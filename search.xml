@@ -9,7 +9,7 @@
   <entry>
     <title>CSLU 2024 UPM</title>
     <url>/2024/12/31/CSLU-2024-UPM/</url>
-    <content><![CDATA[<h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h1><h2 id="Dr-Mals"><a href="#Dr-Mals" class="headerlink" title="Dr. Mals"></a>Dr. Mals</h2><h3 id="Step-by-Step-Solve"><a href="#Step-by-Step-Solve" class="headerlink" title="Step by Step Solve"></a>Step by Step Solve</h3><hr>
+    <content><![CDATA[<h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h1><h2 id="Dr-Mals"><a href="#Dr-Mals" class="headerlink" title="Dr. Mals"></a>Dr. Mals</h2><hr>
 <ol>
 <li>Download the Dr. Mals word file</li>
 <li>Use Oletools - olevba to decrypt this file<ul>
@@ -52,7 +52,7 @@
 <li>Thats it.</li>
 </ol>
 <h4 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Akram for providing Hint</p>
-<h2 id="RE-Memory-Delete"><a href="#RE-Memory-Delete" class="headerlink" title="RE:Memory Delete"></a>RE:Memory Delete</h2><h3 id="Step-by-Step-Solve-1"><a href="#Step-by-Step-Solve-1" class="headerlink" title="Step by Step Solve"></a>Step by Step Solve</h3><hr>
+<h2 id="RE-Memory-Delete"><a href="#RE-Memory-Delete" class="headerlink" title="RE:Memory Delete"></a>RE:Memory Delete</h2><hr>
 <ol>
 <li>First, we download the attached file given by the challenge.<ul>
 <li>Challenge.7z</li>
@@ -68,7 +68,7 @@
                 ></li>
 <li>There goes the flag</li>
 </ol>
-<h2 id="Skyfall"><a href="#Skyfall" class="headerlink" title="Skyfall"></a>Skyfall</h2><h3 id="Step-by-step-solve"><a href="#Step-by-step-solve" class="headerlink" title="Step by step solve"></a>Step by step solve</h3><hr>
+<h2 id="Skyfall"><a href="#Skyfall" class="headerlink" title="Skyfall"></a>Skyfall</h2><hr>
 <p><em>Pain killer, My Skill issue… XD</em></p>
 <ol>
 <li>Download the file attach by the challenge.<br>-capture.pcapng</li>
@@ -182,7 +182,7 @@
                 ><br>Heres the flag.<br>Okay its maybe abit harder than i though. cry die.</li>
 </ol>
 <h4 id="Acknowledgement-1"><a href="#Acknowledgement-1" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Bakayang for providing solution at the end of the day</p>
-<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="Useless-Website"><a href="#Useless-Website" class="headerlink" title="Useless Website"></a>Useless Website</h2><h3 id="Step-by-Step-Solve-2"><a href="#Step-by-Step-Solve-2" class="headerlink" title="Step by Step Solve"></a>Step by Step Solve</h3><hr>
+<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="Useless-Website"><a href="#Useless-Website" class="headerlink" title="Useless Website"></a>Useless Website</h2><hr>
 <ol>
 <li><p>Download the source code of the website</p>
 </li>
