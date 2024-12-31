@@ -223,4 +223,347 @@
         <tag>Web</tag>
       </tags>
   </entry>
+  <entry>
+    <title>CyberX Internal CTF 2024</title>
+    <url>/2024/12/31/CyberX-Internal-CTF-2024/</url>
+    <content><![CDATA[<h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h1><h2 id="Forensic-Odyssey-1-A-Message-in-the-Mist"><a href="#Forensic-Odyssey-1-A-Message-in-the-Mist" class="headerlink" title="Forensic Odyssey 1: A Message in the Mist"></a>Forensic Odyssey 1: A Message in the Mist</h2><hr>
+<ol>
+<li>First, we downlaod and unzip the Artifact.zip file with the password given by the challenge.</li>
+<li>Inspect what inside the file.<ul>
+<li>There is only a file name <code>CyberX_CTF.E01</code> file.</li>
+</ul>
+</li>
+<li>Look closer, it is a <code>E01</code> extension file, as we know, <code>E01</code>file is a file extension for Encase Disk Image or (Encase Evidence Files or Expert Witness Format (EWF) files) Google ^_^!</li>
+<li>To open this file, we need to download Auotspy(<a class="link"   href="https://www.autopsy.com/" >https://www.autopsy.com/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>) or Eterro FTK Imager(<a class="link"   href="https://www.exterro.com/digital-forensics-software/ftk-imager" >https://www.exterro.com/digital-forensics-software/ftk-imager<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>)</li>
+<li>After that, open Autospy(for this time I use Autospy), but before others flag, we need to find the first flag, i have mount the image to local disk E and I can see there is a Welcome.txt file in the disk.</li>
+<li><ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/593e4d72-ceeb-4e7d-a35a-60bfbf0c7c5f"
+                      alt="image"
+                ></li>
+<li><img  width="501" alt="image" 
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/c16df287-4631-46d4-acc6-b511698abf16"
+                      
+                ></li>
+</ul>
+</li>
+<li>And you will get the flag in the txt file.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/44e82b55-2148-4f53-beec-277bd3f09b4a"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Forensic-Odyssey-2-The-Hidden-Path"><a href="#Forensic-Odyssey-2-The-Hidden-Path" class="headerlink" title="Forensic Odyssey 2: The Hidden Path"></a>Forensic Odyssey 2: The Hidden Path</h2><hr>
+<ol>
+<li>CONTINUE to the Forensics Odyssey 1.</li>
+<li>Open the autospy and open the disk image.</li>
+<li>Before started, we should think where is the data normally will be hidden.<ul>
+<li>Recycle bin etc…</li>
+</ul>
+</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/42ba190b-9590-4234-87bb-a46a9169f540"
+                      alt="image"
+                ></li>
+<li>We can see there is the flag, but opps, it is not the correct flag after I tried. Lets have a check for others flag.</li>
+<li>After few searching we can see there is a hidden named file in <code>user/plssk/download/</code></li>
+<li>there is a txt file name flag2.txt and when we press in, there is a sentences<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/bb14d2d9-8d88-491d-af9e-03e6dd97be92"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Where is the flag??</li>
+<li>When we highlights it, we can see there is different size of space in there<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/8c33799f-371b-4df6-852d-84ae10893c6c"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Copy it and go to white space decoder()</li>
+</ol>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/aba034e4-2b70-48a8-aa46-8eecb127cc4c"
+                      alt="image"
+                ></li>
+</ul>
+<ol start="11">
+<li>There you go ! The flag for this challenge is out!</li>
+</ol>
+<hr>
+<h1 id="Forensic-Odyssey-3-The-Time-Traveler"><a href="#Forensic-Odyssey-3-The-Time-Traveler" class="headerlink" title="Forensic Odyssey 3: The Time Traveler"></a>Forensic Odyssey 3: The Time Traveler</h1><hr>
+<ol>
+<li>Continue Forensics Odyssey 2.</li>
+<li>We can see there is something hidding in here</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/7c81eb0a-e7f7-4f97-9990-30615311bc40"
+                      alt="image"
+                ></li>
+<li>After we take the encrypted code from txt and put into CyberChef to decode the base64 text.</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/e8deb263-9a5e-4739-ba34-941feb8c486d"
+                      alt="image"
+                ></li>
+<li>Here this is the flag!</li>
+</ol>
+<hr>
+<h2 id="Forensic-Odyssey-4-The-Final-Trail"><a href="#Forensic-Odyssey-4-The-Final-Trail" class="headerlink" title="Forensic Odyssey 4: The Final Trail"></a>Forensic Odyssey 4: The Final Trail</h2><hr>
+<ol>
+<li>Continue Forensics Odyssey 3.</li>
+<li>Last we can see there is a deleted files in the side of the tab</li>
+</ol>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/198a4dab-284a-464a-a87e-c0f8615ca65e"
+                      alt="image"
+                ></li>
+</ul>
+<ol start="3">
+<li>Press <code>All</code></li>
+<li>And we can see the last flag at here, it is easy right!</li>
+</ol>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/598a80c8-3357-42d3-88d0-4c36b7499783"
+                      alt="image"
+                ></li>
+</ul>
+<hr>
+<h2 id="Knock-Knock"><a href="#Knock-Knock" class="headerlink" title="Knock Knock"></a>Knock Knock</h2><hr>
+<ol>
+<li>Download the attachment given by the challenge.</li>
+<li>Open the pcap file using wireshark(<a class="link"   href="https://www.wireshark.org/#downloadLink" >https://www.wireshark.org/#downloadLink<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>)</li>
+<li>We can see theres only TCP Protocol this time, but hey look at the down-right corner, its at there again.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/eaaf7623-2810-4ac7-b310-f75a4b97aa85"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>OK lets try different port. And we can see there is a different character but the same as flag CyberX{ word.</li>
+<li>So just follow and record it one by one and we can get the flag for this challenge.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/2613a9d0-598a-4aa8-9d8c-fde38289d386"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Hooray there goess the flag!</li>
+</ol>
+<h4 id="Knock-Knock-whose-there-CyberX-here-hehe"><a href="#Knock-Knock-whose-there-CyberX-here-hehe" class="headerlink" title="Knock Knock, whose there? CyberX here hehe."></a>Knock Knock, whose there? CyberX here hehe.</h4><hr>
+<h2 id="Poslaju"><a href="#Poslaju" class="headerlink" title="Poslaju"></a>Poslaju</h2><hr>
+<ol>
+<li>Download the attachment given by the challenge.</li>
+<li>Open the pcap file using wireshark(<a class="link"   href="https://www.wireshark.org/#downloadLink" >https://www.wireshark.org/#downloadLink<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>)</li>
+<li>Choose one port of http and right click, follow the http stream.</li>
+<li>You can see there is a C in front of the HTTP&#x2F;1.1.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/561fba6a-e20b-446f-b1ac-90ef149fec8c"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Looks like there is a flag there maybe, so lets try increase the stream.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/de8fd55d-4ff7-425a-ae4e-e0b8fee270ed"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Looks like there is a y, so lets record it (flag type &#x3D; CyberX{})<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/98c918b7-5db8-401a-af80-ccecd7c52f51"
+                      alt="image"
+                ></li>
+<li>Record the flag one bye one by increasing the stream.</li>
+</ul>
+</li>
+<li>And there is it the flag!</li>
+</ol>
+<hr>
+<h2 id="Powershell-1"><a href="#Powershell-1" class="headerlink" title="Powershell 1"></a>Powershell 1</h2><hr>
+<ol>
+<li>Download the Runme.zip file from the attachment.</li>
+<li>Unzip the file</li>
+<li>Inspect what inside the file.<ul>
+<li>It contains only  <code>runme.ps1</code></li>
+</ul>
+</li>
+<li>I try edit the file with notepad and inside we can see this code<br><code>powershell -EncodedCommand ZQBjAGgAbwAgAEMAeQBiAGUAcgBYAHsAdwBoADQAdABfADEAbgBfAHQAaAA0AF8AYgBhAHMAZQA2ADQAXwAxAHMAXwBUAGgAMQBzACEAIQB9AA==</code></li>
+<li>ZQBjAGgAbwAgAEMAeQBiAGUAcg…. is smoehow look like a encryted words.</li>
+<li>Use CyberChef(<a class="link"   href="https://cyberchef.net/" >https://cyberchef.net/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>)</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/4110855f-aa84-4db3-bd11-979ced3d4587"
+                      alt="image"
+                ></li>
+<li>And there is it the Flag!</li>
+</ol>
+<hr>
+<h2 id="Santa-Scan"><a href="#Santa-Scan" class="headerlink" title="Santa Scan"></a>Santa Scan</h2><hr>
+<ol>
+<li>First download the attachment given by the challenge.</li>
+<li>It is a file call santa_scan.pcap.</li>
+<li>Open the file using wireshark(<a class="link"   href="https://www.wireshark.org/#downloadLink" >https://www.wireshark.org/#downloadLink<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>)</li>
+<li>The hint given by the challenge is TCP, so let us type TCP in the seach box.</li>
+<li>As you can see there is a lot of port with TCP Protocol.</li>
+<li>Now lets find where is the flag, but hey see, there is something at the down-right corner (highlighted)<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/1b897044-3b61-41b2-aa43-81fae3a7dd67"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>After pressing few TCP Ports and we can sure that it is the Flag for us (TCP Stream with port length 60)<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/c3c72452-1e08-4f89-8639-392042818d83"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Thats the flag!! Hooray, Happy Christmas HoHoHo!!!</li>
+</ol>
+<hr>
+<h2 id="ZipCrack-1-The-Hidden-Lock"><a href="#ZipCrack-1-The-Hidden-Lock" class="headerlink" title="ZipCrack 1: The Hidden Lock"></a>ZipCrack 1: The Hidden Lock</h2><hr>
+<ol>
+<li><p>Download the zip file from the attachment.</p>
+</li>
+<li><p>unzip the file, but hemm, look like normally unzip is not suitable(see the attach picture)</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/42a109a3-89bd-483f-ad01-1ca00d3d6c75"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li><p>So use command <code>7z e flag.zip</code> 7zip is a better unzip tools in this case. But ohno there is a password.</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/72ed79ac-ef55-4727-ae7f-3828b5d96907"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li><p>So i try to bruteforce it using  <code>John The Ripper</code> .</p>
+<ul>
+<li>because it is a zipfile, we need to use command <code>zip2john flag.zip &gt; hash.txt</code> to make the zip file a hash text then we can use to bruteforce finding the same hash to find out the password.</li>
+</ul>
+</li>
+<li><p>Use this command <code>john -w usr/share/wordlists/rockyou.txt hash.txt</code></p>
+</li>
+<li><p>And we will found out that the password for this file is <code>rainbow1</code></p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/86d78732-768b-4f18-b9ad-26d4d356e3a6"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li><p>And now let use use the password to go inside and take a look of the flag.txt file</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/e50f85c5-f31d-486a-a1e5-cd5bce1e2238"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li><p>Thats it!! the flag for this question!!</p>
+</li>
+</ol>
+<h2 id="ZipCrack-2-The-Champion-Lock"><a href="#ZipCrack-2-The-Champion-Lock" class="headerlink" title="ZipCrack 2: The Champion Lock"></a>ZipCrack 2: The Champion Lock</h2><hr>
+<ul>
+<li>this make me frustrated and at the end just found out a word in upper case causing fail …..</li>
+</ul>
+<ol>
+<li><p>First download the attachment for the challenge.</p>
+</li>
+<li><p>Same as the last question it need to use 7z to unzip. But this time, hint is using the LOL Champions name.</p>
+</li>
+<li><p>Im not a LOL player so, i go online search what is champion and blablabla~, and found out champions is a character of the LOL Games.</p>
+</li>
+<li><p>Ok now have the hint, i try go GPT to let it list it our for me all champions name 100+ and make it a wordlist (.txt)</p>
+</li>
+<li><p>Last, use john to bruteforce the zipfile answer using the command</p>
+<p><code>zip2john champion.zip &gt; hash_flag2.txt</code><br><code>john --wordlist=lol_wordlist.txt hash_flag2.txt</code></p>
+</li>
+<li><p>And we found out the password for this file is</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/02af9e4f-3dc4-455b-83b1-e3937200acbd"
+                      alt="image"
+                ></li>
+<li>Credit to my teammates Ching Yang to find out, as my wordlist is with uppercase in the first character…….</li>
+</ul>
+</li>
+<li><p>use 7z to unzip it and we can see the flag is inside Yay!</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/747118fd-d46b-4736-95b8-055d58d15c86"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li><p>There you go the flag!!</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>CTF 2024</category>
+      </categories>
+  </entry>
 </search>
