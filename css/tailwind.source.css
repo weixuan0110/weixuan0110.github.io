@@ -86,3 +86,16 @@
 .scrollbar-hide::-webkit-scrollbar {
     display: none;            /* Chrome, Safari and Opera */
 }
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .profile-pic img {
+    width: 100%;
+    height: auto;
+  }
