@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-01-17T18:01:49.000Z">
-<meta property="article:modified_time" content="2025-01-19T19:56:39.504Z">
+<meta property="article:modified_time" content="2025-01-19T20:47:50.711Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -341,7 +341,7 @@
 <hr>
 <p>✨ <em>“The best way to predict the future is to invent it.”</em> ✨</p>
 <hr>
-<h1 id="Technology-And-Information-System"><a href="#Technology-And-Information-System" class="headerlink" title="Technology And Information System"></a>Technology And Information System</h1><h2 id="Assignments"><a href="#Assignments" class="headerlink" title="Assignments"></a>Assignments</h2><div style="display: flex; flex-direction: column; gap: 15px; max-width: 300px; margin: 0 auto;">
+<h1 id="Technology-And-Information-System"><a href="#Technology-And-Information-System" class="headerlink" title="Technology And Information System"></a>Technology And Information System</h1><h2 id="Assignments"><a href="#Assignments" class="headerlink" title="Assignments"></a>Assignments</h2><div style="display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 0 auto;">
   <a href="/2025/01/18/PC-Assembly-LAB-TIS-UTM/" class="btn">PC Assembly LAB</a>
   <a href="/2025/01/19/Design-thinking-Project-TIS/" class="btn">Design Thinking Project</a>
   <a href="/2025/01/18/Assigment-4-TIS/" class="btn">Assignment 4</a>
@@ -353,23 +353,41 @@
 <style>
   .btn {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #4CAF50; /* Green background */
-    color: white;
+    padding: 14px 28px; /* Slightly larger padding */
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Elegant purple gradient */
+    color: white; /* White text for dark themes */
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 12px;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 2px solid transparent;
+    width: 100%; /* Full width of the container */
+    max-width: 400px; /* Suitable width for buttons */
+    margin: 0 auto; /* Center the buttons */
+  }
+
+  /* Light theme adjustments */
+  @media (prefers-color-scheme: light) {
+    .btn {
+      color: #333; /* Dark text for light themes */
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Light gradient for light themes */
+    }
   }
 
   .btn:hover {
-    background-color: #45a049; /* Darker green on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #764ba2, #667eea); /* Reverse gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
+  }
+
+  /* Light theme hover adjustments */
+  @media (prefers-color-scheme: light) {
+    .btn:hover {
+      background: linear-gradient(135deg, #c3cfe2, #f5f7fa); /* Light gradient reverse on hover */
+    }
   }
 
   .btn:active {
