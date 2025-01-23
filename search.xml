@@ -693,9 +693,45 @@
 </ol>
 <h2 id="Kuih-Lapis"><a href="#Kuih-Lapis" class="headerlink" title="Kuih Lapis"></a>Kuih Lapis</h2><ol>
 <li>Download the poem.pdf file</li>
-<li>Throw it into <a class="link"   href="https://pdfcrowd.com/inspect-pdf/" >pdf inspect<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> website and we will see all the details in this page<br>[image](&#x2F;image&#x2F;Screenshot 2025-01-24 012619.png)</li>
-<li>And we can see the details and flag at here [image](&#x2F;image&#x2F;Screenshot 2025-01-24 012801.png)</li>
+<li>Throw it into <a class="link"   href="https://pdfcrowd.com/inspect-pdf/" >pdf inspect<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> website and we will see all the details in this page<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/image11.png"
+                      alt="image"
+                ></li>
+<li>And we can see the details and flag at here <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/image222.png"
+                      alt="image"
+                ></li>
 </ol>
+<h2 id="Lost-Password"><a href="#Lost-Password" class="headerlink" title="Lost Password"></a>Lost Password</h2><ol>
+<li>Download the zip file.</li>
+<li>We can see inside have cloud_password.txt and a index.html file. <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/imagebk1.png"
+                      alt="image"
+                ></li>
+<li>With the use of BKCrack, we can use known plaintext attack on pkzip</li>
+<li>Next find the common bytes in the index.html file(why html file? as we dont know the starters of the cloud_password.txt) <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/imagebk2.png"
+                      alt="image"
+                >.</li>
+<li>Save those code in a file call bin </li>
+<li>Then <code>bkcrack -C html.zip -c &quot;index.html&quot; -p bin</code></li>
+<li>After getting the key, Continue to crack it</li>
+<li><code>bkcrack -C html.zip -k 1d63e85a b3b66126 33619315 -U bkbk.zip 1234</code></li>
+</ol>
+<p>1d63e85a b3b66126 33619315 is the key, and 1234 is the password we set.<br>9. then unzip the zip file bkbk.zip with pass 1234.<br>10. Thats it the flag here<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/imagelah.png"
+                      alt="flag"
+                ></p>
 <h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><h2 id="Neighbour-RSA"><a href="#Neighbour-RSA" class="headerlink" title="Neighbour RSA"></a>Neighbour RSA</h2><ol>
 <li>Download the file, then see the rsa encrypted code<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import inverse, long_to_bytes</span><br><span class="line">from gmpy2 import isqrt, mpz</span><br><span class="line">def fermat_factorization(N):</span><br><span class="line">    a = isqrt(N) + 1</span><br><span class="line">    b2 = a * a - N</span><br><span class="line">    while not is_square(b2):</span><br><span class="line">        a += 1</span><br><span class="line">        b2 = a * a - N</span><br><span class="line">    b = isqrt(b2)</span><br><span class="line">    return a - b, a + b</span><br><span class="line"></span><br><span class="line">def is_square(n):</span><br><span class="line">    return isqrt(n) ** 2 == n</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 14587704432822344892341272427282646120364434437414523883376089608218979364959927948590898540264210246449374363014541914863792835772986609660515612532877044074684115597786182642011407163350289201826895454398548254854919237599957739718174053771619150887665707867636064460914489445835497948439951659044458159773886454887057327846897569977945202458245268351728125973721764332352011029125694046428350269451464778793326007087955043888570293765138721335344787054343738337660927131968049415376352589981259058448540690666004751490375493430556965591293772542601776934892741235532054785639594081598607404023545471998403197674267</span><br><span class="line">e = 65537</span><br><span class="line">C = 7329184746351979600304810893726842767688467204256990201181172159445966473650977905122553415838916142690364388789400790015517642902297387406215773278164829517035052625373870964570981590734714495297149889660019174034119566329569798047522829383224123884562703447321306836996392334132844673471179765556339187200820259655159008340673516040862000226792914228312336356120448967504158288031247387263438925257977725844911872753683719735641011693324441777888582417108481882731436005780409094974241968759397096299213838515746566064813787517925040756180508206242396925444425306180593790729890681708626826056328684043890127100581</span><br><span class="line"></span><br><span class="line"># Step 1: Factorize N</span><br><span class="line">p, q = fermat_factorization(N)</span><br><span class="line">print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 2: Compute the private key d</span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">print(f&quot;d = &#123;d&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 3: Decrypt the ciphertext C</span><br><span class="line">plaintext = pow(C, d, N)</span><br><span class="line">print(f&quot;Plaintext (as long): &#123;plaintext&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 4: Convert the plaintext to bytes</span><br><span class="line">flag = long_to_bytes(plaintext)</span><br><span class="line">print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)</span><br></pre></td></tr></table></figure></div></li>
 <li>Then decrypt it! <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import inverse, long_to_bytes</span><br><span class="line">from gmpy2 import isqrt, mpz</span><br><span class="line">def fermat_factorization(N):</span><br><span class="line">a = isqrt(N) + 1</span><br><span class="line">b2 = a * a - N</span><br><span class="line">while not is_square(b2):</span><br><span class="line">    a += 1</span><br><span class="line">    b2 = a * a - N</span><br><span class="line">b = isqrt(b2)</span><br><span class="line">return a - b, a + b</span><br><span class="line"></span><br><span class="line">def is_square(n):</span><br><span class="line">return isqrt(n) ** 2 == n</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 14587704432822344892341272427282646120364434437414523883376089608218979364959927948590898540264210246449374363014541914863792835772986609660515612532877044074684115597786182642011407163350289201826895454398548254854919237599957739718174053771619150887665707867636064460914489445835497948439951659044458159773886454887057327846897569977945202458245268351728125973721764332352011029125694046428350269451464778793326007087955043888570293765138721335344787054343738337660927131968049415376352589981259058448540690666004751490375493430556965591293772542601776934892741235532054785639594081598607404023545471998403197674267</span><br><span class="line">e = 65537</span><br><span class="line">C = 7329184746351979600304810893726842767688467204256990201181172159445966473650977905122553415838916142690364388789400790015517642902297387406215773278164829517035052625373870964570981590734714495297149889660019174034119566329569798047522829383224123884562703447321306836996392334132844673471179765556339187200820259655159008340673516040862000226792914228312336356120448967504158288031247387263438925257977725844911872753683719735641011693324441777888582417108481882731436005780409094974241968759397096299213838515746566064813787517925040756180508206242396925444425306180593790729890681708626826056328684043890127100581</span><br><span class="line"></span><br><span class="line"># Step 1: Factorize N</span><br><span class="line">p, q = fermat_factorization(N)</span><br><span class="line">print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 2: Compute the private key d</span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">print(f&quot;d = &#123;d&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 3: Decrypt the ciphertext C</span><br><span class="line">plaintext = pow(C, d, N)</span><br><span class="line">print(f&quot;Plaintext (as long): &#123;plaintext&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 4: Convert the plaintext to bytes</span><br><span class="line">flag = long_to_bytes(plaintext)</span><br><span class="line">print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)&lt;/p&gt;</span><br></pre></td></tr></table></figure></div></li>
