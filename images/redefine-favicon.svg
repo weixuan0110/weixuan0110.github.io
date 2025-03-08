@@ -1,20 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
-  <!-- Background -->
-  <rect width="600" height="400" fill="#121212"/>
-  
-  <!-- Circuit board pattern background -->
-  <g fill="none" stroke="#2a2a2a" stroke-width="2">
-    <path d="M50 50 H550 M50 100 H550 M50 150 H550 M50 200 H550 M50 250 H550 M50 300 H550 M50 350 H550"/>
-    <path d="M100 50 V350 M200 50 V350 M300 50 V350 M400 50 V350 M500 50 V350"/>
-    
-    <!-- Circuit nodes -->
-    <circle cx="100" cy="100" r="6" fill="#00ff00" opacity="0.5"/>
-    <circle cx="200" cy="200" r="6" fill="#00ff00" opacity="0.5"/>
-    <circle cx="400" cy="150" r="6" fill="#00ff00" opacity="0.5"/>
-    <circle cx="300" cy="300" r="6" fill="#00ff00" opacity="0.5"/>
-    <circle cx="500" cy="250" r="6" fill="#00ff00" opacity="0.5"/>
-  </g>
-  
   <!-- Shield outline (cybersecurity symbol) -->
   <path d="M300 80 L200 120 V240 L300 300 L400 240 V120 Z" fill="#0a0a0a" stroke="#00ff00" stroke-width="3"/>
   
@@ -36,10 +20,4 @@
   
   <!-- Tagline -->
   <text x="300" y="350" font-family="Arial, sans-serif" font-size="20" fill="#00ff00" text-anchor="middle">CYBERSECURITY | CTF PLAYER</text>
-  
-  <!-- Decorative elements -->
-  <path d="M150 80 L170 80 L170 90 L150 90 Z" fill="#00ff00"/>
-  <path d="M430 80 L450 80 L450 90 L430 90 Z" fill="#00ff00"/>
-  <path d="M150 310 L170 310 L170 320 L150 320 Z" fill="#00ff00"/>
-  <path d="M430 310 L450 310 L450 320 L430 320 Z" fill="#00ff00"/>
 </svg>
