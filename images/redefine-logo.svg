@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>logo</title><defs><path d="M168.410557,0 C237.219406,0 293,56.1882639 293,125.5 C293,194.811736 237.219406,251 168.410557,251 L168.41,171.369 L168.741123,171.36621 C193.778595,170.957299 213.950147,150.385146 213.950147,125.067241 C213.950147,99.6381036 193.60096,78.9965089 168.410838,78.7640518 L0,78.762069 L0,0 Z" id="path-1"></path></defs><g id="logo-MIT" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Logo" transform="translate(60.000000, 52.000000)"><polygon id="左下角" fill="#A31F34" points="-1.46896384e-14 182 116 295 0 295"></polygon><polygon id="梯形" fill="#C9C8C7" points="-1.35612008e-14 3.96601155e-15 295 295 188.782799 295 -1.35612008e-14 107.068255"></polygon><mask id="mask-2" fill="white"><use xlink:href="#path-1"></use></mask><use id="Combined-Shape" fill="#C9C8C7" xlink:href="#path-1"></use><polygon id="阴影" fill="#8A8B8C" mask="url(#mask-2)" points="0 0 107.937318 3.96601155e-15 295 183.424839 295 295"></polygon></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <!-- Shield outline (cybersecurity symbol) -->
+  <path d="M300 80 L200 120 V240 L300 300 L400 240 V120 Z" fill="#0a0a0a" stroke="#00ff00" stroke-width="3"/>
+  
+  <!-- Binary data on shield -->
+  <text x="240" y="170" font-family="monospace" font-size="12" fill="#00ff00">01001100</text>
+  <text x="240" y="190" font-family="monospace" font-size="12" fill="#00ff00">10110101</text>
+  <text x="240" y="210" font-family="monospace" font-size="12" fill="#00ff00">01101100</text>
+  <text x="240" y="230" font-family="monospace" font-size="12" fill="#00ff00">11010101</text>
+  
+  <!-- Flag (CTF symbol) -->
+  <polygon points="400,120 400,170 360,150 400,130" fill="#ff3e3e"/>
+  
+  <!-- Lock icon (cybersecurity symbol) -->
+  <rect x="275" y="210" width="50" height="40" rx="5" fill="#444"/>
+  <rect x="285" y="190" width="30" height="25" rx="10" fill="none" stroke="#00ff00" stroke-width="3"/>
+  
+  <!-- w_11 text -->
+  <text x="300" y="160" font-family="Arial, sans-serif" font-weight="bold" font-size="40" fill="#ffffff" text-anchor="middle">w_11</text>
+  
+  <!-- Tagline -->
+  <text x="300" y="350" font-family="Arial, sans-serif" font-size="20" fill="#00ff00" text-anchor="middle">CYBERSECURITY | CTF PLAYER</text>
+</svg>
