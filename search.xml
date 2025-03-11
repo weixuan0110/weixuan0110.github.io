@@ -650,6 +650,13 @@
 <li><p>and we can get the flag content.</p>
 </li>
 </ol>
+<h2 id="KingsBrew"><a href="#KingsBrew" class="headerlink" title="KingsBrew"></a>KingsBrew</h2><ol>
+<li>First we get into the website using the host and port given.</li>
+<li>According to the hint it should be something menu as when you press {drink and flag!} it jump out menu.php.</li>
+<li>After we test, LFI is usable in this case</li>
+<li><code>http://135.181.88.229:35206/?page=php://filter/convert.base64-encode/resource=menu.php</code></li>
+<li>This is one of LFI payloads of PHP filters to read menu.php without executing PHP and decode the base 64 by ourself using cyberchef.</li>
+</ol>
 <h1 id="Mobile"><a href="#Mobile" class="headerlink" title="Mobile"></a>Mobile</h1><h2 id="Who’s-that-pukimon"><a href="#Who’s-that-pukimon" class="headerlink" title="Who’s that pukimon"></a>Who’s that pukimon</h2><ol>
 <li>Download the APK Andorid files and open it in a android emulator(Im using andorid studio)</li>
 <li>We can see that this is a game that we need to guess who is this Pokemon (pukimon)<br><img  

@@ -36,7 +36,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-01-18T06:18:36.000Z">
-<meta property="article:modified_time" content="2025-01-23T20:01:19.293Z">
+<meta property="article:modified_time" content="2025-03-11T13:36:28.171Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Forensics">
 <meta property="article:tag" content="Web">
@@ -294,8 +294,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-01-24 04:01:19</span>
-            <span class="mobile">2025-01-24 04:01:19</span>
+            <span class="desktop">2025-03-11 21:36:28</span>
+            <span class="mobile">2025-03-11 21:36:28</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -430,6 +430,13 @@
 <li><p>and we can get the flag content.</p>
 </li>
 </ol>
+<h2 id="KingsBrew"><a href="#KingsBrew" class="headerlink" title="KingsBrew"></a>KingsBrew</h2><ol>
+<li>First we get into the website using the host and port given.</li>
+<li>According to the hint it should be something menu as when you press {drink and flag!} it jump out menu.php.</li>
+<li>After we test, LFI is usable in this case</li>
+<li><code>http://135.181.88.229:35206/?page=php://filter/convert.base64-encode/resource=menu.php</code></li>
+<li>This is one of LFI payloads of PHP filters to read menu.php without executing PHP and decode the base 64 by ourself using cyberchef.</li>
+</ol>
 <h1 id="Mobile"><a href="#Mobile" class="headerlink" title="Mobile"></a>Mobile</h1><h2 id="Who’s-that-pukimon"><a href="#Who’s-that-pukimon" class="headerlink" title="Who’s that pukimon"></a>Who’s that pukimon</h2><ol>
 <li>Download the APK Andorid files and open it in a android emulator(Im using andorid studio)</li>
 <li>We can see that this is a game that we need to guess who is this Pokemon (pukimon)<br><img  
@@ -477,7 +484,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-01-24 04:01:19
+                    :</strong> 2025-03-11 21:36:28
             </li>
         
         <li>
@@ -599,7 +606,7 @@
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
 		<div class="page-title">EQFCTF 2025</div>
-		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Join-Our-Discord"><span class="nav-text">Join Our Discord</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forensic"><span class="nav-text">Forensic</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Velociraptor"><span class="nav-text">Velociraptor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kuih-Lapis"><span class="nav-text">Kuih Lapis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lost-Password"><span class="nav-text">Lost Password</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Neighbour-RSA"><span class="nav-text">Neighbour RSA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Neighbour-RSA-2"><span class="nav-text">Neighbour RSA_2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WEB"><span class="nav-text">WEB</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EggSecret"><span class="nav-text">EggSecret</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mobile"><span class="nav-text">Mobile</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Who%E2%80%99s-that-pukimon"><span class="nav-text">Who’s that pukimon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Capture-that-Pukimon"><span class="nav-text">Capture that Pukimon</span></a></li></ol></li></ol>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Misc"><span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Join-Our-Discord"><span class="nav-text">Join Our Discord</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forensic"><span class="nav-text">Forensic</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Velociraptor"><span class="nav-text">Velociraptor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kuih-Lapis"><span class="nav-text">Kuih Lapis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lost-Password"><span class="nav-text">Lost Password</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Neighbour-RSA"><span class="nav-text">Neighbour RSA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Neighbour-RSA-2"><span class="nav-text">Neighbour RSA_2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WEB"><span class="nav-text">WEB</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EggSecret"><span class="nav-text">EggSecret</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KingsBrew"><span class="nav-text">KingsBrew</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mobile"><span class="nav-text">Mobile</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Who%E2%80%99s-that-pukimon"><span class="nav-text">Who’s that pukimon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Capture-that-Pukimon"><span class="nav-text">Capture that Pukimon</span></a></li></ol></li></ol>
 
 	</div>
 </div>
