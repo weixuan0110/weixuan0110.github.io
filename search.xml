@@ -716,4 +716,22 @@
     <url>/2025/03/08/PICO-CTF/</url>
     <content><![CDATA[]]></content>
   </entry>
+  <entry>
+    <title>Try Hack Me Hackinfinity Battle CTF 2025</title>
+    <url>/2025/03/19/Try-Hack-Me-Hackinfinity-Battle-CTF-2025/</url>
+    <content><![CDATA[<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="NotePad-Online"><a href="#NotePad-Online" class="headerlink" title="NotePad Online"></a>NotePad Online</h2><ol>
+<li>First, start the machine and sign in to the ip address and email+password given.</li>
+<li>Have a look in the url, we can see the url have id&#x3D;1.</li>
+<li>Lets have a try to increase the number and we can found that it do can be increase and changing different data shown.</li>
+<li>After arrive id&#x3D;7, it show that we can decrease the number 1 so change it to 0</li>
+<li>Tada! The flag is there <code>THM&#123;i_can_see_your_notes&#125;</code></li>
+</ol>
+<h1 id="Osint"><a href="#Osint" class="headerlink" title="Osint"></a>Osint</h1><h2 id="Catch-Me-If-You-Can"><a href="#Catch-Me-If-You-Can" class="headerlink" title="Catch Me If You Can"></a>Catch Me If You Can</h2><ol>
+<li>According to the Image given, It show a building with a some arts.</li>
+<li>after image search on google, we found that it is at brazil, beco do batman.</li>
+<li>Google search beco do batman burger restaurant shows some restaurant name but first is coringa do beco.</li>
+<li>Flag &#x3D; THM{coringa_do_beco}</li>
+</ol>
+]]></content>
+  </entry>
 </search>
