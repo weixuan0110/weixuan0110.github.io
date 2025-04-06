@@ -712,9 +712,12 @@
       </tags>
   </entry>
   <entry>
-    <title>PICO CTF</title>
+    <title>PICO CTF 2025</title>
     <url>/2025/03/08/PICO-CTF/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="Forensics"><a href="#Forensics" class="headerlink" title="[Forensics]"></a>[Forensics]</h1>]]></content>
+      <tags>
+        <tag>CTF 2025</tag>
+      </tags>
   </entry>
   <entry>
     <title>Try Hack Me Hackinfinity Battle CTF 2025</title>
