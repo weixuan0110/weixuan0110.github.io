@@ -740,13 +740,6 @@
   <entry>
     <title>UM CyberSummit 2024</title>
     <url>/2025/04/18/UM-CyberSummit-2024/</url>
-    <content><![CDATA[
-
-	<div class="row">
-    <embed src="w_11/source/files/UMCS" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
+    <content><![CDATA[<embed src="w_11/source/files/UMCS CTF Preliminary Round Writeups.pdf" type="application/pdf" width="100%" height="600px">]]></content>
   </entry>
 </search>
