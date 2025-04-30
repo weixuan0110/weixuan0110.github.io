@@ -1,0 +1,1 @@
+User-agent: *\nAllow: /\nDisallow: /js/\nDisallow: /css/\nDisallow: /fonts/\nDisallow: /webfonts/\n\nSitemap: https://example.com/sitemap.xml
