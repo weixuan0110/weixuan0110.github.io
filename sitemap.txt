@@ -13,5 +13,5 @@ http://example.com/
 http://example.com/tags/Forensics/
 http://example.com/tags/Web/
 http://example.com/tags/CTF-2025/
-http://example.com/categories/CTF-2024/
 http://example.com/categories/CTF-2025/
+http://example.com/categories/CTF-2024/
