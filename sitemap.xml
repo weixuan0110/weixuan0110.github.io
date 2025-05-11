@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>http://example.com/2025/05/11/Analysis-of-Malware-APK-Appendix/</loc>
+    
+    <lastmod>2025-05-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/projects/index.html</loc>
     
     <lastmod>2025-04-30</lastmod>
@@ -146,6 +155,27 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://example.com/tags/Android-Security/</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Mobile-Threats/</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Banking-Trojan/</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -157,6 +187,13 @@
   
   <url>
     <loc>http://example.com/categories/CTF-2024/</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Malware-Analysis/</loc>
     <lastmod>2025-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
