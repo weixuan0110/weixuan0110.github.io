@@ -217,7 +217,8 @@ These findings corroborate the assessment that this malware represents a signifi
     <content><![CDATA[IntroductionDuring a routine security intelligence exchange with my senior Ann from CyberX, I received a suspicious Android application package (APK) for analysis. The sample, disguised as a legitimate banking application (maybank2u.apk), demonstrated significant malicious capabilities warranting a comprehensive technical investigation.
 
 
-Malware Investigation Report: Android Banking TrojanExecutive SummaryThis technical analysis documents a sophisticated Android banking trojan (maybank2u.apk) designed to intercept and exfiltrate sensitive information from compromised devices. The malware demonstrates advanced capabilities including:
+Malware Investigation Report: Android Banking TrojanFirst PageStay at this page after login with anything
+Executive SummaryThis technical analysis documents a sophisticated Android banking trojan (maybank2u.apk) designed to intercept and exfiltrate sensitive information from compromised devices. The malware demonstrates advanced capabilities including:
 
 SMS Interception: Captures one-time passwords (OTPs) and authentication codes
 Data Exfiltration: Transmits stolen data to command and control (C2) infrastructure
@@ -257,11 +258,7 @@ Details
 
 
 Package Name
-m.m.ml (obfuscated)
-
-
-SHA-256 Hash
-[REDACTED] 
+maybank2u
 
 
 Targeted Data
@@ -392,6 +389,14 @@ Persistence after device restart
 
 FOREGROUND_SERVICE
 Maintain background operation
+
+
+
+
+
+
+
+
 
 
 6.2. Core Exfiltration LogicThe primary exfiltration mechanism (C0044Fe.d()) implements sophisticated data transmission:
