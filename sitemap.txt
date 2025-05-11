@@ -1,3 +1,4 @@
+http://example.com/2025/05/11/Analysis-of-Malware-APK/
 http://example.com/projects/index.html
 http://example.com/links/index.html
 http://example.com/2025/04/18/UM-CyberSummit-2025/
@@ -13,5 +14,6 @@ http://example.com/
 http://example.com/tags/Forensics/
 http://example.com/tags/Web/
 http://example.com/tags/CTF-2025/
+http://example.com/tags/Malware-Analysis/
 http://example.com/categories/CTF-2025/
 http://example.com/categories/CTF-2024/
