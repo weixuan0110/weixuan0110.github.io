@@ -11,16 +11,16 @@
   </url>
   
   <url>
-    <loc>http://example.com/2025/05/11/Analysis-of-Malware-APK/</loc>
+    <loc>http://example.com/2025/05/11/Analysis-of-Malware-APK-Appendix/</loc>
     
-    <lastmod>2025-05-11</lastmod>
+    <lastmod>2025-05-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/2025/05/11/Analysis-of-Malware-APK-Appendix/</loc>
+    <loc>http://example.com/2025/05/11/Analysis-of-Malware-APK/</loc>
     
     <lastmod>2025-05-11</lastmod>
     
@@ -128,20 +128,6 @@
 
   
   <url>
-    <loc>http://example.com/tags/Forensics/</loc>
-    <lastmod>2025-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/Web/</loc>
-    <lastmod>2025-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/Malware-Analysis/</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -170,6 +156,20 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/Forensics/</loc>
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Web/</loc>
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/CTF-2025/</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -179,14 +179,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/CTF-2024/</loc>
+    <loc>http://example.com/categories/Malware-Analysis/</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Malware-Analysis/</loc>
+    <loc>http://example.com/categories/CTF-2024/</loc>
     <lastmod>2025-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
