@@ -85,6 +85,18 @@ These findings corroborate the assessment that this malware represents a signifi
       </tags>
   </entry>
   <entry>
+    <title>Bronco CTF 2025</title>
+    <url>/2025/02/17/Bronco-CTF-2025/</url>
+    <content><![CDATA[Web]]></content>
+      <categories>
+        <category>CTF 2025</category>
+      </categories>
+      <tags>
+        <tag>Forensics</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Technical Analysis of Android Malware - Banking Trojan</title>
     <url>/2025/05/11/Analysis-of-Malware-APK/</url>
     <content><![CDATA[IntroductionDuring a routine security intelligence exchange with my senior Ann from CyberX, I received a suspicious Android application package (APK) for analysis. The sample, disguised as a legitimate banking application (maybank2u.apk), demonstrated significant malicious capabilities warranting a comprehensive technical investigation.
@@ -400,18 +412,6 @@ Enable Google Play Protect on Android devices
       </tags>
   </entry>
   <entry>
-    <title>Bronco CTF 2025</title>
-    <url>/2025/02/17/Bronco-CTF-2025/</url>
-    <content><![CDATA[Web]]></content>
-      <categories>
-        <category>CTF 2025</category>
-      </categories>
-      <tags>
-        <tag>Forensics</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSLU 2024 UPM</title>
     <url>/2024/12/31/CSLU-2024-UPM/</url>
     <content><![CDATA[ForensicsDr. Mals
@@ -536,6 +536,14 @@ AcknowledgementThx for Megat for the solution.
       <tags>
         <tag>Forensics</tag>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PICO CTF 2025</title>
+    <url>/2025/03/08/PICO-CTF/</url>
+    <content><![CDATA[[Forensics]]]></content>
+      <tags>
+        <tag>CTF 2025</tag>
       </tags>
   </entry>
   <entry>
@@ -761,20 +769,6 @@ There you go the flag!!
       </tags>
   </entry>
   <entry>
-    <title>PICO CTF 2025</title>
-    <url>/2025/03/08/PICO-CTF/</url>
-    <content><![CDATA[[Forensics]]]></content>
-      <tags>
-        <tag>CTF 2025</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Readme</title>
-    <url>/2024/12/31/Readme/</url>
-    <content><![CDATA[This is my First Post in my Website!!There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???
-]]></content>
-  </entry>
-  <entry>
     <title>Try Hack Me Hackinfinity Battle CTF 2025</title>
     <url>/2025/03/19/Try-Hack-Me-Hackinfinity-Battle-CTF-2025/</url>
     <content><![CDATA[WebNotePad Online
@@ -807,6 +801,12 @@ Flag &#x3D; THM{coringa_do_beco}
       <tags>
         <tag>CTF 2025</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Readme</title>
+    <url>/2024/12/31/Readme/</url>
+    <content><![CDATA[This is my First Post in my Website!!There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???
+]]></content>
   </entry>
   <entry>
     <title>EQFCTF 2025</title>

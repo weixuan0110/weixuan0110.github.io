@@ -1,1 +1,17 @@
-User-agent: *\nAllow: /\nDisallow: /js/\nDisallow: /css/\nDisallow: /fonts/\nDisallow: /webfonts/\n\nSitemap: https://example.com/sitemap.xml
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Allow: /about/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /webfonts/
+Disallow: /vendors/
+
+# Optimize crawling
+Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://weixuan0110.github.io/sitemap.xml
