@@ -581,7 +581,153 @@ Cortex-M spans the spectrum of embedded applications
 Drives up energy efficiency
 High performance
 
-]]></content>
+Day 2SoC Development FlowKey Stages
+
+1 Architecture Definition &amp; Specification
+Define the system requirements based on target applications (e.g., mobile, IoT, edge AI)
+
+
+2 IP Selection and Integration
+Select pre-verified RTL IP from providers like Arm (e.g., CPU, system interconnects, Corstone Subsystem)
+Integrate third-party IPs (e.g., security engines, wireless transceivers)
+
+
+3 Frontend Design and Verification
+Perform RTL design using Verilog&#x2F;SystemVerilog and desin sysnthesis for digital logic
+
+
+4 Software Development( in Parallel)
+Use virtua platforms (e.g. ARM FVPs) to enable early software development before hardware is ready.
+Develop and validate firmware, bloatloaders, devides drivers, and applications software.
+
+
+5 Backend Implementation
+Complete logi synthesis to convert RTL into gate-level netlist
+Perform place and route to create physical layout
+Run DFM (design for Manufactueabilty) checks
+
+
+6 Tape-out and Fabrication
+Generate the final GDSII (GDSII) file layout file and deliver it to the semiconductor foundary
+
+
+7 Validation and bring up
+Use evaluation board or FPGA prototypes for post-silicon validation
+
+
+8 Mass Production and Deployment
+Manufacture the SoC at scale and deploy it in target devices
+
+
+
+Key Components of Arm-Based SoC1 ARM Cpu Cores
+** Cortes-A**: High-performance application processors for smartphones, tablets, and laptops.
+Cortex-R: Real-time processors for automotive, industrial control, and medical devices
+Cortex-M: Low-power microcontrollers for IoT, wearables, and
+
+Memory Subsystem
+L1&#x2F;L2&#x2F;L3 Cache: On-chip caches for fast access to frequently used data, TCM (tightly Coupled Memory)
+DDR Memory Controller: Interface to external DRAM memory (e.g., LPDDR4, DDR5)
+On-chip SDRAM and ROM with support for external DRAM and flash memory
+
+AMBA Interconnect Fabric
+Arm -based SoC use AMBA (Advanced Microcontroller Bus Architecture) protovols”:
+AXI (Advanced eXtensible Interface): High-performance interconnect for connecting high-speed peripherals and memory
+AHB (Advanced High-performance Bus): Used for connecting lower-speed peripherals and memory
+APB (Advanced Peripheral Bus): Low-power bus for connecting low-speed peripherals
+
+
+
+ARM System IP and CCorstone SubsystemInclude essential Arm System IP    - NIC-400&#x2F;NIC-450 (Interconnect)    - MMU&#x2F;MOU, DMA controllers, timer and power management blocks
+Peripherals and I&#x2F;O Interfaces
+Standard communication interfaces: UART, SPI, I2C, CAN , USB, Ethernet
+general purpose I&#x2F;Os (GPIOs), Timers, ADCs.DACs
+Interfaces for display camera or storages as needed (ed. mipi, sido)
+
+AI&#x2F;ML and Arithmetic Hardware Accelerators
+Arm Ethos-N NPU for AI&#x2F;ML inference acceleration
+CCompatible with TensorFlow Lite for Microcontrollers, TVM and Vela compiler
+
+Hardware Security Components
+Arm TrustZone for secure boot, secure storage, and trusted execution environment (TEE)
+Cryptographic accelerators for encryption&#x2F;decryption
+Secure debug and trace interfaces
+
+Power and Clock Managements
+Dynamic Voltage and Frequency Scaling (DVFS) for power efficiency
+Clock gating, power islands and PMU (power management unit) to extend battery life and reduce thermal load
+
+resource www.arm.com/resources/education.academic-developer-platform
+Arm-based Development PlatformsAI Software DevelopmentCortex-M Platform:
+
+Himax Grove Vision AI v2
+Cortex-M55 + Ethos-U55
+Optimized for edge AI applications
+
+
+
+Cortex-A Platform:
+
+Raspberry Pi 4
+Cortex-A76 + PCIe Gen3
+High-performance computing for AI workloads
+
+
+
+IP ValidationCortex-M Platform:
+
+ARM MPS3 FPGA
+Cortex-M55 + Ethos-U55
+FPGA-based validation environment
+
+
+
+Cortex-A Platform:
+
+AMD Zynq MPSoC
+Cortex-A53 + FPGA
+Hybrid ARM + FPGA development platform
+
+
+
+SoC EmulationHardware Emulation Platform:
+
+AMD VU19P
+SoC hardware emulation with real-world data
+Enterprise-grade emulation capabilities
+
+
+
+Resource: www.arm.com/resources/education/academic-developer-platforms
+nanoSoc Silicom from SOC LabsFast-kNNAcademic Silicon cortex-M55 + ethos-U55 (tsmc n16)
+wiki.seedstudio.com&#x2F;grove_vision_ai_v2
+Early software development using arm virtual hardwareArm virtual hardware (AVH)AVH fixed virtual platforms (FVPs)AVH corellium models
+Summary
+Architecture Design and HW &amp; SW Partition
+Hardware Virtual Modeling
+FPGA Prototyping
+
+
+Hardware IP Design and SoC integration
+Select IP Cores
+SoC Hardware Integration
+Functional Simulation
+
+
+Software development
+Develop Device drivers
+Build Linux OS Kernels
+Create applications software
+
+
+Use cases
+Functional Verification
+Boot code and OS Bring up
+Performance Analysis
+
+
+
+Day 3]]></content>
   </entry>
   <entry>
     <title>CyberX Internal CTF 2024</title>
