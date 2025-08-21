@@ -215,7 +215,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/CTF-2025/</loc>
+    <loc>http://example.com/categories/CTF-2024/</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -229,7 +229,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/CTF-2024/</loc>
+    <loc>http://example.com/categories/CTF-2025/</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
