@@ -7,10 +7,8 @@ http://example.com/404.html
 http://example.com/tags/index.html
 http://example.com/links/index.html
 http://example.com/2025/04/18/UM-CyberSummit-2025/
-http://example.com/2025/03/08/PICO-CTF/
 http://example.com/2025/03/19/Try-Hack-Me-Hackinfinity-Battle-CTF-2025/
 http://example.com/2025/01/18/EQFCTF-2025/
-http://example.com/2025/02/17/Bronco-CTF-2025/
 http://example.com/categories/index.html
 http://example.com/2024/12/31/CSLU-2024-UPM/
 http://example.com/2024/12/31/CyberX-Internal-CTF-2024/
@@ -24,5 +22,5 @@ http://example.com/tags/Mobile-Threats/
 http://example.com/tags/Banking-Trojan/
 http://example.com/tags/CTF-2025/
 http://example.com/categories/CTF-2024/
-http://example.com/categories/Malware-Analysis/
 http://example.com/categories/CTF-2025/
+http://example.com/categories/Malware-Analysis/

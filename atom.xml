@@ -129,54 +129,6 @@
   </entry>
   
   <entry>
-    <title>PICO CTF 2025</title>
-    <link href="http://example.com/2025/03/08/PICO-CTF/"/>
-    <id>http://example.com/2025/03/08/PICO-CTF/</id>
-    <published>2025-03-08T15:40:38.000Z</published>
-    <updated>2025-04-03T13:23:40.126Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Forensics"><a href="#Forensics" class="headerlink" title="[Forensics]"></a>[Forensics]</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;node_modules&#92;aplayer&#92;dist&#92;APl</summary>
-      
-    
-    
-    
-    
-    <category term="CTF 2025" scheme="http://example.com/tags/CTF-2025/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bronco CTF 2025</title>
-    <link href="http://example.com/2025/02/17/Bronco-CTF-2025/"/>
-    <id>http://example.com/2025/02/17/Bronco-CTF-2025/</id>
-    <published>2025-02-17T13:18:08.000Z</published>
-    <updated>2025-02-17T13:18:58.685Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;node_modules&#92;aplayer&#92;dist&#92;APl</summary>
-      
-    
-    
-    
-    <category term="CTF 2025" scheme="http://example.com/categories/CTF-2025/"/>
-    
-    
-    <category term="Forensics" scheme="http://example.com/tags/Forensics/"/>
-    
-    <category term="Web" scheme="http://example.com/tags/Web/"/>
-    
-  </entry>
-  
-  <entry>
     <title>EQFCTF 2025</title>
     <link href="http://example.com/2025/01/18/EQFCTF-2025/"/>
     <id>http://example.com/2025/01/18/EQFCTF-2025/</id>
