@@ -355,7 +355,68 @@
 <li>Arm Kleidi AI</li>
 <li>Arm Kleidi CV</li>
 </ul>
-<p><em>&#x2F;&#x2F;write more about Arm Kleidi AI and CV</em></p>
+<h4 id="Arm-Kleidi-AI"><a href="#Arm-Kleidi-AI" class="headerlink" title="Arm Kleidi AI"></a>Arm Kleidi AI</h4><p>Arm Kleidi AI is a compact libraries suite for deploying and optimizing neural-network inference on Arm-based devices. It focuses on small-footprint, low-latency inference for edge and embedded targets.</p>
+<p>Key features</p>
+<ul>
+<li>Lightweight runtime optimized for Cortex‑A, Cortex‑M and Ethos NPUs</li>
+<li>Support for common model formats: TensorFlow Lite, ONNX, and TVM graph exports</li>
+<li>Quantization workflows: 8-bit post‑training quantization and int16&#x2F;float16 options</li>
+<li>Hardware acceleration hooks for Ethos‑N, Neon, Helium (M‑profile) and SME&#x2F;SME2 where available</li>
+<li>Runtime tools for profiling, memory&#x2F;perf tracing and telemetry</li>
+</ul>
+<p>Typical integration flow</p>
+<ol>
+<li>Convert model to supported format (TFLite&#x2F;ONNX&#x2F;TVM).</li>
+<li>Quantize and compile with Kleidi toolchain (produces optimized kernels or NPU binaries).</li>
+<li>Link Kleidi runtime into firmware or Linux userland.</li>
+<li>Profile and tune memory&#x2F;layout for target SoC.</li>
+</ol>
+<p>Optimization tips</p>
+<ul>
+<li>Prefer per‑channel quantization for conv layers to improve accuracy.</li>
+<li>Use Neon&#x2F;Helium kernels on CPU if no NPU present.</li>
+<li>Fuse common ops (conv+bn+relu) during compile stage to reduce memory traffic.</li>
+<li>Trim model input&#x2F;output datatypes to reduce memory footprint.</li>
+</ul>
+<p>Supported targets</p>
+<ul>
+<li>Cortex‑M (M55 + Ethos‑U)</li>
+<li>Cortex‑A (A‑series with Neon&#x2F;SVE2)</li>
+<li>Ethos‑N NPUs via vendor drivers</li>
+</ul>
+<h4 id="Arm-Kleidi-CV"><a href="#Arm-Kleidi-CV" class="headerlink" title="Arm Kleidi CV"></a>Arm Kleidi CV</h4><p>Arm Kleidi CV provides computer-vision primitives and accelerated backends for image preprocessing and inference pipelines tailored to Arm SoCs.</p>
+<p>Key features</p>
+<ul>
+<li>Optimized routines: resize, crop, color conversion, normalization, image pyramid, feature extractors</li>
+<li>Hardware‑accelerated filters using Neon&#x2F;Helium and DMA-friendly buffers</li>
+<li>Integration adapters for OpenCV, ArmNN and TFLite pipelines</li>
+<li>Streaming APIs for camera-to-inference pipelines with zero-copy buffers</li>
+<li>Example pipelines for object detection, segmentation and classification with edge-friendly postprocessing</li>
+</ul>
+<p>Getting started</p>
+<ul>
+<li>Use Kleidi CV for preprocessing on the CPU and hand off tensors to Kleidi AI runtime or Ethos NPU.</li>
+<li>Employ zero-copy frame buffers (supported on many SoC camera ISPs) to cut latency.</li>
+<li>Validate pipelines with included perf suites and sample datasets.</li>
+</ul>
+<p>Use cases</p>
+<ul>
+<li>Low‑latency vision at the edge (smart cameras, robotics)</li>
+<li>Power‑constrained inference on wearable or sensor nodes</li>
+<li>Real‑time pre‑processing for offload to NPU or GPU</li>
+</ul>
+<p>Developer tooling</p>
+<ul>
+<li>Command‑line compiler for kernel generation and model packaging</li>
+<li>Profilers for CPU, NPU and memory</li>
+<li>Sample apps and CI integration scripts for smooth bring‑up</li>
+</ul>
+<p>Notes</p>
+<ul>
+<li>Check target SoC SDK for board‑specific drivers (camera, DMA, NPU).</li>
+<li>For highest throughput, combine Kleidi CV zero‑copy I&#x2F;O with Kleidi AI compiled models.</li>
+<li>Refer to vendor reference examples for platform‑specific optimizations.</li>
+</ul>
 <h3 id="Cortex-R-Benefits"><a href="#Cortex-R-Benefits" class="headerlink" title="Cortex-R Benefits"></a>Cortex-R Benefits</h3><p>Cortex-R processors are designed for real-time applications, providing low-latency and deterministic performance. They are used in applications such as automotive, industrial control systems, and medical devices.</p>
 <h4 id="Key-Benefits"><a href="#Key-Benefits" class="headerlink" title="Key Benefits"></a>Key Benefits</h4><ul>
 <li><strong>Fast and deterministic response times</strong>: Cortex-R processors are designed to provide fast and deterministic response times, making them ideal for real-time applications.</li>
@@ -551,7 +612,10 @@
 </ul>
 </li>
 </ul>
-<h1 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h1>]]></content>
+<h1 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h1><ul>
+<li>i have record nothing so ya byerr</li>
+</ul>
+]]></content>
       <tags>
         <tag>ARM</tag>
         <tag>IC Design</tag>
@@ -1729,6 +1793,20 @@
 ]]></content>
       <tags>
         <tag>CTF 2025</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Solve VMware VM No WiFi Problem</title>
+    <url>/2025/10/17/Problem/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\node_modules\aplayer\dist\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\node_modules\aplayer\dist\Meting.min.js"></script><h1 id="Problem-Found"><a href="#Problem-Found" class="headerlink" title="Problem Found"></a>Problem Found</h1><p>This is a quick blog about an issue I faced with my VMware VM.</p>
+<p>Most of the time, I found that my VM can’t connect to WiFi (the ethernet connection shows up in the VM). After some investigation, I discovered an easy way to solve this problem. Simply go to <code>Services.msc</code>, then search for <code>VMware DHCP Service</code> and <code>VMware NAT Service</code>. Make sure both show <code>Running</code> in the status column. If not, just right-click on them and start them.</p>
+<h2 id="How-I-Discovered-This-Solution"><a href="#How-I-Discovered-This-Solution" class="headerlink" title="How I Discovered This Solution"></a>How I Discovered This Solution</h2><p>I actually encountered this problem many times. Most of the time, I tried restarting the network manager using <code>sudo systemctl restart NetworkManager</code>, but it still couldn’t connect. I tried NAT, bridged, and other methods I found online, but nothing worked. </p>
+<p>After that, I did some research and found that there are services running in the background that need to be active for VM WiFi connection to work. That’s when I discovered that my VMware NAT Service was not running, along with the DHCP service. I’m not sure why they stopped running, but for now, starting these services solved the problem!</p>
+]]></content>
+      <tags>
+        <tag>VMware</tag>
+        <tag>Networking</tag>
+        <tag>Troubleshooting</tag>
       </tags>
   </entry>
   <entry>
