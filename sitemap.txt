@@ -1,3 +1,4 @@
+http://example.com/2025/05/12/BBCTF-2025/
 http://example.com/2025/10/17/Problem/
 http://example.com/2025/07/28/Arm-Malaysia-On-Demand-Traning/
 http://example.com/2025/10/09/Offsec-Gauntlet-Echo-Response/
@@ -34,6 +35,8 @@ http://example.com/tags/CTF-2025/
 http://example.com/tags/VMware/
 http://example.com/tags/Networking/
 http://example.com/tags/Troubleshooting/
+http://example.com/tags/BBCTF/
+http://example.com/tags/Writeup/
 http://example.com/categories/CTF-2024/
 http://example.com/categories/Malware-Analysis/
 http://example.com/categories/CTF-2025/
